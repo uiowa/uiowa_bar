@@ -1,0 +1,429 @@
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/all\/themes\/sitenow_standardtheme\/sass\/base\.scss}line{font-family:\0000393}}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/all\/themes\/sitenow_standardtheme\/ui-header\/uigb-light\/\*\.png}line{font-family:\0000382}}
+.uigb-light-sprite, .uigb-light-a-z, .uigb-light-arrow-down, .uigb-light-maps, .uigb-light-phonebook, .uigb-light-search, .uigb-light-ui-logo, .phonebook:after, .maps:after, .a-z:after, .search:after, #ui-wrapper #ui-logo, #ui-wrapper #gsa-search #uniform-sitesearch:after {
+  background: url('images/ui-header/uigb-light-s7a081c391b.png') no-repeat;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/all\/themes\/sitenow_standardtheme\/ui-header\/uigb-dark\/\*\.png}line{font-family:\0000382}}
+.uigb-dark-sprite, .skin-b .phonebook:after, .skin-b .maps:after, .skin-b .a-z:after, .skin-b .search:after, .skin-b #ui-wrapper #ui-logo, .skin-b #ui-wrapper #gsa-search #uniform-sitesearch:after {
+  background: url('images/ui-header/uigb-dark-see7d9d41d2.png') no-repeat;
+}
+
+/**
+ * @file
+ * UI Global Bar Stles
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby193\/lib\/ruby\/gems\/1\.9\.1\/gems\/compass-0\.12\.1\/frameworks\/compass\/stylesheets\/compass\/utilities\/sprites\/_base\.scss}line{font-family:\0000360}}
+.uigb-light-a-z {
+  background-position: 0 -41px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby193\/lib\/ruby\/gems\/1\.9\.1\/gems\/compass-0\.12\.1\/frameworks\/compass\/stylesheets\/compass\/utilities\/sprites\/_base\.scss}line{font-family:\0000360}}
+.uigb-light-arrow-down {
+  background-position: 0 -95px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby193\/lib\/ruby\/gems\/1\.9\.1\/gems\/compass-0\.12\.1\/frameworks\/compass\/stylesheets\/compass\/utilities\/sprites\/_base\.scss}line{font-family:\0000360}}
+.uigb-light-maps {
+  background-position: 0 -59px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby193\/lib\/ruby\/gems\/1\.9\.1\/gems\/compass-0\.12\.1\/frameworks\/compass\/stylesheets\/compass\/utilities\/sprites\/_base\.scss}line{font-family:\0000360}}
+.uigb-light-phonebook {
+  background-position: 0 -77px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby193\/lib\/ruby\/gems\/1\.9\.1\/gems\/compass-0\.12\.1\/frameworks\/compass\/stylesheets\/compass\/utilities\/sprites\/_base\.scss}line{font-family:\0000360}}
+.uigb-light-search {
+  background-position: 0 -23px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby193\/lib\/ruby\/gems\/1\.9\.1\/gems\/compass-0\.12\.1\/frameworks\/compass\/stylesheets\/compass\/utilities\/sprites\/_base\.scss}line{font-family:\0000360}}
+.uigb-light-ui-logo {
+  background-position: 0 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/all\/themes\/sitenow_standardtheme\/sass\/ui-global-bar\.scss}line{font-family:\0000328}}
+.phonebook:after {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 5px;
+  left: 4px;
+  background-position: 0 -77px;
+  height: 18px;
+  width: 18px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/all\/themes\/sitenow_standardtheme\/sass\/ui-global-bar\.scss}line{font-family:\0000319}}
+.skin-b .phonebook:after {
+  top: 3px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/all\/themes\/sitenow_standardtheme\/sass\/ui-global-bar\.scss}line{font-family:\0000328}}
+.skin-b .phonebook:after {
+  background-position: 0 -77px;
+  height: 18px;
+  width: 18px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/all\/themes\/sitenow_standardtheme\/sass\/ui-global-bar\.scss}line{font-family:\0000329}}
+.maps:after {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 5px;
+  left: 4px;
+  background-position: 0 -59px;
+  height: 18px;
+  width: 18px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/all\/themes\/sitenow_standardtheme\/sass\/ui-global-bar\.scss}line{font-family:\0000319}}
+.skin-b .maps:after {
+  top: 3px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/all\/themes\/sitenow_standardtheme\/sass\/ui-global-bar\.scss}line{font-family:\0000329}}
+.skin-b .maps:after {
+  background-position: 0 -59px;
+  height: 18px;
+  width: 18px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/all\/themes\/sitenow_standardtheme\/sass\/ui-global-bar\.scss}line{font-family:\0000330}}
+.a-z:after {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 5px;
+  left: 4px;
+  background-position: 0 -41px;
+  height: 18px;
+  width: 18px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/all\/themes\/sitenow_standardtheme\/sass\/ui-global-bar\.scss}line{font-family:\0000319}}
+.skin-b .a-z:after {
+  top: 3px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/all\/themes\/sitenow_standardtheme\/sass\/ui-global-bar\.scss}line{font-family:\0000330}}
+.skin-b .a-z:after {
+  background-position: 0 -41px;
+  height: 18px;
+  width: 18px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/all\/themes\/sitenow_standardtheme\/sass\/ui-global-bar\.scss}line{font-family:\0000331}}
+.search:after {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 5px;
+  left: 4px;
+  background-position: 0 -23px;
+  height: 18px;
+  width: 18px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/all\/themes\/sitenow_standardtheme\/sass\/ui-global-bar\.scss}line{font-family:\0000319}}
+.skin-b .search:after {
+  top: 3px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/all\/themes\/sitenow_standardtheme\/sass\/ui-global-bar\.scss}line{font-family:\0000331}}
+.skin-b .search:after {
+  background-position: 0 -23px;
+  height: 18px;
+  width: 18px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/all\/themes\/sitenow_standardtheme\/sass\/ui-global-bar\.scss}line{font-family:\0000335}}
+#ui-wrapper {
+  background: #f7f7f7;
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y3ZjdmNyIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Q2ZDZkNiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA=='), #f7f7f7;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f7f7f7), color-stop(100%, #d6d6d6)), #f7f7f7;
+  background: -webkit-linear-gradient(top, #f7f7f7, #d6d6d6), #f7f7f7;
+  background: -moz-linear-gradient(top, #f7f7f7, #d6d6d6), #f7f7f7;
+  background: -o-linear-gradient(top, #f7f7f7, #d6d6d6), #f7f7f7;
+  background: -ms-linear-gradient(top, #f7f7f7, #d6d6d6), #f7f7f7;
+  background: linear-gradient(top, #f7f7f7, #d6d6d6), #f7f7f7;
+  border-top: 3px solid #2D2D2D;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 3px 0px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 3px 0px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 3px 0px;
+  position: relative;
+  height: 40px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/all\/themes\/sitenow_standardtheme\/sass\/ui-global-bar\.scss}line{font-family:\0000342}}
+.skin-b #ui-wrapper {
+  background: #3B3B3C;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/all\/themes\/sitenow_standardtheme\/sass\/ui-global-bar\.scss}line{font-family:\0000346}}
+#ui-wrapper .container {
+  *zoom: 1;
+  position: relative;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby193\/lib\/ruby\/gems\/1\.9\.1\/gems\/compass-0\.12\.1\/frameworks\/compass\/stylesheets\/compass\/utilities\/general\/_clearfix\.scss}line{font-family:\0000322}}
+#ui-wrapper .container:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/all\/themes\/sitenow_standardtheme\/sass\/ui-global-bar\.scss}line{font-family:\0000351}}
+#ui-wrapper #ui-logo {
+  position: absolute;
+  top: -3px;
+  left: 5px;
+  border-top: 3px solid #FFCD05;
+  text-indent: -9999px;
+  font-size: 1em;
+  line-height: 0;
+  height: 37px;
+  width: 175px;
+  background-position: 0 10px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/all\/themes\/sitenow_standardtheme\/sass\/ui-global-bar\.scss}line{font-family:\0000362}}
+#ui-wrapper #ui-logo a {
+  display: block;
+  height: 100%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/all\/themes\/sitenow_standardtheme\/sass\/ui-global-bar\.scss}line{font-family:\0000364}}
+.skin-b #ui-wrapper #ui-logo {
+  background-position: 0 10px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/all\/themes\/sitenow_standardtheme\/sass\/ui-global-bar\.scss}line{font-family:\0000369}}
+#ui-wrapper #ui-global-bar-nav {
+  float: right;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/all\/themes\/sitenow_standardtheme\/sass\/ui-global-bar\.scss}line{font-family:\0000371}}
+#ui-wrapper #ui-global-links {
+  float: left;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/all\/themes\/sitenow_standardtheme\/sass\/ui-global-bar\.scss}line{font-family:\0000374}}
+#ui-wrapper #ui-global-links ul, #ui-wrapper #ui-global-links li {
+  line-height: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/all\/themes\/sitenow_standardtheme\/sass\/ui-global-bar\.scss}line{font-family:\0000376}}
+#ui-wrapper #ui-global-links ul {
+  margin: 4px 0 0;
+  *zoom: 1;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby193\/lib\/ruby\/gems\/1\.9\.1\/gems\/compass-0\.12\.1\/frameworks\/compass\/stylesheets\/compass\/utilities\/general\/_clearfix\.scss}line{font-family:\0000322}}
+#ui-wrapper #ui-global-links ul:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/all\/themes\/sitenow_standardtheme\/sass\/ui-global-bar\.scss}line{font-family:\0000382}}
+#ui-wrapper #ui-global-links li {
+  display: block;
+  float: left;
+  margin-right: 5px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/all\/themes\/sitenow_standardtheme\/sass\/ui-global-bar\.scss}line{font-family:\0000388}}
+#ui-wrapper #ui-global-links a.icon {
+  position: relative;
+  height: 20px;
+  width: 20px;
+  background: #d6d6d6;
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y3ZjdmNyIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Q2ZDZkNiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA=='), #d6d6d6;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f7f7f7), color-stop(100%, #d6d6d6)), #d6d6d6;
+  background: -webkit-linear-gradient(top, #f7f7f7, #d6d6d6), #d6d6d6;
+  background: -moz-linear-gradient(top, #f7f7f7, #d6d6d6), #d6d6d6;
+  background: -o-linear-gradient(top, #f7f7f7, #d6d6d6), #d6d6d6;
+  background: -ms-linear-gradient(top, #f7f7f7, #d6d6d6), #d6d6d6;
+  background: linear-gradient(top, #f7f7f7, #d6d6d6), #d6d6d6;
+  display: inline-block;
+  text-indent: -9999px;
+  font-size: 1em;
+  line-height: 0;
+  padding: 13px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 1px 0px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 1px 0px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 1px 0px;
+  border: 1px solid #eee;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/all\/themes\/sitenow_standardtheme\/sass\/ui-global-bar\.scss}line{font-family:\00003100}}
+.skin-b #ui-wrapper #ui-global-links a.icon {
+  background: #262626;
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzI2MjYyNiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzBkMGQwZCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA=='), #262626;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #262626), color-stop(100%, #0d0d0d)), #262626;
+  background: -webkit-linear-gradient(top, #262626, #0d0d0d), #262626;
+  background: -moz-linear-gradient(top, #262626, #0d0d0d), #262626;
+  background: -o-linear-gradient(top, #262626, #0d0d0d), #262626;
+  background: -ms-linear-gradient(top, #262626, #0d0d0d), #262626;
+  background: linear-gradient(top, #262626, #0d0d0d), #262626;
+  border: 1px solid #333;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/all\/themes\/sitenow_standardtheme\/sass\/ui-global-bar\.scss}line{font-family:\00003107}}
+#ui-wrapper #gsa-search {
+  float: left;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/all\/themes\/sitenow_standardtheme\/sass\/ui-global-bar\.scss}line{font-family:\00003109}}
+#ui-wrapper #gsa-search * {
+  float: left;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/all\/themes\/sitenow_standardtheme\/sass\/ui-global-bar\.scss}line{font-family:\00003112}}
+#ui-wrapper #gsa-search fieldset {
+  border: none;
+  margin: 5px 0 0 -20px;
+  padding: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/all\/themes\/sitenow_standardtheme\/sass\/ui-global-bar\.scss}line{font-family:\00003118}}
+#ui-wrapper #gsa-search #search-terms {
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
+  padding: 5px 5px 5px 20px;
+  background-color: #333;
+  border: 1px solid #ccc;
+  color: #ebebeb;
+  width: 200px;
+  margin-right: 10px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/all\/themes\/sitenow_standardtheme\/sass\/ui-global-bar\.scss}line{font-family:\00003127}}
+.skin-b #ui-wrapper #gsa-search #search-terms {
+  background-color: #BABABA;
+  color: #414042;
+  border-color: #8A8B8A;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/all\/themes\/sitenow_standardtheme\/sass\/ui-global-bar\.scss}line{font-family:\00003134}}
+#ui-wrapper #gsa-search #site-search-label {
+  text-shadow: rgba(255, 255, 255, 0.45) 0px 1px 0px;
+  color: #414042;
+  font-family: Georgia, Baskerville, Palatino, "Palatino Linotype", "Book Antiqua", "Times New Roman", serif;
+  font-size: .8em;
+  font-style: italic;
+  font-weight: bold;
+  margin: 6px 8px 0 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/all\/themes\/sitenow_standardtheme\/sass\/ui-global-bar\.scss}line{font-family:\00003143}}
+.skin-b #ui-wrapper #gsa-search #site-search-label {
+  color: #DCDDDE;
+  text-shadow: rgba(0, 0, 0, 0.6) 0px -1px 0px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/all\/themes\/sitenow_standardtheme\/sass\/ui-global-bar\.scss}line{font-family:\00003150}}
+#ui-wrapper #gsa-search #uniform-sitesearch {
+  background: #d6d6d6;
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y3ZjdmNyIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Q2ZDZkNiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA=='), #d6d6d6;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f7f7f7), color-stop(100%, #d6d6d6)), #d6d6d6;
+  background: -webkit-linear-gradient(top, #f7f7f7, #d6d6d6), #d6d6d6;
+  background: -moz-linear-gradient(top, #f7f7f7, #d6d6d6), #d6d6d6;
+  background: -o-linear-gradient(top, #f7f7f7, #d6d6d6), #d6d6d6;
+  background: -ms-linear-gradient(top, #f7f7f7, #d6d6d6), #d6d6d6;
+  background: linear-gradient(top, #f7f7f7, #d6d6d6), #d6d6d6;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 2px 0px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 2px 0px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 2px 0px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  border: 1px solid #eee;
+  margin: 0px 10px 0 0;
+  position: relative;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/all\/themes\/sitenow_standardtheme\/sass\/ui-global-bar\.scss}line{font-family:\00003158}}
+.skin-b #ui-wrapper #gsa-search #uniform-sitesearch {
+  background: #262626;
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzI2MjYyNiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzBkMGQwZCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA=='), #262626;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #262626), color-stop(100%, #0d0d0d)), #262626;
+  background: -webkit-linear-gradient(top, #262626, #0d0d0d), #262626;
+  background: -moz-linear-gradient(top, #262626, #0d0d0d), #262626;
+  background: -o-linear-gradient(top, #262626, #0d0d0d), #262626;
+  background: -ms-linear-gradient(top, #262626, #0d0d0d), #262626;
+  background: linear-gradient(top, #262626, #0d0d0d), #262626;
+  border: 1px solid #333;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/all\/themes\/sitenow_standardtheme\/sass\/ui-global-bar\.scss}line{font-family:\00003163}}
+#ui-wrapper #gsa-search #uniform-sitesearch:after {
+  position: absolute;
+  right: 5px;
+  top: 8px;
+  display: block;
+  background-position: 0 -95px;
+  height: 9px;
+  width: 9px;
+  content: "";
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/all\/themes\/sitenow_standardtheme\/sass\/ui-global-bar\.scss}line{font-family:\00003171}}
+.skin-b #ui-wrapper #gsa-search #uniform-sitesearch:after {
+  background-position: 0 -95px;
+  height: 9px;
+  width: 9px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/all\/themes\/sitenow_standardtheme\/sass\/ui-global-bar\.scss}line{font-family:\00003176}}
+#ui-wrapper #gsa-search #uniform-sitesearch span {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: .8em;
+  color: #414042;
+  line-height: normal;
+  text-shadow: rgba(255, 255, 255, 0.45) 0px 1px 0px;
+  padding: 4px 20px 4px 10px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/all\/themes\/sitenow_standardtheme\/sass\/ui-global-bar\.scss}line{font-family:\00003185}}
+.skin-b #ui-wrapper #gsa-search #uniform-sitesearch span {
+  color: #DCDDDE;
+  text-shadow: rgba(0, 0, 0, 0.6) 0px -1px 0px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/all\/themes\/sitenow_standardtheme\/sass\/ui-global-bar\.scss}line{font-family:\00003191}}
+#ui-wrapper #gsa-search #uniform-sitesearch #sitesearch {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  cursor: pointer;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/all\/themes\/sitenow_standardtheme\/sass\/ui-global-bar\.scss}line{font-family:\00003205}}
+#ui-wrapper #gsa-search #submit-search {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 1px solid #FFCD05;
+  background: #ffcd05;
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmY2QwNSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2QzYWIyYSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA=='), #ffcd05;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffcd05), color-stop(100%, #d3ab2a)), #ffcd05;
+  background: -webkit-linear-gradient(top, #ffcd05, #d3ab2a), #ffcd05;
+  background: -moz-linear-gradient(top, #ffcd05, #d3ab2a), #ffcd05;
+  background: -o-linear-gradient(top, #ffcd05, #d3ab2a), #ffcd05;
+  background: -ms-linear-gradient(top, #ffcd05, #d3ab2a), #ffcd05;
+  background: linear-gradient(top, #ffcd05, #d3ab2a), #ffcd05;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 2px 0px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 2px 0px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 2px 0px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  padding: 4px 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: .8em;
+  color: #414042;
+  line-height: normal;
+  text-shadow: rgba(255, 255, 255, 0.45) 0px 1px 0px;
+  margin-right: 5px;
+}

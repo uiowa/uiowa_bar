@@ -1,0 +1,90 @@
+<?php
+
+/**
+ * @file
+ * 
+ * Adds the University of Iowa Branding Bar to your theme
+ */
+
+/* Include CSS Assets */
+drupal_add_css(drupal_get_path('module', 'uiowa_bar') . '/css/ui-global-bar.css');
+
+/* Include Javascript Assets */
+drupal_add_js(drupal_get_path('module', 'uiowa_bar') . '/js/uniform/jquery.uniform.min.js');
+drupal_add_js(drupal_get_path('module', 'uiowa_bar') . '/js/ui-header.js');
+
+
+/* HTML Preprocesses */
+function uiowa_bar_preprocess_html(&$vars) {
+  global $theme_key;
+  
+  // Add a body class for the active theme name.
+  $vars['classes_array'][] = theme_get_setting('ui_globalbar');
+}
+
+
+/* Page Preprocesses */
+function uiowa_bar_preprocess_page(&$vars) {
+/* UIowa Bar Markup - Implemented in page.tpl.php */
+$vars['ui_header'] = 
+  '<div id="ui-wrapper"><div class="container">
+  <div id="ui-global-bar">
+    <div id="ui-logo"><a href="http://www.uiowa.edu">The University of Iowa</a></div>
+    <div id="ui-global-bar-nav">
+      <div id="ui-global-links">
+        <ul>
+          <li><a href="http://www.uiowa.edu/homepage/directories/" class="icon phonebook" title="Phonebook">Phonebook</a></li>
+          <li><a href="http://www.uiowa.edu/homepage/hub/tours.html" class="icon maps" title="Maps">Maps</a></li>
+          <li><a href="http://www.uiowa.edu/homepage/search/index.html" class="icon a-z" title="A-Z">A-Z</a></li>
+          <li><a href="#" class="icon search" title="Search">Search</a></li>
+        </ul>
+      </div><!-- /ui-global-links -->
+      <div id="gsa-search">
+        <form action="http://search.uiowa.edu/search" method="get">
+          <fieldset>
+            <legend class="element-hidden">Search</legend>
+            <div id="search-box">
+              <label class="element-hidden" for="search-terms">Search Terms</label> 
+              <input id="search-terms" maxlength="256" name="q" placeholder="Start Searching ..." size="15" type="text" value="" /> 
+              
+              <label for="sitesearch" id="site-search-label">for</label><div id="sitesearch-container">
+              <select id="sitesearch" name="sitesearch">
+                <option id="search-this-site" value="' . $_SERVER['SERVER_NAME'] . '">This Site</option>
+                <option id="search-ui" value="www.uiowa.edu">All Sites</option>
+              </select>
+
+              <input id="submit-search" name="btnG" type="submit" value="Search" />
+              <input name="site" type="hidden" value="default_collection" />
+              <input name="client" type="hidden" value="default_frontend" />
+              <input name="output" type="hidden" value="xml_no_dtd" />
+              <input name="proxystylesheet" type="hidden" value="default_frontend" />
+            </div><!-- /search-box -->
+          </fieldset>
+        </form>
+      </div><!-- /gsa-search -->
+    </div><!-- /global-bar-nav -->
+  </div><!-- /ui-global-bar -->
+  </div></div><!-- /ui-wrapper and conatiner -->';
+}
+
+
+/* Implements hook_form_system_theme_settings_alter() to add Theme Customization to Theme Settings Page */
+function uiowa_bar_form_system_theme_settings_alter(&$form, &$form_state)  {
+  // Custom UI Branded Bar Styles
+  $form['at-settings']['ui_branding'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('UI Branding'),
+    '#description' => t('<h3>UI Branding Bar</h3><p>This setting allows you to customize the top University of Iowa branded bar.</p>'),
+  );
+
+  $form['at-settings']['ui_branding']['ui_globalbar'] = array(
+    '#type' => 'select',
+    '#title' => t('UI Branded Bar'),
+    '#default_value' => theme_get_setting('ui_globalbar', variable_get('theme_default','none')),
+    '#description' => t(''),
+    '#options' => array(
+      'skin-a' => t('Light Theme'),
+      'skin-b' => t('Dark Theme'),
+    ),
+  );
+}
