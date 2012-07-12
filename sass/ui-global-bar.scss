@@ -1,0 +1,224 @@
+
+@import "base.scss";
+@import "ui-header/uigb-light/*.png";
+@import "ui-header/uigb-dark/*.png";
+
+/**
+ * @file
+ * UI Global Bar Stles
+ */
+
+
+@mixin iconReplaceUigb {
+	position: absolute;
+	content: "";
+	display: block;
+	top: 5px;
+	left: 4px;
+
+	.skin-b & {
+		top: 3px; // fixes position due to fuax drop shadow on icon
+	}
+}
+
+$experimental-support-for-svg: true;
+
+
+@include all-uigb-light-sprites;
+.phonebook:after { @include iconReplaceUigb; @include uigb-light-sprite(phonebook, $dimensions: true); .skin-b & { @include uigb-dark-sprite(phonebook, $dimensions: true); }}
+.maps:after { @include iconReplaceUigb; @include uigb-light-sprite(maps, $dimensions: true); .skin-b & { @include uigb-dark-sprite(maps, $dimensions: true); }}
+.a-z:after { @include iconReplaceUigb; @include uigb-light-sprite(a-z, $dimensions: true); .skin-b & { @include uigb-dark-sprite(a-z, $dimensions: true); }}
+.search:after { @include iconReplaceUigb; @include uigb-light-sprite(search, $dimensions: true); .skin-b & { @include uigb-dark-sprite(search, $dimensions: true); }}
+
+
+
+#ui-wrapper {
+	@include background-with-css2-fallback(linear-gradient(top, #F7F7F7, #D6D6D6), #F7F7F7);
+	border-top: 3px solid #2D2D2D;
+	@include box-shadow(rgba(0,0,0,.1) 0px 2px 3px 0px);
+	position: relative;
+	height: 40px;
+
+	.skin-b & {
+		background: #3B3B3C;
+	}
+
+	.container { 
+		@include legacy-pie-clearfix; 
+		position: relative;
+	}
+
+	#ui-logo {
+		position: absolute;
+		top: -3px;
+		left: 5px;
+
+		border-top: 3px solid #FFCD05;
+		@include imgReplace;
+		height: 37px;
+		width: 175px;
+		@include uigb-light-sprite(ui-logo, $offset-y: 10px);
+
+		a { display: block; height: 100%;}
+
+		.skin-b & {
+			@include uigb-dark-sprite(ui-logo, $offset-y: 10px);
+		}
+	}
+
+	#ui-global-bar-nav { float: right; }
+
+	#ui-global-links {
+		float: left;
+
+		ul, li { line-height: 0; }
+
+		ul {
+			margin: 4px 0 0;
+			@include legacy-pie-clearfix;
+
+		}
+
+		li { 
+			display: block;
+			float: left;
+			margin-right: 5px;
+		}
+
+		a.icon {
+			position: relative;
+			height: 20px;
+			width: 20px;
+			@include background-with-css2-fallback(linear-gradient(top, #F7F7F7, #D6D6D6), #D6D6D6);
+			display: inline-block;
+			@include imgReplace;
+			padding: 13px;
+			@include border-radius(50%);
+			@include box-shadow(rgba(0,0,0,.3) 0px 2px 1px 0px);
+			border: 1px solid #eee;
+
+			.skin-b & {
+				@include background-with-css2-fallback(linear-gradient(top, #262626, #0D0D0D), #262626);
+				border: 1px solid #333;
+			}
+		}
+	}
+
+	#gsa-search {  
+		float: left;
+		* { float: left; }
+
+
+		fieldset {
+			border: none;
+			margin: 5px 0 0 -20px;
+			padding: 0;
+		}
+
+		#search-terms {
+			@include border-radius(6px);
+			padding: 5px 5px 5px 20px;
+			background-color: #333;
+			border: 1px solid #ccc;
+			color: #ebebeb;
+			width: 200px;
+			margin-right: 10px;
+
+			.skin-b & {
+				background-color: #BABABA;
+				color: #414042;
+				border-color: #8A8B8A;
+			}
+		}
+
+		#site-search-label {
+			@include text-shadow(rgba(255,255,255,.45) 0px 1px 0px);
+			color: #414042;
+			font-family: $serif-large;
+			font-size: .8em;
+			font-style: italic;
+			font-weight: bold;
+			margin: 6px 8px 0 0;
+
+			.skin-b & {
+				color: #DCDDDE;
+				@include text-shadow(rgba(0,0,0,.6) 0px -1px 0px);
+			}
+		}
+
+
+		#uniform-sitesearch {
+			@include background-with-css2-fallback(linear-gradient(top, #F7F7F7, #D6D6D6), #D6D6D6);
+			@include box-shadow(rgba(0,0,0,.3) 0px 2px 2px 0px);
+			@include border-radius(3px);
+			border: 1px solid #eee;
+			margin: 0px 10px 0 0;
+			position: relative;
+
+			.skin-b & {
+				@include background-with-css2-fallback(linear-gradient(top, #262626, #0D0D0D), #262626);
+				border: 1px solid #333;
+			}		
+
+			&:after { 
+				position: absolute; 
+				right: 5px; 
+				top: 8px;
+				display: block; 
+				@include uigb-light-sprite(arrow-down, $dimensions: true); 
+				content: "";
+
+				.skin-b & {
+					@include uigb-dark-sprite(arrow-down, $dimensions: true);
+				}
+			}
+
+			span {
+				font-family: $sans-serif-arial-helvetica;
+				font-weight: bold;
+				font-size: .8em;
+				color: #414042;
+				line-height: normal;
+				@include text-shadow(rgba(255,255,255,.45) 0px 1px 0px);
+				padding: 4px 20px 4px 10px;
+
+				.skin-b & {
+					color: #DCDDDE;
+					@include text-shadow(rgba(0,0,0,.6) 0px -1px 0px);
+				}
+			}
+
+			#sitesearch { 
+				@include appearance(none);
+				background-color: transparent !important;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				padding: 0;
+				border: 0;
+				cursor: pointer;
+			}
+		}
+
+		#submit-search {
+			@include appearance(none);
+			border: 1px solid #FFCD05;
+			
+			@include background-with-css2-fallback(linear-gradient(top, #FFCD05, #D3AB2A), #FFCD05);
+			@include box-shadow(rgba(0,0,0,.3) 0px 2px 2px 0px);
+			@include border-radius(3px);
+			padding: 4px 10px;
+
+			font-family: $sans-serif-arial-helvetica;
+			font-weight: bold;
+			font-size: .8em;
+			color: #414042;
+			line-height: normal;
+			@include text-shadow(rgba(255,255,255,.45) 0px 1px 0px);
+			margin-right: 5px;
+		}
+	}
+}
+
