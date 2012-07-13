@@ -8,7 +8,6 @@
 @import 'compass/css3';                        // Use one CSS3 mixin instead of multiple vendor prefixes.
 @import 'compass/typography';
 
-//@import 'bourbon/bourbon'; // Import Bourbon lib if available: http://thoughtbot.com/bourbon/
 
 * {
 	@include box-sizing(border-box);
@@ -32,8 +31,7 @@ $sans-serif-arial-helvetica:  Arial, Helvetica, sans-serif;
 	}
 }
 
-$experimental-support-for-svg: true;
-
+$experimental-support-for-svg: true; // set svg support for IE9
 
 @include all-uigb-light-sprites;
 
