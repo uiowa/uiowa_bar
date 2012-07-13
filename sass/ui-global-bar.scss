@@ -94,6 +94,7 @@ $experimental-support-for-svg: true;
 			display: block;
 			float: left;
 			margin-right: 5px;
+			@include hide-text;
 		}
 
 		a.icon {
@@ -101,9 +102,9 @@ $experimental-support-for-svg: true;
 			height: 20px;
 			width: 20px;
 			@include background-with-css2-fallback(linear-gradient(top, #F7F7F7, #D6D6D6), #D6D6D6);
-			display: inline-block;
-			@include hide-text;
+			display: block;
 			padding: 13px;
+			color: red;
 			@include border-radius(50%);
 			@include box-shadow(rgba(0,0,0,.3) 0px 2px 1px 0px);
 			border: 1px solid #eee;
