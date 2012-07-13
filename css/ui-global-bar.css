@@ -8,11 +8,11 @@
   box-sizing: border-box;
 }
 
-.uigb-light-sprite, .uigb-light-a-z, .uigb-light-arrow-down, .uigb-light-maps, .uigb-light-phonebook, .uigb-light-search, .uigb-light-ui-logo, .phonebook:after, .maps:after, .a-z:after, .search:after, #ui-wrapper #ui-logo, #ui-wrapper #gsa-search #uniform-sitesearch:after {
+.uigb-light-sprite, .uigb-light-a-z, .uigb-light-arrow-down, .uigb-light-maps, .uigb-light-phonebook, .uigb-light-search, .uigb-light-ui-logo, .link-style-icons .phonebook:after, .link-style-icons .maps:after, .link-style-icons .a-z:after, .link-style-icons .search:after, #ui-wrapper #ui-logo, #ui-wrapper #gsa-search #uniform-sitesearch:after {
   background: url('images/ui-header/uigb-light-s7a081c391b.png') no-repeat;
 }
 
-.uigb-dark-sprite, .skin-b .phonebook:after, .skin-b .maps:after, .skin-b .a-z:after, .skin-b .search:after, .skin-b #ui-wrapper #ui-logo, .skin-b #ui-wrapper #gsa-search #uniform-sitesearch:after {
+.uigb-dark-sprite, .skin-b .link-style-icons .phonebook:after, .skin-b .link-style-icons .maps:after, .skin-b .link-style-icons .a-z:after, .skin-b .link-style-icons .search:after, .skin-b #ui-wrapper #ui-logo, .skin-b #ui-wrapper #gsa-search #uniform-sitesearch:after {
   background: url('images/ui-header/uigb-dark-see7d9d41d2.png') no-repeat;
 }
 
@@ -40,7 +40,7 @@
   background-position: 0 0;
 }
 
-.phonebook:after {
+.link-style-icons .phonebook:after {
   position: absolute;
   content: "";
   display: block;
@@ -50,16 +50,15 @@
   height: 18px;
   width: 18px;
 }
-.skin-b .phonebook:after {
+.skin-b .link-style-icons .phonebook:after {
   top: 3px;
 }
-.skin-b .phonebook:after {
+.skin-b .link-style-icons .phonebook:after {
   background-position: 0 -77px;
   height: 18px;
   width: 18px;
 }
-
-.maps:after {
+.link-style-icons .maps:after {
   position: absolute;
   content: "";
   display: block;
@@ -69,16 +68,15 @@
   height: 18px;
   width: 18px;
 }
-.skin-b .maps:after {
+.skin-b .link-style-icons .maps:after {
   top: 3px;
 }
-.skin-b .maps:after {
+.skin-b .link-style-icons .maps:after {
   background-position: 0 -59px;
   height: 18px;
   width: 18px;
 }
-
-.a-z:after {
+.link-style-icons .a-z:after {
   position: absolute;
   content: "";
   display: block;
@@ -88,16 +86,15 @@
   height: 18px;
   width: 18px;
 }
-.skin-b .a-z:after {
+.skin-b .link-style-icons .a-z:after {
   top: 3px;
 }
-.skin-b .a-z:after {
+.skin-b .link-style-icons .a-z:after {
   background-position: 0 -41px;
   height: 18px;
   width: 18px;
 }
-
-.search:after {
+.link-style-icons .search:after {
   position: absolute;
   content: "";
   display: block;
@@ -107,10 +104,10 @@
   height: 18px;
   width: 18px;
 }
-.skin-b .search:after {
+.skin-b .link-style-icons .search:after {
   top: 3px;
 }
-.skin-b .search:after {
+.skin-b .link-style-icons .search:after {
   background-position: 0 -23px;
   height: 18px;
   width: 18px;
@@ -172,9 +169,6 @@
 #ui-wrapper #ui-global-links {
   float: left;
 }
-#ui-wrapper #ui-global-links ul, #ui-wrapper #ui-global-links li {
-  line-height: 0;
-}
 #ui-wrapper #ui-global-links ul {
   margin: 4px 0 0;
   *zoom: 1;
@@ -191,8 +185,11 @@
   display: block;
   float: left;
   margin-right: 5px;
+  text-indent: 110%;
+  white-space: nowrap;
+  overflow: hidden;
 }
-#ui-wrapper #ui-global-links a.icon {
+.link-style-icons #ui-wrapper #ui-global-links a.icon {
   position: relative;
   height: 20px;
   width: 20px;
@@ -204,11 +201,9 @@
   background: -o-linear-gradient(top, #f7f7f7, #d6d6d6), #d6d6d6;
   background: -ms-linear-gradient(top, #f7f7f7, #d6d6d6), #d6d6d6;
   background: linear-gradient(top, #f7f7f7, #d6d6d6), #d6d6d6;
-  display: inline-block;
-  text-indent: 110%;
-  white-space: nowrap;
-  overflow: hidden;
+  display: block;
   padding: 13px;
+  color: red;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
@@ -218,6 +213,9 @@
   -moz-box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 1px 0px;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 1px 0px;
   border: 1px solid #eee;
+}
+.link-style-text #ui-wrapper #ui-global-links a.icon {
+  padding: 13px;
 }
 .skin-b #ui-wrapper #ui-global-links a.icon {
   background: #262626;
@@ -229,6 +227,9 @@
   background: -ms-linear-gradient(top, #262626, #0d0d0d), #262626;
   background: linear-gradient(top, #262626, #0d0d0d), #262626;
   border: 1px solid #333;
+}
+#ui-wrapper .icon-style-icons #ui-global-links ul, #ui-wrapper .icon-style-icons #ui-global-links li {
+  line-height: 0;
 }
 #ui-wrapper #gsa-search {
   float: left;

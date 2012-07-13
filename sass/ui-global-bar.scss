@@ -36,12 +36,37 @@ $experimental-support-for-svg: true;
 
 
 @include all-uigb-light-sprites;
-.phonebook:after { @include iconReplaceUigb; @include uigb-light-sprite(phonebook, $dimensions: true); .skin-b & { @include uigb-dark-sprite(phonebook, $dimensions: true); }}
-.maps:after { @include iconReplaceUigb; @include uigb-light-sprite(maps, $dimensions: true); .skin-b & { @include uigb-dark-sprite(maps, $dimensions: true); }}
-.a-z:after { @include iconReplaceUigb; @include uigb-light-sprite(a-z, $dimensions: true); .skin-b & { @include uigb-dark-sprite(a-z, $dimensions: true); }}
-.search:after { @include iconReplaceUigb; @include uigb-light-sprite(search, $dimensions: true); .skin-b & { @include uigb-dark-sprite(search, $dimensions: true); }}
 
-
+.link-style-icons {
+  .phonebook:after { 
+    @include iconReplaceUigb; 
+    @include uigb-light-sprite(phonebook, $dimensions: true); 
+    .skin-b & { 
+      @include uigb-dark-sprite(phonebook, $dimensions: true); 
+    }
+  }
+  .maps:after { 
+    @include iconReplaceUigb; 
+    @include uigb-light-sprite(maps, $dimensions: true); 
+    .skin-b & { 
+      @include uigb-dark-sprite(maps, $dimensions: true); 
+    }
+  }
+  .a-z:after { 
+    @include iconReplaceUigb; 
+    @include uigb-light-sprite(a-z, $dimensions: true); 
+    .skin-b & { 
+      @include uigb-dark-sprite(a-z, $dimensions: true); 
+    }
+  }
+  .search:after { 
+    @include iconReplaceUigb; 
+    @include uigb-light-sprite(search, $dimensions: true); 
+    .skin-b & { 
+      @include uigb-dark-sprite(search, $dimensions: true); 
+    }
+  }
+}
 
 #ui-wrapper {
 	@include background-with-css2-fallback(linear-gradient(top, #F7F7F7, #D6D6D6), #F7F7F7);
@@ -82,8 +107,6 @@ $experimental-support-for-svg: true;
 	#ui-global-links {
 		float: left;
 
-		ul, li { line-height: 0; }
-
 		ul {
 			margin: 4px 0 0;
 			@include legacy-pie-clearfix;
@@ -98,7 +121,8 @@ $experimental-support-for-svg: true;
 		}
 
 		a.icon {
-			position: relative;
+		  .link-style-icons & {
+      position: relative;
 			height: 20px;
 			width: 20px;
 			@include background-with-css2-fallback(linear-gradient(top, #F7F7F7, #D6D6D6), #D6D6D6);
@@ -108,6 +132,11 @@ $experimental-support-for-svg: true;
 			@include border-radius(50%);
 			@include box-shadow(rgba(0,0,0,.3) 0px 2px 1px 0px);
 			border: 1px solid #eee;
+			}
+			
+			.link-style-text & {
+  			padding: 13px;
+			}
 
 			.skin-b & {
 				@include background-with-css2-fallback(linear-gradient(top, #262626, #0D0D0D), #262626);
@@ -115,6 +144,10 @@ $experimental-support-for-svg: true;
 			}
 		}
 	}
+	
+	.icon-style-icons #ui-global-links {
+	   ul, li { line-height: 0; }
+	 }
 
 	#gsa-search {  
 		float: left;

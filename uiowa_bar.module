@@ -20,6 +20,7 @@ function uiowa_bar_preprocess_html(&$vars) {
   
   // Add a body class for the active theme name.
   $vars['classes_array'][] = theme_get_setting('ui_globalbar');
+  $vars['classes_array'][] = theme_get_setting('ui_globalbar_link_style');
 }
 
 
@@ -85,6 +86,17 @@ function uiowa_bar_form_system_theme_settings_alter(&$form, &$form_state)  {
     '#options' => array(
       'skin-a' => t('Light Theme'),
       'skin-b' => t('Dark Theme'),
+    ),
+  );
+  
+  $form['at-settings']['ui_branding']['ui_globalbar_link_style'] = array(
+    '#type' => 'select',
+    '#title' => t('Link Style'),
+    '#default_value' => theme_get_setting('ui_globalbar_link_style', variable_get('theme_default','none')),
+    '#description' => t('Choose the link style for the UI Branded Bar action links'),
+    '#options' => array(
+      'link-style-icons' => t('Icon-based'),
+      'link-style-text' => t('Text-based'),
     ),
   );
 }
