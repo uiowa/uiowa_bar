@@ -79,9 +79,9 @@ function uiowa_bar_form_system_theme_settings_alter(&$form, &$form_state)  {
 
   $form['at-settings']['ui_branding']['ui_globalbar'] = array(
     '#type' => 'select',
-    '#title' => t('UI Branded Bar'),
+    '#title' => t('Color Palette'),
     '#default_value' => theme_get_setting('ui_globalbar', variable_get('theme_default','none')),
-    '#description' => t(''),
+    '#description' => t('Choose the color palette of the UI Branded Bar'),
     '#options' => array(
       'skin-a' => t('Light Theme'),
       'skin-b' => t('Dark Theme'),
