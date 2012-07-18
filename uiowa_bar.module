@@ -70,6 +70,9 @@ function uiowa_bar_theme(){
 function uiowa_bar_page_build(&$page) {
   global $theme_key;
   if (variable_get('theme_default','none') === $theme_key) {
-    print theme('uiowa_bar');
+    $page['page_top']['uiowa_bar'] = array(
+      '#markup' => theme('uiowa_bar'),
+      '#weight' => 25,
+    );
   }
 }
