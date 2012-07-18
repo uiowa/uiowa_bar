@@ -2,54 +2,44 @@
  * @file
  * UI Global Bar Stles
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/test2\/modules\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\0000312}}
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/test2\/modules\/uiowa_bar\/ui-header\/uigb-light\/\*\.png}line{font-family:\0000382}}
 .uigb-light-sprite, .uigb-light-a-z, .uigb-light-arrow-down, .uigb-light-maps, .uigb-light-phonebook, .uigb-light-search, .uigb-light-ui-logo, .link-style-icons .phonebook:after, .link-style-icons .maps:after, .link-style-icons .a-z:after, .link-style-icons .search:after, #ui-wrapper #ui-logo, #ui-wrapper #gsa-search #uniform-sitesearch:after {
   background: url('images/ui-header/uigb-light-s7a081c391b.png') no-repeat;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/test2\/modules\/uiowa_bar\/ui-header\/uigb-dark\/\*\.png}line{font-family:\0000382}}
 .uigb-dark-sprite, .skin-b .link-style-icons .phonebook:after, .skin-b .link-style-icons .maps:after, .skin-b .link-style-icons .a-z:after, .skin-b .link-style-icons .search:after, .skin-b #ui-wrapper #ui-logo, .skin-b #ui-wrapper #gsa-search #uniform-sitesearch:after {
   background: url('images/ui-header/uigb-dark-see7d9d41d2.png') no-repeat;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby193\/lib\/ruby\/gems\/1\.9\.1\/gems\/compass-0\.12\.1\/frameworks\/compass\/stylesheets\/compass\/utilities\/sprites\/_base\.scss}line{font-family:\0000360}}
 .uigb-light-a-z {
   background-position: 0 -41px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby193\/lib\/ruby\/gems\/1\.9\.1\/gems\/compass-0\.12\.1\/frameworks\/compass\/stylesheets\/compass\/utilities\/sprites\/_base\.scss}line{font-family:\0000360}}
 .uigb-light-arrow-down {
   background-position: 0 -95px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby193\/lib\/ruby\/gems\/1\.9\.1\/gems\/compass-0\.12\.1\/frameworks\/compass\/stylesheets\/compass\/utilities\/sprites\/_base\.scss}line{font-family:\0000360}}
 .uigb-light-maps {
   background-position: 0 -59px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby193\/lib\/ruby\/gems\/1\.9\.1\/gems\/compass-0\.12\.1\/frameworks\/compass\/stylesheets\/compass\/utilities\/sprites\/_base\.scss}line{font-family:\0000360}}
 .uigb-light-phonebook {
   background-position: 0 -77px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby193\/lib\/ruby\/gems\/1\.9\.1\/gems\/compass-0\.12\.1\/frameworks\/compass\/stylesheets\/compass\/utilities\/sprites\/_base\.scss}line{font-family:\0000360}}
 .uigb-light-search {
   background-position: 0 -23px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby193\/lib\/ruby\/gems\/1\.9\.1\/gems\/compass-0\.12\.1\/frameworks\/compass\/stylesheets\/compass\/utilities\/sprites\/_base\.scss}line{font-family:\0000360}}
 .uigb-light-ui-logo {
   background-position: 0 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/test2\/modules\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\0000339}}
 .link-style-icons .phonebook:after {
   position: absolute;
   content: "";
