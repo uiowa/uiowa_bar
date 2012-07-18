@@ -2,7 +2,7 @@
  * @file
  * UI Global Bar Stles
  */
-* {
+#ui-wrapper * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
