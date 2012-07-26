@@ -8,7 +8,7 @@
 		  evt.preventDefault();
 		  
 		  
-		  $("#ui-global-bar #search-box").toggle();
+		  $("#ui-global-bar #search-box").css('height', '28px').css('overflow', 'hidden').toggle('slow');
 		  $(this).toggleClass("expanded"); 
 	   });
    });
