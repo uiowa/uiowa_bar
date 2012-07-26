@@ -10,7 +10,7 @@
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/test2\/modules\/uiowa_bar\/ui-header\/uigb-light\/\*\.png}line{font-family:\0000382}}
-.uigb-light-sprite, .uigb-light-a-z, .uigb-light-arrow-down, .uigb-light-maps, .uigb-light-phonebook, .uigb-light-search, .uigb-light-ui-logo, .link-style-icons .phonebook:after, .link-style-icons .maps:after, .link-style-icons .a-z:after, .link-style-icons .search:after, #ui-wrapper #ui-logo, #ui-wrapper #gsa-search #uniform-sitesearch:after {
+.uigb-light-sprite, .link-style-icons .phonebook:after, .link-style-icons .maps:after, .link-style-icons .a-z:after, .link-style-icons .search:after, #ui-wrapper #ui-logo, #ui-wrapper #gsa-search #uniform-sitesearch:after {
   background: url('images/ui-header/uigb-light-s7a081c391b.png') no-repeat;
 }
 
@@ -19,37 +19,7 @@
   background: url('images/ui-header/uigb-dark-see7d9d41d2.png') no-repeat;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby193\/lib\/ruby\/gems\/1\.9\.1\/gems\/compass-0\.12\.1\/frameworks\/compass\/stylesheets\/compass\/utilities\/sprites\/_base\.scss}line{font-family:\0000360}}
-.uigb-light-a-z {
-  background-position: 0 -41px;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby193\/lib\/ruby\/gems\/1\.9\.1\/gems\/compass-0\.12\.1\/frameworks\/compass\/stylesheets\/compass\/utilities\/sprites\/_base\.scss}line{font-family:\0000360}}
-.uigb-light-arrow-down {
-  background-position: 0 -95px;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby193\/lib\/ruby\/gems\/1\.9\.1\/gems\/compass-0\.12\.1\/frameworks\/compass\/stylesheets\/compass\/utilities\/sprites\/_base\.scss}line{font-family:\0000360}}
-.uigb-light-maps {
-  background-position: 0 -59px;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby193\/lib\/ruby\/gems\/1\.9\.1\/gems\/compass-0\.12\.1\/frameworks\/compass\/stylesheets\/compass\/utilities\/sprites\/_base\.scss}line{font-family:\0000360}}
-.uigb-light-phonebook {
-  background-position: 0 -77px;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby193\/lib\/ruby\/gems\/1\.9\.1\/gems\/compass-0\.12\.1\/frameworks\/compass\/stylesheets\/compass\/utilities\/sprites\/_base\.scss}line{font-family:\0000360}}
-.uigb-light-search {
-  background-position: 0 -23px;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Ruby193\/lib\/ruby\/gems\/1\.9\.1\/gems\/compass-0\.12\.1\/frameworks\/compass\/stylesheets\/compass\/utilities\/sprites\/_base\.scss}line{font-family:\0000360}}
-.uigb-light-ui-logo {
-  background-position: 0 0;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/test2\/modules\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\0000339}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/test2\/modules\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\0000338}}
 .link-style-icons .phonebook:after {
   position: absolute;
   content: "";
@@ -64,13 +34,13 @@
 .skin-b .link-style-icons .phonebook:after {
   top: 3px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/test2\/modules\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\0000342}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/test2\/modules\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\0000341}}
 .skin-b .link-style-icons .phonebook:after {
   background-position: 0 -77px;
   height: 18px;
   width: 18px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/test2\/modules\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\0000346}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/test2\/modules\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\0000343}}
 .link-style-icons .maps:after {
   position: absolute;
   content: "";
@@ -85,13 +55,13 @@
 .skin-b .link-style-icons .maps:after {
   top: 3px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/test2\/modules\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\0000349}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/test2\/modules\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\0000346}}
 .skin-b .link-style-icons .maps:after {
   background-position: 0 -59px;
   height: 18px;
   width: 18px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/test2\/modules\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\0000353}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/test2\/modules\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\0000348}}
 .link-style-icons .a-z:after {
   position: absolute;
   content: "";
@@ -106,13 +76,13 @@
 .skin-b .link-style-icons .a-z:after {
   top: 3px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/test2\/modules\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\0000356}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/test2\/modules\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\0000351}}
 .skin-b .link-style-icons .a-z:after {
   background-position: 0 -41px;
   height: 18px;
   width: 18px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/test2\/modules\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\0000360}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/test2\/modules\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\0000353}}
 .link-style-icons .search:after {
   position: absolute;
   content: "";
@@ -127,14 +97,14 @@
 .skin-b .link-style-icons .search:after {
   top: 3px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/test2\/modules\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\0000363}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/test2\/modules\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\0000356}}
 .skin-b .link-style-icons .search:after {
   background-position: 0 -23px;
   height: 18px;
   width: 18px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/test2\/modules\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\0000369}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/test2\/modules\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\0000360}}
 #ui-wrapper {
   background: #f7f7f7;
   background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y3ZjdmNyIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Q2ZDZkNiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA=='), #f7f7f7;
@@ -152,11 +122,11 @@
   z-index: 1;
   height: 40px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/test2\/modules\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\0000377}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/test2\/modules\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\0000368}}
 .skin-b #ui-wrapper {
   background: #3B3B3C;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/test2\/modules\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\0000381}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/test2\/modules\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\0000372}}
 #ui-wrapper .container {
   *zoom: 1;
   position: relative;
@@ -170,7 +140,7 @@
   overflow: hidden;
   visibility: hidden;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/test2\/modules\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\0000386}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/test2\/modules\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\0000377}}
 #ui-wrapper #ui-logo {
   position: absolute;
   top: -3px;
@@ -183,24 +153,24 @@
   width: 175px;
   background-position: 0 10px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/test2\/modules\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\0000397}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/test2\/modules\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\0000388}}
 #ui-wrapper #ui-logo a {
   display: block;
   height: 100%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/test2\/modules\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\0000399}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/test2\/modules\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\0000390}}
 .skin-b #ui-wrapper #ui-logo {
   background-position: 0 10px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/test2\/modules\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003104}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/test2\/modules\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\0000395}}
 #ui-wrapper #ui-global-bar-nav {
   float: right;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/test2\/modules\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003106}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/test2\/modules\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\0000397}}
 #ui-wrapper #ui-global-links {
   float: left;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/test2\/modules\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003109}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/test2\/modules\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003100}}
 #ui-wrapper #ui-global-links ul {
   margin: 4px 0 0;
   *zoom: 1;
@@ -214,7 +184,7 @@
   overflow: hidden;
   visibility: hidden;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/test2\/modules\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003115}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/test2\/modules\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003106}}
 #ui-wrapper #ui-global-links li {
   display: block;
   float: left;
@@ -222,8 +192,9 @@
   text-indent: 110%;
   white-space: nowrap;
   overflow: hidden;
+  padding-bottom: 2px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/test2\/modules\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003123}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/test2\/modules\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003115}}
 .link-style-icons #ui-wrapper #ui-global-links a.icon {
   position: relative;
   height: 20px;
@@ -249,11 +220,11 @@
   box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 1px 0px;
   border: 1px solid #eee;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/test2\/modules\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003136}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/test2\/modules\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003128}}
 .link-style-text #ui-wrapper #ui-global-links a.icon {
   padding: 13px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/test2\/modules\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003140}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/test2\/modules\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003132}}
 .skin-b #ui-wrapper #ui-global-links a.icon {
   background: #262626;
   background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzI2MjYyNiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzBkMGQwZCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA=='), #262626;
@@ -265,25 +236,25 @@
   background: linear-gradient(top, #262626, #0d0d0d), #262626;
   border: 1px solid #333;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/test2\/modules\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003148}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/test2\/modules\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003140}}
 #ui-wrapper .icon-style-icons #ui-global-links ul, #ui-wrapper .icon-style-icons #ui-global-links li {
   line-height: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/test2\/modules\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003151}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/test2\/modules\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003143}}
 #ui-wrapper #gsa-search {
   float: left;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/test2\/modules\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003153}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/test2\/modules\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003145}}
 #ui-wrapper #gsa-search * {
   float: left;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/test2\/modules\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003156}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/test2\/modules\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003148}}
 #ui-wrapper #gsa-search fieldset {
   border: none;
   margin: 5px 0 0 -20px;
   padding: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/test2\/modules\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003162}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/test2\/modules\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003154}}
 #ui-wrapper #gsa-search #search-terms {
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
@@ -297,13 +268,13 @@
   width: 200px;
   margin-right: 10px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/test2\/modules\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003171}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/test2\/modules\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003163}}
 .skin-b #ui-wrapper #gsa-search #search-terms {
   background-color: #BABABA;
   color: #414042;
   border-color: #8A8B8A;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/test2\/modules\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003178}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/test2\/modules\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003170}}
 #ui-wrapper #gsa-search #site-search-label {
   text-shadow: rgba(255, 255, 255, 0.45) 0px 1px 0px;
   color: #414042;
@@ -313,12 +284,12 @@
   font-weight: bold;
   margin: 6px 8px 0 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/test2\/modules\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003187}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/test2\/modules\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003179}}
 .skin-b #ui-wrapper #gsa-search #site-search-label {
   color: #DCDDDE;
   text-shadow: rgba(0, 0, 0, 0.6) 0px -1px 0px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/test2\/modules\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003194}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/test2\/modules\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003186}}
 #ui-wrapper #gsa-search #uniform-sitesearch {
   background: #d6d6d6;
   background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y3ZjdmNyIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Q2ZDZkNiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA=='), #d6d6d6;
@@ -340,7 +311,7 @@
   margin: 0px 10px 0 0;
   position: relative;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/test2\/modules\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003202}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/test2\/modules\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003194}}
 .skin-b #ui-wrapper #gsa-search #uniform-sitesearch {
   background: #262626;
   background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzI2MjYyNiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzBkMGQwZCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA=='), #262626;
@@ -352,7 +323,7 @@
   background: linear-gradient(top, #262626, #0d0d0d), #262626;
   border: 1px solid #333;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/test2\/modules\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003207}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/test2\/modules\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003199}}
 #ui-wrapper #gsa-search #uniform-sitesearch:after {
   position: absolute;
   right: 5px;
@@ -363,13 +334,13 @@
   width: 9px;
   content: "";
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/test2\/modules\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003215}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/test2\/modules\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003207}}
 .skin-b #ui-wrapper #gsa-search #uniform-sitesearch:after {
   background-position: 0 -95px;
   height: 9px;
   width: 9px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/test2\/modules\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003220}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/test2\/modules\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003212}}
 #ui-wrapper #gsa-search #uniform-sitesearch span {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
@@ -379,12 +350,12 @@
   text-shadow: rgba(255, 255, 255, 0.45) 0px 1px 0px;
   padding: 4px 20px 4px 10px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/test2\/modules\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003229}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/test2\/modules\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003221}}
 .skin-b #ui-wrapper #gsa-search #uniform-sitesearch span {
   color: #DCDDDE;
   text-shadow: rgba(0, 0, 0, 0.6) 0px -1px 0px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/test2\/modules\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003235}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/test2\/modules\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003227}}
 #ui-wrapper #gsa-search #uniform-sitesearch #sitesearch {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -399,7 +370,7 @@
   border: 0;
   cursor: pointer;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/test2\/modules\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003249}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/wamp\/www\/sitenow_standard\/sites\/test2\/modules\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003241}}
 #ui-wrapper #gsa-search #submit-search {
   -webkit-appearance: none;
   -moz-appearance: none;

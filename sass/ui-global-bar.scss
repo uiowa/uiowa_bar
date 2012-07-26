@@ -33,36 +33,27 @@ $sans-serif-arial-helvetica:  Arial, Helvetica, sans-serif;
 
 $experimental-support-for-svg: true; // set svg support for IE9
 
-@include all-uigb-light-sprites;
 
 .link-style-icons {
   .phonebook:after { 
     @include iconReplaceUigb; 
-    @include uigb-light-sprite(phonebook, $dimensions: true); 
-    .skin-b & { 
-      @include uigb-dark-sprite(phonebook, $dimensions: true); 
-    }
+    @include uigb-light-sprite(phonebook, $dimensions: true);
+    .skin-b & { @include uigb-dark-sprite(phonebook, $dimensions: true); }
   }
   .maps:after { 
     @include iconReplaceUigb; 
-    @include uigb-light-sprite(maps, $dimensions: true); 
-    .skin-b & { 
-      @include uigb-dark-sprite(maps, $dimensions: true); 
-    }
+    @include uigb-light-sprite(maps, $dimensions: true);
+    .skin-b & { @include uigb-dark-sprite(maps, $dimensions: true); }
   }
   .a-z:after { 
     @include iconReplaceUigb; 
-    @include uigb-light-sprite(a-z, $dimensions: true); 
-    .skin-b & { 
-      @include uigb-dark-sprite(a-z, $dimensions: true); 
-    }
+	@include uigb-light-sprite(a-z, $dimensions: true);
+    .skin-b & { @include uigb-dark-sprite(a-z, $dimensions: true); }
   }
   .search:after { 
     @include iconReplaceUigb; 
-    @include uigb-light-sprite(search, $dimensions: true); 
-    .skin-b & { 
-      @include uigb-dark-sprite(search, $dimensions: true); 
-    }
+    @include uigb-light-sprite(search, $dimensions: true);
+    .skin-b & { @include uigb-dark-sprite(search, $dimensions: true); }
   }
 }
 
@@ -117,24 +108,25 @@ $experimental-support-for-svg: true; // set svg support for IE9
 			float: left;
 			margin-right: 5px;
 			@include hide-text;
+			padding-bottom: 2px; // provide extra space for drop shadow, excluded from overflow hidden declaration
 		}
 
 		a.icon {
-		  .link-style-icons & {
-      position: relative;
-			height: 20px;
-			width: 20px;
-			@include background-with-css2-fallback(linear-gradient(top, #F7F7F7, #D6D6D6), #D6D6D6);
-			display: block;
-			padding: 13px;
-			color: red;
-			@include border-radius(50%);
-			@include box-shadow(rgba(0,0,0,.3) 0px 2px 1px 0px);
-			border: 1px solid #eee;
+			.link-style-icons & {
+	      		position: relative;
+				height: 20px;
+				width: 20px;
+				@include background-with-css2-fallback(linear-gradient(top, #F7F7F7, #D6D6D6), #D6D6D6);
+				display: block;
+				padding: 13px;
+				color: red;
+				@include border-radius(50%);
+				@include box-shadow(rgba(0,0,0,.3) 0px 2px 1px 0px);
+				border: 1px solid #eee;
 			}
 			
 			.link-style-text & {
-  			padding: 13px;
+  				padding: 13px;
 			}
 
 			.skin-b & {
