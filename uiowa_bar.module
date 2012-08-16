@@ -6,13 +6,19 @@
  * Adds the University of Iowa Branding Bar to your theme
  */
 
-/* Include CSS Assets */
-drupal_add_css(drupal_get_path('module', 'uiowa_bar') . '/css/ui-global-bar.css');
-
-/* Include Javascript Assets */
-drupal_add_js(drupal_get_path('module', 'uiowa_bar') . '/js/uniform/jquery.uniform.min.js');
-drupal_add_js(drupal_get_path('module', 'uiowa_bar') . '/js/ui-header.js');
-
+/**
+ * Implements hook_init().
+ */
+function uiowa_bar_init() {
+  if (arg(0) != 'admin') {
+    /* Include CSS Assets */
+    drupal_add_css(drupal_get_path('module', 'uiowa_bar') . '/css/ui-global-bar.css');
+    
+    /* Include Javascript Assets */
+    drupal_add_js(drupal_get_path('module', 'uiowa_bar') . '/js/uniform/jquery.uniform.min.js');
+    drupal_add_js(drupal_get_path('module', 'uiowa_bar') . '/js/ui-header.js');
+  }
+}
 
 /* HTML Preprocesses */
 function uiowa_bar_preprocess_html(&$vars) {
