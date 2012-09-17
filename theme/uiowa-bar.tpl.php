@@ -32,7 +32,7 @@
               
               <label for="sitesearch" id="site-search-label">for</label><div id="sitesearch-container">
               <select id="sitesearch" name="sitesearch">
-                <option id="search-this-site" value="' . $_SERVER['SERVER_NAME'] . '">This Site</option>
+                <option id="search-this-site" value="<?php print $_SERVER['SERVER_NAME'] ?>">This Site</option>
                 <option id="search-ui" value="www.uiowa.edu">All Sites</option>
               </select>
 
