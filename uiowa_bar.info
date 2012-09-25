@@ -1,5 +1,5 @@
 name = Uiowa Bar
 description = Adds the University of Iowa Branding Bar to your theme
-package = UIowa Module Package
+package = UIowa
 core = 7.x
 
