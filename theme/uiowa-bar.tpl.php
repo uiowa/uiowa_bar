@@ -5,7 +5,7 @@
  * This template handles the layout of the Uiowa Branding Bar.
  *
  * Variables available:
- * 
+ *
  *
  */
 ?>
@@ -27,9 +27,8 @@
           <fieldset>
             <legend class="element-hidden">Search</legend>
             <div id="search-box">
-              <label class="element-hidden" for="search-terms">Search Terms</label> 
-              <input id="search-terms" maxlength="256" name="q" placeholder="Start Searching ..." size="15" type="text" value="" /> 
-              
+              <label class="element-hidden" for="search-terms">Search Terms</label>
+              <input id="search-terms" maxlength="256" name="q" placeholder="Start Searching ..." size="15" type="text" value="" />
               <label for="sitesearch" id="site-search-label">for</label><div id="sitesearch-container">
               <select id="sitesearch" name="sitesearch">
                 <option id="search-this-site" value="<?php print $_SERVER['SERVER_NAME'] ?>">This Site</option>
