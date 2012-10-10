@@ -8,6 +8,9 @@
  *
  *
  */
+
+// Base URL without the protocol - needed for the Google Search Appliance
+$base_url_no_protocol = preg_replace('/^https?:\/\//i', '', $GLOBALS['base_url']);
 ?>
 
 <div id="ui-wrapper"><div class="container">
@@ -31,7 +34,7 @@
               <input id="search-terms" maxlength="256" name="q" placeholder="Start Searching ..." size="15" type="text" value="" />
               <label for="sitesearch" id="site-search-label">for</label><div id="sitesearch-container">
               <select id="sitesearch" name="sitesearch">
-                <option id="search-this-site" value="<?php print $_SERVER['SERVER_NAME'] ?>">This Site</option>
+                <option id="search-this-site" value="<?php print $base_url_no_protocol ?>">This Site</option>
                 <option id="search-ui" value="www.uiowa.edu">All Sites</option>
               </select>
 
