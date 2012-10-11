@@ -34,24 +34,24 @@ $sans-serif-arial-helvetica:  Arial, Helvetica, sans-serif;
 $experimental-support-for-svg: true; // set svg support for IE9
 
 
-.link-style-icons {
-  .phonebook:after { 
-    @include iconReplaceUigb; 
+.uiowa-icon, {
+  .phonebook:after {
+    @include iconReplaceUigb;
     @include uigb-light-sprite(phonebook, $dimensions: true);
     .skin-b & { @include uigb-dark-sprite(phonebook, $dimensions: true); }
   }
-  .maps:after { 
-    @include iconReplaceUigb; 
+  .maps:after {
+    @include iconReplaceUigb;
     @include uigb-light-sprite(maps, $dimensions: true);
     .skin-b & { @include uigb-dark-sprite(maps, $dimensions: true); }
   }
-  .a-z:after { 
-    @include iconReplaceUigb; 
+  .a-z:after {
+    @include iconReplaceUigb;
 	@include uigb-light-sprite(a-z, $dimensions: true);
     .skin-b & { @include uigb-dark-sprite(a-z, $dimensions: true); }
   }
-  .search:after { 
-    @include iconReplaceUigb; 
+  .search:after {
+    @include iconReplaceUigb;
     @include uigb-light-sprite(search, $dimensions: true);
     .skin-b & { @include uigb-dark-sprite(search, $dimensions: true); }
   }
@@ -69,8 +69,8 @@ $experimental-support-for-svg: true; // set svg support for IE9
 		background: #3B3B3C;
 	}
 
-	.container { 
-		@include legacy-pie-clearfix; 
+	.container {
+		@include legacy-pie-clearfix;
 		position: relative;
 	}
 
@@ -103,16 +103,16 @@ $experimental-support-for-svg: true; // set svg support for IE9
 
 		}
 
-		li { 
+		li {
 			display: block;
 			float: left;
-			margin-right: 5px;
+			margin: 0 5px 0 0;
 			@include hide-text;
 			padding-bottom: 2px; // provide extra space for drop shadow, excluded from overflow hidden declaration
 		}
 
-		a.icon {
-			.link-style-icons & {
+		a {
+			&.uiowa-icon {
 	      		position: relative;
 				height: 20px;
 				width: 20px;
@@ -124,7 +124,7 @@ $experimental-support-for-svg: true; // set svg support for IE9
 				@include box-shadow(rgba(0,0,0,.3) 0px 2px 1px 0px);
 				border: 1px solid #eee;
 			}
-			
+
 			.link-style-text & {
   				padding: 13px;
 			}
@@ -135,12 +135,15 @@ $experimental-support-for-svg: true; // set svg support for IE9
 			}
 		}
 	}
-	
+
 	.icon-style-icons #ui-global-links {
 	   ul, li { line-height: 0; }
 	 }
 
-	#gsa-search {  
+	#gsa-search {
+		.form-item {
+			margin: 0;
+		}
 		float: left;
 		* { float: left; }
 
@@ -151,7 +154,7 @@ $experimental-support-for-svg: true; // set svg support for IE9
 			padding: 0;
 		}
 
-		#search-terms {
+		#edit-search-terms {
 			@include border-radius(6px);
 			padding: 5px 5px 5px 20px;
 			background-color: #333;
@@ -167,7 +170,7 @@ $experimental-support-for-svg: true; // set svg support for IE9
 			}
 		}
 
-		#site-search-label {
+		#site-search-label, .form-item-sitesearch label {
 			@include text-shadow(rgba(255,255,255,.45) 0px 1px 0px);
 			color: #414042;
 			font-family: $serif-large;
@@ -183,7 +186,7 @@ $experimental-support-for-svg: true; // set svg support for IE9
 		}
 
 
-		#uniform-sitesearch {
+		#uniform-edit-sitesearch {
 			@include background-with-css2-fallback(linear-gradient(top, #F7F7F7, #D6D6D6), #D6D6D6);
 			@include box-shadow(rgba(0,0,0,.3) 0px 2px 2px 0px);
 			@include border-radius(3px);
@@ -194,14 +197,14 @@ $experimental-support-for-svg: true; // set svg support for IE9
 			.skin-b & {
 				@include background-with-css2-fallback(linear-gradient(top, #262626, #0D0D0D), #262626);
 				border: 1px solid #333;
-			}		
+			}
 
-			&:after { 
-				position: absolute; 
-				right: 5px; 
+			&:after {
+				position: absolute;
+				right: 5px;
 				top: 8px;
-				display: block; 
-				@include uigb-light-sprite(arrow-down, $dimensions: true); 
+				display: block;
+				@include uigb-light-sprite(arrow-down, $dimensions: true);
 				content: "";
 
 				.skin-b & {
@@ -224,7 +227,7 @@ $experimental-support-for-svg: true; // set svg support for IE9
 				}
 			}
 
-			#sitesearch { 
+			#edit-sitesearch {
 				@include appearance(none);
 				background-color: transparent !important;
 				position: absolute;
@@ -238,10 +241,10 @@ $experimental-support-for-svg: true; // set svg support for IE9
 			}
 		}
 
-		#submit-search {
+		#edit-submit-search {
 			@include appearance(none);
 			border: 1px solid #FFCD05;
-			
+
 			@include background-with-css2-fallback(linear-gradient(top, #FFCD05, #D3AB2A), #FFCD05);
 			@include box-shadow(rgba(0,0,0,.3) 0px 2px 2px 0px);
 			@include border-radius(3px);

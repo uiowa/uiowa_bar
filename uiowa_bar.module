@@ -2,7 +2,7 @@
 
 /**
  * @file
- * 
+ *
  * Adds the University of Iowa Branding Bar to your theme
  */
 
@@ -13,7 +13,7 @@ function uiowa_bar_init() {
   if (arg(0) != 'admin') {
     /* Include CSS Assets */
     drupal_add_css(drupal_get_path('module', 'uiowa_bar') . '/css/ui-global-bar.css');
-    
+
     /* Include Javascript Assets */
     drupal_add_js(drupal_get_path('module', 'uiowa_bar') . '/js/uniform/jquery.uniform.min.js');
     drupal_add_js(drupal_get_path('module', 'uiowa_bar') . '/js/ui-header.js');
@@ -23,7 +23,7 @@ function uiowa_bar_init() {
 /* HTML Preprocesses */
 function uiowa_bar_preprocess_html(&$vars) {
   global $theme_key;
-  
+
   // Add a body class for the active theme name.
   $vars['classes_array'][] = theme_get_setting('ui_globalbar');
   $vars['classes_array'][] = theme_get_setting('ui_globalbar_link_style');
@@ -49,15 +49,15 @@ function uiowa_bar_form_system_theme_settings_alter(&$form, &$form_state)  {
       'skin-b' => t('Dark Theme'),
     ),
   );
-  
+
   $form['at-settings']['ui_branding']['ui_globalbar_link_style'] = array(
     '#type' => 'select',
     '#title' => t('Link Style'),
     '#default_value' => theme_get_setting('ui_globalbar_link_style', variable_get('theme_default','none')),
     '#description' => t('Choose the link style for the UI Branded Bar action links'),
     '#options' => array(
-      'link-style-icons' => t('Icon-based'),
-      'link-style-text' => t('Text-based'),
+      'uiowa-icon' => t('Icon-based'),
+      'uiowa-text' => t('Text-based'),
     ),
   );
 }
@@ -68,7 +68,10 @@ function uiowa_bar_theme(){
     'uiowa_bar' => array(
         'path'      => drupal_get_path('module', 'uiowa_bar').'/theme',
         'template'  => 'uiowa-bar',
-    )
+    ),
+    'uiowa_bar_link_list' => array(
+      'render element' => 'links',
+    ),
   );
 }
 
@@ -82,3 +85,155 @@ function uiowa_bar_page_build(&$page) {
     );
   }
 }
+
+/**
+ * Displays a list of links.
+ */
+function theme_uiowa_bar_link_list($variables = array()) {
+  $type = theme_get_setting('ui_globalbar_link_style');
+  $links = array();
+  foreach ($variables['links']['#children'] as $link) {
+    $links[] = l($link['label'], $link['url'], array('attributes' => array('class' => array($type, $link['class']))));
+  }
+  return theme('item_list', array('items' => $links));
+}
+
+/**
+ * Base URL without the protocol - needed for the Google Search Appliance.
+ */
+function base_url_no_protocol() {
+  $url = preg_replace('/^https?:\/\//i', '', $GLOBALS['base_url']);
+  return $url;
+}
+
+/**
+ * Build out the UIowa Bar.
+ */
+function build_uiowa_bar() {
+  $uiowa_bar = array(
+    'ui-global-bar' => array( // Create <div id="ui-global-bar">
+      '#attributes' => array('id' => array('ui-global-bar')),
+      '#type' => 'container',
+      'ui-logo' => array( // Create <div id="ui-logo">
+        '#attributes' => array('id' => array('ui-logo')),
+        '#type' => 'container',
+        'link' => array( // Create <a href="http://www.uiowa.edu">The University of Iowa</a></div>
+          '#type' => 'link',
+          '#title' => t('The University of Iowa'),
+          '#href' => 'http://www.uiowa.edu',
+        )
+      ),
+      'ui-global-bar-nav' => array(
+        '#attributes' => array('id' => array('ui-global-bar-nav')),
+        '#type' => 'container',
+        'ui-global-links' => array( // Create <div id="ui-global-links">
+          '#attributes' => array('id' => array('ui-global-links')),
+          '#type' => 'container',
+          'links' => array(
+            '#theme' => 'uiowa_bar_link_list',
+            '#children' => array(
+              0 => array(
+                'label' => t('Phonebook'),
+                'url' => 'http://www.uiowa.edu/homepage/directories/',
+                'class' => 'phonebook'
+              ),
+              1 => array(
+                'label' => t('Maps'),
+                'url' => 'http://www.uiowa.edu/homepage/hub/tours.html',
+                'class' => 'maps'
+              ),
+              2 => array(
+                'label' => t('A-Z'),
+                'url' => 'http://www.uiowa.edu/homepage/search/index.html',
+                'class' => 'a-z'
+              ),
+              3 => array(
+                'label' => t('Search'),
+                'url' => '#',
+                'class' => 'search'
+              )
+            )
+          )
+        ),
+        'gsa-search' => array(
+          '#attributes' => array('id' => array('gsa-search')),
+          '#type' => 'container',
+          'search-form' => drupal_get_form('uiowa_bar_search_form'),
+        )
+      )
+    )
+  );
+
+return $uiowa_bar;
+
+}
+
+/**
+ * Build out search form for the GSA.
+ */
+function uiowa_bar_search_form($form, &$form_state) {
+  $form = array();
+  $form['#action'] = 'http://search.uiowa.edu/search';
+  $form['#method'] = 'get';
+  $form['fieldset'] = array (
+    '#type' => 'fieldset'
+  );
+  $form['fieldset']['search-terms'] = array (
+    '#prefix' => '<legend class="element-hidden">Search</legend><div id="search-box">',
+    '#type' => 'textfield',
+    '#title' => t('Search Terms'),
+    '#title_display' => 'invisible',
+    '#attributes' => array(
+      'placeholder' => 'Start Searching ...'
+    ),
+    '#name' => 'q',
+    '#maxlength' => '256',
+    '#size' => '15'
+  );
+  $form['fieldset']['sitesearch'] = array (
+    '#prefix' => '<div id="sitesearch-container">',
+    '#type' => 'select',
+    '#title' => t('for'),
+    '#name' => 'sitesearch',
+    '#options' => array(
+      base_url_no_protocol() => 'This Site',
+      'www.uiowa.edu' => 'All Sites'
+    )
+  );
+  $form['fieldset']['submit-search'] = array (
+    '#type' => 'submit',
+    '#value' => t('Search'),
+    '#name' => 'btnG',
+    '#suffix' => '</div>'
+  );
+  $form['fieldset']['hidden-site'] = array (
+    '#type' => 'hidden',
+    '#value' => t('default_collection'),
+    '#name' => 'site',
+  );
+  $form['fieldset']['hidden-client'] = array (
+    '#type' => 'hidden',
+    '#value' => t('default_frontend'),
+    '#name' => 'client',
+  );
+  $form['fieldset']['hidden-output'] = array (
+    '#type' => 'hidden',
+    '#value' => t('xml_no_dtd'),
+    '#name' => 'output',
+  );
+  $form['fieldset']['hidden-proxystylesheet'] = array (
+    '#type' => 'hidden',
+    '#value' => t('default_frontend'),
+    '#name' => 'proxystylesheet',
+    '#suffix' => '</div>'
+  );
+  return $form;
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter.
+ */
+function uiowa_bar_preprocess_uiowa_bar(&$variables) {
+  $variables['uiowa_bar'] = build_uiowa_bar();
+}
+
