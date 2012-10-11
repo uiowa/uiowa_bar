@@ -10,12 +10,6 @@
  */
 ?>
 
-<?php
-
-dpm($uiowa_bar, "UIowa Bar");
-dpm(array_keys(theme_get_registry()));
-?>
-
 <div id="ui-wrapper">
   <div class="container">
     <?php print render($uiowa_bar); ?>
