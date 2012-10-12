@@ -117,62 +117,59 @@ function base_url_no_protocol() {
  * Build out the UIowa Bar.
  */
 function build_uiowa_bar() {
-  $uiowa_bar = array(
-    'ui-global-bar' => array( // Create <div id="ui-global-bar">
-      '#attributes' => array('id' => array('ui-global-bar')),
-      '#type' => 'container',
-      'ui-logo' => array( // Create <div id="ui-logo">
-        '#attributes' => array('id' => array('ui-logo')),
-        '#type' => 'container',
-        'link' => array( // Create <a href="http://www.uiowa.edu">The University of Iowa</a></div>
-          '#type' => 'link',
-          '#title' => t('The University of Iowa'),
-          '#href' => 'http://www.uiowa.edu',
-        )
+  $uiowa_bar = array();
+  $uiowa_bar['ui-global-bar'] = array(
+    '#attributes' => array('id' => array('ui-global-bar')),
+    '#type' => 'container',
+  );
+  $uiowa_bar['ui-global-bar']['ui-logo'] = array(
+    '#attributes' => array('id' => array('ui-logo')),
+    '#type' => 'container',
+  );
+  $uiowa_bar['ui-global-bar']['ui-logo']['link'] = array(
+    '#type' => 'link',
+    '#title' => t('The University of Iowa'),
+    '#href' => 'http://www.uiowa.edu',
+  );
+  $uiowa_bar['ui-global-bar']['ui-global-bar-nav'] = array(
+    '#attributes' => array('id' => array('ui-global-bar-nav')),
+    '#type' => 'container',
+  );
+  $uiowa_bar['ui-global-bar']['ui-global-bar-nav']['ui-global-links'] = array(
+    '#attributes' => array('id' => array('ui-global-links')),
+    '#type' => 'container',
+  );
+  $uiowa_bar['ui-global-bar']['ui-global-bar-nav']['ui-global-links']['links'] = array(
+    '#theme' => 'uiowa_bar_link_list',
+    '#children' => array(
+      0 => array(
+        'label' => t('Phonebook'),
+        'url' => 'http://www.uiowa.edu/homepage/directories/',
+        'class' => 'phonebook'
       ),
-      'ui-global-bar-nav' => array(
-        '#attributes' => array('id' => array('ui-global-bar-nav')),
-        '#type' => 'container',
-        'ui-global-links' => array( // Create <div id="ui-global-links">
-          '#attributes' => array('id' => array('ui-global-links')),
-          '#type' => 'container',
-          'links' => array(
-            '#theme' => 'uiowa_bar_link_list',
-            '#children' => array(
-              0 => array(
-                'label' => t('Phonebook'),
-                'url' => 'http://www.uiowa.edu/homepage/directories/',
-                'class' => 'phonebook'
-              ),
-              1 => array(
-                'label' => t('Maps'),
-                'url' => 'http://www.uiowa.edu/homepage/hub/tours.html',
-                'class' => 'maps'
-              ),
-              2 => array(
-                'label' => t('A-Z'),
-                'url' => 'http://www.uiowa.edu/homepage/search/index.html',
-                'class' => 'a-z'
-              ),
-              3 => array(
-                'label' => t('Search'),
-                'url' => '#',
-                'class' => 'search'
-              )
-            )
-          )
-        ),
-        'gsa-search' => array(
-          '#attributes' => array('id' => array('gsa-search')),
-          '#type' => 'container',
-          'search-form' => drupal_get_form('uiowa_bar_search_form'),
-        )
+      1 => array(
+        'label' => t('Maps'),
+        'url' => 'http://www.uiowa.edu/homepage/hub/tours.html',
+        'class' => 'maps'
+      ),
+      2 => array(
+        'label' => t('A-Z'),
+        'url' => 'http://www.uiowa.edu/homepage/search/index.html',
+        'class' => 'a-z'
+      ),
+      3 => array(
+        'label' => t('Search'),
+        'url' => '#',
+        'class' => 'search'
       )
     )
   );
-
-return $uiowa_bar;
-
+  $uiowa_bar['ui-global-bar']['ui-global-bar-nav']['gsa-search'] = array(
+    '#attributes' => array('id' => array('gsa-search')),
+    '#type' => 'container',
+  );
+  $uiowa_bar['ui-global-bar']['ui-global-bar-nav']['gsa-search']['search-form'] = drupal_get_form('uiowa_bar_search_form');
+  return $uiowa_bar;
 }
 
 /**
