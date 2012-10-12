@@ -20,7 +20,9 @@ function uiowa_bar_init() {
   }
 }
 
-/* HTML Preprocesses */
+/**
+ * Implements hook_preprocess_HOOK().
+ */
 function uiowa_bar_preprocess_html(&$vars) {
   global $theme_key;
 
@@ -29,8 +31,9 @@ function uiowa_bar_preprocess_html(&$vars) {
   $vars['classes_array'][] = theme_get_setting('ui_globalbar_link_style');
 }
 
-
-/* Implements hook_form_system_theme_settings_alter() to add Theme Customization to Theme Settings Page */
+/**
+ * Implements hook_form_system_theme_settings_alter().
+ */
 function uiowa_bar_form_system_theme_settings_alter(&$form, &$form_state)  {
   // Custom UI Branded Bar Styles
   $form['at-settings']['ui_branding'] = array(
@@ -62,7 +65,9 @@ function uiowa_bar_form_system_theme_settings_alter(&$form, &$form_state)  {
   );
 }
 
-/* Implement hook_theme() */
+/**
+ * Implements hook_theme().
+ */
 function uiowa_bar_theme(){
   return array(
     'uiowa_bar' => array(
@@ -75,7 +80,9 @@ function uiowa_bar_theme(){
   );
 }
 
-/* Add uiowa_bar markup to page */
+/**
+ * Add uiowa_bar markup to page
+ */
 function uiowa_bar_page_build(&$page) {
   global $theme_key;
   if (variable_get('theme_default','none') === $theme_key) {
