@@ -3,7 +3,7 @@
 /**
  * @file
  *
- * Adds the University of Iowa Branding Bar to your theme
+ * Adds the University of Iowa Branding Bar to each page
  */
 
 /**
@@ -81,7 +81,7 @@ function uiowa_bar_theme(){
 }
 
 /**
- * Add uiowa_bar markup to page
+ * Add UIowa Bar markup to page
  */
 function uiowa_bar_page_build(&$page) {
   global $theme_key;
@@ -94,7 +94,7 @@ function uiowa_bar_page_build(&$page) {
 }
 
 /**
- * Displays a list of links.
+ * Theme function to build a list of action links for the UIowa Bar.
  */
 function theme_uiowa_bar_link_list($variables = array()) {
   $type = theme_get_setting('ui_globalbar_link_style');
