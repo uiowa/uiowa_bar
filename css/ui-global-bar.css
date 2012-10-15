@@ -119,6 +119,7 @@ a.uiowa-icon.search:before #ui-wrapper * {
   position: relative;
   z-index: 1;
   height: 40px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .skin-b #ui-wrapper {
   background: #3B3B3C;
@@ -316,7 +317,6 @@ a.uiowa-icon.search:before #ui-wrapper * {
   width: 9px;
 }
 #ui-wrapper #gsa-search #uniform-edit-sitesearch span {
-  font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   font-size: .8em;
   color: #414042;

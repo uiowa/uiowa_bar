@@ -62,6 +62,7 @@ a.uiowa-icon {
 	position: relative;
 	z-index: 1;
 	height: 40px;
+	font-family: $sans-serif-arial-helvetica;
 
 	.skin-b & {
 		background: #3B3B3C;
@@ -211,7 +212,6 @@ a.uiowa-icon {
 			}
 
 			span {
-				font-family: $sans-serif-arial-helvetica;
 				font-weight: bold;
 				font-size: .8em;
 				color: #414042;
