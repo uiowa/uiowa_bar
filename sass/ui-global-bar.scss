@@ -126,6 +126,10 @@ a.uiowa-icon {
 				@include border-radius(50%);
 				@include box-shadow(rgba(0,0,0,.3) 0px 2px 1px 0px);
 				border: 1px solid #eee;
+				&:focus, &:hover {
+					@include background-with-css2-fallback(linear-gradient(top, #D6D6D6, #F7F7F7), #F7F7F7);
+					@include box-shadow(rgba(0,0,0,.3) 0px 0px 0px 0px);
+				}
 			}
 
 			.link-style-text & {
@@ -135,6 +139,10 @@ a.uiowa-icon {
 			.skin-b & {
 				@include background-with-css2-fallback(linear-gradient(top, #262626, #0D0D0D), #262626);
 				border: 1px solid #333;
+				&:focus, &:hover {
+					@include background-with-css2-fallback(linear-gradient(top, #bfbfbf, #3f3f3f), #131313);
+					//@include box-shadow(rgba(0,0,0,.3) 0px 0px 0px 0px);
+				}
 			}
 		}
 	}
