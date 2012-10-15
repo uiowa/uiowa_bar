@@ -28,7 +28,7 @@ function uiowa_bar_preprocess_html(&$vars) {
 
   // Add a body class for the active theme name.
   $vars['classes_array'][] = theme_get_setting('ui_globalbar');
-  $vars['classes_array'][] = theme_get_setting('ui_globalbar_link_style');
+  $vars['classes_array'][] = theme_get_setting('ui_globalbar_link_style') . '-style';
 }
 
 /**
