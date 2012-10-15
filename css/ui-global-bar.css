@@ -2,39 +2,38 @@
  * @file
  * UI Global Bar Stles
  */
-#ui-wrapper * {
+.uigb-light-sprite, a.uiowa-icon.phonebook:before, a.uiowa-icon.maps:before, a.uiowa-icon.a-z:before, a.uiowa-icon.search:before, #ui-wrapper #ui-logo, #ui-wrapper #gsa-search #uniform-edit-sitesearch:after {
+  background: url('images/ui-header/uigb-light-s7a081c391b.png') no-repeat;
+}
+
+.uigb-dark-sprite, .skin-b a.uiowa-icon.phonebook:before, .skin-b a.uiowa-icon.maps:before, .skin-b a.uiowa-icon.a-z:before, .skin-b a.uiowa-icon.search:before, .skin-b #ui-wrapper #ui-logo, .skin-b #ui-wrapper #gsa-search #uniform-edit-sitesearch:after {
+  background: url('images/ui-header/uigb-dark-see7d9d41d2.png') no-repeat;
+}
+
+a.uiowa-icon.phonebook:before {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 5px;
+  left: 4px;
+  background-position: 0 -77px;
+  height: 18px;
+  width: 18px;
+}
+a.uiowa-icon.phonebook:before #ui-wrapper * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-
-.uigb-light-sprite, .uiowa-icon .phonebook:after, .uiowa-icon .maps:after, .uiowa-icon .a-z:after, .uiowa-icon .search:after, #ui-wrapper #ui-logo, #ui-wrapper #gsa-search #uniform-edit-sitesearch:after {
-  background: url('images/ui-header/uigb-light-s7a081c391b.png') no-repeat;
-}
-
-.uigb-dark-sprite, .skin-b .uiowa-icon .phonebook:after, .skin-b .uiowa-icon .maps:after, .skin-b .uiowa-icon .a-z:after, .skin-b .uiowa-icon .search:after, .skin-b #ui-wrapper #ui-logo, .skin-b #ui-wrapper #gsa-search #uniform-edit-sitesearch:after {
-  background: url('images/ui-header/uigb-dark-see7d9d41d2.png') no-repeat;
-}
-
-.uiowa-icon .phonebook:after {
-  position: absolute;
-  content: "";
-  display: block;
-  top: 5px;
-  left: 4px;
-  background-position: 0 -77px;
-  height: 18px;
-  width: 18px;
-}
-.skin-b .uiowa-icon .phonebook:after {
+.skin-b a.uiowa-icon.phonebook:before {
   top: 3px;
 }
-.skin-b .uiowa-icon .phonebook:after {
+.skin-b a.uiowa-icon.phonebook:before {
   background-position: 0 -77px;
   height: 18px;
   width: 18px;
 }
-.uiowa-icon .maps:after {
+a.uiowa-icon.maps:before {
   position: absolute;
   content: "";
   display: block;
@@ -44,15 +43,20 @@
   height: 18px;
   width: 18px;
 }
-.skin-b .uiowa-icon .maps:after {
+a.uiowa-icon.maps:before #ui-wrapper * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.skin-b a.uiowa-icon.maps:before {
   top: 3px;
 }
-.skin-b .uiowa-icon .maps:after {
+.skin-b a.uiowa-icon.maps:before {
   background-position: 0 -59px;
   height: 18px;
   width: 18px;
 }
-.uiowa-icon .a-z:after {
+a.uiowa-icon.a-z:before {
   position: absolute;
   content: "";
   display: block;
@@ -62,15 +66,20 @@
   height: 18px;
   width: 18px;
 }
-.skin-b .uiowa-icon .a-z:after {
+a.uiowa-icon.a-z:before #ui-wrapper * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.skin-b a.uiowa-icon.a-z:before {
   top: 3px;
 }
-.skin-b .uiowa-icon .a-z:after {
+.skin-b a.uiowa-icon.a-z:before {
   background-position: 0 -41px;
   height: 18px;
   width: 18px;
 }
-.uiowa-icon .search:after {
+a.uiowa-icon.search:before {
   position: absolute;
   content: "";
   display: block;
@@ -80,10 +89,15 @@
   height: 18px;
   width: 18px;
 }
-.skin-b .uiowa-icon .search:after {
+a.uiowa-icon.search:before #ui-wrapper * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.skin-b a.uiowa-icon.search:before {
   top: 3px;
 }
-.skin-b .uiowa-icon .search:after {
+.skin-b a.uiowa-icon.search:before {
   background-position: 0 -23px;
   height: 18px;
   width: 18px;

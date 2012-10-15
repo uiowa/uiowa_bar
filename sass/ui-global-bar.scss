@@ -7,12 +7,6 @@
 @import 'compass/utilities/sprites';           // See http://compass-style.org/help/tutorials/spriting/
 @import 'compass/css3';                        // Use one CSS3 mixin instead of multiple vendor prefixes.
 @import 'compass/typography';
-
-
-#ui-wrapper * {
-	@include box-sizing(border-box);
-}
-
 @import "ui-header/uigb-light/*.png";
 @import "ui-header/uigb-dark/*.png";
 
@@ -26,6 +20,10 @@ $sans-serif-arial-helvetica:  Arial, Helvetica, sans-serif;
 	top: 5px;
 	left: 4px;
 
+#ui-wrapper * {
+	@include box-sizing(border-box);
+}
+
 	.skin-b & {
 		top: 3px; // fixes position due to fuax drop shadow on icon
 	}
@@ -34,23 +32,23 @@ $sans-serif-arial-helvetica:  Arial, Helvetica, sans-serif;
 $experimental-support-for-svg: true; // set svg support for IE9
 
 
-.uiowa-icon, {
-  .phonebook:after {
+a.uiowa-icon {
+  &.phonebook:before {
     @include iconReplaceUigb;
     @include uigb-light-sprite(phonebook, $dimensions: true);
     .skin-b & { @include uigb-dark-sprite(phonebook, $dimensions: true); }
   }
-  .maps:after {
+  &.maps:before {
     @include iconReplaceUigb;
     @include uigb-light-sprite(maps, $dimensions: true);
     .skin-b & { @include uigb-dark-sprite(maps, $dimensions: true); }
   }
-  .a-z:after {
+  &.a-z:before {
     @include iconReplaceUigb;
 	@include uigb-light-sprite(a-z, $dimensions: true);
     .skin-b & { @include uigb-dark-sprite(a-z, $dimensions: true); }
   }
-  .search:after {
+  &.search:before {
     @include iconReplaceUigb;
     @include uigb-light-sprite(search, $dimensions: true);
     .skin-b & { @include uigb-dark-sprite(search, $dimensions: true); }
