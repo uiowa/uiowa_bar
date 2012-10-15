@@ -177,10 +177,12 @@ a.uiowa-icon.search:before #ui-wrapper * {
   display: block;
   float: left;
   margin: 0 5px 0 0;
+  padding-bottom: 2px;
+}
+.uiowa-icon-style #ui-wrapper #ui-global-links li {
   text-indent: 110%;
   white-space: nowrap;
   overflow: hidden;
-  padding-bottom: 2px;
 }
 #ui-wrapper #ui-global-links a.uiowa-icon {
   position: relative;

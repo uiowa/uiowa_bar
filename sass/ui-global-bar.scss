@@ -106,19 +106,23 @@ a.uiowa-icon {
 			display: block;
 			float: left;
 			margin: 0 5px 0 0;
-			@include hide-text;
 			padding-bottom: 2px; // provide extra space for drop shadow, excluded from overflow hidden declaration
+			.uiowa-icon-style & {
+			  @include hide-text;
+			}
+
 		}
 
 		a {
 			&.uiowa-icon {
-	      		position: relative;
+	      position: relative;
 				height: 20px;
 				width: 20px;
 				@include background-with-css2-fallback(linear-gradient(top, #F7F7F7, #D6D6D6), #D6D6D6);
 				display: block;
 				padding: 13px;
 				color: red;
+				//@include hide-text;
 				@include border-radius(50%);
 				@include box-shadow(rgba(0,0,0,.3) 0px 2px 1px 0px);
 				border: 1px solid #eee;
