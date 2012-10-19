@@ -107,7 +107,7 @@ a.uiowa-icon {
 			display: block;
 			float: left;
 			margin: 0 5px 0 0;
-			padding-bottom: 2px; // provide extra space for drop shadow, excluded from overflow hidden declaration
+			padding: 0 0 2px 0; // provide extra space for drop shadow, excluded from overflow hidden declaration
 			.uiowa-icon-style & {
 			  @include hide-text;
 			}
@@ -159,11 +159,17 @@ a.uiowa-icon {
 		float: left;
 		* { float: left; }
 
-
 		fieldset {
+			background: none;
 			border: none;
 			margin: 5px 0 0 -20px;
+			position: inherit;
 			padding: 0;
+
+			.fieldset-wrapper {
+		    padding: 0;
+		    margin: 0;
+			}
 		}
 
 		#edit-search-terms {
