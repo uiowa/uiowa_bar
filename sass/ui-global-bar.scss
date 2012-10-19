@@ -20,13 +20,13 @@ $sans-serif-arial-helvetica:  Arial, Helvetica, sans-serif;
 	top: 5px;
 	left: 4px;
 
-#ui-wrapper * {
-	@include box-sizing(border-box);
-}
-
 	.skin-b & {
 		top: 3px; // fixes position due to fuax drop shadow on icon
 	}
+}
+
+#ui-wrapper * {
+	@include box-sizing(border-box);
 }
 
 $experimental-support-for-svg: true; // set svg support for IE9
