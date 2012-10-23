@@ -100,7 +100,12 @@ function theme_uiowa_bar_link_list($variables = array()) {
   $type = theme_get_setting('ui_globalbar_link_style');
   $links = array();
   foreach ($variables['links']['#children'] as $link) {
-    $links[] = l($link['label'], $link['url'], array('attributes' => array('class' => array($type, $link['class']))));
+    $links[] = l($link['label'], $link['url'], array(
+      'attributes' => array(
+        'class' => array($type, $link['class']),
+        'title' => $link['title'])
+      )
+    );
   }
   return theme('item_list', array('items' => $links));
 }
@@ -145,22 +150,26 @@ function build_uiowa_bar() {
       0 => array(
         'label' => t('Phonebook'),
         'url' => 'http://www.uiowa.edu/homepage/directories/',
-        'class' => 'phonebook'
+        'class' => 'phonebook',
+        'title' => 'Phonebook'
       ),
       1 => array(
         'label' => t('Maps'),
         'url' => 'http://www.uiowa.edu/homepage/hub/tours.html',
-        'class' => 'maps'
+        'class' => 'maps',
+        'title' => 'Maps'
       ),
       2 => array(
         'label' => t('A-Z'),
         'url' => 'http://www.uiowa.edu/homepage/search/index.html',
-        'class' => 'a-z'
+        'class' => 'a-z',
+        'title' => 'A-Z'
       ),
       3 => array(
         'label' => t('Search'),
         'url' => '#',
-        'class' => 'search'
+        'class' => 'search',
+        'title' => 'Search'
       )
     )
   );
