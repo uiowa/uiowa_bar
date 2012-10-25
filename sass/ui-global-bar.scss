@@ -92,10 +92,13 @@ a.uiowa-icon {
 		}
 	}
 
-	#ui-global-bar-nav { float: right; }
+	#ui-global-bar-nav {
+		float: right;
+		width: 100%;
+	}
 
 	#ui-global-links {
-		float: left;
+		float: right;
 
 		ul {
 			margin: 4px 0 0;
@@ -153,16 +156,17 @@ a.uiowa-icon {
 	 }
 
 	#gsa-search {
-		.form-item {
+		.form-item,.form-item-sitesearch label, .form-submit {
 			margin: 0;
+			float: left;
 		}
+		width: 100%;
 		float: left;
-		* { float: left; }
-
+		clear: both;
+		margin: 10px;
 		fieldset {
 			background: none;
 			border: none;
-			margin: 5px 0 0 -20px;
 			position: inherit;
 			padding: 0;
 
@@ -171,10 +175,12 @@ a.uiowa-icon {
 		    margin: 0;
 			}
 		}
-
+		#sitesearch-container {
+			float: left;
+		}
 		#edit-search-terms {
 			@include border-radius(6px);
-			padding: 5px 5px 5px 20px;
+			padding: 5px;
 			background-color: #333;
 			border: 1px solid #ccc;
 			color: #ebebeb;
@@ -211,6 +217,7 @@ a.uiowa-icon {
 			border: 1px solid #eee;
 			margin: 0px 10px 0 0;
 			position: relative;
+			float: left;
 
 			.skin-b & {
 				@include background-with-css2-fallback(linear-gradient(top, #262626, #0D0D0D), #262626);
@@ -278,3 +285,26 @@ a.uiowa-icon {
 	}
 }
 
+@media only screen and (min-width: 700px) {
+  #ui-wrapper {
+		#ui-global-links {
+			float: left;
+		}
+		#ui-global-bar-nav {
+			float: right;
+			width: inherit;
+		}
+    #gsa-search {
+			float: right;
+			clear: none;
+			margin: 0;
+			width: inherit;
+			fieldset {
+				margin: 5px 0 0 -20px;
+			}
+			#edit-search-terms {
+				padding: 5px 5px 5px 20px;
+			}
+		}
+  }
+}

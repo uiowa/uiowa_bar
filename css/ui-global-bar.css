@@ -144,9 +144,10 @@ a.uiowa-icon.search:before {
 }
 #ui-wrapper #ui-global-bar-nav {
   float: right;
+  width: 100%;
 }
 #ui-wrapper #ui-global-links {
-  float: left;
+  float: right;
 }
 #ui-wrapper #ui-global-links ul {
   margin: 4px 0 0;
@@ -237,18 +238,18 @@ a.uiowa-icon.search:before {
   line-height: 0;
 }
 #ui-wrapper #gsa-search {
+  width: 100%;
   float: left;
+  clear: both;
+  margin: 10px;
 }
-#ui-wrapper #gsa-search .form-item {
+#ui-wrapper #gsa-search .form-item, #ui-wrapper #gsa-search .form-item-sitesearch label, #ui-wrapper #gsa-search .form-submit {
   margin: 0;
-}
-#ui-wrapper #gsa-search * {
   float: left;
 }
 #ui-wrapper #gsa-search fieldset {
   background: none;
   border: none;
-  margin: 5px 0 0 -20px;
   position: inherit;
   padding: 0;
 }
@@ -256,13 +257,16 @@ a.uiowa-icon.search:before {
   padding: 0;
   margin: 0;
 }
+#ui-wrapper #gsa-search #sitesearch-container {
+  float: left;
+}
 #ui-wrapper #gsa-search #edit-search-terms {
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   -ms-border-radius: 6px;
   -o-border-radius: 6px;
   border-radius: 6px;
-  padding: 5px 5px 5px 20px;
+  padding: 5px;
   background-color: #333;
   border: 1px solid #ccc;
   color: #ebebeb;
@@ -307,6 +311,7 @@ a.uiowa-icon.search:before {
   border: 1px solid #eee;
   margin: 0px 10px 0 0;
   position: relative;
+  float: left;
 }
 .skin-b #ui-wrapper #gsa-search #uniform-edit-sitesearch {
   background: #262626;
@@ -389,4 +394,26 @@ a.uiowa-icon.search:before {
   line-height: normal;
   text-shadow: rgba(255, 255, 255, 0.45) 0px 1px 0px;
   margin-right: 5px;
+}
+
+@media only screen and (min-width: 700px) {
+  #ui-wrapper #ui-global-links {
+    float: left;
+  }
+  #ui-wrapper #ui-global-bar-nav {
+    float: right;
+    width: inherit;
+  }
+  #ui-wrapper #gsa-search {
+    float: right;
+    clear: none;
+    margin: 0;
+    width: inherit;
+  }
+  #ui-wrapper #gsa-search fieldset {
+    margin: 5px 0 0 -20px;
+  }
+  #ui-wrapper #gsa-search #edit-search-terms {
+    padding: 5px 5px 5px 20px;
+  }
 }
