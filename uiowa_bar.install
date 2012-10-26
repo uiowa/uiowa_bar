@@ -22,8 +22,10 @@ function uiowa_bar_uninstall() {
   variable_del('uiowa_bar_link_style');
 }
 
+/**
+* Update from theme settings to variables
+*/
 function uiowa_bar_update_7000() {
-  // Update from theme_settings to variables
   $old_link_style = theme_get_setting('ui_globalbar_link_style');
   if ($old_link_style) {
     switch ($old_link_style) {
