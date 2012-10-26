@@ -1,0 +1,23 @@
+<?php
+
+/**
+ * @file
+ *
+ * Install and uninstall tasks for UIowa Bar
+ */
+
+/**
+ * Implements hook_install().
+ */
+function uiowa_bar_install() {
+  variable_set('uiowa_bar_color_palette', 'skin-a');
+  variable_set('uiowa_bar_link_style', 'uiowa-icon');
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function uiowa_bar_uninstall() {
+  variable_del('uiowa_bar_color_palette');
+  variable_del('uiowa_bar_link_style');
+}

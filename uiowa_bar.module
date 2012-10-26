@@ -24,11 +24,75 @@ function uiowa_bar_init() {
  * Implements hook_preprocess_HOOK().
  */
 function uiowa_bar_preprocess_html(&$vars) {
-  global $theme_key;
-
   // Add a body class for the active theme name.
-  $vars['classes_array'][] = theme_get_setting('ui_globalbar');
-  $vars['classes_array'][] = theme_get_setting('ui_globalbar_link_style') . '-style';
+  $vars['classes_array'][] = variable_get('uiowa_bar_color_palette');
+  $vars['classes_array'][] = variable_get('uiowa_bar_link_style') . '-style';
+}
+
+/**
+* Implements hook_permission().
+*/
+function uiowa_bar_permission() {
+  return array(
+    'administer uiowa bar' => array(
+      'title' => t('Administer UIowa Branding Bar'),
+      'description' => t('Perform administration tasks for the UIowa branding bar.'),
+    ),
+  );
+}
+
+/**
+* Implements hook_menu().
+*/
+function uiowa_bar_menu() {
+  $items = array();
+
+  $items['admin/config/user-interface/uiowa-bar'] = array(
+    'title' => 'UIowa Branding Bar',
+    'description' => 'Configuration for the University of Iowa branding bar',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('uiowa_bar_config_form'),
+    'access arguments' => array('administer uiowa bar'),
+    'type' => MENU_NORMAL_ITEM,
+  );
+
+  return $items;
+}
+
+/**
+* Page callback: UIowa Branding Bar
+*
+* @see uiowa_bar_menu()
+*/
+function uiowa_bar_config_form($form, &$form_state) {
+  $form['markup'] = array(
+    '#type' => 'markup',
+    '#markup' => t('<p>These settings allows you to customize the top University of Iowa branded bar.</p>'),
+  );
+
+  $form['uiowa_bar_color_palette'] = array(
+    '#type' => 'select',
+    '#title' => t('Color Palette'),
+    '#default_value' => variable_get('uiowa_bar_color_palette'),
+    '#description' => t('Choose the color palette of the UI Branded Bar'),
+    '#options' => array(
+      'skin-a' => t('Light Theme'),
+      'skin-b' => t('Dark Theme'),
+    ),
+  );
+
+  $form['uiowa_bar_link_style'] = array(
+    '#type' => 'select',
+    '#title' => t('Link Style'),
+    '#default_value' => variable_get('uiowa_bar_link_style'),
+    '#description' => t('Choose the link style for the UI Branded Bar action links'),
+    '#options' => array(
+      'uiowa-icon' => t('Icon-based'),
+      'uiowa-text' => t('Text-based'),
+    ),
+  );
+
+  return system_settings_form($form);
 }
 
 /**
@@ -38,30 +102,14 @@ function uiowa_bar_form_system_theme_settings_alter(&$form, &$form_state)  {
   // Custom UI Branded Bar Styles
   $form['at-settings']['ui_branding'] = array(
     '#type' => 'fieldset',
-    '#title' => t('UI Branding'),
-    '#description' => t('<h3>UI Branding Bar</h3><p>This setting allows you to customize the top University of Iowa branded bar.</p>'),
+    '#title' => t('UIowa Branding Bar'),
+    '#description' => t('<p>University of Iowa branding bar customization.</p>'),
   );
 
-  $form['at-settings']['ui_branding']['ui_globalbar'] = array(
-    '#type' => 'select',
-    '#title' => t('Color Palette'),
-    '#default_value' => theme_get_setting('ui_globalbar', variable_get('theme_default','none')),
-    '#description' => t('Choose the color palette of the UI Branded Bar'),
-    '#options' => array(
-      'skin-a' => t('Light Theme'),
-      'skin-b' => t('Dark Theme'),
-    ),
-  );
-
-  $form['at-settings']['ui_branding']['ui_globalbar_link_style'] = array(
-    '#type' => 'select',
-    '#title' => t('Link Style'),
-    '#default_value' => theme_get_setting('ui_globalbar_link_style', variable_get('theme_default','none')),
-    '#description' => t('Choose the link style for the UI Branded Bar action links'),
-    '#options' => array(
-      'uiowa-icon' => t('Icon-based'),
-      'uiowa-text' => t('Text-based'),
-    ),
+  $form['at-settings']['ui_branding']['content'] = array(
+    '#type' => 'markup',
+    '#markup' => '<p>Many customization options are available for the UIowa Branding Bar, including color palette and how the bar functions.</p>
+    <p><a href="' . $GLOBALS['base_url'] . '/admin/config/user-interface/uiowa-bar">Customize UIowa Bar</a>.</p>'
   );
 }
 
@@ -97,7 +145,7 @@ function uiowa_bar_page_build(&$page) {
  * Theme function to build a list of action links for the UIowa Bar.
  */
 function theme_uiowa_bar_link_list($variables = array()) {
-  $type = theme_get_setting('ui_globalbar_link_style');
+  $type = variable_get('uiowa_bar_link_style');
   $links = array();
   foreach ($variables['links']['#children'] as $link) {
     $links[] = l($link['label'], $link['url'], array(
@@ -249,4 +297,3 @@ function uiowa_bar_search_form($form, &$form_state) {
 function uiowa_bar_preprocess_uiowa_bar(&$variables) {
   $variables['uiowa_bar'] = build_uiowa_bar();
 }
-
