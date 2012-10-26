@@ -113,7 +113,7 @@ function theme_uiowa_bar_link_list($variables = array()) {
 /**
  * Base URL without the protocol - needed for the Google Search Appliance.
  */
-function base_url_no_protocol() {
+function uiowa_bar_base_url_no_protocol() {
   $url = preg_replace('/^https?:\/\//i', '', $GLOBALS['base_url']);
   return $url;
 }
@@ -209,7 +209,7 @@ function uiowa_bar_search_form($form, &$form_state) {
     '#title' => t('for'),
     '#name' => 'sitesearch',
     '#options' => array(
-      base_url_no_protocol() => 'This Site',
+      uiowa_bar_base_url_no_protocol() => 'This Site',
       'www.uiowa.edu' => 'All Sites'
     )
   );
