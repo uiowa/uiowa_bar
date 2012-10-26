@@ -1,5 +1,5 @@
-name = Uiowa Bar
-description = Adds the University of Iowa Branding Bar to your theme
+name = UIowa Bar
+description = Adds the University of Iowa Branding Bar to the page
 package = UIowa
 core = 7.x
 configure = admin/config/user-interface/uiowa-bar
