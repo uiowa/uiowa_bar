@@ -3,7 +3,7 @@
 /**
  * @file
  *
- * Adds the University of Iowa Branding Bar to each page
+ * Adds the University of Iowa branding bar to each page
  */
 
 /**
@@ -35,7 +35,7 @@ function uiowa_bar_preprocess_html(&$vars) {
 function uiowa_bar_permission() {
   return array(
     'administer uiowa bar' => array(
-      'title' => t('Administer UIowa Branding Bar'),
+      'title' => t('Administer UIowa branding bar'),
       'description' => t('Perform administration tasks for the UIowa branding bar.'),
     ),
   );
@@ -48,7 +48,7 @@ function uiowa_bar_menu() {
   $items = array();
 
   $items['admin/config/user-interface/uiowa-bar'] = array(
-    'title' => 'UIowa Branding Bar',
+    'title' => 'University of Iowa branding bar',
     'description' => 'Configuration for the University of Iowa branding bar',
     'page callback' => 'drupal_get_form',
     'page arguments' => array('uiowa_bar_config_form'),
@@ -60,21 +60,21 @@ function uiowa_bar_menu() {
 }
 
 /**
-* Page callback: UIowa Branding Bar
+* Page callback: University of Iowa branding bar
 *
 * @see uiowa_bar_menu()
 */
 function uiowa_bar_config_form($form, &$form_state) {
   $form['markup'] = array(
     '#type' => 'markup',
-    '#markup' => t('<p>These settings allows you to customize the top University of Iowa branded bar.</p>'),
+    '#markup' => t('<p>These settings allows you to customize the top University of Iowa branding bar.</p>'),
   );
 
   $form['uiowa_bar_color_palette'] = array(
     '#type' => 'select',
     '#title' => t('Color Palette'),
     '#default_value' => variable_get('uiowa_bar_color_palette'),
-    '#description' => t('Choose the color palette of the UI Branded Bar'),
+    '#description' => t('Choose the color palette of the University of Iowa branding bar'),
     '#options' => array(
       'skin-a' => t('Light Theme'),
       'skin-b' => t('Dark Theme'),
@@ -85,7 +85,7 @@ function uiowa_bar_config_form($form, &$form_state) {
     '#type' => 'select',
     '#title' => t('Link Style'),
     '#default_value' => variable_get('uiowa_bar_link_style'),
-    '#description' => t('Choose the link style for the UI Branded Bar action links'),
+    '#description' => t('Choose the link style for the University of Iowa branding bar action links'),
     '#options' => array(
       'uiowa-icon' => t('Icon-based'),
       'uiowa-text' => t('Text-based'),
@@ -102,14 +102,14 @@ function uiowa_bar_form_system_theme_settings_alter(&$form, &$form_state)  {
   // Custom UI Branded Bar Styles
   $form['at-settings']['ui_branding'] = array(
     '#type' => 'fieldset',
-    '#title' => t('UIowa Branding Bar'),
+    '#title' => t('UIowa branding bar'),
     '#description' => t('<p>University of Iowa branding bar customization.</p>'),
   );
 
   $form['at-settings']['ui_branding']['content'] = array(
     '#type' => 'markup',
-    '#markup' => '<p>Many customization options are available for the UIowa Branding Bar, including color palette and how the bar functions.</p>
-    <p><a href="' . $GLOBALS['base_url'] . '/admin/config/user-interface/uiowa-bar">Customize UIowa Bar</a>.</p>'
+    '#markup' => '<p>Many customization options are available for the University of Iowa branding bar, including color palette and how the bar functions.</p>
+    <p><a href="' . $GLOBALS['base_url'] . '/admin/config/user-interface/uiowa-bar">Customize the University of Iowa branding bar</a>.</p>'
   );
 }
 
@@ -129,7 +129,7 @@ function uiowa_bar_theme(){
 }
 
 /**
- * Add UIowa Bar markup to page
+ * Add University of Iowa branding bar markup to page
  */
 function uiowa_bar_page_build(&$page) {
   global $theme_key;
@@ -142,7 +142,8 @@ function uiowa_bar_page_build(&$page) {
 }
 
 /**
- * Theme function to build a list of action links for the UIowa Bar.
+ * Theme function to build a list of action links for the University of Iowa
+ * branding bar.
  */
 function theme_uiowa_bar_link_list($variables = array()) {
   $type = variable_get('uiowa_bar_link_style');
@@ -167,7 +168,7 @@ function uiowa_bar_base_url_no_protocol() {
 }
 
 /**
- * Build out the UIowa Bar.
+ * Build out the University of Iowa branding bar.
  */
 function build_uiowa_bar() {
   $uiowa_bar = array();
