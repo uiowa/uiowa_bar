@@ -25,21 +25,22 @@ function uiowa_bar_uninstall() {
 /**
 * Update from theme settings to variables
 */
-function uiowa_bar_update_7000() {
-  $old_link_style = theme_get_setting('ui_globalbar_link_style');
+function uiowa_bar_update_7000(&$sandbox) {
+  $theme_default = variable_get('theme_default', NULL);
+  $old_link_style = theme_get_setting('ui_globalbar_link_style', $theme = $theme_default);
   if ($old_link_style) {
     switch ($old_link_style) {
       case 'link-style-text':
       case 'uiowa-text':
-        variable_set('ui_globalbar_link_style', 'uiowa-text');
+        variable_set('uiowa_bar_link_style', 'uiowa-text');
         break;
       default:
-        variable_set('ui_globalbar_link_style', 'uiowa-icon');
+        variable_set('uiowa_bar_link_style', 'uiowa-icon');
     }
   }
 
-  $old_color_ = theme_get_setting('ui_globalbar');
+  $old_palette_color = theme_get_setting('ui_globalbar', $theme = $theme_default);
   if ($old_palette_color) {
-    variable_set('uiowa_bar_color_palette', $old_color_palette);
+    variable_set('uiowa_bar_color_palette', $old_palette_color);
   }
 }
