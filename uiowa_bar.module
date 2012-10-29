@@ -104,7 +104,11 @@ function uiowa_bar_page_build(&$page) {
       '#markup' => theme('uiowa_bar'),
       '#weight' => 25,
     );
-    $js_settings = array('uiowa_bar_search_display' => variable_get('uiowa_bar_search_display'));
+    $js_settings = array(
+      'uiowa_bar_color_palette' => variable_get('uiowa_bar_color_palette'),
+      'uiowa_bar_link_style' => variable_get('uiowa_bar_link_style'),
+      'uiowa_bar_search_display' => variable_get('uiowa_bar_search_display'),
+    );
     $page['page_top']['uiowa_bar']['#attached']['js'][] = array(
     'data' => array('uiowa_bar' => $js_settings),
       'type' => 'setting',
