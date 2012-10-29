@@ -12,6 +12,7 @@
 function uiowa_bar_install() {
   variable_set('uiowa_bar_color_palette', 'skin-a');
   variable_set('uiowa_bar_link_style', 'uiowa-icon');
+  variable_set('uiowa_bar_search_display', 1);
 }
 
 /**
@@ -20,6 +21,7 @@ function uiowa_bar_install() {
 function uiowa_bar_uninstall() {
   variable_del('uiowa_bar_color_palette');
   variable_del('uiowa_bar_link_style');
+  variable_del('uiowa_bar_search_display');
 }
 
 /**
