@@ -94,7 +94,7 @@ function uiowa_bar_theme(){
 }
 
 /**
- * Add University of Iowa branding bar markup to page
+ * Implements hook_page_build().
  */
 function uiowa_bar_page_build(&$page) {
   global $theme_key;
