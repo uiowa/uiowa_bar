@@ -64,10 +64,10 @@ function uiowa_bar_menu() {
  * Implements hook_form_system_theme_settings_alter().
  */
 function uiowa_bar_form_system_theme_settings_alter(&$form, &$form_state)  {
-  // Custom UI Branded Bar Styles
+  // Custom University of Iowa branding bar styles
   $form['at-settings']['ui_branding'] = array(
     '#type' => 'fieldset',
-    '#title' => t('UIowa branding bar'),
+    '#title' => t('University of Iowa branding bar'),
     '#description' => t('<p>University of Iowa branding bar customization.</p>'),
   );
 
