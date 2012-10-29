@@ -46,3 +46,10 @@ function uiowa_bar_update_7000(&$sandbox) {
     variable_set('uiowa_bar_color_palette', $old_palette_color);
   }
 }
+
+/**
+* Add default variable for search display
+*/
+function uiowa_bar_update_7100(&$sandbox) {
+  variable_set('uiowa_bar_search_display', 0);
+}

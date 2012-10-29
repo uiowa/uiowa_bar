@@ -41,9 +41,9 @@ function uiowa_bar_config_form($form, &$form_state) {
 
   $form['uiowa_bar_search_display'] = array(
     '#type' => 'checkbox',
-    '#title' => t('Close search form on wide screen displays.'),
+    '#title' => t('Expand search form on wide screen displays.'),
     '#default_value' => variable_get('uiowa_bar_search_display'),
-    '#description' => t('Display option for the search form to on wide displays. Defaults to closed.  On small screen displays, the search will always default to closed.'),
+    '#description' => t('Display option for the search form on wide displays. Defaults to closed.  On small screen displays, the search will always default to closed.'),
   );
 
 
