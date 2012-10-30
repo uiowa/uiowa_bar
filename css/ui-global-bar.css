@@ -160,8 +160,12 @@ a.uiowa-icon.search:before {
   overflow: hidden;
   text-indent: 9999px;
 }
-#ui-wrapper #ui-global-links {
+.uiowa-icon-style #ui-wrapper #ui-global-links {
   float: right;
+}
+.uiowa-text-style #ui-wrapper #ui-global-links {
+  clear: both;
+  float: left;
 }
 #ui-wrapper #ui-global-links ul {
   margin: 4px 0 0;

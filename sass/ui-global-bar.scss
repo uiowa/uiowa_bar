@@ -114,7 +114,14 @@ a.uiowa-icon {
 	}
 
 	#ui-global-links {
-		float: right;
+
+		.uiowa-icon-style & {
+			float: right;
+		}
+		.uiowa-text-style & {
+			clear: both;
+			float: left;
+		}
 
 		ul {
 			margin: 4px 0 0;
