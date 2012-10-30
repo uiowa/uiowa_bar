@@ -74,6 +74,13 @@ a.uiowa-icon {
 		position: relative;
 	}
 
+	a {
+		color: #000;
+		&:hover, &:focus {
+			text-decoration: underline;
+		}
+	}
+
 	#ui-logo {
 		position: absolute;
 		top: -3px;
@@ -143,7 +150,6 @@ a.uiowa-icon {
 				@include background-with-css2-fallback(linear-gradient(top, #F7F7F7, #D6D6D6), #D6D6D6);
 				display: block;
 				padding: 13px;
-				color: red;
 				//@include hide-text;
 				@include border-radius(50%);
 				@include box-shadow(rgba(0,0,0,.3) 0px 2px 1px 0px);
