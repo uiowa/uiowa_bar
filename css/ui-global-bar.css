@@ -166,6 +166,8 @@ a.uiowa-icon.search:before {
 .uiowa-text-style #ui-wrapper #ui-global-links {
   clear: both;
   float: left;
+  background-color: #D6D6D6;
+  width: 100%;
 }
 #ui-wrapper #ui-global-links ul {
   margin: 4px 0 0;
@@ -446,6 +448,10 @@ a.uiowa-icon.search:before {
   }
 }
 @media only screen and (min-width: 820px) {
+  .uiowa-text-style #ui-wrapper #ui-global-links {
+    background-color: transparent;
+    width: inherit;
+  }
   .uiowa-text-style #ui-wrapper #gsa-search #edit-search-terms {
     width: 200px;
     padding: 5px;

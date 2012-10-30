@@ -121,6 +121,8 @@ a.uiowa-icon {
 		.uiowa-text-style & {
 			clear: both;
 			float: left;
+			background-color: #D6D6D6;
+			width: 100%;
 		}
 
 		ul {
@@ -354,6 +356,10 @@ a.uiowa-icon {
 @media only screen and (min-width: 820px) {
 	.uiowa-text-style {
 		#ui-wrapper {
+			#ui-global-links {
+				background-color: transparent;
+				width: inherit;
+			}
 			#gsa-search {
 				#edit-search-terms {
 					width: 200px;
