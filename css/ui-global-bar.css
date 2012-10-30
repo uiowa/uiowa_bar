@@ -292,7 +292,6 @@ a.uiowa-icon.search:before {
   background-color: #333;
   border: 1px solid #ccc;
   color: #ebebeb;
-  width: 200px;
   margin-right: 10px;
 }
 .skin-b #ui-wrapper #gsa-search #edit-search-terms {
@@ -435,7 +434,16 @@ a.uiowa-icon.search:before {
   #ui-wrapper #gsa-search fieldset {
     margin: 5px 0 0 -20px;
   }
-  #ui-wrapper #gsa-search #edit-search-terms {
+}
+@media only screen and (min-width: 700px) {
+  .uiowa-icon-style #ui-wrapper #gsa-search #edit-search-terms {
+    width: 200px;
     padding: 5px 5px 5px 20px;
+  }
+}
+@media only screen and (min-width: 820px) {
+  .uiowa-text-style #ui-wrapper #gsa-search #edit-search-terms {
+    width: 200px;
+    padding: 5px;
   }
 }
