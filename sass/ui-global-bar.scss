@@ -97,6 +97,15 @@ a.uiowa-icon {
 		width: 100%;
 	}
 
+	#ui-global-nav-sm a {
+		float: right;
+		width: 40px;
+		height: 40px;
+		background: url('../nav.png');
+		overflow: hidden;
+		text-indent: 9999px;
+	}
+
 	#ui-global-links {
 		float: right;
 
