@@ -12,12 +12,14 @@
       .toggleClass("expanded").toggleClass("collapsed");
     });
 
-    var mql = window.matchMedia("screen and (min-width: 700px)");
+    var mql700 = window.matchMedia("screen and (min-width: 700px)");
 
     /* If the search display is set to open for wide screen
     devices, then expand. */
-    if (mql.matches && Drupal.settings.uiowa_bar.uiowa_bar_search_display === 1) {
+    if (mql700.matches && Drupal.settings.uiowa_bar.uiowa_bar_search_display === 1) {
       $("#ui-global-bar #gsa-search").toggle().toggleClass("expanded");
     }
+
+    var mql820 = window.matchMedia("screen and (min-width: 820px)");
   });
 }(jQuery));
