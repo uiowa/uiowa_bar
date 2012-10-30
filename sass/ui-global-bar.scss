@@ -123,6 +123,15 @@ a.uiowa-icon {
 			.uiowa-icon-style & {
 			  @include hide-text;
 			}
+			.uiowa-text-style & {
+				border-left: 2px solid #000;
+				margin: 0;
+				padding: 0 7px;
+				line-height: .9em;
+				&:first-child {
+					border-left-style: none;
+				}
+			}
 
 		}
 

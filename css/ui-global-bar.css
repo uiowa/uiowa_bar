@@ -169,6 +169,9 @@ a.uiowa-icon.search:before {
   overflow: hidden;
   visibility: hidden;
 }
+.uiowa-text-style #ui-wrapper #ui-global-links ul {
+  margin: 10px;
+}
 #ui-wrapper #ui-global-links li {
   display: block;
   float: left;
