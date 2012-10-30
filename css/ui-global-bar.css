@@ -169,9 +169,6 @@ a.uiowa-icon.search:before {
   overflow: hidden;
   visibility: hidden;
 }
-.uiowa-text-style #ui-wrapper #ui-global-links ul {
-  margin: 10px;
-}
 #ui-wrapper #ui-global-links li {
   display: block;
   float: left;
@@ -182,6 +179,15 @@ a.uiowa-icon.search:before {
   text-indent: 110%;
   white-space: nowrap;
   overflow: hidden;
+}
+.uiowa-text-style #ui-wrapper #ui-global-links li {
+  border-left: 2px solid #000;
+  margin: 0;
+  padding: 0 7px;
+  line-height: .9em;
+}
+.uiowa-text-style #ui-wrapper #ui-global-links li:first-child {
+  border-left-style: none;
 }
 #ui-wrapper #ui-global-links a.uiowa-icon {
   position: relative;
