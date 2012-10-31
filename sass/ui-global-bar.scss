@@ -102,6 +102,9 @@ a.uiowa-icon {
 	#ui-global-bar-nav {
 		float: right;
 		width: 100%;
+		.uiowa-text-style & {
+			@include box-shadow(0px 2px 6px rgba(0, 0, 0, .4) inset);
+		}
 	}
 
 	#ui-global-nav-sm a {
@@ -201,6 +204,7 @@ a.uiowa-icon {
 		.uiowa-icon-style & {
 			padding: 3px 10px;
 			margin: 6px 0 0 0;
+			@include box-shadow(0px 2px 6px rgba(0, 0, 0, .4) inset)
 		}
 		.uiowa-text-style & {
 			padding: 0 10px;
@@ -353,6 +357,7 @@ a.uiowa-icon {
 				background-color: transparent;
 				padding: 1px 0 0 0;
 				margin: 0;
+				@include box-shadow(none);
 				fieldset {
 					margin: 5px 0 0 -20px;
 				}
@@ -372,6 +377,7 @@ a.uiowa-icon {
 			#ui-global-bar-nav {
 				float: right;
 				width: inherit;
+				@include box-shadow(none);
 			}
 			#ui-global-links {
 				background-color: transparent;

@@ -13,7 +13,7 @@
     });
 
     if (Drupal.settings.uiowa_bar.uiowa_bar_link_style === 'uiowa-text') {
-      $("#ui-global-links").before("<div id='ui-global-nav-sm'><a href='#'>Navigation</a></div>");
+      $("#ui-global-bar-nav").before("<div id='ui-global-nav-sm'><a href='#'>Navigation</a></div>");
       $("#ui-global-links").hide().toggleClass("collapsed");
       $("#ui-global-nav-sm a").click(function (evt) {
         evt.preventDefault();
