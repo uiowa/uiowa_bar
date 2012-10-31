@@ -123,6 +123,7 @@ a.uiowa-icon {
 			float: left;
 			background-color: #D6D6D6;
 			width: 100%;
+			padding: 10px 0;
 		}
 
 		ul {
@@ -331,9 +332,6 @@ a.uiowa-icon {
 			clear: none;
 			margin: 0;
 			width: inherit;
-			fieldset {
-				margin: 5px 0 0 -20px;
-			}
 		}
   }
 }
@@ -343,6 +341,9 @@ a.uiowa-icon {
 	.uiowa-icon-style {
 		#ui-wrapper {
 			#gsa-search {
+				fieldset {
+					margin: 5px 0 0 -20px;
+				}
 				#edit-search-terms {
 					width: 200px;
 					padding: 5px 5px 5px 20px;
@@ -361,6 +362,9 @@ a.uiowa-icon {
 				width: inherit;
 			}
 			#gsa-search {
+				fieldset {
+					margin: 5px 0 0 0;
+				}
 				#edit-search-terms {
 					width: 200px;
 					padding: 5px;
