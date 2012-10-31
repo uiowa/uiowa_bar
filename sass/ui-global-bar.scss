@@ -340,7 +340,11 @@ a.uiowa-icon {
 @media only screen and (min-width: 700px) {
 	.uiowa-icon-style {
 		#ui-wrapper {
+			#ui-global-links {
+				float: left;
+			}
 			#gsa-search {
+				float: left;
 				fieldset {
 					margin: 5px 0 0 -20px;
 				}

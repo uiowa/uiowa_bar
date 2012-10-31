@@ -440,6 +440,12 @@ a.uiowa-icon.search:before {
   }
 }
 @media only screen and (min-width: 700px) {
+  .uiowa-icon-style #ui-wrapper #ui-global-links {
+    float: left;
+  }
+  .uiowa-icon-style #ui-wrapper #gsa-search {
+    float: left;
+  }
   .uiowa-icon-style #ui-wrapper #gsa-search fieldset {
     margin: 5px 0 0 -20px;
   }
