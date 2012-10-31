@@ -454,6 +454,8 @@ a.uiowa-icon.search:before {
   .uiowa-icon-style #ui-wrapper #gsa-search {
     float: left;
     background-color: transparent;
+    padding: 1px 0 0 0;
+    margin: 0;
   }
   .uiowa-icon-style #ui-wrapper #gsa-search fieldset {
     margin: 5px 0 0 -20px;
