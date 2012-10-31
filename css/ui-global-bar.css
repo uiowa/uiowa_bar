@@ -168,7 +168,7 @@ a.uiowa-icon.search:before {
   float: left;
   background-color: #D6D6D6;
   width: 100%;
-  padding: 10px 0;
+  padding: 4px 0 0 0;
 }
 #ui-wrapper #ui-global-links ul {
   margin: 4px 0 0;
@@ -267,14 +267,21 @@ a.uiowa-icon.search:before {
   line-height: 0;
 }
 #ui-wrapper #gsa-search {
+  background-color: #D6D6D6;
   width: 100%;
   float: left;
   clear: both;
-  margin: 10px;
 }
 #ui-wrapper #gsa-search .form-item, #ui-wrapper #gsa-search .form-item-sitesearch label, #ui-wrapper #gsa-search .form-submit {
   margin: 0;
   float: left;
+}
+.uiowa-icon-style #ui-wrapper #gsa-search {
+  padding: 3px 10px;
+  margin: 6px 0 0 0;
+}
+.uiowa-text-style #ui-wrapper #gsa-search {
+  padding: 0 10px;
 }
 #ui-wrapper #gsa-search fieldset {
   background: none;
@@ -428,23 +435,25 @@ a.uiowa-icon.search:before {
   #ui-wrapper #ui-global-links {
     float: left;
   }
-  #ui-wrapper #ui-global-bar-nav {
-    float: right;
-    width: inherit;
-  }
   #ui-wrapper #gsa-search {
     float: right;
     clear: none;
     margin: 0;
     width: inherit;
+    padding: 0;
   }
 }
 @media only screen and (min-width: 700px) {
+  .uiowa-icon-style #ui-wrapper #ui-global-bar-nav {
+    float: right;
+    width: inherit;
+  }
   .uiowa-icon-style #ui-wrapper #ui-global-links {
     float: left;
   }
   .uiowa-icon-style #ui-wrapper #gsa-search {
     float: left;
+    background-color: transparent;
   }
   .uiowa-icon-style #ui-wrapper #gsa-search fieldset {
     margin: 5px 0 0 -20px;
@@ -455,9 +464,17 @@ a.uiowa-icon.search:before {
   }
 }
 @media only screen and (min-width: 820px) {
+  .uiowa-text-style #ui-wrapper #ui-global-bar-nav {
+    float: right;
+    width: inherit;
+  }
   .uiowa-text-style #ui-wrapper #ui-global-links {
     background-color: transparent;
     width: inherit;
+    padding: 10px 0;
+  }
+  .uiowa-text-style #ui-wrapper #gsa-search {
+    background-color: transparent;
   }
   .uiowa-text-style #ui-wrapper #gsa-search fieldset {
     margin: 5px 0 0 0;
