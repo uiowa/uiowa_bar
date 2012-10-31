@@ -432,9 +432,6 @@ a.uiowa-icon.search:before {
 }
 
 @media only screen and (min-width: 700px) {
-  #ui-wrapper #ui-global-links {
-    float: left;
-  }
   #ui-wrapper #gsa-search {
     float: right;
     clear: none;
