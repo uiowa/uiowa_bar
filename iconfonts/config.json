@@ -1,0 +1,37 @@
+{
+  "name": "",
+  "glyphs": [
+    {
+      "uid": "7222571caa5c15f83dcfd447c58d68d9",
+      "orig_css": "search",
+      "orig_code": 128269,
+      "css": "search",
+      "code": 128269,
+      "src": "entypo"
+    },
+    {
+      "uid": "457c8e2b305e7af74c1be4f07a01ca92",
+      "orig_css": "vcard",
+      "orig_code": 59170,
+      "css": "phonebook",
+      "code": 59170,
+      "src": "entypo"
+    },
+    {
+      "uid": "64f5a50cf7ac972a56a9a511acb5d28e",
+      "orig_css": "map",
+      "orig_code": 59175,
+      "css": "maps",
+      "code": 59175,
+      "src": "entypo"
+    },
+    {
+      "uid": "96ea1be71f597a5bdfc8f791ada4f651",
+      "orig_css": "archive",
+      "orig_code": 59192,
+      "css": "a-z",
+      "code": 59192,
+      "src": "entypo"
+    }
+  ]
+}

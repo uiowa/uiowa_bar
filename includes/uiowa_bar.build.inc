@@ -147,7 +147,21 @@ function theme_uiowa_bar_link_list($variables = array()) {
   $type = variable_get('uiowa_bar_link_style');
   $links = array();
   foreach ($variables['links']['#children'] as $link) {
-    $links[] = l($link['label'], $link['url'], array(
+    if ($type === 'uiowa-text') {
+      $prefix = '<strong>';
+    }
+    else {
+      $prefix = '<span aria-hidden="true" class="icon-' . $link['class'] . '"></span><strong>';
+    }
+    $link_content = array(
+      '#prefix' => $prefix,
+      '#type' => 'markup',
+      '#markup' => $link['label'],
+      '#suffix' => '</strong>',
+    );
+    $link_url = $link['url'];
+    $links[] = l(render($link_content), $link_url, array(
+      'html' => TRUE,
       'attributes' => array(
         'class' => array($type, $link['class']),
         'title' => $link['title'])
