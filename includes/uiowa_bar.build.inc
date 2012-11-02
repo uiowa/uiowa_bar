@@ -48,10 +48,10 @@ function build_uiowa_bar() {
         'title' => 'Maps'
       ),
       2 => array(
-        'label' => t('A-Z'),
+        'label' => t('A-Z Index'),
         'url' => 'http://www.uiowa.edu/homepage/search/index.html',
         'class' => 'a-z',
-        'title' => 'A-Z'
+        'title' => 'A-Z Index'
       ),
       3 => array(
         'label' => t('Search'),
