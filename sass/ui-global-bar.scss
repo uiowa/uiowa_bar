@@ -26,17 +26,6 @@
 $serif-large: Georgia, Baskerville, Palatino, 'Palatino Linotype', 'Book Antiqua', 'Times New Roman', serif;
 $sans-serif-arial-helvetica:  Arial, Helvetica, sans-serif;
 
-@mixin iconReplaceUigb {
-	position: absolute;
-	content: "";
-	display: block;
-	top: 5px;
-	left: 4px;
-
-	.skin-b & {
-		top: 3px; // fixes position due to fuax drop shadow on icon
-	}
-}
 
 @font-face {
   font-family: 'fontello';
