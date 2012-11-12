@@ -40,7 +40,7 @@
   text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.6);
 }
 
-.uiowa-icon-style strong {
+.uiowa-icon-style #ui-wrapper strong {
   display: inline-block;
   display: block !important;
   text-indent: 100%;
