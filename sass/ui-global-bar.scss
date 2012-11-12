@@ -91,7 +91,7 @@ a.uiowa-icon {
 	font-size: 13px;
 
 	.skin-a & {
-		@include background-with-css2-fallback(linear-gradient(top, #F7F7F7, #D6D6D6), #F7F7F7);
+		@include background-with-css2-fallback(linear-gradient(top, #F7F7F7, #D6D6D6), #D6D6D6);
 		a { color: #333; }
 	}
 
