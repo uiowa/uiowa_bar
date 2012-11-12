@@ -39,19 +39,19 @@ function build_uiowa_bar() {
         'label' => t('Phonebook'),
         'url' => 'http://www.uiowa.edu/homepage/directories/',
         'class' => 'phonebook',
-        'title' => 'Phonebook'
+        'title' => 'University of Iowa Phonebook'
       ),
       1 => array(
         'label' => t('Maps'),
         'url' => 'http://www.uiowa.edu/homepage/hub/tours.html',
         'class' => 'maps',
-        'title' => 'Maps'
+        'title' => 'University of Iowa Maps'
       ),
       2 => array(
         'label' => t('A-Z Index'),
         'url' => 'http://www.uiowa.edu/homepage/search/index.html',
         'class' => 'a-z',
-        'title' => 'A-Z Index'
+        'title' => 'University of Iowa A-Z Index'
       ),
       3 => array(
         'label' => t('Search'),
