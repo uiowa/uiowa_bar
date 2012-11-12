@@ -43,22 +43,27 @@ $sans-serif-arial-helvetica:  Arial, Helvetica, sans-serif;
   speak: none;
   display: inline-block;
   text-decoration: inherit;
-  //width: 1em;
-  //padding: 5px;
-  //margin-right: 0.2em;
   text-align: center;
-  opacity: 0.7;
-/* Uncomment for 3D effect */
-/* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
-/* fix buttons height */
-  //line-height: 28px;
-  //font-size: 28px;
-/* you can be more comfortable with increased icons size */
- //font-size: 2.4em;
+
  	.uiowa-icon-style & {
-		font-size: 20px;
-		line-height: 20px;
+		font-size: 18px;
+		line-height: 26px;
  	}
+
+ 	.skin-a & {
+ 		color: #333;
+ 		@include text-shadow(0px 1px 0px rgba(255,255,255,.6));
+ 	}
+
+ 	.skin-b & {
+ 		color: #ddd;
+ 		@include text-shadow(0px -1px 0px rgba(0,0,0,.6));
+ 	}
+}
+
+.uiowa-icon-style strong {
+	display: inline-block;
+	@include ir;
 }
 
 .icon-phonebook:before { content: '\e722'; } /* '' */
@@ -77,7 +82,6 @@ a.uiowa-icon {
 }
 
 #ui-wrapper {
-	@include background-with-css2-fallback(linear-gradient(top, #F7F7F7, #D6D6D6), #F7F7F7);
 	border-top: 3px solid #2D2D2D;
 	@include box-shadow(0px 2px 6px rgba(0, 0, 0, .4));
 	position: relative;
@@ -86,17 +90,21 @@ a.uiowa-icon {
 	font-family: $sans-serif-arial-helvetica;
 	font-size: 13px;
 
+	.skin-a & {
+		@include background-with-css2-fallback(linear-gradient(top, #F7F7F7, #D6D6D6), #F7F7F7);
+		a { color: #333; }
+	}
+
 	.skin-b & {
 		background: #3B3B3C;
 	}
 
 	.container {
-		@include legacy-pie-clearfix;
+		@include clearfix;
 		position: relative;
 	}
 
 	a {
-		color: #000;
 		&:hover, &:focus {
 			text-decoration: underline;
 		}
@@ -104,28 +112,32 @@ a.uiowa-icon {
 
 	#ui-logo {
 		position: absolute;
-		top: -3px;
+		top: 5px;
 		left: 5px;
 
-		border-top: 3px solid #FFCD05;
+
 		@include hide-text;
-		height: 37px;
-		width: 175px;
-		@include uigb-light-sprite(ui-logo, $offset-y: 10px);
+		@include sprites-sprite(ui-logo-light, $dimensions: true);
 
 		a { display: block; height: 100%;}
 
 		.skin-b & {
-			@include uigb-dark-sprite(ui-logo, $offset-y: 10px);
+			@include sprites-sprite(ui-logo-dark, $dimensions: true);
 		}
 	}
 
 	#ui-global-bar-nav {
 		float: right;
 		width: 100%;
+
 		.uiowa-text-style & {
 			@include box-shadow(0px 2px 6px rgba(0, 0, 0, .4) inset);
 			background-color: #D6D6D6;
+
+
+			.search {
+				@include ir;
+			}
 		}
 	}
 
@@ -139,6 +151,8 @@ a.uiowa-icon {
 	}
 
 	#ui-global-links {
+		position: relative;
+		z-index: 1;
 
 		.uiowa-icon-style & {
 			float: right;
@@ -162,7 +176,7 @@ a.uiowa-icon {
 			margin: 0 5px 0 0;
 			padding: 0 0 2px 0; // provide extra space for drop shadow, excluded from overflow hidden declaration
 			.uiowa-icon-style & {
-			  //@include hide-text;
+
 			}
 			.uiowa-text-style & {
 				border-left: 2px solid #000;
@@ -181,18 +195,22 @@ a.uiowa-icon {
 			&.uiowa-icon {
 				span {
 					padding: 5px;
-					//position: relative;
 					@include background-with-css2-fallback(linear-gradient(top, #F7F7F7, #D6D6D6), #D6D6D6);
-					//display: block;
-					//padding: 13px;
-
 
 					@include border-radius(50%);
 					@include box-shadow(rgba(0,0,0,.3) 0px 2px 1px 0px);
 					border: 1px solid #eee;
+
 					&:focus, &:hover {
 						@include background-with-css2-fallback(linear-gradient(top, #D6D6D6, #F7F7F7), #F7F7F7);
 						@include box-shadow(rgba(0,0,0,.3) 0px 0px 0px 0px);
+					}
+
+					.skin-b & {
+					@include background-with-css2-fallback(linear-gradient(top, #262626, #0D0D0D), #262626);
+					border: 1px solid #333;
+					&:focus, &:hover {
+						@include background-with-css2-fallback(linear-gradient(top, #bfbfbf, #3f3f3f), #131313);
 					}
 				}
 				strong {
@@ -206,13 +224,6 @@ a.uiowa-icon {
   				padding: 13px;
 			}
 
-			.skin-b & {
-				@include background-with-css2-fallback(linear-gradient(top, #262626, #0D0D0D), #262626);
-				border: 1px solid #333;
-				&:focus, &:hover {
-					@include background-with-css2-fallback(linear-gradient(top, #bfbfbf, #3f3f3f), #131313);
-					//@include box-shadow(rgba(0,0,0,.3) 0px 0px 0px 0px);
-				}
 			}
 		}
 	}
@@ -222,6 +233,9 @@ a.uiowa-icon {
 	 }
 
 	#gsa-search {
+		position: relative;
+		z-index: 0;
+
 		.form-item,.form-item-sitesearch label, .form-submit {
 			margin: 0;
 			float: left;
@@ -291,6 +305,7 @@ a.uiowa-icon {
 			margin: 0px 10px 0 0;
 			position: relative;
 			float: left;
+			padding: 2px 0;
 
 			.skin-b & {
 				@include background-with-css2-fallback(linear-gradient(top, #262626, #0D0D0D), #262626);
@@ -302,11 +317,11 @@ a.uiowa-icon {
 				right: 5px;
 				top: 8px;
 				display: block;
-				@include uigb-light-sprite(arrow-down, $dimensions: true);
+				@include sprites-sprite(arrow-down-light, $dimensions: true);
 				content: "";
 
 				.skin-b & {
-					@include uigb-dark-sprite(arrow-down, $dimensions: true);
+					@include sprites-sprite(arrow-down-dark, $dimensions: true);
 				}
 			}
 
@@ -345,7 +360,7 @@ a.uiowa-icon {
 			@include background-with-css2-fallback(linear-gradient(top, #FFCD05, #D3AB2A), #FFCD05);
 			@include box-shadow(rgba(0,0,0,.3) 0px 2px 2px 0px);
 			@include border-radius(3px);
-			padding: 4px 10px;
+			padding: 6px 10px;
 
 			font-family: $sans-serif-arial-helvetica;
 			font-weight: bold;
@@ -388,7 +403,7 @@ a.uiowa-icon {
 				margin: 0;
 				@include box-shadow(none);
 				fieldset {
-					margin: 5px 0 0 -20px;
+					margin: 2px 0 0 -20px;
 				}
 				#edit-search-terms {
 					width: 200px;
