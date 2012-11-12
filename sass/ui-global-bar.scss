@@ -7,8 +7,7 @@
 @import 'compass/utilities/sprites';           // See http://compass-style.org/help/tutorials/spriting/
 @import 'compass/css3';                        // Use one CSS3 mixin instead of multiple vendor prefixes.
 @import 'compass/typography';
-@import "ui-header/uigb-light/*.png";
-@import "ui-header/uigb-dark/*.png";
+@import "sprites/*.png";
 
 $serif-large: Georgia, Baskerville, Palatino, 'Palatino Linotype', 'Book Antiqua', 'Times New Roman', serif;
 $sans-serif-arial-helvetica:  Arial, Helvetica, sans-serif;
