@@ -97,6 +97,7 @@
   background: -webkit-linear-gradient(top, #f7f7f7, #d6d6d6), #f7f7f7;
   background: -moz-linear-gradient(top, #f7f7f7, #d6d6d6), #f7f7f7;
   background: -o-linear-gradient(top, #f7f7f7, #d6d6d6), #f7f7f7;
+  background: -ms-linear-gradient(top, #f7f7f7, #d6d6d6), #f7f7f7;
   background: linear-gradient(top, #f7f7f7, #d6d6d6), #f7f7f7;
 }
 .skin-a #ui-wrapper a {
@@ -117,9 +118,9 @@
   position: absolute;
   top: 5px;
   left: 5px;
-  text-indent: -119988px;
+  text-indent: 110%;
+  white-space: nowrap;
   overflow: hidden;
-  text-align: left;
   background-position: 0 -23px;
   height: 23px;
   width: 173px;
@@ -210,6 +211,7 @@
   background: -webkit-linear-gradient(top, #f7f7f7, #d6d6d6), #d6d6d6;
   background: -moz-linear-gradient(top, #f7f7f7, #d6d6d6), #d6d6d6;
   background: -o-linear-gradient(top, #f7f7f7, #d6d6d6), #d6d6d6;
+  background: -ms-linear-gradient(top, #f7f7f7, #d6d6d6), #d6d6d6;
   background: linear-gradient(top, #f7f7f7, #d6d6d6), #d6d6d6;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -228,6 +230,7 @@
   background: -webkit-linear-gradient(top, #d6d6d6, #f7f7f7), #f7f7f7;
   background: -moz-linear-gradient(top, #d6d6d6, #f7f7f7), #f7f7f7;
   background: -o-linear-gradient(top, #d6d6d6, #f7f7f7), #f7f7f7;
+  background: -ms-linear-gradient(top, #d6d6d6, #f7f7f7), #f7f7f7;
   background: linear-gradient(top, #d6d6d6, #f7f7f7), #f7f7f7;
   -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 0px 0px;
   -moz-box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 0px 0px;
@@ -240,6 +243,7 @@
   background: -webkit-linear-gradient(top, #262626, #0d0d0d), #262626;
   background: -moz-linear-gradient(top, #262626, #0d0d0d), #262626;
   background: -o-linear-gradient(top, #262626, #0d0d0d), #262626;
+  background: -ms-linear-gradient(top, #262626, #0d0d0d), #262626;
   background: linear-gradient(top, #262626, #0d0d0d), #262626;
   border: 1px solid #333;
 }
@@ -250,6 +254,7 @@
   background: -webkit-linear-gradient(top, #bfbfbf, #3f3f3f), #131313;
   background: -moz-linear-gradient(top, #bfbfbf, #3f3f3f), #131313;
   background: -o-linear-gradient(top, #bfbfbf, #3f3f3f), #131313;
+  background: -ms-linear-gradient(top, #bfbfbf, #3f3f3f), #131313;
   background: linear-gradient(top, #bfbfbf, #3f3f3f), #131313;
 }
 #ui-wrapper #ui-global-links a.uiowa-icon span strong {
@@ -335,6 +340,7 @@
   background: -webkit-linear-gradient(top, #f7f7f7, #d6d6d6), #d6d6d6;
   background: -moz-linear-gradient(top, #f7f7f7, #d6d6d6), #d6d6d6;
   background: -o-linear-gradient(top, #f7f7f7, #d6d6d6), #d6d6d6;
+  background: -ms-linear-gradient(top, #f7f7f7, #d6d6d6), #d6d6d6;
   background: linear-gradient(top, #f7f7f7, #d6d6d6), #d6d6d6;
   -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 2px 0px;
   -moz-box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 2px 0px;
@@ -357,6 +363,7 @@
   background: -webkit-linear-gradient(top, #262626, #0d0d0d), #262626;
   background: -moz-linear-gradient(top, #262626, #0d0d0d), #262626;
   background: -o-linear-gradient(top, #262626, #0d0d0d), #262626;
+  background: -ms-linear-gradient(top, #262626, #0d0d0d), #262626;
   background: linear-gradient(top, #262626, #0d0d0d), #262626;
   border: 1px solid #333;
 }
@@ -412,6 +419,7 @@
   background: -webkit-linear-gradient(top, #ffcd05, #d3ab2a), #ffcd05;
   background: -moz-linear-gradient(top, #ffcd05, #d3ab2a), #ffcd05;
   background: -o-linear-gradient(top, #ffcd05, #d3ab2a), #ffcd05;
+  background: -ms-linear-gradient(top, #ffcd05, #d3ab2a), #ffcd05;
   background: linear-gradient(top, #ffcd05, #d3ab2a), #ffcd05;
   -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 2px 0px;
   -moz-box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 2px 0px;
