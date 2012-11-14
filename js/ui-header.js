@@ -1,5 +1,6 @@
 (function ($) {
-  $(document).ready(function() {
+    Drupal.behaviors.uiowa_bar = {
+    attach: function (context, settings) {
     // Use uniform.js library to customize select box in ui-header
     $("#ui-global-bar select").uniform();
     $("#ui-global-bar #gsa-search").hide().toggleClass("collapsed");
@@ -45,6 +46,6 @@
         .toggleClass("expanded").toggleClass("collapsed");
       $("#ui-global-links ul").append($search);
     }
-
-  });
-}(jQuery));
+  }
+};
+})(jQuery);
