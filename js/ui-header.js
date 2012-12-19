@@ -28,23 +28,25 @@
       $search.detach();
     }
 
-    // var mql700 = window.matchMedia("screen and (min-width: 700px)");
+    console.log(modernizer);
 
-    // /* If the search display is set to open for wide screen
-    // devices, then expand. */
-    // if (mql700.matches && Drupal.settings.uiowa_bar.uiowa_bar_search_display === 1) {
-    //   $("#ui-global-bar #gsa-search").toggle().toggleClass("expanded");
-    // }
+    var mql700 = window.matchMedia("screen and (min-width: 700px)");
 
-    // var mql820 = window.matchMedia("screen and (min-width: 820px)");
+    /* If the search display is set to open for wide screen
+    devices, then expand. */
+    if (mql700.matches && Drupal.settings.uiowa_bar.uiowa_bar_search_display === 1) {
+      $("#ui-global-bar #gsa-search").toggle().toggleClass("expanded");
+    }
 
-    // if (mql820.matches && Drupal.settings.uiowa_bar.uiowa_bar_link_style == "uiowa-text") {
-    //   $("#ui-global-nav-sm").detach();
-    //   $("#ui-global-links")
-    //     .toggle()
-    //     .toggleClass("expanded").toggleClass("collapsed");
-    //   $("#ui-global-links ul").append($search);
-    // }
+    var mql820 = window.matchMedia("screen and (min-width: 820px)");
+
+    if (mql820.matches && Drupal.settings.uiowa_bar.uiowa_bar_link_style == "uiowa-text") {
+      $("#ui-global-nav-sm").detach();
+      $("#ui-global-links")
+        .toggle()
+        .toggleClass("expanded").toggleClass("collapsed");
+      $("#ui-global-links ul").append($search);
+    }
   };
 
   // Attach uiowa_bar behavior.
