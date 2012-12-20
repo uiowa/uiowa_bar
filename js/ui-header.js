@@ -28,8 +28,6 @@
       $search.detach();
     }
 
-    console.log(modernizer);
-
     var mql700 = window.matchMedia("screen and (min-width: 700px)");
 
     /* If the search display is set to open for wide screen
