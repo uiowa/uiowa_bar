@@ -4,3 +4,5 @@ package = UIowa
 core = 7.x
 version = 7.x-1.0-dev2
 configure = admin/config/user-interface/uiowa-bar
+; dependencies[] = google_appliance
+; dependencies[] = uiowa_gsa

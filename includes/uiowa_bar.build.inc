@@ -57,7 +57,7 @@ function build_uiowa_bar() {
         'label' => t('Search'),
         'url' => '#',
         'class' => 'search',
-        'title' => 'Search'
+        'title' => 'University of Iowa Search'
       )
     )
   );
@@ -74,8 +74,6 @@ function build_uiowa_bar() {
  */
 function uiowa_bar_search_form($form, &$form_state) {
   $form = array();
-  $form['#action'] = 'http://search.uiowa.edu/search';
-  $form['#method'] = 'get';
   $form['fieldset'] = array (
     '#type' => 'fieldset'
   );
@@ -85,21 +83,10 @@ function uiowa_bar_search_form($form, &$form_state) {
     '#title' => t('Search Terms'),
     '#title_display' => 'invisible',
     '#attributes' => array(
-      'placeholder' => 'Start Searching ...'
+      'placeholder' => 'Search uiowa.edu'
     ),
-    '#name' => 'q',
     '#maxlength' => '256',
     '#size' => '15'
-  );
-  $form['fieldset']['sitesearch'] = array (
-    '#prefix' => '<div id="sitesearch-container">',
-    '#type' => 'select',
-    '#title' => t('for'),
-    '#name' => 'sitesearch',
-    '#options' => array(
-      uiowa_bar_base_url_no_protocol() => 'This Site',
-      'www.uiowa.edu' => 'All Sites'
-    )
   );
   $form['fieldset']['submit-search'] = array (
     '#type' => 'submit',
@@ -107,28 +94,24 @@ function uiowa_bar_search_form($form, &$form_state) {
     '#name' => 'btnG',
     '#suffix' => '</div>'
   );
-  $form['fieldset']['hidden-site'] = array (
-    '#type' => 'hidden',
-    '#value' => t('default_collection'),
-    '#name' => 'site',
-  );
-  $form['fieldset']['hidden-client'] = array (
-    '#type' => 'hidden',
-    '#value' => t('default_frontend'),
-    '#name' => 'client',
-  );
-  $form['fieldset']['hidden-output'] = array (
-    '#type' => 'hidden',
-    '#value' => t('xml_no_dtd'),
-    '#name' => 'output',
-  );
-  $form['fieldset']['hidden-proxystylesheet'] = array (
-    '#type' => 'hidden',
-    '#value' => t('default_frontend'),
-    '#name' => 'proxystylesheet',
-    '#suffix' => '</div>'
-  );
+  $form_state['action'] = 'gsearch/';
+
+  // use core search CSS in addition to this module's css
+  // (keep it general in case core search is enabled)
+  $form['#attributes']['class'][] = 'search-form';
+  $form['#attributes']['class'][] = 'search-google-appliance-search-form';
+
   return $form;
+}
+
+/**
+ * Submit handler for full search form
+ */
+function uiowa_bar_search_form_submit($form, &$form_state) {
+
+  // set the redirect
+  $search_query = urlencode($form_state['input']['search-terms']);
+  $form_state['redirect'] = url($form_state['action'] . $search_query, array('absolute' => TRUE));
 }
 
 /**
