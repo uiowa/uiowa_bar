@@ -13,6 +13,12 @@ function uiowa_bar_install() {
   variable_set('uiowa_bar_color_palette', 'skin-a');
   variable_set('uiowa_bar_link_style', 'uiowa-icon');
   variable_set('uiowa_bar_search_display', 1);
+
+  // Set permissions.
+  $roles = user_roles();
+  foreach ($roles as $rid => $role) {
+    user_role_grant_permissions($rid, array('access_google_appliance_content'));
+  }
 }
 
 /**
@@ -60,4 +66,15 @@ function uiowa_bar_update_7100(&$sandbox) {
 function uiowa_bar_update_7101(&$sandbox) {
   $module_list = array('google_appliance', 'uiowa_gsa');
   module_enable($module_list, $enable_dependencies = FALSE);
+}
+
+/**
+ * Update anonymous and authenticated roles to allow Google Appliance searches
+ */
+function uiowa_bar_update_7102(&$sandbox) {
+  // Set permissions.
+  $roles = user_roles();
+  foreach ($roles as $rid => $role) {
+    user_role_grant_permissions($rid, array('access_google_appliance_content'));
+  }
 }
