@@ -53,3 +53,11 @@ function uiowa_bar_update_7000(&$sandbox) {
 function uiowa_bar_update_7100(&$sandbox) {
   variable_set('uiowa_bar_search_display', 0);
 }
+
+/**
+* Turn on new search dependencies
+*/
+function uiowa_bar_update_7101(&$sandbox) {
+  $module_list = array('google_appliance', 'uiowa_gsa');
+  module_enable($module_list, $enable_dependencies = FALSE);
+}
