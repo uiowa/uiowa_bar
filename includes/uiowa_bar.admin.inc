@@ -23,29 +23,10 @@ function uiowa_bar_config_form($form, &$form_state) {
     '#default_value' => variable_get('uiowa_bar_color_palette'),
     '#description' => t('Choose the color palette of the University of Iowa branding bar'),
     '#options' => array(
-      'skin-a' => t('Light Theme'),
-      'skin-b' => t('Dark Theme'),
+      'uiowa-bar-light' => t('Light Theme'),
+      'uiowa-bar-light' => t('Dark Theme'),
     ),
   );
-
-  $form['uiowa_bar_link_style'] = array(
-    '#type' => 'select',
-    '#title' => t('Link Style'),
-    '#default_value' => variable_get('uiowa_bar_link_style'),
-    '#description' => t('Choose the link style for the University of Iowa branding bar action links'),
-    '#options' => array(
-      'uiowa-icon' => t('Icon-based'),
-      'uiowa-text' => t('Text-based'),
-    ),
-  );
-
-  $form['uiowa_bar_search_display'] = array(
-    '#type' => 'checkbox',
-    '#title' => t('Expand search form on wide screen displays.'),
-    '#default_value' => variable_get('uiowa_bar_search_display'),
-    '#description' => t('Display option for the search form on wide displays. Defaults to closed.  On small screen displays, the search will always default to closed.'),
-  );
-
 
   return system_settings_form($form);
 }

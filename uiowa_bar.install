@@ -10,9 +10,7 @@
  * Implements hook_install().
  */
 function uiowa_bar_install() {
-  variable_set('uiowa_bar_color_palette', 'skin-a');
-  variable_set('uiowa_bar_link_style', 'uiowa-icon');
-  variable_set('uiowa_bar_search_display', 1);
+  variable_set('uiowa_bar_color_palette', 'uiowa-bar-light');
 
   // Set permissions.
   $roles = user_roles();
@@ -26,8 +24,6 @@ function uiowa_bar_install() {
  */
 function uiowa_bar_uninstall() {
   variable_del('uiowa_bar_color_palette');
-  variable_del('uiowa_bar_link_style');
-  variable_del('uiowa_bar_search_display');
 }
 
 /**
@@ -76,5 +72,28 @@ function uiowa_bar_update_7102(&$sandbox) {
   $roles = user_roles();
   foreach ($roles as $rid => $role) {
     user_role_grant_permissions($rid, array('access_google_appliance_content'));
+  }
+}
+
+/**
+ * Remove deprecated configuration options and rename palette choices.
+ */
+function uiowa_bar_update_7103(&$sandbox) {
+  // Delete variables
+  variable_del('uiowa_bar_link_style');
+  variable_del('uiowa_bar_search_display');
+  // Rename palette options
+  $palette = variable_get('uiowa_bar_color_palette');
+  if ($palette) {
+    switch ($palette) {
+      case 'skin-a':
+        variable_set('uiowa_bar_color_palette', 'uiowa-bar-light');
+        break;
+      case 'skin-b':
+        variable_set('uiowa_bar_color_palette', 'uiowa-bar-dark');
+        break;
+      default:
+        variable_set('uiowa_bar_color_palette', 'uiowa-bar-light');
+    }
   }
 }
