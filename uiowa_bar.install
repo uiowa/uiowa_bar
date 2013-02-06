@@ -10,9 +10,10 @@
  * Implements hook_install().
  */
 function uiowa_bar_install() {
+  // Set the default color palette to the light palette.
   variable_set('uiowa_bar_color_palette', 'uiowa-bar-light');
 
-  // Set permissions.
+  // Set permissions for the search.
   $roles = user_roles();
   foreach ($roles as $rid => $role) {
     user_role_grant_permissions($rid, array('access_google_appliance_content'));
@@ -23,6 +24,7 @@ function uiowa_bar_install() {
  * Implements hook_uninstall().
  */
 function uiowa_bar_uninstall() {
+  // Delete the color palette variable.
   variable_del('uiowa_bar_color_palette');
 }
 

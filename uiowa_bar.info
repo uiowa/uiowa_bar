@@ -1,5 +1,5 @@
 name = UIowa Bar
-description = Adds the University of Iowa Branding Bar to the page
+description = Adds the University of Iowa Branding Bar and Footer to the page
 package = UIowa
 core = 7.x
 version = 7.x-1.0-dev2

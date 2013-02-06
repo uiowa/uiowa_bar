@@ -3,11 +3,11 @@
 /**
  * @file
  *
- * Build and theme the University of Iowa branding bar
+ * Build and theme the University of Iowa branding bar footer
  */
 
 /**
- * Build out the University of Iowa branding bar.
+ * Build out the University of Iowa branding bar footer.
  */
 function build_uiowa_bar_footer() {
   $uiowa_bar = array();
@@ -77,8 +77,9 @@ function build_uiowa_bar_footer() {
       ),
     )
   );
-  // Copyright info
+  // Get year
   $year = date('Y');
+  // Add copyright
   $uiowa_bar['ui-global-footer']['container']['copyright'] = array(
     '#attributes' => array('class' => array('ui-copyright')),
     '#type' => 'markup',

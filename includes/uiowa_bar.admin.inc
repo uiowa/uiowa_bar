@@ -7,7 +7,7 @@
  */
 
 /**
-* Page callback: University of Iowa branding bar
+* Page callback: University of Iowa branding bar configuration form
 *
 * @see uiowa_bar_menu()
 */
