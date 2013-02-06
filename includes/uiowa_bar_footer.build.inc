@@ -95,7 +95,6 @@ function build_uiowa_bar_footer() {
  * branding bar.
  */
 function theme_uiowa_bar_link_list($variables = array()) {
-  $type = variable_get('uiowa_bar_link_style');
   $links = array();
   foreach ($variables['links']['#children'] as $link) {
     $link_content = array(
@@ -108,7 +107,7 @@ function theme_uiowa_bar_link_list($variables = array()) {
     $links[] = l(render($link_content), $link_url, array(
       'html' => TRUE,
       'attributes' => array(
-        'class' => array($type, $link['class']),
+        'class' => array($link['class']),
         'title' => $link['title'])
       )
     );
