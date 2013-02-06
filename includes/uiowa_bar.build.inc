@@ -50,7 +50,6 @@ function uiowa_bar_search_form($form, &$form_state) {
   $form['search-terms'] = array (
     '#type' => 'textfield',
     '#title' => t('Search Terms'),
-    '#title_display' => 'invisible',
     '#attributes' => array(
       'placeholder' => 'Search uiowa.edu'
     ),
