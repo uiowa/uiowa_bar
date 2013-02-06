@@ -12,31 +12,35 @@
 function build_uiowa_bar() {
   $uiowa_bar = array();
   $uiowa_bar['ui-global-bar'] = array(
-    '#attributes' => array('id' => array('ui-global-bar')),
+    '#attributes' => array('id' => array('ui-wrapper')),
     '#type' => 'container',
   );
-  $uiowa_bar['ui-global-bar']['ui-logo'] = array(
+  $uiowa_bar['ui-global-bar']['container'] = array(
+    '#attributes' => array('class' => array('container')),
+    '#type' => 'container',
+  );
+  $uiowa_bar['ui-global-bar']['container']['ui-logo'] = array(
     '#attributes' => array('id' => array('ui-logo')),
     '#type' => 'container',
   );
-  $uiowa_bar['ui-global-bar']['ui-logo']['link'] = array(
+  $uiowa_bar['ui-global-bar']['container']['ui-logo']['link'] = array(
     '#type' => 'link',
     '#title' => t('The University of Iowa'),
     '#href' => 'http://www.uiowa.edu',
   );
-  $uiowa_bar['ui-global-bar']['ui-global-bar-nav'] = array(
+  $uiowa_bar['ui-global-bar']['container']['ui-global-bar-nav'] = array(
     '#attributes' => array('id' => array('ui-global-bar-nav')),
     '#type' => 'container',
   );
-  $uiowa_bar['ui-global-bar']['ui-global-bar-nav']['ui-global-links'] = array(
+  $uiowa_bar['ui-global-bar']['container']['ui-global-bar-nav']['ui-global-links'] = array(
     '#attributes' => array('id' => array('ui-global-links')),
     '#type' => 'container',
   );
-  $uiowa_bar['ui-global-bar']['ui-global-bar-nav']['gsa-search'] = array(
+  $uiowa_bar['ui-global-bar']['container']['ui-global-bar-nav']['gsa-search'] = array(
     '#attributes' => array('id' => array('gsa-search')),
     '#type' => 'container',
   );
-  $uiowa_bar['ui-global-bar']['ui-global-bar-nav']['gsa-search']['search-form'] = drupal_get_form('uiowa_bar_search_form');
+  $uiowa_bar['ui-global-bar']['container']['ui-global-bar-nav']['gsa-search']['search-form'] = drupal_get_form('uiowa_bar_search_form');
   return $uiowa_bar;
 }
 

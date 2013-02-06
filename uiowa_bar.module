@@ -69,10 +69,6 @@ function uiowa_bar_form_system_theme_settings_alter(&$form, &$form_state)  {
  */
 function uiowa_bar_theme(){
   return array(
-    'uiowa_bar' => array(
-        'path'      => drupal_get_path('module', 'uiowa_bar').'/theme',
-        'template'  => 'uiowa-bar',
-    ),
     'uiowa_bar_link_list' => array(
       'render element' => 'links',
     ),
@@ -99,7 +95,7 @@ function uiowa_bar_page_build(&$page) {
 
     // Build the University of Iowa branding bar
     $page['page_top']['uiowa_bar'] = array(
-      '#markup' => theme('uiowa_bar'),
+      '#markup' => render(build_uiowa_bar()),
       '#weight' => 25,
     );
     $js_settings = array(
@@ -112,11 +108,4 @@ function uiowa_bar_page_build(&$page) {
       'type' => 'setting',
     );
   }
-}
-
-/**
- * Implements hook_form_FORM_ID_alter.
- */
-function uiowa_bar_preprocess_uiowa_bar(&$variables) {
-  $variables['uiowa_bar'] = build_uiowa_bar();
 }
