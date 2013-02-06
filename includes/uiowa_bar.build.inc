@@ -84,12 +84,3 @@ function uiowa_bar_search_form_submit($form, &$form_state) {
   $search_query = urlencode($form_state['input']['search-terms']);
   $form_state['redirect'] = url($form_state['action'] . $search_query, array('absolute' => TRUE));
 }
-
-/**
- * Base URL without the protocol - needed for the Google Search Appliance.
- */
-function uiowa_bar_base_url_no_protocol() {
-  $url = preg_replace('/^https?:\/\//i', '', $GLOBALS['base_url']);
-  return $url;
-}
-
