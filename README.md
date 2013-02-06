@@ -1,8 +1,0 @@
-UIowa-Branding-Bar
-==================
-
-Top Branding Bar for UIowa
-
-Jenkins
-
-For Ken
