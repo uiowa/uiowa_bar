@@ -28,19 +28,17 @@ function build_uiowa_bar() {
     '#title' => t('The University of Iowa'),
     '#href' => 'http://www.uiowa.edu',
   );
-  $uiowa_bar['ui-global-bar']['container']['ui-global-bar-nav'] = array(
-    '#attributes' => array('id' => array('ui-global-bar-nav')),
+  $uiowa_bar['ui-global-bar']['container']['ui-search-toggle'] = array(
+    '#type' => 'link',
+    '#title' => t('Search'),
+    '#href' => '#',
+    '#attributes' => array('id' => array('ui-search-toggle')),
+  );
+  $uiowa_bar['ui-global-bar']['container']['ui-search'] = array(
+    '#attributes' => array('id' => array('ui-search')),
     '#type' => 'container',
   );
-  $uiowa_bar['ui-global-bar']['container']['ui-global-bar-nav']['ui-global-links'] = array(
-    '#attributes' => array('id' => array('ui-global-links')),
-    '#type' => 'container',
-  );
-  $uiowa_bar['ui-global-bar']['container']['ui-global-bar-nav']['gsa-search'] = array(
-    '#attributes' => array('id' => array('gsa-search')),
-    '#type' => 'container',
-  );
-  $uiowa_bar['ui-global-bar']['container']['ui-global-bar-nav']['gsa-search']['search-form'] = drupal_get_form('uiowa_bar_search_form');
+  $uiowa_bar['ui-global-bar']['container']['ui-search']['search-form'] = drupal_get_form('uiowa_bar_search_form');
   return $uiowa_bar;
 }
 
@@ -49,11 +47,7 @@ function build_uiowa_bar() {
  */
 function uiowa_bar_search_form($form, &$form_state) {
   $form = array();
-  $form['fieldset'] = array (
-    '#type' => 'fieldset'
-  );
-  $form['fieldset']['search-terms'] = array (
-    '#prefix' => '<legend class="element-hidden">Search</legend><div id="search-box">',
+  $form['search-terms'] = array (
     '#type' => 'textfield',
     '#title' => t('Search Terms'),
     '#title_display' => 'invisible',
@@ -63,11 +57,10 @@ function uiowa_bar_search_form($form, &$form_state) {
     '#maxlength' => '256',
     '#size' => '15'
   );
-  $form['fieldset']['submit-search'] = array (
+  $form['submit-search'] = array (
     '#type' => 'submit',
     '#value' => t('Search'),
     '#name' => 'btnG',
-    '#suffix' => '</div>'
   );
   $form_state['action'] = 'gsearch/';
 
