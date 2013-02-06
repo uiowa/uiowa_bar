@@ -57,12 +57,6 @@ function build_uiowa_bar_footer() {
         'class' => 'a-z',
         'title' => 'University of Iowa A-Z Index'
       ),
-      3 => array(
-        'label' => t('Search'),
-        'url' => '#',
-        'class' => 'search',
-        'title' => 'University of Iowa Search'
-      )
     )
   );
 
