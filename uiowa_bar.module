@@ -91,7 +91,7 @@ function uiowa_bar_page_build(&$page) {
     drupal_add_css(drupal_get_path('module', 'uiowa_bar') . '/css/ie7.css', array('group' => CSS_DEFAULT, 'every_page' => TRUE, 'browsers' => array('IE' => 'lte IE 7', '!IE' => FALSE)));
 
     /* Include Javascript Assets */
-    drupal_add_js(drupal_get_path('module', 'uiowa_bar') . '/js/ui-header.js');
+    //drupal_add_js(drupal_get_path('module', 'uiowa_bar') . '/js/ui-header.js');
 
     // Build the University of Iowa branding bar
     $page['page_top']['uiowa_bar'] = array(
@@ -103,9 +103,16 @@ function uiowa_bar_page_build(&$page) {
       'uiowa_bar_link_style' => variable_get('uiowa_bar_link_style'),
       'uiowa_bar_search_display' => variable_get('uiowa_bar_search_display'),
     );
-    $page['page_top']['uiowa_bar']['#attached']['js'][] = array(
+    /*$page['page_top']['uiowa_bar']['#attached']['js'][] = array(
       'data' => array('uiowa_bar' => $js_settings),
       'type' => 'setting',
+    );*/
+
+    module_load_include('inc', 'uiowa_bar', 'includes/uiowa_bar_footer.build');
+    // Build the University of Iowa branding bar
+    $page['page_bottom']['uiowa_bar_footer'] = array(
+      '#markup' => render(build_uiowa_bar_footer()),
+      '#weight' => 25,
     );
   }
 }
