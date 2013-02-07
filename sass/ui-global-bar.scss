@@ -7,6 +7,7 @@
 @import 'compass/utilities/sprites';           // See http://compass-style.org/help/tutorials/spriting/
 @import 'compass/css3';                        // Use one CSS3 mixin instead of multiple vendor prefixes.
 @import 'compass/typography';
+@import 'compass/css3/user-interface';
 @import "sprites/*.png";
 @import "animate";
 
@@ -33,6 +34,8 @@ $serif-large: Georgia, Baskerville, Palatino, 'Palatino Linotype', 'Book Antiqua
 $sans-serif-arial-helvetica:  Arial, Helvetica, sans-serif;
 
 $uiowa-bar-gutter: 8px;
+
+$ui-gold: #f6c72f;
 
 
 @font-face {
@@ -201,6 +204,13 @@ input {
         border: 1px solid #333;
         color: #999;
         @include box-shadow(0px -12px 2px rgba(0,0,0,.5) inset);
+
+        &:hover, &:focus, &:active {
+          background-color: lighten($ui-gold, 15%);
+          @include box-shadow(0px -12px 2px $ui-gold inset);
+          color: #222;
+          @include text-shadow(0px 1px 0px rgba(255,255,255,.3));
+        }
       }
     }
   }
@@ -208,17 +218,60 @@ input {
 
 
 /* =============================================================================
- *   Custom Media Query
+ *   UI Global Footer
+ * ========================================================================== */
+  #ui-global-footer {
+    background-color: #111111;
+    color: #999;
+    padding: 20px $uiowa-bar-gutter;
+    font-size: 14px;
+    border-top: 1px solid #000;
+    @include box-shadow(0px 1px 0px rgba(255,255,255,.05) inset);
+
+    a {
+      color: #999;
+    }
+  }
+
+  #ui-footer-logo a {
+    @include ir;
+    @include sprites-sprite(ui-wm-dome-footer, $dimensions: true);
+  }
+
+  #ui-global-links .item-list {
+
+    ul {
+      margin-top: 10px;
+    }
+
+    li {
+      list-style-type: none;
+      margin: 0;
+      display: block;
+    }
+  }
+/* ========================================================================== */
+
+
+/* =============================================================================
+ *   Small Media Query
  * ========================================================================== */
   @media only screen and (max-width:500px) {
     #ui-wrapper {
       height: auto;
     }
 
-    #ui-logo a {
-      position: relative;
-      display: inline-block;
-      width: 100%;
+    #ui-logo {
+      a {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+      }
+
+      .uiowa-bar-dark &.search-exposed {
+        border-bottom: 1px solid #202020;
+        @include box-shadow(0px 1px 0px rgba(255,255,255,.05));
+      }
     }
 
     #ui-search-toggle {
@@ -265,7 +318,8 @@ input {
       float: none;
       width: auto;
     }
-  }
+
+  } // END MEDIA QUERY
 /* ========================================================================== */
 
 
@@ -276,6 +330,24 @@ input {
     #ui-search.search-hidden {
       display: block;
     }
-  }
+
+    /* FOOTER ----------------------------------------------------------------*/
+    #ui-global-links .item-list {
+      @include cf;
+
+      li {
+        display: block;
+        float: left;
+        margin-right: 10px;
+
+
+        &:after {
+          content: "/";
+          padding-left: 10px;
+        }
+      }
+    }
+
+  } // END MEDIA QUERY
 /* ========================================================================== */
 

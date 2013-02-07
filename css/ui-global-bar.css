@@ -2,8 +2,8 @@
  * @file
  * UI Global Bar Stles
  */
-.sprites-sprite, .uiowa-bar-dark #ui-logo a {
-  background: url('images/sprites-sd3bb2edf2a.png') no-repeat;
+.sprites-sprite, .uiowa-bar-dark #ui-logo a, #ui-footer-logo a {
+  background: url('images/sprites-s9381384258.png') no-repeat;
 }
 
 /*
@@ -172,7 +172,7 @@ input {
   width: 190px;
 }
 .uiowa-bar-dark #ui-logo a {
-  background-position: 8px 0;
+  background-position: 8px -26px;
 }
 
 .uiowa-bar-dark #ui-logo.search-exposed a {
@@ -281,10 +281,59 @@ input {
   -moz-box-shadow: 0px -12px 2px rgba(0, 0, 0, 0.5) inset;
   box-shadow: 0px -12px 2px rgba(0, 0, 0, 0.5) inset;
 }
+.uiowa-bar-dark #ui-search #edit-submit-search:hover, .uiowa-bar-dark #ui-search #edit-submit-search:focus, .uiowa-bar-dark #ui-search #edit-submit-search:active {
+  background-color: #f9db78;
+  -webkit-box-shadow: 0px -12px 2px #f6c72f inset;
+  -moz-box-shadow: 0px -12px 2px #f6c72f inset;
+  box-shadow: 0px -12px 2px #f6c72f inset;
+  color: #222;
+  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.3);
+}
 
 /* ========================================================================== */
 /* =============================================================================
- *   Custom Media Query
+ *   UI Global Footer
+ * ========================================================================== */
+#ui-global-footer {
+  background-color: #111111;
+  color: #999;
+  padding: 20px 8px;
+  font-size: 14px;
+  border-top: 1px solid #000;
+  -webkit-box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.05) inset;
+  -moz-box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.05) inset;
+  box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.05) inset;
+}
+#ui-global-footer a {
+  color: #999;
+}
+
+#ui-footer-logo a {
+  display: block !important;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  border: 0;
+  text-shadow: none;
+  color: transparent;
+  background-color: transparent;
+  background-position: 0 0;
+  height: 26px;
+  width: 200px;
+}
+
+#ui-global-links .item-list ul {
+  margin-top: 10px;
+}
+#ui-global-links .item-list li {
+  list-style-type: none;
+  margin: 0;
+  display: block;
+}
+
+/* ========================================================================== */
+/* =============================================================================
+ *   Small Media Query
  * ========================================================================== */
 @media only screen and (max-width: 500px) {
   #ui-wrapper {
@@ -295,6 +344,12 @@ input {
     position: relative;
     display: inline-block;
     width: 100%;
+  }
+  .uiowa-bar-dark #ui-logo.search-exposed {
+    border-bottom: 1px solid #202020;
+    -webkit-box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.05);
+    -moz-box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.05);
+    box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.05);
   }
 
   #ui-search-toggle {
@@ -349,6 +404,22 @@ input {
 @media only screen and (min-width: 500px) {
   #ui-search.search-hidden {
     display: block;
+  }
+
+  /* FOOTER ----------------------------------------------------------------*/
+  #ui-global-links .item-list {
+    overflow: hidden;
+    *overflow: visible;
+    *zoom: 1;
+  }
+  #ui-global-links .item-list li {
+    display: block;
+    float: left;
+    margin-right: 10px;
+  }
+  #ui-global-links .item-list li:after {
+    content: "/";
+    padding-left: 10px;
   }
 }
 /* ========================================================================== */
