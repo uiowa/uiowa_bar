@@ -2,7 +2,6 @@
  * @file
  * UI Global Bar Stles
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/sitenow_standard\/sites\/all\/modules\/custom\/uiowa_bar\/sprites\/\*\.png}line{font-family:\0000342}}
 .sprites-sprite, .uiowa-bar-dark #ui-logo a {
   background: url('images/sprites-sd3bb2edf2a.png') no-repeat;
 }
@@ -25,19 +24,19 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   -ms-animation-fill-mode: both;
   -o-animation-fill-mode: both;
   animation-fill-mode: both;
+  -webkit-animation-duration: .5s;
+  -moz-animation-duration: .5s;
+  -ms-animation-duration: .5s;
+  -o-animation-duration: .5s;
+  animation-duration: .5s;
+}
+
+.animated.hinge {
   -webkit-animation-duration: 1s;
   -moz-animation-duration: 1s;
   -ms-animation-duration: 1s;
   -o-animation-duration: 1s;
   animation-duration: 1s;
-}
-
-.animated.hinge {
-  -webkit-animation-duration: 2s;
-  -moz-animation-duration: 2s;
-  -ms-animation-duration: 2s;
-  -o-animation-duration: 2s;
-  animation-duration: 2s;
 }
 
 @-webkit-keyframes fadeInDown {
@@ -103,7 +102,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   font-style: normal;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/sitenow_standard\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\0000345}}
 input {
   font-family: arial !important;
   font-size: 14px !important;
@@ -112,18 +110,15 @@ input {
 /* =============================================================================
  *   UI Wrapper and Container
  * ========================================================================== */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/sitenow_standard\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\0000353}}
 #ui-wrapper {
   height: 40px;
   font-size: 14px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/sitenow_standard\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\0000357}}
 #ui-wrapper * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/sitenow_standard\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\0000361}}
 .uiowa-bar-dark #ui-wrapper {
   background-color: #1d1c1c;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #333333), color-stop(100%, #1d1c1c));
@@ -136,7 +131,6 @@ input {
   -moz-box-shadow: 0px -1px 0px #131313 inset;
   box-shadow: 0px -1px 0px #131313 inset;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/sitenow_standard\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\0000368}}
 #ui-wrapper .container {
   overflow: hidden;
   *overflow: visible;
@@ -148,16 +142,21 @@ input {
 /* =============================================================================
  *   Search Toggle
  * ========================================================================== */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/sitenow_standard\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\0000379}}
 #ui-search-toggle {
   display: none;
+}
+.uiowa-bar-dark #ui-search-toggle.inactive {
+  background-color: transparent;
+  -webkit-box-shadow: -1px 0px 0px rgba(255, 255, 255, 0.05);
+  -moz-box-shadow: -1px 0px 0px rgba(255, 255, 255, 0.05);
+  box-shadow: -1px 0px 0px rgba(255, 255, 255, 0.05);
+  border-left: 1px solid #111;
 }
 
 /* ========================================================================== */
 /* =============================================================================
  *   UI Logo
  * ========================================================================== */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/sitenow_standard\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\0000388}}
 #ui-logo a {
   position: absolute;
   margin-top: 12px;
@@ -172,12 +171,10 @@ input {
   background-color: transparent;
   width: 190px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/sitenow_standard\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\0000395}}
 .uiowa-bar-dark #ui-logo a {
   background-position: 8px 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/sitenow_standard\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003101}}
 .uiowa-bar-dark #ui-logo.search-exposed a {
   border-bottom: 1px solid #222;
   -webkit-box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.05);
@@ -189,17 +186,14 @@ input {
 /* =============================================================================
  *   Search Bar
  * ========================================================================== */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/sitenow_standard\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003112}}
 #ui-search.search-hidden {
   display: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/sitenow_standard\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003113}}
 #ui-search.search-exposed {
   display: block;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/sitenow_standard\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003115}}
 #ui-search {
   position: relative;
   -webkit-border-radius: 4px;
@@ -213,7 +207,6 @@ input {
   max-width: 300px;
   float: right;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/sitenow_standard\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003124}}
 .uiowa-bar-dark #ui-search {
   background-color: #333;
   border: 1px solid #202020;
@@ -221,7 +214,6 @@ input {
   -moz-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.25) inset;
   box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.25) inset;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/sitenow_standard\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003131}}
 #ui-search .form-item-search-terms {
   display: inline-block;
   margin: 0;
@@ -230,12 +222,10 @@ input {
   padding-left: 30px;
   line-height: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/sitenow_standard\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003139}}
 #ui-search .form-item-search-terms label {
   font-size: 0;
   display: inline-block;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/sitenow_standard\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003143}}
 #ui-search .form-item-search-terms label:before {
   content: '🔍';
   /* '\1f50d' */
@@ -252,12 +242,10 @@ input {
   top: 2px;
   left: 5px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/sitenow_standard\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003158}}
 .uiowa-bar-dark #ui-search .form-item-search-terms label:before {
   color: #666666;
   text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.35);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/sitenow_standard\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003167}}
 #ui-search #edit-search-terms {
   background-color: transparent;
   border: none;
@@ -266,11 +254,9 @@ input {
   margin: 0;
   padding: 2px 2px 1px 2px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/sitenow_standard\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003175}}
 .uiowa-bar-dark #ui-search #edit-search-terms {
   color: #999;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/sitenow_standard\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003180}}
 #ui-search #edit-submit-search {
   position: absolute;
   top: 2px;
@@ -287,7 +273,6 @@ input {
   height: 24px;
   width: 65px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/sitenow_standard\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003192}}
 .uiowa-bar-dark #ui-search #edit-submit-search {
   background-color: #222;
   border: 1px solid #333;
@@ -302,19 +287,16 @@ input {
  *   Custom Media Query
  * ========================================================================== */
 @media only screen and (max-width: 500px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/sitenow_standard\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003207}}
   #ui-wrapper {
     height: auto;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/sitenow_standard\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003211}}
   #ui-logo a {
     position: relative;
     display: inline-block;
     width: 100%;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/sitenow_standard\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003217}}
   #ui-search-toggle {
     display: block;
     font-size: 0;
@@ -324,14 +306,12 @@ input {
     height: 40px;
     width: 40px;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/sitenow_standard\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003226}}
   .uiowa-bar-dark #ui-search-toggle {
     background-color: #222;
     -webkit-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.6) inset;
     -moz-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.6) inset;
     box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.6) inset;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/sitenow_standard\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003231}}
   #ui-search-toggle:before {
     content: '🔍';
     /* '\1f50d' */
@@ -350,13 +330,11 @@ input {
     top: 3px;
     left: 5px;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/sitenow_standard\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003248}}
   .uiowa-bar-dark #ui-search-toggle:before {
     color: #ccc;
     text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/sitenow_standard\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003255}}
   #ui-search {
     max-width: 100%;
     margin: 10px 8px;
@@ -369,7 +347,6 @@ input {
  *   Large Media Query
  * ========================================================================== */
 @media only screen and (min-width: 500px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/sitenow_standard\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003269}}
   #ui-search.search-hidden {
     display: block;
   }
