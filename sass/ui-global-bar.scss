@@ -42,6 +42,10 @@ $uiowa-bar-gutter: 8px;
   font-style: normal;
 }
 
+input {
+  font-family: arial !important;
+  font-size: 14px !important;
+}
 
 /* =============================================================================
  *   UI Wrapper and Container
@@ -86,11 +90,10 @@ $uiowa-bar-gutter: 8px;
     margin-top: 12px;
     padding-bottom: 6px;
     @include ir;
-
+    width: 190px;
 
     .uiowa-bar-dark & {
       @include sprites-sprite(ui-wm-dark, $offset-x: $uiowa-bar-gutter);
-      width: 190px;
       border-bottom: 1px solid #222;
       @include box-shadow(0px 1px 0px rgba(255,255,255,.05));
     }
@@ -101,6 +104,9 @@ $uiowa-bar-gutter: 8px;
 /* =============================================================================
  *   Search Bar
  * ========================================================================== */
+  #ui-search.search-hidden { display: none; }
+  #ui-search.search-exposed { display: block; }
+
   #ui-search {
     position: relative;
     @include border-radius(4px);
@@ -112,7 +118,7 @@ $uiowa-bar-gutter: 8px;
 
     .uiowa-bar-dark & {
       background-color: #333;
-      border: 1px solid #222222;
+      border: 1px solid #202020;
       @include box-shadow(0px 0px 3px rgba(0,0,0,.25) inset);
     }
 
@@ -158,6 +164,8 @@ $uiowa-bar-gutter: 8px;
       border: none;
       display: inline-block;
       width: 100%;
+      margin: 0;
+      padding: 2px 2px 1px 2px;
 
       .uiowa-bar-dark & {
         color: #999;
@@ -168,8 +176,13 @@ $uiowa-bar-gutter: 8px;
       position: absolute;
       top: 2px;
       right: 2px;
+      background-image: none;
+      margin: 0;
       @include border-radius(6px);
-      padding: 3px 8px;
+      padding: 2px 8px;
+      line-height: normal;
+      height: 24px;
+      width: 65px;
 
       .uiowa-bar-dark & {
         background-color: #222;
@@ -236,10 +249,16 @@ $uiowa-bar-gutter: 8px;
 
     #ui-search {
       max-width: 100%;
-      margin: $uiowa-bar-gutter;
+      margin: 10px $uiowa-bar-gutter;
       float: none;
       width: auto;
     }
   }
 /* ========================================================================== */
+
+  @media only screen and (min-width:500px) {
+    #ui-search.search-hidden {
+      display: block;
+    }
+  }
 

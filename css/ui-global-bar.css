@@ -2,7 +2,7 @@
  * @file
  * UI Global Bar Stles
  */
-.sprites-sprite, #ui-logo a {
+.sprites-sprite, .uiowa-bar-dark #ui-logo a {
   background: url('images/sprites-sd3bb2edf2a.png') no-repeat;
 }
 
@@ -14,12 +14,24 @@
   font-style: normal;
 }
 
+input {
+  font-family: arial !important;
+  font-size: 14px !important;
+}
+
 /* =============================================================================
  *   UI Wrapper and Container
  * ========================================================================== */
 #ui-wrapper {
   height: 40px;
   font-size: 14px;
+}
+#ui-wrapper * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.uiowa-bar-dark #ui-wrapper {
   background-color: #1d1c1c;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #333333), color-stop(100%, #1d1c1c));
   background-image: -webkit-linear-gradient(#333333, #1d1c1c);
@@ -30,11 +42,6 @@
   -webkit-box-shadow: 0px -1px 0px #131313 inset;
   -moz-box-shadow: 0px -1px 0px #131313 inset;
   box-shadow: 0px -1px 0px #131313 inset;
-}
-#ui-wrapper * {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
 }
 #ui-wrapper .container {
   overflow: hidden;
@@ -67,8 +74,10 @@
   text-shadow: none;
   color: transparent;
   background-color: transparent;
-  background-position: 8px 0;
   width: 190px;
+}
+.uiowa-bar-dark #ui-logo a {
+  background-position: 8px 0;
   border-bottom: 1px solid #222;
   -webkit-box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.05);
   -moz-box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.05);
@@ -79,6 +88,14 @@
 /* =============================================================================
  *   Search Bar
  * ========================================================================== */
+#ui-search.search-hidden {
+  display: none;
+}
+
+#ui-search.search-exposed {
+  display: block;
+}
+
 #ui-search {
   position: relative;
   -webkit-border-radius: 4px;
@@ -91,8 +108,10 @@
   width: 100%;
   max-width: 300px;
   float: right;
+}
+.uiowa-bar-dark #ui-search {
   background-color: #333;
-  border: 1px solid #222222;
+  border: 1px solid #202020;
   -webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.25) inset;
   -moz-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.25) inset;
   box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.25) inset;
@@ -124,6 +143,8 @@
   position: absolute;
   top: 2px;
   left: 5px;
+}
+.uiowa-bar-dark #ui-search .form-item-search-terms label:before {
   color: #666666;
   text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.35);
 }
@@ -132,18 +153,29 @@
   border: none;
   display: inline-block;
   width: 100%;
+  margin: 0;
+  padding: 2px 2px 1px 2px;
+}
+.uiowa-bar-dark #ui-search #edit-search-terms {
   color: #999;
 }
 #ui-search #edit-submit-search {
   position: absolute;
   top: 2px;
   right: 2px;
+  background-image: none;
+  margin: 0;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   -ms-border-radius: 6px;
   -o-border-radius: 6px;
   border-radius: 6px;
-  padding: 3px 8px;
+  padding: 2px 8px;
+  line-height: normal;
+  height: 24px;
+  width: 65px;
+}
+.uiowa-bar-dark #ui-search #edit-submit-search {
   background-color: #222;
   border: 1px solid #333;
   color: #999;
@@ -175,6 +207,8 @@
     right: 0;
     height: 40px;
     width: 40px;
+  }
+  .uiowa-bar-dark #ui-search-toggle {
     background-color: #222;
     -webkit-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.6) inset;
     -moz-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.6) inset;
@@ -197,15 +231,22 @@
     padding-left: 5px;
     top: 3px;
     left: 5px;
+  }
+  .uiowa-bar-dark #ui-search-toggle:before {
     color: #ccc;
     text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
   }
 
   #ui-search {
     max-width: 100%;
-    margin: 8px;
+    margin: 10px 8px;
     float: none;
     width: auto;
   }
 }
 /* ========================================================================== */
+@media only screen and (min-width: 500px) {
+  #ui-search.search-hidden {
+    display: block;
+  }
+}
