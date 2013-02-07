@@ -8,6 +8,7 @@
 @import 'compass/css3';                        // Use one CSS3 mixin instead of multiple vendor prefixes.
 @import 'compass/typography';
 @import "sprites/*.png";
+@import "animate";
 
 @mixin ir {
   // Kellum Method
