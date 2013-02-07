@@ -95,9 +95,13 @@ input {
 
     .uiowa-bar-dark & {
       @include sprites-sprite(ui-wm-dark, $offset-x: $uiowa-bar-gutter);
-      border-bottom: 1px solid #222;
-      @include box-shadow(0px 1px 0px rgba(255,255,255,.05));
     }
+  }
+
+  // Set a visible divider when search is exposed for mobile
+  .uiowa-bar-dark #ui-logo.search-exposed a {
+    border-bottom: 1px solid #222;
+    @include box-shadow(0px 1px 0px rgba(255,255,255,.05));
   }
 /* ========================================================================== */
 
@@ -105,6 +109,7 @@ input {
 /* =============================================================================
  *   Search Bar
  * ========================================================================== */
+  // Set visiblity for search box
   #ui-search.search-hidden { display: none; }
   #ui-search.search-exposed { display: block; }
 
@@ -257,9 +262,14 @@ input {
   }
 /* ========================================================================== */
 
+
+/* =============================================================================
+ *   Large Media Query
+ * ========================================================================== */
   @media only screen and (min-width:500px) {
     #ui-search.search-hidden {
       display: block;
     }
   }
+/* ========================================================================== */
 

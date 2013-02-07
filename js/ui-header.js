@@ -9,11 +9,11 @@
       if ($(this).hasClass('inactive')) {
         $(this).addClass('active').removeClass('inactive');
         $('#ui-search').addClass('search-exposed fadeInDown').removeClass('search-hidden');
-      } else if ($(this).hasClass('active')) {
+      }
+      else if ($(this).hasClass('active')) {
         $(this).addClass('inactive').removeClass('active');
         $('#ui-search').addClass('search-hidden').removeClass('search-exposed fadeInDown');
       }
-
     });
   };
 
