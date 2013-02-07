@@ -17,14 +17,21 @@
   overflow: hidden;
   // Additional helpers
   border: 0;                     // Remove the default border from elements like <button>
-  font: 0/0 a;                   // Crush the text down to take up no space
   text-shadow: none;             // Remove any text shadows
   color: transparent;            // Hide any residual text in Safari 4 and any mobile devices that may need it
   background-color: transparent; // Hide the default background color on elements like <button>
 }
 
+@mixin cf {
+  overflow: hidden;   // New formatting context in better browsers
+  *overflow: visible; // Protect IE7 and older from the overflow property
+  *zoom: 1;           // Give IE hasLayout, a new formatting context equivalent
+}
+
 $serif-large: Georgia, Baskerville, Palatino, 'Palatino Linotype', 'Book Antiqua', 'Times New Roman', serif;
 $sans-serif-arial-helvetica:  Arial, Helvetica, sans-serif;
+
+$uiowa-bar-gutter: 8px;
 
 
 @font-face {
@@ -34,3 +41,196 @@ $sans-serif-arial-helvetica:  Arial, Helvetica, sans-serif;
   font-weight: normal;
   font-style: normal;
 }
+
+
+/* =============================================================================
+ *   UI Wrapper and Container
+ * ========================================================================== */
+  #ui-wrapper {
+    height: 40px;
+    font-size: 14px;
+
+    * {
+      @include box-sizing(border-box);
+    }
+
+    // skin declar
+    background-color: #1d1c1c;
+    @include background-image(linear-gradient(#333333, #1d1c1c));
+    border-bottom: 1px solid #222;
+    @include box-shadow(0px -1px 0px #131313 inset);
+
+    .container {
+      @include cf;
+      position: relative;
+    }
+  }
+/* ========================================================================== */
+
+
+/* =============================================================================
+ *   Search Toggle
+ * ========================================================================== */
+  #ui-search-toggle {
+    display: none;  // hide by default
+  }
+/* ========================================================================== */
+
+
+/* =============================================================================
+ *   UI Logo
+ * ========================================================================== */
+  #ui-logo a {
+    position: absolute;
+    margin-top: 12px;
+    padding-bottom: 6px;
+    @include ir;
+
+
+    // skin declar
+    @include sprites-sprite(ui-wm-dark, $offset-x: $uiowa-bar-gutter);
+    width: 190px;
+    border-bottom: 1px solid #222;
+    @include box-shadow(0px 1px 0px rgba(255,255,255,.05));
+  }
+/* ========================================================================== */
+
+
+/* =============================================================================
+ *   Search Bar
+ * ========================================================================== */
+  #ui-search {
+    position: relative;
+    @include border-radius(4px);
+    padding: 0;
+    margin: 6px $uiowa-bar-gutter 0 0;
+    width: 100%;
+    max-width: 300px;
+    float: right;
+
+    // skin declar
+    background-color: #333;
+    border: 1px solid #222222;
+    @include box-shadow(0px 0px 3px rgba(0,0,0,.25) inset);
+
+    // Label
+    .form-item-search-terms {
+      display: inline-block;
+      margin: 0;
+      width: 100%;
+      padding-right: 70px;
+      padding-left: 30px;
+      line-height: 0;
+
+      label {
+        font-size: 0;
+        display: inline-block;
+
+        &:before {
+          content: '🔍'; /* '\1f50d' */
+          font-family: 'fontello';
+          font-style: normal;
+          font-weight: normal;
+          speak: none;
+          display: inline-block;
+          text-decoration: inherit;
+          text-align: center;
+          font-size: 22px;
+          line-height: 23px;
+          position: absolute;
+          top: 2px;
+          left: 5px;
+
+          // skin declar
+          color: #666666;
+          @include text-shadow(0px -1px 0px rgba(0,0,0,.35));
+        }
+      }
+    }
+
+    // Search Text Input
+    #edit-search-terms {
+      background-color: transparent;
+      border: none;
+      display: inline-block;
+      width: 100%;
+
+      //skin declar
+      color: #999;
+    }
+
+    #edit-submit-search {
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      @include border-radius(6px);
+      padding: 3px 8px;
+
+      // skin declar
+      background-color: #222;
+      border: 1px solid #333;
+      color: #999;
+      @include box-shadow(0px -12px 2px rgba(0,0,0,.5) inset);
+    }
+  }
+/* ========================================================================== */
+
+
+/* =============================================================================
+ *   Custom Media Query
+ * ========================================================================== */
+  @media only screen and (max-width:500px) {
+    #ui-wrapper {
+      height: auto;
+    }
+
+    #ui-logo a {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+    }
+
+    #ui-search-toggle {
+      display: block;
+      font-size: 0;
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 40px;
+      width: 40px;
+
+      // color declar
+      background-color: #222;
+      @include box-shadow(0px 0px 6px rgba(0,0,0,.6) inset);
+
+      &:before {
+        content: '🔍'; /* '\1f50d' */
+        font-family: 'fontello';
+        font-style: normal;
+        font-weight: normal;
+        speak: none;
+        display: inline-block;
+        text-decoration: none;
+        text-align: center;
+        font-size: 22px;
+        line-height: 23px;
+        position: absolute;
+        padding-top: 5px;
+        padding-left: 5px;
+        top: 3px;
+        left: 5px;
+
+        color: #ccc;
+        @include text-shadow(0px -1px 0px rgba(0,0,0,.3));
+      }
+    }
+
+    #ui-search {
+      max-width: 100%;
+      margin: $uiowa-bar-gutter;
+      float: none;
+      width: auto;
+    }
+  }
+/* ========================================================================== */
+

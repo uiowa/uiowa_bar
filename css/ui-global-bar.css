@@ -2,8 +2,8 @@
  * @file
  * UI Global Bar Stles
  */
-.sprites-sprite {
-  background: url('images/sprites-s7ce347a49f.png') no-repeat;
+.sprites-sprite, #ui-logo a {
+  background: url('images/sprites-sd3bb2edf2a.png') no-repeat;
 }
 
 @font-face {
@@ -13,3 +13,199 @@
   font-weight: normal;
   font-style: normal;
 }
+
+/* =============================================================================
+ *   UI Wrapper and Container
+ * ========================================================================== */
+#ui-wrapper {
+  height: 40px;
+  font-size: 14px;
+  background-color: #1d1c1c;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #333333), color-stop(100%, #1d1c1c));
+  background-image: -webkit-linear-gradient(#333333, #1d1c1c);
+  background-image: -moz-linear-gradient(#333333, #1d1c1c);
+  background-image: -o-linear-gradient(#333333, #1d1c1c);
+  background-image: linear-gradient(#333333, #1d1c1c);
+  border-bottom: 1px solid #222;
+  -webkit-box-shadow: 0px -1px 0px #131313 inset;
+  -moz-box-shadow: 0px -1px 0px #131313 inset;
+  box-shadow: 0px -1px 0px #131313 inset;
+}
+#ui-wrapper * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#ui-wrapper .container {
+  overflow: hidden;
+  *overflow: visible;
+  *zoom: 1;
+  position: relative;
+}
+
+/* ========================================================================== */
+/* =============================================================================
+ *   Search Toggle
+ * ========================================================================== */
+#ui-search-toggle {
+  display: none;
+}
+
+/* ========================================================================== */
+/* =============================================================================
+ *   UI Logo
+ * ========================================================================== */
+#ui-logo a {
+  position: absolute;
+  margin-top: 12px;
+  padding-bottom: 6px;
+  display: block !important;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  border: 0;
+  text-shadow: none;
+  color: transparent;
+  background-color: transparent;
+  background-position: 8px 0;
+  width: 190px;
+  border-bottom: 1px solid #222;
+  -webkit-box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.05);
+  -moz-box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.05);
+  box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.05);
+}
+
+/* ========================================================================== */
+/* =============================================================================
+ *   Search Bar
+ * ========================================================================== */
+#ui-search {
+  position: relative;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  padding: 0;
+  margin: 6px 8px 0 0;
+  width: 100%;
+  max-width: 300px;
+  float: right;
+  background-color: #333;
+  border: 1px solid #222222;
+  -webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.25) inset;
+  -moz-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.25) inset;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.25) inset;
+}
+#ui-search .form-item-search-terms {
+  display: inline-block;
+  margin: 0;
+  width: 100%;
+  padding-right: 70px;
+  padding-left: 30px;
+  line-height: 0;
+}
+#ui-search .form-item-search-terms label {
+  font-size: 0;
+  display: inline-block;
+}
+#ui-search .form-item-search-terms label:before {
+  content: '🔍';
+  /* '\1f50d' */
+  font-family: 'fontello';
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  text-align: center;
+  font-size: 22px;
+  line-height: 23px;
+  position: absolute;
+  top: 2px;
+  left: 5px;
+  color: #666666;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.35);
+}
+#ui-search #edit-search-terms {
+  background-color: transparent;
+  border: none;
+  display: inline-block;
+  width: 100%;
+  color: #999;
+}
+#ui-search #edit-submit-search {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
+  padding: 3px 8px;
+  background-color: #222;
+  border: 1px solid #333;
+  color: #999;
+  -webkit-box-shadow: 0px -12px 2px rgba(0, 0, 0, 0.5) inset;
+  -moz-box-shadow: 0px -12px 2px rgba(0, 0, 0, 0.5) inset;
+  box-shadow: 0px -12px 2px rgba(0, 0, 0, 0.5) inset;
+}
+
+/* ========================================================================== */
+/* =============================================================================
+ *   Custom Media Query
+ * ========================================================================== */
+@media only screen and (max-width: 500px) {
+  #ui-wrapper {
+    height: auto;
+  }
+
+  #ui-logo a {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+  }
+
+  #ui-search-toggle {
+    display: block;
+    font-size: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 40px;
+    width: 40px;
+    background-color: #222;
+    -webkit-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.6) inset;
+    -moz-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.6) inset;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.6) inset;
+  }
+  #ui-search-toggle:before {
+    content: '🔍';
+    /* '\1f50d' */
+    font-family: 'fontello';
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    font-size: 22px;
+    line-height: 23px;
+    position: absolute;
+    padding-top: 5px;
+    padding-left: 5px;
+    top: 3px;
+    left: 5px;
+    color: #ccc;
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
+  }
+
+  #ui-search {
+    max-width: 100%;
+    margin: 8px;
+    float: none;
+    width: auto;
+  }
+}
+/* ========================================================================== */
