@@ -2,5 +2,6 @@
 .DS_Store
 .uiowa-bar.sublime-project
 .uiowa-bar.sublime-workspace
+Drupal.sublime-projectcompletions
 .sass-cache/*
 

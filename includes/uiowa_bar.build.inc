@@ -51,7 +51,7 @@ function uiowa_bar_search_form($form, &$form_state) {
     '#type' => 'textfield',
     '#title' => t('Search Terms'),
     '#attributes' => array(
-      'placeholder' => 'Search uiowa.edu'
+      'placeholder' => 'Search this site'
     ),
     '#maxlength' => '256',
     '#size' => '15'
@@ -61,7 +61,7 @@ function uiowa_bar_search_form($form, &$form_state) {
     '#value' => t('Search'),
     '#name' => 'btnG',
   );
-  $form_state['action'] = 'gsearch/';
+  $form_state['action'] = 'gsearch/this-site/';
 
   // use core search CSS in addition to this module's css
   // (keep it general in case core search is enabled)
