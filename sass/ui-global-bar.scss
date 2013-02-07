@@ -79,6 +79,12 @@ input {
  * ========================================================================== */
   #ui-search-toggle {
     display: none;  // hide by default
+
+    .uiowa-bar-dark &.inactive {
+      background-color: transparent;
+      @include box-shadow(-1px 0px 0px rgba(255,255,255,.05));
+      border-left: 1px solid #111;
+    }
   }
 /* ========================================================================== */
 
