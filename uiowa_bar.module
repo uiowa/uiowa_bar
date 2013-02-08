@@ -12,8 +12,6 @@
 function uiowa_bar_preprocess_html(&$vars) {
   // Add a body class for the active theme name.
   $vars['classes_array'][] = variable_get('uiowa_bar_color_palette');
-  // Adds ui-header.js
-  drupal_add_js(drupal_get_path('module', 'uiowa_bar') . '/js/ui-header.js');
 }
 
 /**
@@ -93,7 +91,6 @@ function uiowa_bar_page_build(&$page) {
     drupal_add_css(drupal_get_path('module', 'uiowa_bar') . '/css/' . $color . '.css', array('group' => CSS_DEFAULT, 'every_page' => TRUE,));
     drupal_add_css(drupal_get_path('module', 'uiowa_bar') . '/css/ie7.css', array('group' => CSS_DEFAULT, 'every_page' => TRUE, 'browsers' => array('IE' => 'lte IE 7', '!IE' => FALSE)));
 
-
     /* Include Javascript Assets */
     drupal_add_js(drupal_get_path('module', 'uiowa_bar') . '/js/ui-header.js');
 
@@ -101,13 +98,6 @@ function uiowa_bar_page_build(&$page) {
     $page['page_top']['uiowa_bar'] = array(
       '#markup' => render(build_uiowa_bar()),
       '#weight' => 25,
-    );
-    $js_settings = array(
-      'uiowa_bar_color_palette' => variable_get('uiowa_bar_color_palette'),
-    );
-    $page['page_top']['uiowa_bar']['#attached']['js'][] = array(
-      'data' => array('uiowa_bar' => $js_settings),
-      'type' => 'setting',
     );
 
     module_load_include('inc', 'uiowa_bar', 'includes/uiowa_bar_footer.build');
