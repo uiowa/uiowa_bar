@@ -12,8 +12,6 @@
 function uiowa_bar_preprocess_html(&$vars) {
   // Add a body class for the active theme name.
   $vars['classes_array'][] = variable_get('uiowa_bar_color_palette');
-  $vars['classes_array'][] = variable_get('uiowa_bar_link_style') . '-style';
-
   // Adds ui-header.js
   drupal_add_js(drupal_get_path('module', 'uiowa_bar') . '/js/ui-header.js');
 }
