@@ -1,73 +1,23 @@
 /**
  * @file
- * UI Global Bar Stles
+ * UI Global Bar Structure
  */
-@import 'compass/support';                     // Add Compass' IE and vendor prefix support variables.
-@import 'compass/utilities/general/clearfix';  // Better than Drupal's clearfix.
-@import 'compass/utilities/sprites';           // See http://compass-style.org/help/tutorials/spriting/
-@import 'compass/css3';                        // Use one CSS3 mixin instead of multiple vendor prefixes.
-@import 'compass/typography';
-@import 'compass/css3/user-interface';
-@import "sprites/*.png";
-@import "animate";
 
-@mixin ir {
-  // Kellum Method
-  display: block !important;
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  // Additional helpers
-  border: 0;                     // Remove the default border from elements like <button>
-  text-shadow: none;             // Remove any text shadows
-  color: transparent;            // Hide any residual text in Safari 4 and any mobile devices that may need it
-  background-color: transparent; // Hide the default background color on elements like <button>
-}
+ /* =============================================================================
+  *   Imports
+  * ========================================================================== */
+  @import "base";
+  @import "reset";
+  @import "animate";
+ /* ========================================================================== */
 
-@mixin cf {
-  overflow: hidden;   // New formatting context in better browsers
-  *overflow: visible; // Protect IE7 and older from the overflow property
-  *zoom: 1;           // Give IE hasLayout, a new formatting context equivalent
-}
-
-$serif-large: Georgia, Baskerville, Palatino, 'Palatino Linotype', 'Book Antiqua', 'Times New Roman', serif;
-$sans-serif-arial-helvetica:  Arial, Helvetica, sans-serif;
-
-$uiowa-bar-gutter: 8px;
-
-$ui-gold: #f6c72f;
-
-
-@font-face {
-  font-family: 'fontello';
-  src: url("../iconfonts/font/fontello.eot");
-  src: url("../iconfonts/font/fontello.eot?#iefix") format('embedded-opentype'), url("../iconfonts/font/fontello.woff") format('woff'), url("../iconfonts/font/fontello.ttf") format('truetype'), url("../iconfonts/font/fontello.svg#fontello") format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-input {
-  font-family: arial !important;
-  font-size: 14px !important;
-}
 
 /* =============================================================================
  *   UI Wrapper and Container
- * ========================================================================== */
+ * ========================================================================= */
   #ui-wrapper {
     height: 40px;
     font-size: 14px;
-
-    * {
-      @include box-sizing(border-box);
-    }
-
-    .uiowa-bar-dark & {
-      background-color: #1d1c1c;
-      @include background-image(linear-gradient(#333333, #1d1c1c));
-      border-bottom: 1px solid #222;
-      @include box-shadow(0px -1px 0px #131313 inset);
-    }
 
     .container {
       @include cf;
@@ -82,12 +32,6 @@ input {
  * ========================================================================== */
   #ui-search-toggle {
     display: none;  // hide by default
-
-    .uiowa-bar-dark &.inactive {
-      background-color: transparent;
-      @include box-shadow(-1px 0px 0px rgba(255,255,255,.05));
-      border-left: 1px solid #111;
-    }
   }
 /* ========================================================================== */
 
@@ -101,16 +45,6 @@ input {
     padding-bottom: 6px;
     @include ir;
     width: 190px;
-
-    .uiowa-bar-dark & {
-      @include sprites-sprite(ui-wm-dark, $offset-x: $uiowa-bar-gutter);
-    }
-  }
-
-  // Set a visible divider when search is exposed for mobile
-  .uiowa-bar-dark #ui-logo.search-exposed a {
-    border-bottom: 1px solid #222;
-    @include box-shadow(0px 1px 0px rgba(255,255,255,.05));
   }
 /* ========================================================================== */
 
@@ -126,16 +60,10 @@ input {
     position: relative;
     @include border-radius(4px);
     padding: 0;
-    margin: 6px $uiowa-bar-gutter 0 0;
+    margin: 5px $uiowa-bar-gutter 0 0;
     width: 100%;
     max-width: 300px;
     float: right;
-
-    .uiowa-bar-dark & {
-      background-color: #333;
-      border: 1px solid #202020;
-      @include box-shadow(0px 0px 3px rgba(0,0,0,.25) inset);
-    }
 
     // Label
     .form-item-search-terms {
@@ -164,11 +92,6 @@ input {
           position: absolute;
           top: 2px;
           left: 5px;
-
-          .uiowa-bar-dark & {
-            color: #666666;
-            @include text-shadow(0px -1px 0px rgba(0,0,0,.35));
-          }
         }
       }
     }
@@ -181,10 +104,6 @@ input {
       width: 100%;
       margin: 0;
       padding: 2px 2px 1px 2px;
-
-      .uiowa-bar-dark & {
-        color: #999;
-      }
     }
 
     #edit-submit-search {
@@ -198,20 +117,6 @@ input {
       line-height: normal;
       height: 24px;
       width: 65px;
-
-      .uiowa-bar-dark & {
-        background-color: #222;
-        border: 1px solid #333;
-        color: #999;
-        @include box-shadow(0px -12px 2px rgba(0,0,0,.5) inset);
-
-        &:hover, &:focus, &:active {
-          background-color: lighten($ui-gold, 15%);
-          @include box-shadow(0px -12px 2px $ui-gold inset);
-          color: #222;
-          @include text-shadow(0px 1px 0px rgba(255,255,255,.3));
-        }
-      }
     }
   }
 /* ========================================================================== */
@@ -267,11 +172,6 @@ input {
         display: inline-block;
         width: 100%;
       }
-
-      .uiowa-bar-dark &.search-exposed {
-        border-bottom: 1px solid #202020;
-        @include box-shadow(0px 1px 0px rgba(255,255,255,.05));
-      }
     }
 
     #ui-search-toggle {
@@ -282,11 +182,6 @@ input {
       right: 0;
       height: 40px;
       width: 40px;
-
-      .uiowa-bar-dark & {
-        background-color: #222;
-        @include box-shadow(0px 0px 6px rgba(0,0,0,.6) inset);
-      }
 
       &:before {
         content: '🔍'; /* '\1f50d' */
@@ -304,11 +199,6 @@ input {
         padding-left: 5px;
         top: 3px;
         left: 5px;
-
-        .uiowa-bar-dark & {
-          color: #ccc;
-          @include text-shadow(0px -1px 0px rgba(0,0,0,.3));
-        }
       }
     }
 
@@ -327,8 +217,12 @@ input {
  *   Large Media Query
  * ========================================================================== */
   @media only screen and (min-width:501px) {
+    #ui-logo {
+      margin-top: -2px; // hides the border set on mobile display
+    }
+
     #ui-search.search-hidden {
-      display: block;
+      display: block; // forces visibility when hidden for mobile display
     }
 
     /* FOOTER ----------------------------------------------------------------*/

@@ -1,9 +1,50 @@
 /**
  * @file
- * UI Global Bar Stles
+ * UI Global Bar Structure
  */
-.sprites-sprite, .uiowa-bar-dark #ui-logo a, #ui-footer-logo a {
+/* =============================================================================
+ *   Imports
+ * ========================================================================== */
+/**
+ * @file
+ * Base File
+ */
+.sprites-sprite, #ui-footer-logo a {
   background: url('images/sprites-s9381384258.png') no-repeat;
+}
+
+/**
+ * @file
+ * Custom Partial
+ */
+/* =============================================================================
+ *   Variables
+ * ========================================================================== */
+/* ========================================================================== */
+/* =============================================================================
+ *   Mixins
+ * ========================================================================== */
+/* ========================================================================== */
+@font-face {
+  font-family: 'fontello';
+  src: url("../iconfonts/font/fontello.eot");
+  src: url("../iconfonts/font/fontello.eot?#iefix") format("embedded-opentype"), url("../iconfonts/font/fontello.woff") format("woff"), url("../iconfonts/font/fontello.ttf") format("truetype"), url("../iconfonts/font/fontello.svg#fontello") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/**
+ * @file
+ * Resets
+ */
+#ui-wrapper * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#ui-wrapper input {
+  font-family: arial !important;
+  font-size: 14px !important;
 }
 
 /*
@@ -94,42 +135,13 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   animation-name: fadeInDown;
 }
 
-@font-face {
-  font-family: 'fontello';
-  src: url("../iconfonts/font/fontello.eot");
-  src: url("../iconfonts/font/fontello.eot?#iefix") format("embedded-opentype"), url("../iconfonts/font/fontello.woff") format("woff"), url("../iconfonts/font/fontello.ttf") format("truetype"), url("../iconfonts/font/fontello.svg#fontello") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
-input {
-  font-family: arial !important;
-  font-size: 14px !important;
-}
-
+/* ========================================================================== */
 /* =============================================================================
  *   UI Wrapper and Container
- * ========================================================================== */
+ * ========================================================================= */
 #ui-wrapper {
   height: 40px;
   font-size: 14px;
-}
-#ui-wrapper * {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-.uiowa-bar-dark #ui-wrapper {
-  background-color: #1d1c1c;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #333333), color-stop(100%, #1d1c1c));
-  background-image: -webkit-linear-gradient(#333333, #1d1c1c);
-  background-image: -moz-linear-gradient(#333333, #1d1c1c);
-  background-image: -o-linear-gradient(#333333, #1d1c1c);
-  background-image: linear-gradient(#333333, #1d1c1c);
-  border-bottom: 1px solid #222;
-  -webkit-box-shadow: 0px -1px 0px #131313 inset;
-  -moz-box-shadow: 0px -1px 0px #131313 inset;
-  box-shadow: 0px -1px 0px #131313 inset;
 }
 #ui-wrapper .container {
   overflow: hidden;
@@ -144,13 +156,6 @@ input {
  * ========================================================================== */
 #ui-search-toggle {
   display: none;
-}
-.uiowa-bar-dark #ui-search-toggle.inactive {
-  background-color: transparent;
-  -webkit-box-shadow: -1px 0px 0px rgba(255, 255, 255, 0.05);
-  -moz-box-shadow: -1px 0px 0px rgba(255, 255, 255, 0.05);
-  box-shadow: -1px 0px 0px rgba(255, 255, 255, 0.05);
-  border-left: 1px solid #111;
 }
 
 /* ========================================================================== */
@@ -170,16 +175,6 @@ input {
   color: transparent;
   background-color: transparent;
   width: 190px;
-}
-.uiowa-bar-dark #ui-logo a {
-  background-position: 8px -26px;
-}
-
-.uiowa-bar-dark #ui-logo.search-exposed a {
-  border-bottom: 1px solid #222;
-  -webkit-box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.05);
-  -moz-box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.05);
-  box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.05);
 }
 
 /* ========================================================================== */
@@ -202,17 +197,10 @@ input {
   -o-border-radius: 4px;
   border-radius: 4px;
   padding: 0;
-  margin: 6px 8px 0 0;
+  margin: 5px 8px 0 0;
   width: 100%;
   max-width: 300px;
   float: right;
-}
-.uiowa-bar-dark #ui-search {
-  background-color: #333;
-  border: 1px solid #202020;
-  -webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.25) inset;
-  -moz-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.25) inset;
-  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.25) inset;
 }
 #ui-search .form-item-search-terms {
   display: inline-block;
@@ -242,10 +230,6 @@ input {
   top: 2px;
   left: 5px;
 }
-.uiowa-bar-dark #ui-search .form-item-search-terms label:before {
-  color: #666666;
-  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.35);
-}
 #ui-search #edit-search-terms {
   background-color: transparent;
   border: none;
@@ -253,9 +237,6 @@ input {
   width: 100%;
   margin: 0;
   padding: 2px 2px 1px 2px;
-}
-.uiowa-bar-dark #ui-search #edit-search-terms {
-  color: #999;
 }
 #ui-search #edit-submit-search {
   position: absolute;
@@ -272,22 +253,6 @@ input {
   line-height: normal;
   height: 24px;
   width: 65px;
-}
-.uiowa-bar-dark #ui-search #edit-submit-search {
-  background-color: #222;
-  border: 1px solid #333;
-  color: #999;
-  -webkit-box-shadow: 0px -12px 2px rgba(0, 0, 0, 0.5) inset;
-  -moz-box-shadow: 0px -12px 2px rgba(0, 0, 0, 0.5) inset;
-  box-shadow: 0px -12px 2px rgba(0, 0, 0, 0.5) inset;
-}
-.uiowa-bar-dark #ui-search #edit-submit-search:hover, .uiowa-bar-dark #ui-search #edit-submit-search:focus, .uiowa-bar-dark #ui-search #edit-submit-search:active {
-  background-color: #f9db78;
-  -webkit-box-shadow: 0px -12px 2px #f6c72f inset;
-  -moz-box-shadow: 0px -12px 2px #f6c72f inset;
-  box-shadow: 0px -12px 2px #f6c72f inset;
-  color: #222;
-  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.3);
 }
 
 /* ========================================================================== */
@@ -345,12 +310,6 @@ input {
     display: inline-block;
     width: 100%;
   }
-  .uiowa-bar-dark #ui-logo.search-exposed {
-    border-bottom: 1px solid #202020;
-    -webkit-box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.05);
-    -moz-box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.05);
-    box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.05);
-  }
 
   #ui-search-toggle {
     display: block;
@@ -360,12 +319,6 @@ input {
     right: 0;
     height: 40px;
     width: 40px;
-  }
-  .uiowa-bar-dark #ui-search-toggle {
-    background-color: #222;
-    -webkit-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.6) inset;
-    -moz-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.6) inset;
-    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.6) inset;
   }
   #ui-search-toggle:before {
     content: '🔍';
@@ -385,10 +338,6 @@ input {
     top: 3px;
     left: 5px;
   }
-  .uiowa-bar-dark #ui-search-toggle:before {
-    color: #ccc;
-    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
-  }
 
   #ui-search {
     max-width: 100%;
@@ -402,6 +351,10 @@ input {
  *   Large Media Query
  * ========================================================================== */
 @media only screen and (min-width: 501px) {
+  #ui-logo {
+    margin-top: -2px;
+  }
+
   #ui-search.search-hidden {
     display: block;
   }

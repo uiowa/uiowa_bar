@@ -1,0 +1,25 @@
+/**
+ * @file
+ * Base File
+ */
+
+// Compass Imports
+@import 'compass/support';                     // Add Compass' IE and vendor prefix support variables.
+@import 'compass/utilities/general/clearfix';  // Better than Drupal's clearfix.
+@import 'compass/utilities/sprites';           // See http://compass-style.org/help/tutorials/spriting/
+@import 'compass/css3';                        // Use one CSS3 mixin instead of multiple vendor prefixes.
+@import 'compass/typography';
+@import 'compass/css3/user-interface';
+
+// Custom Imports
+@import "sprites/*.png";
+@import 'custom';
+
+// Fonts
+@font-face {
+  font-family: 'fontello';
+  src: url("../iconfonts/font/fontello.eot");
+  src: url("../iconfonts/font/fontello.eot?#iefix") format('embedded-opentype'), url("../iconfonts/font/fontello.woff") format('woff'), url("../iconfonts/font/fontello.ttf") format('truetype'), url("../iconfonts/font/fontello.svg#fontello") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

@@ -1,0 +1,16 @@
+/**
+ * @file
+ * Resets
+ */
+
+#ui-wrapper {
+
+  * {
+    @include box-sizing(border-box);
+  }
+
+  input {
+    font-family: arial !important;
+    font-size: 14px !important;
+  }
+}
