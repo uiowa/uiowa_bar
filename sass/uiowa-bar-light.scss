@@ -13,7 +13,7 @@
     @include background-image(linear-gradient(#f3f0f0, #d0d0d0));
     border-bottom: 1px solid #ddd;
     border-top: 1px solid #ccc;
-    @include box-shadow(0px -1px 0px #999 inset);
+    @include box-shadow(0px -1px 0px #bbb inset);
 
 
   }

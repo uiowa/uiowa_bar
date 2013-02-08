@@ -42,9 +42,9 @@
   background-image: linear-gradient(#f3f0f0, #d0d0d0);
   border-bottom: 1px solid #ddd;
   border-top: 1px solid #ccc;
-  -webkit-box-shadow: 0px -1px 0px #999999 inset;
-  -moz-box-shadow: 0px -1px 0px #999999 inset;
-  box-shadow: 0px -1px 0px #999999 inset;
+  -webkit-box-shadow: 0px -1px 0px #bbbbbb inset;
+  -moz-box-shadow: 0px -1px 0px #bbbbbb inset;
+  box-shadow: 0px -1px 0px #bbbbbb inset;
 }
 
 /* ========================================================================== */
