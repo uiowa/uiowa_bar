@@ -8,7 +8,7 @@
 /* =============================================================================
  *   UI Wrapper and Container
  * ========================================================================== */
-  .uiowa-bar-dark #ui-wrapper {
+  .uiowa-bar-light #ui-wrapper {
     background-color: #f3f0f0;
     @include background-image(linear-gradient(#f3f0f0, #d0d0d0));
     border-bottom: 1px solid #ddd;
@@ -23,7 +23,7 @@
 /* =============================================================================
  *   Search Toggle
  * ========================================================================== */
-  .uiowa-bar-dark #ui-search-toggle {
+  .uiowa-bar-light #ui-search-toggle {
     background-color: #ddd;
     @include box-shadow(0px 0px 6px rgba(0,0,0,.3) inset);
 
@@ -44,7 +44,7 @@
 /* =============================================================================
  *   UI Logo
  * ========================================================================== */
-  .uiowa-bar-dark #ui-logo {
+  .uiowa-bar-light #ui-logo {
     border-bottom: 1px solid #ccc;
     @include box-shadow(0px 1px 0px rgba(255,255,255,.8));
 
@@ -58,7 +58,7 @@
 /* =============================================================================
  *   Search Bar
  * ========================================================================== */
-  .uiowa-bar-dark #ui-search {
+  .uiowa-bar-light #ui-search {
     background-color: #eee;
     border: 1px solid #bbb;
     @include box-shadow(0px 0px 3px rgba(0,0,0,.1) inset);
