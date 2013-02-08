@@ -1,7 +1,4 @@
 @charset "UTF-8";
 
 
-.icon-phonebook:before { content: '\e722'; } /* '' */
-.icon-maps:before { content: '\e727'; } /* '' */
-.icon-a-z:before { content: '\e738'; } /* '' */
 .icon-search:before { content: '🔍'; } /* '\1f50d' */
