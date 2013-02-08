@@ -28,5 +28,16 @@ function uiowa_bar_config_form($form, &$form_state) {
     ),
   );
 
+  $form['uiowa_bar_footer_location'] = array(
+    '#type' => 'select',
+    '#title' => t('Footer Location'),
+    '#default_value' => variable_get('uiowa_bar_footer_location'),
+    '#description' => t('Choose which region to render the footer. This may style the footer differently depending upon your theme.'),
+    '#options' => array(
+      'footer' => t('Footer Region'),
+      'page_bottom' => t('Page Bottom Region'),
+    ),
+  );
+
   return system_settings_form($form);
 }

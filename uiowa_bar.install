@@ -12,6 +12,8 @@
 function uiowa_bar_install() {
   // Set the default color palette to the light palette.
   variable_set('uiowa_bar_color_palette', 'uiowa-bar-light');
+  // Set the default footer rendering location.
+  variable_set('uiowa_bar_footer_location', 'page_bottom');
 
   // Set permissions for the search.
   $roles = user_roles();
@@ -26,6 +28,8 @@ function uiowa_bar_install() {
 function uiowa_bar_uninstall() {
   // Delete the color palette variable.
   variable_del('uiowa_bar_color_palette');
+  // Delete the footer location variable.
+  variable_del('uiowa_bar_footer_location');
 }
 
 /**
@@ -98,4 +102,20 @@ function uiowa_bar_update_7103(&$sandbox) {
         variable_set('uiowa_bar_color_palette', 'uiowa-bar-light');
     }
   }
+}
+
+/**
+ * Set a default footer rendering location.
+ */
+function uiowa_bar_update_7104(&$sandbox) {
+  // Set the default footer rendering location.
+  variable_set('uiowa_bar_footer_location', 'uiowa-bar-page-bottom');
+}
+
+/**
+ * Set a default footer rendering location.
+ */
+function uiowa_bar_update_7105(&$sandbox) {
+  // Set the default footer rendering location.
+  variable_set('uiowa_bar_footer_location', 'page_bottom');
 }

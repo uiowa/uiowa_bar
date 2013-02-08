@@ -102,7 +102,9 @@ function uiowa_bar_page_build(&$page) {
 
     // Build the University of Iowa branding bar footer
     module_load_include('inc', 'uiowa_bar', 'includes/uiowa_bar_footer.build');
-    $page['page_bottom']['uiowa_bar_footer'] = array(
+    // Get the footer location variable
+    $footer_location = variable_get('uiowa_bar_footer_location');
+    $page[$footer_location]['uiowa_bar_footer'] = array(
       '#markup' => render(build_uiowa_bar_footer()),
       '#weight' => 25,
     );
