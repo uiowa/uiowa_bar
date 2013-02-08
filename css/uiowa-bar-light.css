@@ -34,17 +34,17 @@
  *   UI Wrapper and Container
  * ========================================================================== */
 .uiowa-bar-dark #ui-wrapper {
-  background-color: #1d1c1c;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #333333), color-stop(100%, #1d1c1c));
-  background-image: -webkit-linear-gradient(#333333, #1d1c1c);
-  background-image: -moz-linear-gradient(#333333, #1d1c1c);
-  background-image: -o-linear-gradient(#333333, #1d1c1c);
-  background-image: linear-gradient(#333333, #1d1c1c);
-  border-bottom: 1px solid #222;
-  border-top: 1px solid #222;
-  -webkit-box-shadow: 0px -1px 0px #131313 inset;
-  -moz-box-shadow: 0px -1px 0px #131313 inset;
-  box-shadow: 0px -1px 0px #131313 inset;
+  background-color: #f3f0f0;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f3f0f0), color-stop(100%, #d0d0d0));
+  background-image: -webkit-linear-gradient(#f3f0f0, #d0d0d0);
+  background-image: -moz-linear-gradient(#f3f0f0, #d0d0d0);
+  background-image: -o-linear-gradient(#f3f0f0, #d0d0d0);
+  background-image: linear-gradient(#f3f0f0, #d0d0d0);
+  border-bottom: 1px solid #ddd;
+  border-top: 1px solid #ccc;
+  -webkit-box-shadow: 0px -1px 0px #999999 inset;
+  -moz-box-shadow: 0px -1px 0px #999999 inset;
+  box-shadow: 0px -1px 0px #999999 inset;
 }
 
 /* ========================================================================== */
@@ -52,21 +52,21 @@
  *   Search Toggle
  * ========================================================================== */
 .uiowa-bar-dark #ui-search-toggle {
-  background-color: #222;
-  -webkit-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.6) inset;
-  -moz-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.6) inset;
-  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.6) inset;
+  background-color: #ddd;
+  -webkit-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3) inset;
+  -moz-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3) inset;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3) inset;
 }
 .uiowa-bar-dark #ui-search-toggle:before {
-  color: #ccc;
-  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
+  color: #222;
+  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.8);
 }
 .uiowa-bar-dark #ui-search-toggle.inactive {
   background-color: transparent;
-  -webkit-box-shadow: -1px 0px 0px rgba(255, 255, 255, 0.05);
-  -moz-box-shadow: -1px 0px 0px rgba(255, 255, 255, 0.05);
-  box-shadow: -1px 0px 0px rgba(255, 255, 255, 0.05);
-  border-left: 1px solid #111;
+  -webkit-box-shadow: -1px 0px 0px rgba(255, 255, 255, 0.8);
+  -moz-box-shadow: -1px 0px 0px rgba(255, 255, 255, 0.8);
+  box-shadow: -1px 0px 0px rgba(255, 255, 255, 0.8);
+  border-left: 1px solid #c1c1c1;
 }
 
 /* ========================================================================== */
@@ -74,13 +74,13 @@
  *   UI Logo
  * ========================================================================== */
 .uiowa-bar-dark #ui-logo {
-  border-bottom: 1px solid #202020;
-  -webkit-box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.05);
-  -moz-box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.05);
-  box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid #ccc;
+  -webkit-box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.8);
+  -moz-box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.8);
+  box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.8);
 }
 .uiowa-bar-dark #ui-logo a {
-  background-position: 8px -26px;
+  background-position: 8px -42px;
 }
 
 /* ========================================================================== */
@@ -88,26 +88,27 @@
  *   Search Bar
  * ========================================================================== */
 .uiowa-bar-dark #ui-search {
-  background-color: #333;
-  border: 1px solid #202020;
-  -webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.25) inset;
-  -moz-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.25) inset;
-  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.25) inset;
+  background-color: #eee;
+  border: 1px solid #bbb;
+  -webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1) inset;
+  -moz-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1) inset;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1) inset;
 }
 .uiowa-bar-dark #ui-search .form-item-search-terms label:before {
-  color: #666666;
-  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.35);
+  color: #777;
+  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.6);
 }
 .uiowa-bar-dark #ui-search #edit-search-terms {
-  color: #999;
+  color: #444;
 }
 .uiowa-bar-dark #ui-search #edit-submit-search {
-  background-color: #222;
-  border: 1px solid #333;
-  color: #999;
-  -webkit-box-shadow: 0px -12px 2px rgba(0, 0, 0, 0.5) inset;
-  -moz-box-shadow: 0px -12px 2px rgba(0, 0, 0, 0.5) inset;
-  box-shadow: 0px -12px 2px rgba(0, 0, 0, 0.5) inset;
+  background-color: #eee;
+  border: 1px solid #bbb;
+  color: #666;
+  -webkit-box-shadow: 0px -12px 2px rgba(0, 0, 0, 0.1) inset;
+  -moz-box-shadow: 0px -12px 2px rgba(0, 0, 0, 0.1) inset;
+  box-shadow: 0px -12px 2px rgba(0, 0, 0, 0.1) inset;
+  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.6);
 }
 .uiowa-bar-dark #ui-search #edit-submit-search:hover, .uiowa-bar-dark #ui-search #edit-submit-search:focus, .uiowa-bar-dark #ui-search #edit-submit-search:active {
   background-color: #f9db78;
