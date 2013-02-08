@@ -12,6 +12,7 @@
 @import 'compass/css3/user-interface';
 
 // Custom Imports
+$sprites-spacing: 20px; // add spacing around sprite images to avoid collision on offsets
 @import "sprites/*.png";
 @import 'custom';
 
