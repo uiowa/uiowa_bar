@@ -1,26 +1,20 @@
+
 /* =============================================================================
  *   Fixes for fontello embeds
  * ========================================================================== */
-[class^="icon-"],
-[class*=" icon-"] {
-  font-family: 'fontello';
-  font-style: normal;
-  font-weight: normal;
+  [class^="icon-"],
+  [class*=" icon-"] {
+    font-family: 'fontello';
+    font-style: normal;
+    font-weight: normal;
   /* fix buttons height */
-  line-height: 1em;
+    line-height: 1em;
   /* you can be more comfortable with increased icons size */
   /* font-size: 120%; */
-}
+  }
 
-.icon-search {
-  *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x1f50d;&nbsp;');
-}
-
+  .icon-search { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x1f50d;&nbsp;'); }
 /* ========================================================================== */
-#ui-search {
-  height: 30px;
-}
 
-#ui-search .form-item-search-terms label {
-  font-size: 14px;
-}
+#ui-search { height: 30px; }
+#ui-search .form-item-search-terms label { font-size: 14px; }
