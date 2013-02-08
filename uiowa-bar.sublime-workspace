@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"search-",
+				"search-exposed"
+			],
+			[
 				"te",
 				"text-shadow"
 			],
@@ -299,38 +303,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "sass/ui-global-bar.scss",
-			"settings":
-			{
-				"buffer_size": 6827,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Applications/MAMP/htdocs/sitenow_custom/sites/govrel.uiowa.edu/themes/govrel/sass/_custom.scss",
-			"settings":
-			{
-				"buffer_size": 6174,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Applications/MAMP/htdocs/sitenow_custom/sites/all/modules/custom/uiowa_bar/sass/ui-global-bar.scss",
-			"settings":
-			{
-				"buffer_size": 9453,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "css/ui-global-bar.css",
-			"settings":
-			{
-				"buffer_size": 1201,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -360,7 +332,30 @@
 	},
 	"file_history":
 	[
+		"/Applications/MAMP/htdocs/sitenow_standard/sites/all/modules/custom/uiowa_bar/sass/lte-ie8.scss",
+		"/Applications/MAMP/htdocs/sitenow_standard/sites/all/modules/custom/uiowa_bar/css/ie7.css",
+		"/Applications/MAMP/htdocs/sitenow_standard/sites/all/modules/custom/uiowa_bar/sass/ie7.scss",
+		"/Applications/MAMP/htdocs/sitenow_standard/sites/all/modules/custom/uiowa_bar/css/uiowa-bar-dark.css",
+		"/Applications/MAMP/htdocs/sitenow_standard/sites/all/modules/custom/uiowa_bar/uiowa_bar.module",
+		"/Applications/MAMP/htdocs/sitenow_standard/sites/all/modules/custom/uiowa_bar/sass/uiowa-bar-light.scss",
+		"/Applications/MAMP/htdocs/sitenow_standard/sites/all/modules/custom/uiowa_bar/sass/_animate.scss",
+		"/Applications/MAMP/htdocs/sitenow_standard/sites/all/modules/custom/uiowa_bar/sass/_base.scss",
+		"/Applications/MAMP/htdocs/sitenow_standard/sites/all/modules/custom/uiowa_bar/sass/ui-global-bar.scss",
+		"/Applications/MAMP/htdocs/sitenow_standard/sites/all/modules/custom/uiowa_bar/sass/_custom.scss",
+		"/Applications/MAMP/htdocs/sitenow_standard/sites/all/modules/custom/uiowa_bar/sass/_reset.scss",
+		"/Users/ajdelaney/Desktop/housing.uiowa.edu/modules/uiowa_bar/css/ie7.css",
+		"/Applications/MAMP/htdocs/sitenow_standard/sites/all/modules/custom/uiowa_bar/nav.ai",
+		"/Applications/MAMP/htdocs/sitenow_custom/sites/all/modules/custom/uiowa_bar/sass/ui-global-bar.scss",
+		"/Applications/MAMP/htdocs/sitenow_custom/sites/govrel.uiowa.edu/themes/govrel/sass/_custom.scss",
+		"/Applications/MAMP/htdocs/sitenow_standard/sites/all/modules/custom/uiowa_bar/uiowa_bar.info",
+		"/Applications/MAMP/htdocs/sitenow_custom/sites/all/themes/parallaxy/parallaxy_core/template.php",
+		"/Applications/MAMP/htdocs/sitenow_standard/sites/all/modules/custom/uiowa_bar/.gitignore",
+		"/Applications/MAMP/htdocs/sitenow_standard/sites/all/modules/custom/uiowa_bar/js/ui-header.js",
 		"/Applications/MAMP/htdocs/sitenow_standard/sites/all/modules/custom/uiowa_bar/css/ui-global-bar.css",
+		"/Applications/MAMP/htdocs/sitenow_custom/sites/all/themes/parallaxy/parallaxy_core/scripts/custom.js",
+		"/Applications/MAMP/htdocs/sitenow_custom/sites/sites.php",
+		"/Applications/MAMP/htdocs/sitenow_custom/sites/fye.uiowa.edu/settings.php",
+		"/Applications/MAMP/htdocs/sitenow_custom/sites/tile.uiowa.edu/settings.php",
 		"/Users/ajdelaney/Downloads/pathauto_persist/pathauto_persist.module",
 		"/Applications/MAMP/htdocs/sitenow_standard/sites/all/modules/features/sitenow_featured_slider/theme/sass/_custom.scss",
 		"/Applications/MAMP/htdocs/sitenow_standard/sites/all/themes/sitenow_standardtheme/sass/_theme-overrides_content-style.scss",
@@ -380,7 +375,6 @@
 		"/Applications/MAMP/htdocs/its/sites/all/themes/its/sass/global.styles.scss",
 		"/Applications/MAMP/htdocs/sitenow_custom/sites/transportation.uiowa.edu/modules/features/sitenow_featured_slider/sitenow_featured_slider.info",
 		"/Applications/MAMP/htdocs/sitenow_custom/sites/transportation.uiowa.edu/modules/features/sitenow_featured_slider/sitenow_featured_slider.module",
-		"/Applications/MAMP/htdocs/sitenow_custom/sites/sites.php",
 		"/private/etc/hosts",
 		"/Applications/MAMP/htdocs/sitenow_custom/sites/2013.drupalcorn.org/themes/drupalcorn/templates/page--full-width-wrappers.tpl.php",
 		"/Applications/MAMP/htdocs/sitenow_custom/sites/2013.drupalcorn.org/themes/drupalcorn/sass/global.styles.scss",
@@ -457,7 +451,6 @@
 		"/Applications/MAMP/htdocs/sitenow_custom/sites/honors.uiowa.edu/themes/honors/sass/global.styles.scss",
 		"/Applications/MAMP/htdocs/sitenow_custom/sites/honors.uiowa.edu/themes/honors/sass/_custom.scss",
 		"/Applications/MAMP/htdocs/sitenow_custom/sites/all/themes/parallaxy/parallaxy_core/css/parallaxy.global.styles.css",
-		"/Applications/MAMP/htdocs/sitenow_custom/sites/all/themes/parallaxy/parallaxy_core/scripts/custom.js",
 		"/Applications/MAMP/htdocs/sitenow_custom/sites/obermann.uiowa.edu/themes/obermann/sass/responsive.custom.scss",
 		"/Applications/MAMP/htdocs/sitenow_custom/sites/obermann.uiowa.edu/themes/obermann/sass/responsive.tablet.portrait.scss",
 		"/Applications/MAMP/htdocs/sitenow_custom/sites/obermann.uiowa.edu/themes/obermann/obermann.info",
@@ -466,28 +459,7 @@
 		"/Volumes/Prod- Falcon-05/vhosts/falcon.its.uiowa.edu/htdocs/sites/president.uiowa.edu/settings.php",
 		"/Applications/MAMP/htdocs/sitenow_custom/sites/obermann.uiowa.edu/themes/obermann/sass/responsive.desktop.scss",
 		"/Applications/MAMP/htdocs/sitenow_custom/sites/obermann.uiowa.edu/themes/obermann/sass/responsive.tablet.landscape.scss",
-		"/Applications/MAMP/htdocs/sitenow_custom/sites/obermann.uiowa.edu/themes/obermann/sass/responsive.smartphone.portrait.scss",
-		"/Applications/MAMP/htdocs/sitenow_custom/sites/oniowa.uiowa.edu/themes/oniowa/scripts/custom.js",
-		"/Applications/MAMP/htdocs/sitenow_custom/sites/obermann.uiowa.edu/themes/obermann/sass/_custom.forms.scss",
-		"/Applications/MAMP/htdocs/sitenow_custom/sites/obermann.uiowa.edu/themes/obermann/sass/responsive.smartphone.landscape.scss",
-		"/Volumes/Dev- Condor-08 3/vhosts/condor.its.uiowa.edu/htdocs/sites/obermann.uiowa.edu/themes/obermann/obermann.info",
-		"/Applications/MAMP/htdocs/sitenow_custom/sites/oniowa.uiowa.edu/themes/oniowa/sass/responsive.custom.scss",
-		"/Applications/MAMP/htdocs/sitenow_custom/sites/honors.uiowa.edu/themes/honors/scripts/faq_toggle.js",
-		"/Applications/MAMP/htdocs/sitenow_custom/sites/honors.uiowa.edu/themes/honors/scripts/custom.js",
-		"/Applications/MAMP/htdocs/sitenow_custom/sites/obermann.uiowa.edu/themes/obermann.sublime-project",
-		"/Applications/MAMP/htdocs/sitenow_custom/sites/obermann.uiowa.edu/themes/obermann/templates/date-views-pager.tpl.php",
-		"/Applications/MAMP/htdocs/sitenow_custom/sites/obermann.uiowa.edu/themes/obermann/sass/_calendar.scss",
-		"/Applications/MAMP/htdocs/sitenow_custom/sites/president.uiowa.edu/themes/president/sass/local.styles.scss",
-		"/Applications/MAMP/htdocs/sitenow_custom/sites/obermann.uiowa.edu/themes/obermann/templates/page--full-width-wrappers.tpl.php",
-		"/Applications/MAMP/htdocs/sitenow_custom/sites/obermann.uiowa.edu/.gitignore",
-		"/Applications/MAMP/htdocs/sitenow_custom/sites/president.uiowa.edu/themes/president/sass/global.styles.scss",
-		"/Applications/MAMP/htdocs/sitenow_custom/sites/outreach.uiowa.edu/themes/outreach/sass/global.styles.scss",
-		"/Applications/MAMP/htdocs/sitenow_custom/sites/obermann.uiowa.edu/themes/obermann/sass/font-awesome/_glyphs.scss",
-		"/Applications/MAMP/htdocs/sitenow_custom/sites/obermann.uiowa.edu/themes/obermann/sass/font-awesome/_font-awesome.scss",
-		"/Applications/MAMP/htdocs/sitenow_custom/sites/obermann.uiowa.edu/themes/obermann/sass/font-awesome/_font-face.scss",
-		"/Applications/MAMP/htdocs/sitenow_custom/sites/obermann.uiowa.edu/themes/obermann/sass/font-awesome/_mixin.scss",
-		"/Applications/MAMP/htdocs/sitenow_custom/sites/obermann.uiowa.edu/themes/obermann/sass/font-awesome/_glyphs-after.scss",
-		"/Applications/MAMP/htdocs/sitenow_custom/sites/all/modules/contrib/flexslider/flexslider_views/theme/flexslider_views.theme.inc"
+		"/Applications/MAMP/htdocs/sitenow_custom/sites/obermann.uiowa.edu/themes/obermann/sass/responsive.smartphone.portrait.scss"
 	],
 	"find":
 	{
@@ -505,6 +477,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			".uiowa-bar-dark",
+			"css",
+			"font-size: 0",
+			"ui-search.search-exposed",
 			".sidebar",
 			"panel-panel",
 			"panel",
@@ -628,11 +604,7 @@
 			"tasks",
 			"pane-title",
 			"menu",
-			"left",
-			"panel-panel",
-			".block",
-			"panel-panel",
-			"footer-wrapper"
+			"left"
 		],
 		"highlight": false,
 		"in_selection": false,
@@ -640,6 +612,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			".uiowa-bar-light",
 			"",
 			" }",
 			"",
@@ -674,118 +647,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "sass/ui-global-bar.scss",
-					"settings":
-					{
-						"buffer_size": 6827,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								787,
-								787
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/SASS/Syntaxes/SASS.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/Applications/MAMP/htdocs/sitenow_custom/sites/govrel.uiowa.edu/themes/govrel/sass/_custom.scss",
-					"settings":
-					{
-						"buffer_size": 6174,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3474,
-								3240
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/SASS/Syntaxes/SASS.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1060.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "/Applications/MAMP/htdocs/sitenow_custom/sites/all/modules/custom/uiowa_bar/sass/ui-global-bar.scss",
-					"settings":
-					{
-						"buffer_size": 9453,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2390,
-								2184
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/SASS/Syntaxes/SASS.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 870.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "css/ui-global-bar.css",
-					"settings":
-					{
-						"buffer_size": 1201,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -839,16 +702,16 @@
 	},
 	"select_project":
 	{
-		"height": 0.0,
+		"height": 500.0,
 		"selected_items":
 		[
 		],
-		"width": 0.0
+		"width": 380.0
 	},
 	"show_minimap": true,
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 235.0,
+	"side_bar_width": 236.0,
 	"status_bar_visible": true
 }
