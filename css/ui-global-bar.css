@@ -165,7 +165,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 #ui-logo a {
   position: absolute;
   margin-top: 8px;
-  padding-bottom: 6px;
+  padding-bottom: 10px;
   display: block !important;
   text-indent: 100%;
   white-space: nowrap;
