@@ -7,7 +7,7 @@
  * Base File
  */
 .sprites-sprite, .uiowa-bar-dark #ui-logo a {
-  background: url('images/sprites-s56c9096924.png') no-repeat;
+  background: url('images/sprites-s1b3ac075f0.png') no-repeat;
 }
 
 /**
@@ -80,7 +80,7 @@
   box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.05);
 }
 .uiowa-bar-dark #ui-logo a {
-  background-position: 8px -46px;
+  background-position: 8px -92px;
 }
 
 /* ========================================================================== */
