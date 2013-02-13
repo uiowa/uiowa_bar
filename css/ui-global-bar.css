@@ -299,9 +299,10 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/custom\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003136}}
 #ui-global-footer a {
   color: #999;
+  border-bottom: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/custom\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003141}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/custom\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003142}}
 #ui-footer-logo a {
   display: block !important;
   text-indent: 100%;
@@ -316,11 +317,11 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   width: 200px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/custom\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003148}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/custom\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003149}}
 #ui-global-links .item-list ul {
   margin-top: 10px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/custom\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003152}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/custom\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003153}}
 #ui-global-links .item-list li {
   list-style-type: none;
   margin: 0;
@@ -332,19 +333,19 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
  *   Small Media Query
  * ========================================================================== */
 @media only screen and (max-width: 500px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/custom\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003165}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/custom\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003166}}
   #ui-wrapper {
     height: auto;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/custom\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003170}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/custom\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003171}}
   #ui-logo a {
     position: relative;
     display: inline-block;
     width: 100%;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/custom\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003177}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/custom\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003178}}
   #ui-search-toggle {
     display: block;
     font-size: 0;
@@ -354,7 +355,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     height: 40px;
     width: 40px;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/custom\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003186}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/custom\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003187}}
   #ui-search-toggle:before {
     content: '🔍';
     /* '\1f50d' */
@@ -374,7 +375,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     left: 5px;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/custom\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003205}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/custom\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003206}}
   #ui-search {
     max-width: 100%;
     margin: 10px 8px;
@@ -387,35 +388,35 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
  *   Large Media Query
  * ========================================================================== */
 @media only screen and (min-width: 501px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/custom\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003220}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/custom\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003221}}
   #ui-logo {
     margin-top: -2px;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/custom\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003224}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/custom\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003225}}
   #ui-search.search-hidden {
     display: block;
   }
 
   /* FOOTER ----------------------------------------------------------------*/
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/custom\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003229}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/custom\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003230}}
   #ui-global-links .item-list {
     overflow: hidden;
     *overflow: visible;
     *zoom: 1;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/custom\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003232}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/custom\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003233}}
   #ui-global-links .item-list li {
     display: block;
     float: left;
     margin-right: 10px;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/custom\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003238}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/custom\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003239}}
   #ui-global-links .item-list li:after {
     content: "/";
     padding-left: 10px;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/custom\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003243}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/custom\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003244}}
   #ui-global-links .item-list li.last:after {
     content: none;
   }
