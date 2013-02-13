@@ -239,6 +239,10 @@
           content: "/";
           padding-left: 10px;
         }
+
+        &.last:after {
+          content: none;
+        }
       }
     }
 

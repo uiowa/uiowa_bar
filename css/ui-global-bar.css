@@ -9,6 +9,7 @@
  * @file
  * Base File
  */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/custom\/sites\/all\/modules\/custom\/uiowa_bar\/sprites\/\*\.png}line{font-family:\0000358}}
 .sprites-sprite, #ui-footer-logo a {
   background: url('images/sprites-s1b3ac075f0.png') no-repeat;
 }
@@ -37,11 +38,13 @@
  * @file
  * Resets
  */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/custom\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/_reset\.scss}line{font-family:\000038}}
 #ui-wrapper * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/custom\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/_reset\.scss}line{font-family:\0000312}}
 #ui-wrapper input {
   font-family: arial !important;
   font-size: 14px !important;
@@ -59,6 +62,7 @@ The above copyright notice and this permission notice shall be included in all c
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/custom\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/_animate\.scss}line{font-family:\0000314}}
 .animated {
   -webkit-animation-fill-mode: both;
   -moz-animation-fill-mode: both;
@@ -72,6 +76,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   animation-duration: .5s;
 }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/custom\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/_animate\.scss}line{font-family:\0000327}}
 .animated.hinge {
   -webkit-animation-duration: 1s;
   -moz-animation-duration: 1s;
@@ -81,11 +86,13 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 }
 
 @-webkit-keyframes fadeInDown {
+  /* line 36, ../sass/_animate.scss */
   0% {
     opacity: 0;
     -webkit-transform: translateY(-20px);
   }
 
+  /* line 41, ../sass/_animate.scss */
   100% {
     opacity: 1;
     -webkit-transform: translateY(0);
@@ -93,11 +100,13 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 }
 
 @-moz-keyframes fadeInDown {
+  /* line 48, ../sass/_animate.scss */
   0% {
     opacity: 0;
     -moz-transform: translateY(-20px);
   }
 
+  /* line 53, ../sass/_animate.scss */
   100% {
     opacity: 1;
     -moz-transform: translateY(0);
@@ -105,11 +114,13 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 }
 
 @-o-keyframes fadeInDown {
+  /* line 60, ../sass/_animate.scss */
   0% {
     opacity: 0;
     -ms-transform: translateY(-20px);
   }
 
+  /* line 65, ../sass/_animate.scss */
   100% {
     opacity: 1;
     -ms-transform: translateY(0);
@@ -117,17 +128,20 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 }
 
 @keyframes fadeInDown {
+  /* line 72, ../sass/_animate.scss */
   0% {
     opacity: 0;
     transform: translateY(-20px);
   }
 
+  /* line 77, ../sass/_animate.scss */
   100% {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/custom\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/_animate\.scss}line{font-family:\0000383}}
 .fadeInDown {
   -webkit-animation-name: fadeInDown;
   -moz-animation-name: fadeInDown;
@@ -139,10 +153,12 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 /* =============================================================================
  *   UI Wrapper and Container
  * ========================================================================= */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/custom\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\0000318}}
 #ui-wrapper {
   height: 40px;
   font-size: 14px;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/custom\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\0000322}}
 #ui-wrapper .container {
   overflow: hidden;
   *overflow: visible;
@@ -154,6 +170,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 /* =============================================================================
  *   Search Toggle
  * ========================================================================== */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/custom\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\0000333}}
 #ui-search-toggle {
   display: none;
 }
@@ -162,6 +179,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 /* =============================================================================
  *   UI Logo
  * ========================================================================== */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/custom\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\0000342}}
 #ui-logo a {
   position: absolute;
   margin-top: 8px;
@@ -181,14 +199,17 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 /* =============================================================================
  *   Search Bar
  * ========================================================================== */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/custom\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\0000356}}
 #ui-search.search-hidden {
   display: none;
 }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/custom\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\0000357}}
 #ui-search.search-exposed {
   display: block;
 }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/custom\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\0000359}}
 #ui-search {
   position: relative;
   -webkit-border-radius: 4px;
@@ -202,6 +223,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   max-width: 300px;
   float: right;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/custom\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\0000369}}
 #ui-search .form-item-search-terms {
   display: inline-block;
   margin: 0;
@@ -210,10 +232,12 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   padding-left: 30px;
   line-height: 0;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/custom\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\0000377}}
 #ui-search .form-item-search-terms label {
   font-size: 0;
   display: inline-block;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/custom\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\0000381}}
 #ui-search .form-item-search-terms label:before {
   content: '🔍';
   /* '\1f50d' */
@@ -230,6 +254,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   top: 2px;
   left: 5px;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/custom\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003100}}
 #ui-search #edit-search-terms {
   background-color: transparent;
   border: none;
@@ -238,6 +263,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   margin: 0;
   padding: 2px 2px 1px 2px;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/custom\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003109}}
 #ui-search #edit-submit-search {
   position: absolute;
   top: 3px;
@@ -259,6 +285,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 /* =============================================================================
  *   UI Global Footer
  * ========================================================================== */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/custom\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003128}}
 #ui-global-footer {
   background-color: #111111;
   color: #999;
@@ -269,10 +296,12 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   -moz-box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.05) inset;
   box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.05) inset;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/custom\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003136}}
 #ui-global-footer a {
   color: #999;
 }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/custom\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003141}}
 #ui-footer-logo a {
   display: block !important;
   text-indent: 100%;
@@ -287,9 +316,11 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   width: 200px;
 }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/custom\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003148}}
 #ui-global-links .item-list ul {
   margin-top: 10px;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/custom\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003152}}
 #ui-global-links .item-list li {
   list-style-type: none;
   margin: 0;
@@ -301,16 +332,19 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
  *   Small Media Query
  * ========================================================================== */
 @media only screen and (max-width: 500px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/custom\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003165}}
   #ui-wrapper {
     height: auto;
   }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/custom\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003170}}
   #ui-logo a {
     position: relative;
     display: inline-block;
     width: 100%;
   }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/custom\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003177}}
   #ui-search-toggle {
     display: block;
     font-size: 0;
@@ -320,6 +354,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     height: 40px;
     width: 40px;
   }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/custom\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003186}}
   #ui-search-toggle:before {
     content: '🔍';
     /* '\1f50d' */
@@ -339,6 +374,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     left: 5px;
   }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/custom\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003205}}
   #ui-search {
     max-width: 100%;
     margin: 10px 8px;
@@ -351,28 +387,37 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
  *   Large Media Query
  * ========================================================================== */
 @media only screen and (min-width: 501px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/custom\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003220}}
   #ui-logo {
     margin-top: -2px;
   }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/custom\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003224}}
   #ui-search.search-hidden {
     display: block;
   }
 
   /* FOOTER ----------------------------------------------------------------*/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/custom\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003229}}
   #ui-global-links .item-list {
     overflow: hidden;
     *overflow: visible;
     *zoom: 1;
   }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/custom\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003232}}
   #ui-global-links .item-list li {
     display: block;
     float: left;
     margin-right: 10px;
   }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/custom\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003238}}
   #ui-global-links .item-list li:after {
     content: "/";
     padding-left: 10px;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/custom\/sites\/all\/modules\/custom\/uiowa_bar\/sass\/ui-global-bar\.scss}line{font-family:\00003243}}
+  #ui-global-links .item-list li.last:after {
+    content: none;
   }
 }
 /* ========================================================================== */
