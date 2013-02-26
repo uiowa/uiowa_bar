@@ -10,8 +10,8 @@
  * Implements hook_install().
  */
 function uiowa_bar_install() {
-  // Set the default color palette to the light palette.
-  variable_set('uiowa_bar_color_palette', 'uiowa-bar-light');
+  // Set the default color palette to the dark palette.
+  variable_set('uiowa_bar_color_palette', 'uiowa-bar-dark');
   // Set the default footer rendering location.
   variable_set('uiowa_bar_footer_location', 'page_bottom');
 
