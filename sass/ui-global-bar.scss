@@ -41,8 +41,7 @@
  * ========================================================================== */
   #ui-logo a {
     position: absolute;
-    margin-top: 8px;
-    padding-bottom: 10px;
+    top: 5px;
     @include ir;
     width: 200px;
   }
@@ -60,7 +59,7 @@
     position: relative;
     @include border-radius(4px);
     padding: 0;
-    margin: 5px $uiowa-bar-gutter 0 0;
+    margin: 8px $uiowa-bar-gutter 0 0;
     width: 100%;
     max-width: 300px;
     float: right;
@@ -104,6 +103,7 @@
       width: 100%;
       margin: 0;
       padding: 2px 2px 1px 2px;
+      line-height: normal;
     }
 
     #edit-submit-search {

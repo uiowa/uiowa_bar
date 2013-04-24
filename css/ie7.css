@@ -1,6 +1,7 @@
 /* =============================================================================
  *   Fixes for fontello embeds
  * ========================================================================== */
+/* line 6, ../sass/ie7.scss */
 [class^="icon-"],
 [class*=" icon-"] {
   font-family: 'fontello';
@@ -12,15 +13,18 @@
   /* font-size: 120%; */
 }
 
+/* line 16, ../sass/ie7.scss */
 .icon-search {
   *zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x1f50d;&nbsp;');
 }
 
 /* ========================================================================== */
+/* line 19, ../sass/ie7.scss */
 #ui-search {
   height: 28px;
 }
 
+/* line 20, ../sass/ie7.scss */
 #ui-search .form-item-search-terms {
   padding-left: 5px;
 }
