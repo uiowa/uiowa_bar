@@ -192,23 +192,24 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   color: transparent;
   background-color: transparent;
   width: 200px;
+  height: 30px;
 }
 
 /* ========================================================================== */
 /* =============================================================================
  *   Search Bar
  * ========================================================================== */
-/* line 55, ../sass/ui-global-bar.scss */
+/* line 56, ../sass/ui-global-bar.scss */
 #ui-search.search-hidden {
   display: none;
 }
 
-/* line 56, ../sass/ui-global-bar.scss */
+/* line 57, ../sass/ui-global-bar.scss */
 #ui-search.search-exposed {
   display: block;
 }
 
-/* line 58, ../sass/ui-global-bar.scss */
+/* line 59, ../sass/ui-global-bar.scss */
 #ui-search {
   position: relative;
   -webkit-border-radius: 4px;
@@ -217,12 +218,12 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   -o-border-radius: 4px;
   border-radius: 4px;
   padding: 0;
-  margin: 8px 8px 0 0;
+  margin: 5px 8px 0 0;
   width: 100%;
   max-width: 300px;
   float: right;
 }
-/* line 68, ../sass/ui-global-bar.scss */
+/* line 69, ../sass/ui-global-bar.scss */
 #ui-search .form-item-search-terms {
   display: inline-block;
   margin: 0;
@@ -231,12 +232,12 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   padding-left: 30px;
   line-height: 0;
 }
-/* line 76, ../sass/ui-global-bar.scss */
+/* line 77, ../sass/ui-global-bar.scss */
 #ui-search .form-item-search-terms label {
   font-size: 0;
   display: inline-block;
 }
-/* line 80, ../sass/ui-global-bar.scss */
+/* line 81, ../sass/ui-global-bar.scss */
 #ui-search .form-item-search-terms label:before {
   content: '🔍';
   /* '\1f50d' */
@@ -253,7 +254,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   top: 2px;
   left: 5px;
 }
-/* line 99, ../sass/ui-global-bar.scss */
+/* line 100, ../sass/ui-global-bar.scss */
 #ui-search #edit-search-terms {
   background-color: transparent;
   border: none;
@@ -263,7 +264,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   padding: 2px 2px 1px 2px;
   line-height: normal;
 }
-/* line 109, ../sass/ui-global-bar.scss */
+/* line 110, ../sass/ui-global-bar.scss */
 #ui-search #edit-submit-search {
   position: absolute;
   top: 3px;
@@ -285,7 +286,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 /* =============================================================================
  *   UI Global Footer
  * ========================================================================== */
-/* line 128, ../sass/ui-global-bar.scss */
+/* line 129, ../sass/ui-global-bar.scss */
 #ui-global-footer {
   background-color: #111111;
   color: #999;
@@ -296,13 +297,13 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   -moz-box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.05) inset;
   box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.05) inset;
 }
-/* line 136, ../sass/ui-global-bar.scss */
+/* line 137, ../sass/ui-global-bar.scss */
 #ui-global-footer a {
   color: #999;
   border-bottom: none;
 }
 
-/* line 142, ../sass/ui-global-bar.scss */
+/* line 143, ../sass/ui-global-bar.scss */
 #ui-footer-logo a {
   display: block !important;
   text-indent: 100%;
@@ -317,11 +318,11 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   width: 200px;
 }
 
-/* line 149, ../sass/ui-global-bar.scss */
+/* line 150, ../sass/ui-global-bar.scss */
 #ui-global-links .item-list ul {
   margin-top: 10px;
 }
-/* line 153, ../sass/ui-global-bar.scss */
+/* line 154, ../sass/ui-global-bar.scss */
 #ui-global-links .item-list li {
   list-style-type: none;
   margin: 0;
@@ -333,19 +334,19 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
  *   Small Media Query
  * ========================================================================== */
 @media only screen and (max-width: 500px) {
-  /* line 166, ../sass/ui-global-bar.scss */
+  /* line 167, ../sass/ui-global-bar.scss */
   #ui-wrapper {
     height: auto;
   }
 
-  /* line 171, ../sass/ui-global-bar.scss */
+  /* line 172, ../sass/ui-global-bar.scss */
   #ui-logo a {
     position: relative;
     display: inline-block;
     width: 100%;
   }
 
-  /* line 178, ../sass/ui-global-bar.scss */
+  /* line 179, ../sass/ui-global-bar.scss */
   #ui-search-toggle {
     display: block;
     font-size: 0;
@@ -355,7 +356,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     height: 40px;
     width: 40px;
   }
-  /* line 187, ../sass/ui-global-bar.scss */
+  /* line 188, ../sass/ui-global-bar.scss */
   #ui-search-toggle:before {
     content: '🔍';
     /* '\1f50d' */
@@ -375,7 +376,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     left: 5px;
   }
 
-  /* line 206, ../sass/ui-global-bar.scss */
+  /* line 207, ../sass/ui-global-bar.scss */
   #ui-search {
     max-width: 100%;
     margin: 10px 8px;
@@ -388,35 +389,35 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
  *   Large Media Query
  * ========================================================================== */
 @media only screen and (min-width: 501px) {
-  /* line 221, ../sass/ui-global-bar.scss */
+  /* line 222, ../sass/ui-global-bar.scss */
   #ui-logo {
     margin-top: -2px;
   }
 
-  /* line 225, ../sass/ui-global-bar.scss */
+  /* line 226, ../sass/ui-global-bar.scss */
   #ui-search.search-hidden {
     display: block;
   }
 
   /* FOOTER ----------------------------------------------------------------*/
-  /* line 230, ../sass/ui-global-bar.scss */
+  /* line 231, ../sass/ui-global-bar.scss */
   #ui-global-links .item-list {
     overflow: hidden;
     *overflow: visible;
     *zoom: 1;
   }
-  /* line 233, ../sass/ui-global-bar.scss */
+  /* line 234, ../sass/ui-global-bar.scss */
   #ui-global-links .item-list li {
     display: block;
     float: left;
     margin-right: 10px;
   }
-  /* line 239, ../sass/ui-global-bar.scss */
+  /* line 240, ../sass/ui-global-bar.scss */
   #ui-global-links .item-list li:after {
     content: "/";
     padding-left: 10px;
   }
-  /* line 244, ../sass/ui-global-bar.scss */
+  /* line 245, ../sass/ui-global-bar.scss */
   #ui-global-links .item-list li.last:after {
     content: none;
   }
