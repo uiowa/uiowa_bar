@@ -211,8 +211,10 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   line-height: 0;
 }
 #ui-search .form-item-search-terms label {
-  font-size: 0;
   display: inline-block;
+  font-size: 0;
+  height: 0;
+  overflow: hidden;
 }
 #ui-search .form-item-search-terms label:before {
   content: '🔍';
