@@ -34,7 +34,7 @@ images_dir = "css/images"
 # command line)
 #output_style = :expanded or :nested or :compact or :compressed
 #output_style = (environment == :development) ? :expanded : :compact
-output_style = :expanded
+output_style = :compressed
 
 # To enable relative paths to assets via compass helper functions. Since Drupal
 # themes can be installed in multiple locations, we don't need to worry about
@@ -48,4 +48,4 @@ relative_assets = true
 #   scss may not have changed, since we want the CSS to be compressed and have
 #   the debug info removed.
 
-sass_options = (environment == :development) ? {:debug_info => true} : {:always_update => true}
+sass_options = (environment == :production) ? {:debug_info => false} : {:always_update => true}
