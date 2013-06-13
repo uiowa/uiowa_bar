@@ -11,6 +11,10 @@
   @import "animate";
  /* ========================================================================== */
 
+// Make room for IPE if present
+.panels-ipe .region-page-bottom {
+  padding-bottom: 60px;
+}
 
 /* =============================================================================
  *   UI Wrapper and Container
