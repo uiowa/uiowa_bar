@@ -9,9 +9,9 @@
  * @file
  * Base File
  */
-/* line 58, sprites/*.png */
+/* line 74, sprites/*.png */
 .sprites-sprite, #ui-footer-logo a {
-  background: url('images/sprites-s1b3ac075f0.png') no-repeat;
+  background: url('images/sprites-s33bf855709.png') no-repeat;
 }
 
 /**
@@ -297,7 +297,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   color: #999;
   padding: 20px 8px;
   font-size: 14px;
-  border-top: 1px solid #000;
+  border-top: 1px solid black;
   -webkit-box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.05) inset;
   -moz-box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.05) inset;
   box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.05) inset;
@@ -318,7 +318,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   text-shadow: none;
   color: transparent;
   background-color: transparent;
-  background-position: 0 0;
+  background-position: 0 -150px;
   height: 26px;
   width: 200px;
 }

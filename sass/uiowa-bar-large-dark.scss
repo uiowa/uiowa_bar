@@ -1,0 +1,103 @@
+/**
+ * @file
+ * UI Global Bar Stles
+ */
+@import "base";
+$use_large_logo: 670px;
+
+/* =============================================================================
+ *   UI Wrapper and Container
+ * ========================================================================== */
+  .uiowa-bar-large-dark #ui-wrapper {
+    background-color: #000;
+    border-bottom: 1px solid #000;
+    border-top: 1px solid #000;
+
+    @media screen and (min-width: $use_large_logo) {
+      height: 55px;
+
+      .container {
+        height: 55px;
+      }
+    }
+  }
+/* ========================================================================== */
+
+
+/* =============================================================================
+ *   Search Toggle
+ * ========================================================================== */
+  .uiowa-bar-large-dark #ui-search-toggle {
+    background-color: #222;
+    @include box-shadow(0px 0px 6px rgba(0,0,0,.6) inset);
+
+    &:before {
+      color: #ccc;
+      @include text-shadow(0px -1px 0px rgba(0,0,0,.3));
+    }
+
+    &.inactive {
+      background-color: transparent;
+      @include box-shadow(-1px 0px 0px rgba(255,255,255,.05));
+      border-left: 1px solid #111;
+    }
+  }
+/* ========================================================================== */
+
+
+/* =============================================================================
+ *   UI Logo
+ * ========================================================================== */
+  .uiowa-bar-large-dark #ui-logo {
+    a {
+      width: 360px;
+
+      @include sprites-sprite(ui-wm-large-dark-mobile, $offset-x: $uiowa-bar-gutter);
+
+      @media screen and (min-width: $use_large_logo) {
+        background-size: 350px;
+        height: 50px;
+        @include sprites-sprite(ui-wm-large-dark, $offset-x: $uiowa-bar-gutter, $offset-y: 20px);
+      }
+    }
+  }
+/* ========================================================================== */
+
+
+/* =============================================================================
+ *   Search Bar
+ * ========================================================================== */
+  .uiowa-bar-large-dark #ui-search {
+    background-color: #333;
+    border: 1px solid #202020;
+    @include box-shadow(0px 0px 3px rgba(0,0,0,.25) inset);
+    @media screen and (min-width: $use_large_logo) {
+      margin-top: 17px;
+    }
+
+    // Label
+    .form-item-search-terms label:before {
+      color: #666666;
+      @include text-shadow(0px -1px 0px rgba(0,0,0,.35));
+    }
+
+    // Search Text Input
+    #edit-search-terms {
+      color: #999;
+    }
+
+    #edit-submit-search {
+      background-color: #222;
+      border: 1px solid #333;
+      color: #999;
+      @include box-shadow(0px -12px 2px rgba(0,0,0,.5) inset);
+
+      &:hover, &:focus, &:active {
+        background-color: lighten($ui-gold, 15%);
+        @include box-shadow(0px -12px 2px $ui-gold inset);
+        color: #222;
+        @include text-shadow(0px 1px 0px rgba(255,255,255,.3));
+      }
+    }
+  }
+/* ========================================================================== */

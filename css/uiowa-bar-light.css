@@ -6,9 +6,9 @@
  * @file
  * Base File
  */
-/* line 58, sprites/*.png */
+/* line 74, sprites/*.png */
 .sprites-sprite, .uiowa-bar-light #ui-logo a {
-  background: url('images/sprites-s1b3ac075f0.png') no-repeat;
+  background: url('images/sprites-s33bf855709.png') no-repeat;
 }
 
 /**
@@ -42,8 +42,8 @@
   background-image: -moz-linear-gradient(#f3f0f0, #d0d0d0);
   background-image: -o-linear-gradient(#f3f0f0, #d0d0d0);
   background-image: linear-gradient(#f3f0f0, #d0d0d0);
-  border-bottom: 1px solid #ddd;
-  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #dddddd;
+  border-top: 1px solid #cccccc;
   -webkit-box-shadow: 0px -1px 0px #bbbbbb inset;
   -moz-box-shadow: 0px -1px 0px #bbbbbb inset;
   box-shadow: 0px -1px 0px #bbbbbb inset;
@@ -80,14 +80,14 @@
  * ========================================================================== */
 /* line 47, ../sass/uiowa-bar-light.scss */
 .uiowa-bar-light #ui-logo {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #cccccc;
   -webkit-box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.8);
   -moz-box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.8);
   box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.8);
 }
 /* line 51, ../sass/uiowa-bar-light.scss */
 .uiowa-bar-light #ui-logo a {
-  background-position: 8px -46px;
+  background-position: 8px -196px;
 }
 
 /* ========================================================================== */
@@ -97,7 +97,7 @@
 /* line 61, ../sass/uiowa-bar-light.scss */
 .uiowa-bar-light #ui-search {
   background-color: #eee;
-  border: 1px solid #bbb;
+  border: 1px solid #bbbbbb;
   -webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1) inset;
   -moz-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1) inset;
   box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1) inset;
@@ -114,7 +114,7 @@
 /* line 77, ../sass/uiowa-bar-light.scss */
 .uiowa-bar-light #ui-search #edit-submit-search {
   background-color: #eee;
-  border: 1px solid #bbb;
+  border: 1px solid #bbbbbb;
   color: #666;
   -webkit-box-shadow: 0px -12px 2px rgba(0, 0, 0, 0.1) inset;
   -moz-box-shadow: 0px -12px 2px rgba(0, 0, 0, 0.1) inset;
