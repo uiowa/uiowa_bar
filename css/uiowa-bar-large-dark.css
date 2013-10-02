@@ -40,14 +40,14 @@
   border-bottom: 1px solid black;
   border-top: 1px solid black;
 }
-@media screen and (min-width: 670px) {
+@media screen and (min-width: 825px) {
   /* line 11, ../sass/uiowa-bar-large-dark.scss */
   .uiowa-bar-large-dark #ui-wrapper {
-    height: 55px;
+    height: 70px;
   }
   /* line 19, ../sass/uiowa-bar-large-dark.scss */
   .uiowa-bar-large-dark #ui-wrapper .container {
-    height: 55px;
+    height: 70px;
   }
 }
 
@@ -82,15 +82,15 @@
  * ========================================================================== */
 /* line 52, ../sass/uiowa-bar-large-dark.scss */
 .uiowa-bar-large-dark #ui-logo a {
-  width: 360px;
+  width: 448px;
   background-position: 8px 0;
 }
-@media screen and (min-width: 670px) {
+@media screen and (min-width: 825px) {
   /* line 52, ../sass/uiowa-bar-large-dark.scss */
   .uiowa-bar-large-dark #ui-logo a {
-    background-size: 350px;
-    height: 50px;
-    background-position: 8px -24px;
+    background-size: 436px;
+    height: 60px;
+    background-position: 8px -30px;
   }
 }
 
@@ -106,10 +106,10 @@
   -moz-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.25) inset;
   box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.25) inset;
 }
-@media screen and (min-width: 670px) {
+@media screen and (min-width: 825px) {
   /* line 70, ../sass/uiowa-bar-large-dark.scss */
   .uiowa-bar-large-dark #ui-search {
-    margin-top: 17px;
+    margin-top: 30px;
   }
 }
 /* line 79, ../sass/uiowa-bar-large-dark.scss */

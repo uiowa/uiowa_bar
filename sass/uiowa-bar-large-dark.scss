@@ -3,7 +3,7 @@
  * UI Global Bar Stles
  */
 @import "base";
-$use_large_logo: 670px;
+$use_large_logo: 825px;
 
 /* =============================================================================
  *   UI Wrapper and Container
@@ -14,10 +14,10 @@ $use_large_logo: 670px;
     border-top: 1px solid #000;
 
     @media screen and (min-width: $use_large_logo) {
-      height: 55px;
+      height: 70px;
 
       .container {
-        height: 55px;
+        height: 70px;
       }
     }
   }
@@ -50,14 +50,14 @@ $use_large_logo: 670px;
  * ========================================================================== */
   .uiowa-bar-large-dark #ui-logo {
     a {
-      width: 360px;
+      width: 448px;
 
       @include sprites-sprite(ui-wm-large-dark-mobile, $offset-x: $uiowa-bar-gutter);
 
       @media screen and (min-width: $use_large_logo) {
-        background-size: 350px;
-        height: 50px;
-        @include sprites-sprite(ui-wm-large-dark, $offset-x: $uiowa-bar-gutter, $offset-y: 20px);
+        background-size: 436px;
+        height: 60px;
+        @include sprites-sprite(ui-wm-large-dark, $offset-x: $uiowa-bar-gutter, $offset-y: 14px);
       }
     }
   }
@@ -72,7 +72,7 @@ $use_large_logo: 670px;
     border: 1px solid #202020;
     @include box-shadow(0px 0px 3px rgba(0,0,0,.25) inset);
     @media screen and (min-width: $use_large_logo) {
-      margin-top: 17px;
+      margin-top: 30px;
     }
 
     // Label
