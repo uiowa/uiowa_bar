@@ -24,6 +24,7 @@ function uiowa_bar_config_form($form, &$form_state) {
     '#description' => t('Choose the color palette of the University of Iowa branding bar'),
     '#options' => array(
       'uiowa-bar-light' => t('Light Theme'),
+      'uiowa-bar-gold' => t('Gold Theme'),
       'uiowa-bar-dark' => t('Dark Theme'),
       'uiowa-bar-large-dark' => t('Large Dark Theme'),
     ),
