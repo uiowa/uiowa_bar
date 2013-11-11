@@ -16,7 +16,7 @@ function build_uiowa_bar_footer() {
     '#type' => 'container',
   );
   $uiowa_bar['ui-global-footer']['container'] = array(
-    '#attributes' => array('class' => array('container')),
+    '#attributes' => array('class' => array('container', 'l-container')),
     '#type' => 'container',
   );
   $uiowa_bar['ui-global-footer']['container']['ui-logo'] = array(
