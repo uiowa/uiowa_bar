@@ -6,9 +6,9 @@
  * @file
  * Base File
  */
-/* line 74, sprites/*.png */
+/* line 82, sprites/*.png */
 .sprites-sprite, .uiowa-bar-dark #ui-logo a {
-  background: url('images/sprites-s33bf855709.png') no-repeat;
+  background: url('images/sprites-se2147779d6.png') no-repeat;
 }
 
 /**
@@ -42,8 +42,8 @@
   background-image: -moz-linear-gradient(#333333, #1d1c1c);
   background-image: -o-linear-gradient(#333333, #1d1c1c);
   background-image: linear-gradient(#333333, #1d1c1c);
-  border-bottom: 1px solid #222222;
-  border-top: 1px solid #222222;
+  border-bottom: 1px solid #222;
+  border-top: 1px solid #222;
   -webkit-box-shadow: 0px -1px 0px #131313 inset;
   -moz-box-shadow: 0px -1px 0px #131313 inset;
   box-shadow: 0px -1px 0px #131313 inset;
@@ -71,7 +71,7 @@
   -webkit-box-shadow: -1px 0px 0px rgba(255, 255, 255, 0.05);
   -moz-box-shadow: -1px 0px 0px rgba(255, 255, 255, 0.05);
   box-shadow: -1px 0px 0px rgba(255, 255, 255, 0.05);
-  border-left: 1px solid #111111;
+  border-left: 1px solid #111;
 }
 
 /* ========================================================================== */
@@ -114,7 +114,7 @@
 /* line 77, ../sass/uiowa-bar-dark.scss */
 .uiowa-bar-dark #ui-search #edit-submit-search {
   background-color: #222;
-  border: 1px solid #333333;
+  border: 1px solid #333;
   color: #999;
   -webkit-box-shadow: 0px -12px 2px rgba(0, 0, 0, 0.5) inset;
   -moz-box-shadow: 0px -12px 2px rgba(0, 0, 0, 0.5) inset;
