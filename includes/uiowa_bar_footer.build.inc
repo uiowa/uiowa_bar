@@ -87,6 +87,10 @@ function build_uiowa_bar_footer() {
     '#suffix' => '</small>',
     '#markup' => '© ' . $year . ' The University of Iowa',
   );
+
+  // Allow other modules to alter the footer render array.
+  drupal_alter('uiowa_bar_footer', $uiowa_bar);
+
   return $uiowa_bar;
 }
 

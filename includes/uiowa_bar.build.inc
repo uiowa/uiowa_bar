@@ -39,6 +39,10 @@ function build_uiowa_bar() {
     '#type' => 'container',
   );
   $uiowa_bar['ui-global-bar']['container']['ui-search']['search-form'] = drupal_get_form('uiowa_bar_search_form');
+
+  // Allow other modules to alter the top render array.
+  drupal_alter('uiowa_bar_top', $uiowa_bar);
+
   return $uiowa_bar;
 }
 
