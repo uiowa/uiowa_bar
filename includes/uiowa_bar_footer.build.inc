@@ -16,7 +16,7 @@ function build_uiowa_bar_footer() {
     '#type' => 'container',
   );
   $uiowa_bar['ui-global-footer']['container'] = array(
-    '#attributes' => array('class' => array('container')),
+    '#attributes' => array('class' => array('container', 'l-container')),
     '#type' => 'container',
   );
   $uiowa_bar['ui-global-footer']['container']['ui-logo'] = array(
@@ -87,6 +87,10 @@ function build_uiowa_bar_footer() {
     '#suffix' => '</small>',
     '#markup' => '© ' . $year . ' The University of Iowa',
   );
+
+  // Allow other modules to alter the footer render array.
+  drupal_alter('uiowa_bar_footer', $uiowa_bar);
+
   return $uiowa_bar;
 }
 
