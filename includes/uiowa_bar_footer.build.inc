@@ -24,9 +24,7 @@ function build_uiowa_bar_footer() {
     '#type' => 'container',
   );
   $uiowa_bar['ui-global-footer']['container']['ui-logo']['link'] = array(
-    '#type' => 'link',
-    '#title' => t('The University of Iowa'),
-    '#href' => 'http://www.uiowa.edu',
+    '#markup' => '<a href="http://www.uiowa.edu" title="The University of Iowa"><i class="ui-glyph-icon-domewordsingle" aria-hidden="true"></i><span class="element-invisible">The University of Iowa</span></a>',
   );
   $uiowa_bar['ui-global-footer']['container']['ui-global-footer-nav'] = array(
     '#attributes' => array('id' => array('ui-global-footer-nav')),
@@ -40,38 +38,38 @@ function build_uiowa_bar_footer() {
     '#theme' => 'uiowa_bar_link_list',
     '#children' => array(
       0 => array(
-        'label' => t('Phonebook/Email'),
+        'label' => t('UI Directory'),
         'url' => 'http://dnaapps.uiowa.edu/PublicDirectory/',
         'class' => 'phonebook',
         'title' => 'University of Iowa Phonebook and Email search',
       ),
       1 => array(
-        'label' => t('A-Z Search'),
-        'url' => 'http://www.uiowa.edu/homepage/search/index.html',
+        'label' => t('UI A-Z Search'),
+        'url' => 'http://www.uiowa.edu/a-z',
         'class' => 'a-z',
         'title' => 'University of Iowa A-Z Search',
       ),
       2 => array(
         'label' => t('About Iowa'),
-        'url' => 'http://www.uiowa.edu/homepage/about-UI/index.html',
+        'url' => 'http://www.uiowa.edu/homepage/about-university',
         'class' => 'about',
         'title' => 'About the University of Iowa',
       ),
       3 => array(
-        'label' => t('Contact Us'),
-        'url' => 'http://www.uiowa.edu/homepage/contact/index.html',
+        'label' => t('UI Contact Us'),
+        'url' => 'http://www.uiowa.edu/homepage/contact-us',
         'class' => 'contact',
         'title' => 'Contact the University of Iowa',
       ),
       4 => array(
-        'label' => t('Calendars'),
-        'url' => 'http://www.uiowa.edu/homepage/calendar/index.html',
+        'label' => t('UI Calendars'),
+        'url' => 'http://www.uiowa.edu/homepage/calendars',
         'class' => 'calendars',
         'title' => 'University of Iowa Calendars',
       ),
       5 => array(
-        'label' => t('Maps'),
-        'url' => 'http://www.uiowa.edu/homepage/hub/tours.html',
+        'label' => t('UI Maps'),
+        'url' => 'http://maps.uiowa.edu',
         'class' => 'maps',
         'title' => 'University of Iowa Maps',
       ),

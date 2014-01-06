@@ -1,21 +1,47 @@
 (function ($) {
   Drupal.uiowa_bar = function() {
-    $("#ui-search-toggle").addClass("inactive");
-    $("#ui-search").addClass("search-hidden animated");
+    // debulked onresize handler
+    function on_resize(c,t){onresize=function(){clearTimeout(t);t=setTimeout(c,100)};return c};
 
+    // toggle attribute function
+    $.fn.toggleAttr = function(attr, attr1, attr2) {
+      return this.each(function() {
+        var self = $(this);
+        if (self.attr(attr) == attr1)
+          self.attr(attr, attr2);
+        else
+          self.attr(attr, attr1);
+      });
+    };
+
+    // Set default states
+    $("#ui-search-toggle").toggleClass("is-active is-inactive");
+    $("#ui-search").addClass("animated").toggleClass("is-visible is-hidden");
+
+    // Evaluate on window resize
+    on_resize(function() {
+      // set aria-hidden for search toggle
+      if ($('#ui-search-toggle').css('display') == 'none') {
+        $("#ui-search-toggle").attr('aria-hidden', 'true');
+      }
+      else {
+        $("#ui-search-toggle").attr('aria-hidden', 'false');
+      }
+
+      // set aria-hidden for search form
+      if ($('#ui-search').css('display') == 'block') {
+        $("#ui-search").attr('aria-hidden', 'false');
+      }
+      else {
+        $("#ui-search").attr('aria-hidden', 'true');
+      }
+    })();
+
+    // attach event listener to toggle
     $("#ui-search-toggle").click(function (evt) {
       evt.preventDefault();
-
-      if ($(this).hasClass('inactive')) {
-        $(this).addClass('active').removeClass('inactive');
-        $('#ui-search').addClass('search-exposed fadeInDown').removeClass('search-hidden');
-        $('#ui-logo').addClass('search-exposed').removeClass('search-hidden');
-      }
-      else if ($(this).hasClass('active')) {
-        $(this).addClass('inactive').removeClass('active');
-        $('#ui-search').addClass('search-hidden').removeClass('search-exposed fadeInDown');
-        $('#ui-logo').addClass('search-hidden').removeClass('search-exposed');
-      }
+      $(this).toggleClass("is-active is-inactive");
+      $('#ui-search').toggleClass("is-visible is-hidden").toggleClass('fadeInDown').toggleAttr('aria-hidden', 'true', 'false');
     });
   };
 
@@ -27,5 +53,4 @@
       });
     }
   };
-
 })(jQuery);

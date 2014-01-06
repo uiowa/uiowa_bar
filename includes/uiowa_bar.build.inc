@@ -24,18 +24,16 @@ function build_uiowa_bar() {
     '#type' => 'container',
   );
   $uiowa_bar['ui-global-bar']['container']['ui-logo']['link'] = array(
-    '#type' => 'link',
-    '#title' => t('The University of Iowa'),
-    '#href' => 'http://www.uiowa.edu',
+    '#markup' => '<a href="http://www.uiowa.edu" title="The University of Iowa"><i class="ui-glyph-icon-domewordsingle" aria-hidden="true"></i><span class="element-invisible">The University of Iowa</span></a>',
   );
   $uiowa_bar['ui-global-bar']['container']['ui-search-toggle'] = array(
-    '#type' => 'link',
-    '#title' => t('Search'),
-    '#href' => '#',
-    '#attributes' => array('id' => array('ui-search-toggle')),
+    '#markup' => '<a href="#" title="Toggle Search" id="ui-search-toggle" class="is-active"><i class="ui-glyph-icon-ui-search" aria-hidden="true"></i><span class="element-invisible">Toggle Search</span></a>',
   );
   $uiowa_bar['ui-global-bar']['container']['ui-search'] = array(
-    '#attributes' => array('id' => array('ui-search')),
+    '#attributes' => array(
+      'id' => array('ui-search'),
+      'class' => array('is-visible'),
+    ),
     '#type' => 'container',
   );
   $uiowa_bar['ui-global-bar']['container']['ui-search']['search-form'] = drupal_get_form('uiowa_bar_search_form');
@@ -51,11 +49,14 @@ function build_uiowa_bar() {
  */
 function uiowa_bar_search_form($form, &$form_state) {
   $form = array();
+  $form['search-icon'] = array (
+    '#markup' => '<i class="ui-glyph-icon-ui-search" aria-hidden="true"></i>',
+  );
   $form['search-terms'] = array (
     '#type' => 'textfield',
     '#title' => t('Search Terms'),
     '#attributes' => array(
-      'placeholder' => 'Search this site'
+      'placeholder' => 'Search this site',
     ),
     '#maxlength' => '256',
     '#size' => '15'

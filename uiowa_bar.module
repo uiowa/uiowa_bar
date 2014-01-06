@@ -85,6 +85,7 @@ function uiowa_bar_page_build(&$page) {
   if (variable_get('theme_default','none') === $theme_key) {
     /* Include CSS Assets */
     drupal_add_css(drupal_get_path('module', 'uiowa_bar') . '/css/ui-global-bar.css', array('group' => CSS_DEFAULT, 'every_page' => TRUE,));
+    drupal_add_css(drupal_get_path('module', 'uiowa_bar') . '/iconfonts/css/ui-bar-glyphs.css', array('group' => CSS_DEFAULT, 'every_page' => TRUE,));
     $color = variable_get('uiowa_bar_color_palette');
     drupal_add_css(drupal_get_path('module', 'uiowa_bar') . '/css/' . $color . '.css', array('group' => CSS_DEFAULT, 'every_page' => TRUE,));
     drupal_add_css(drupal_get_path('module', 'uiowa_bar') . '/css/lte-ie8.css', array('group' => CSS_DEFAULT, 'every_page' => TRUE, 'browsers' => array('IE' => 'lte IE 8', '!IE' => FALSE)));

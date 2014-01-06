@@ -11,16 +11,9 @@
 @import 'compass/typography';
 @import 'compass/css3/user-interface';
 
-// Custom Imports
-$sprites-spacing: 20px; // add spacing around sprite images to avoid collision on offsets
-@import "sprites/*.png";
-@import 'custom';
+@import 'breakpoint';
+@import 'rgbapng';
 
-// Fonts
-@font-face {
-  font-family: 'fontello';
-  src: url("../iconfonts/font/fontello.eot");
-  src: url("../iconfonts/font/fontello.eot?#iefix") format('embedded-opentype'), url("../iconfonts/font/fontello.woff") format('woff'), url("../iconfonts/font/fontello.ttf") format('truetype'), url("../iconfonts/font/fontello.svg#fontello") format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
+// Custom Imports
+@import 'custom';
+@import 'search_abstractions';
