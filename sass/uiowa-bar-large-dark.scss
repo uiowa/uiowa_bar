@@ -55,9 +55,8 @@ $use_large_logo: 825px;
       @include sprites-sprite(ui-wm-large-dark-mobile, $offset-x: $uiowa-bar-gutter);
 
       @media screen and (min-width: $use_large_logo) {
-        background-size: 436px;
-        height: 60px;
-        @include sprites-sprite(ui-wm-large-dark, $offset-x: $uiowa-bar-gutter, $offset-y: 14px);
+        //height: 60px;
+        @include sprites-sprite(ui-wm-large-dark, $dimensions: true);
       }
     }
   }
