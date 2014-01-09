@@ -27,7 +27,7 @@ function build_uiowa_bar() {
     '#markup' => '<a href="http://www.uiowa.edu" title="The University of Iowa"><i class="ui-glyph-icon-domewordsingle" aria-hidden="true"></i><span class="element-invisible">The University of Iowa</span></a>',
   );
   $uiowa_bar['ui-global-bar']['container']['ui-search-toggle'] = array(
-    '#markup' => '<a href="#" title="Toggle Search" id="ui-search-toggle" class="is-active"><i class="ui-glyph-icon-ui-search" aria-hidden="true"></i><span class="element-invisible">Toggle Search</span></a>',
+    '#markup' => '<a href="#" title="Open search bar" id="ui-search-toggle" class="is-active"><i class="ui-glyph-icon-ui-search" aria-hidden="true"></i><span class="element-invisible">Toggle Search</span></a>',
   );
   $uiowa_bar['ui-global-bar']['container']['ui-search'] = array(
     '#attributes' => array(

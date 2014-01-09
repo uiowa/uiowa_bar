@@ -40,7 +40,7 @@
     // attach event listener to toggle
     $("#ui-search-toggle").click(function (evt) {
       evt.preventDefault();
-      $(this).toggleClass("is-active is-inactive");
+      $(this).toggleClass("is-active is-inactive").toggleAttr('title', 'Open search bar', 'Close search bar');
       $('#ui-search').toggleClass("is-visible is-hidden").toggleClass('fadeInDown').toggleAttr('aria-hidden', 'true', 'false');
     });
   };
