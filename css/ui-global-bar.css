@@ -47,8 +47,8 @@
 }
 /* line 14, ../sass/_reset.scss */
 #ui-wrapper * {
-  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 /* line 18, ../sass/_reset.scss */
@@ -104,6 +104,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     -webkit-transform: translateY(0);
   }
 }
+
 @-moz-keyframes fadeInDown {
   /* line 48, ../sass/_animate.scss */
   0% {
@@ -117,6 +118,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     -moz-transform: translateY(0);
   }
 }
+
 @-o-keyframes fadeInDown {
   /* line 60, ../sass/_animate.scss */
   0% {
@@ -130,6 +132,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     -ms-transform: translateY(0);
   }
 }
+
 @keyframes fadeInDown {
   /* line 72, ../sass/_animate.scss */
   0% {
@@ -143,6 +146,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     transform: translateY(0);
   }
 }
+
 /* line 83, ../sass/_animate.scss */
 .fadeInDown {
   -webkit-animation-name: fadeInDown;
@@ -164,8 +168,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 #ui-wrapper {
   position: relative;
   z-index: 1;
-  -moz-box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.4);
   -webkit-box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.4);
   box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.4);
 }
 /* line 27, ../sass/ui-global-bar.scss */
@@ -252,8 +256,10 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 @media (min-width: 501px) {
   /* line 88, ../sass/ui-global-bar.scss */
   #ui-search {
-    -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
     border-radius: 3px;
     min-width: 280px;
     position: absolute;
@@ -286,7 +292,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  text-transform: capitalize;
   background: #fff;
   color: #000;
 }
@@ -317,8 +322,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 #ui-global-footer {
   font-size: 14px;
   font-size: 1.4rem;
-  -moz-box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.05) inset;
   -webkit-box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.05) inset;
+  -moz-box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.05) inset;
   box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.05) inset;
   background-color: #111111;
   color: #999;
@@ -335,7 +340,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 #ui-footer-logo a {
   font-size: 27px;
   font-size: 2.7rem;
-  color: #f6c72f;
+  color: #fee000;
 }
 
 /* line 179, ../sass/ui-global-bar.scss */

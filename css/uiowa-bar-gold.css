@@ -28,8 +28,8 @@
 /* line 9, ../sass/_search_abstractions.scss */
 .uiowa-bar-gold #ui-search {
   background-color: #545454;
-  -moz-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3) inset;
   -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3) inset;
+  -moz-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3) inset;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3) inset;
   border: 1px solid #222;
   color: #333;
@@ -66,9 +66,9 @@
 }
 /* line 34, ../sass/_search_abstractions.scss */
 .uiowa-bar-gold #ui-search #edit-submit-search:hover, .uiowa-bar-gold #ui-search #edit-submit-search:focus, .uiowa-bar-gold #ui-search #edit-submit-search:active {
-  background-color: #f6c72f;
+  background-color: #fee000;
   color: #212121;
-  border-color: #e8b40a;
+  border-color: #cbb300;
 }
 
 /* =============================================================================
@@ -103,8 +103,8 @@
 /* line 35, ../sass/uiowa-bar-gold.scss */
 .uiowa-bar-gold #ui-search-toggle.is-active {
   background-color: #bd930c;
-  -moz-box-shadow: 0px 0px 6px #a5800a inset;
   -webkit-box-shadow: 0px 0px 6px #a5800a inset;
+  -moz-box-shadow: 0px 0px 6px #a5800a inset;
   box-shadow: 0px 0px 6px #a5800a inset;
 }
 

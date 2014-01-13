@@ -31,8 +31,8 @@
 /* line 45, ../sass/_search_abstractions.scss */
 .uiowa-bar-light #ui-search {
   background-color: #eeeeee;
-  -moz-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1) inset;
   -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1) inset;
+  -moz-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1) inset;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1) inset;
   border: 1px solid #bbb;
 }
@@ -68,9 +68,9 @@
 }
 /* line 69, ../sass/_search_abstractions.scss */
 .uiowa-bar-light #ui-search #edit-submit-search:hover, .uiowa-bar-light #ui-search #edit-submit-search:focus, .uiowa-bar-light #ui-search #edit-submit-search:active {
-  background-color: #f6c72f;
+  background-color: #fee000;
   color: #212121;
-  border-color: #e8b40a;
+  border-color: #cbb300;
 }
 
 /* ========================================================================== */
@@ -102,8 +102,8 @@
 /* line 34, ../sass/uiowa-bar-light.scss */
 .uiowa-bar-light #ui-search-toggle.is-active {
   background-color: #c8c8c8;
-  -moz-box-shadow: 0px 0px 6px #bbbbbb inset;
   -webkit-box-shadow: 0px 0px 6px #bbbbbb inset;
+  -moz-box-shadow: 0px 0px 6px #bbbbbb inset;
   box-shadow: 0px 0px 6px #bbbbbb inset;
 }
 
