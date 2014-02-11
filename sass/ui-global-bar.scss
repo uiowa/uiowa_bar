@@ -28,6 +28,10 @@
       @include cf;
       position: relative;
     }
+
+    input {
+      font-size: 100%; // normalize input font-sizing
+    }
   }
 /* ========================================================================== */
 
