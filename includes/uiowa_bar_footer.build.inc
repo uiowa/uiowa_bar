@@ -24,9 +24,7 @@ function build_uiowa_bar_footer() {
     '#type' => 'container',
   );
   $uiowa_bar['ui-global-footer']['container']['ui-logo']['link'] = array(
-    '#type' => 'link',
-    '#title' => t('The University of Iowa'),
-    '#href' => 'http://www.uiowa.edu',
+    '#markup' => '<a href="http://www.uiowa.edu" title="The University of Iowa"><i class="ui-glyph-icon-domewordsingle" aria-hidden="true"></i><span class="element-invisible">The University of Iowa</span></a>',
   );
   $uiowa_bar['ui-global-footer']['container']['ui-global-footer-nav'] = array(
     '#attributes' => array('id' => array('ui-global-footer-nav')),
@@ -47,31 +45,31 @@ function build_uiowa_bar_footer() {
       ),
       1 => array(
         'label' => t('UI A-Z Search'),
-        'url' => 'http://uiowa.edu/a-z/',
+        'url' => 'http://www.uiowa.edu/a-z',
         'class' => 'a-z',
         'title' => 'University of Iowa A-Z Search',
       ),
       2 => array(
-        'label' => t('About the University'),
-        'url' => 'http://uiowa.edu/homepage/about-university/',
+        'label' => t('About Iowa'),
+        'url' => 'http://www.uiowa.edu/homepage/about-university',
         'class' => 'about',
         'title' => 'About the University of Iowa',
       ),
       3 => array(
-        'label' => t('Contact the University'),
-        'url' => 'http://uiowa.edu/homepage/contact-us/',
+        'label' => t('UI Contact Us'),
+        'url' => 'http://www.uiowa.edu/homepage/contact-us',
         'class' => 'contact',
         'title' => 'Contact the University of Iowa',
       ),
       4 => array(
         'label' => t('UI Calendars'),
-        'url' => 'http://uiowa.edu/homepage/calendars/',
+        'url' => 'http://www.uiowa.edu/homepage/calendars',
         'class' => 'calendars',
         'title' => 'University of Iowa Calendars',
       ),
       5 => array(
         'label' => t('UI Maps'),
-        'url' => 'http://maps.uiowa.edu/',
+        'url' => 'http://maps.uiowa.edu',
         'class' => 'maps',
         'title' => 'University of Iowa Maps',
       ),

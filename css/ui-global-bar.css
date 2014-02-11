@@ -9,11 +9,6 @@
  * @file
  * Base File
  */
-/* line 82, sprites/*.png */
-.sprites-sprite, #ui-footer-logo a {
-  background: url('images/sprites-s12d0c54b2a.png') no-repeat;
-}
-
 /**
  * @file
  * Custom Partial
@@ -26,28 +21,39 @@
  *   Mixins
  * ========================================================================== */
 /* ========================================================================== */
-@font-face {
-  font-family: 'fontello';
-  src: url("../iconfonts/font/fontello.eot");
-  src: url("../iconfonts/font/fontello.eot?#iefix") format("embedded-opentype"), url("../iconfonts/font/fontello.woff") format("woff"), url("../iconfonts/font/fontello.ttf") format("truetype"), url("../iconfonts/font/fontello.svg#fontello") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
+/**
+ * @file
+ * Partial for search box abstractions
+ */
+/* =============================================================================
+ *   Dark Version
+ * ========================================================================== */
+/* =============================================================================
+ *   Light Version
+ * ========================================================================== */
+/* ========================================================================== */
 /**
  * @file
  * Resets
  */
-/* line 8, ../sass/_reset.scss */
+/* line 6, ../sass/_reset.scss */
+#ui-wrapper {
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility\9;
+}
+/* line 14, ../sass/_reset.scss */
 #ui-wrapper * {
-  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 12, ../sass/_reset.scss */
+/* line 18, ../sass/_reset.scss */
 #ui-wrapper input {
   font-family: arial !important;
-  font-size: 14px !important;
 }
 
 /*
@@ -98,7 +104,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     -webkit-transform: translateY(0);
   }
 }
-
 @-moz-keyframes fadeInDown {
   /* line 48, ../sass/_animate.scss */
   0% {
@@ -112,7 +117,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     -moz-transform: translateY(0);
   }
 }
-
 @-o-keyframes fadeInDown {
   /* line 60, ../sass/_animate.scss */
   0% {
@@ -126,7 +130,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     -ms-transform: translateY(0);
   }
 }
-
 @keyframes fadeInDown {
   /* line 72, ../sass/_animate.scss */
   0% {
@@ -140,7 +143,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     transform: translateY(0);
   }
 }
-
 /* line 83, ../sass/_animate.scss */
 .fadeInDown {
   -webkit-animation-name: fadeInDown;
@@ -160,11 +162,14 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
  * ========================================================================= */
 /* line 22, ../sass/ui-global-bar.scss */
 #ui-wrapper {
-  height: 40px;
-  font-size: 14px;
+  position: relative;
+  z-index: 1;
+  -moz-box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.4);
 }
-/* line 26, ../sass/ui-global-bar.scss */
-#ui-wrapper .container {
+/* line 27, ../sass/ui-global-bar.scss */
+#ui-wrapper .l-container {
   overflow: hidden;
   *overflow: visible;
   *zoom: 1;
@@ -173,258 +178,175 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 /* ========================================================================== */
 /* =============================================================================
- *   Search Toggle
+ *   UI Logo
  * ========================================================================== */
-/* line 37, ../sass/ui-global-bar.scss */
-#ui-search-toggle {
-  display: none;
+/* line 38, ../sass/ui-global-bar.scss */
+#ui-logo {
+  padding: 2px 0;
+}
+@media (min-width: 501px) {
+  /* line 38, ../sass/ui-global-bar.scss */
+  #ui-logo {
+    float: left;
+  }
+}
+/* line 45, ../sass/ui-global-bar.scss */
+#ui-logo a {
+  font-size: 25px;
+  font-size: 2.5rem;
 }
 
 /* ========================================================================== */
 /* =============================================================================
- *   UI Logo
+ *   Search Toggle
  * ========================================================================== */
-/* line 46, ../sass/ui-global-bar.scss */
-#ui-logo a {
+/* line 55, ../sass/ui-global-bar.scss */
+#ui-search-toggle {
+  display: none;
+  font-size: 20px;
+  font-size: 2rem;
   position: absolute;
-  top: 5px;
-  display: block !important;
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  border: 0;
-  text-shadow: none;
-  color: transparent;
-  background-color: transparent;
-  width: 200px;
-  height: 40px;
+  top: 0;
+  right: 0;
+  padding: 11px 9px;
+  line-height: 0;
+}
+@media (max-width: 500px) {
+  /* line 55, ../sass/ui-global-bar.scss */
+  #ui-search-toggle {
+    display: block;
+  }
 }
 
 /* ========================================================================== */
 /* =============================================================================
  *   Search Bar
  * ========================================================================== */
-/* line 60, ../sass/ui-global-bar.scss */
-#ui-search.search-hidden {
+/* line 76, ../sass/ui-global-bar.scss */
+#ui-search.is-hidden {
   display: none;
 }
+@media (min-width: 501px) {
+  /* line 76, ../sass/ui-global-bar.scss */
+  #ui-search.is-hidden {
+    display: block;
+  }
+}
 
-/* line 61, ../sass/ui-global-bar.scss */
-#ui-search.search-exposed {
+/* line 84, ../sass/ui-global-bar.scss */
+#ui-search.is-visible {
   display: block;
 }
 
-/* line 63, ../sass/ui-global-bar.scss */
+/* line 88, ../sass/ui-global-bar.scss */
 #ui-search {
-  position: relative;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
-  border-radius: 4px;
-  padding: 0;
-  margin: 5px 8px 0 0;
-  width: 100%;
-  max-width: 300px;
-  float: right;
-}
-/* line 73, ../sass/ui-global-bar.scss */
-#ui-search .form-item-search-terms {
-  display: inline-block;
-  margin: 0;
-  width: 100%;
-  padding-right: 70px;
-  padding-left: 30px;
   line-height: 0;
+  overflow: hidden;
 }
-/* line 81, ../sass/ui-global-bar.scss */
-#ui-search .form-item-search-terms label {
-  font-size: 0;
-  display: inline-block;
+@media (max-width: 500px) {
+  /* line 88, ../sass/ui-global-bar.scss */
+  #ui-search {
+    padding: 5px;
+  }
 }
-/* line 85, ../sass/ui-global-bar.scss */
-#ui-search .form-item-search-terms label:before {
-  content: '🔍';
-  /* '\1f50d' */
-  font-family: 'fontello';
-  font-style: normal;
-  font-weight: normal;
-  speak: none;
-  display: inline-block;
-  text-decoration: inherit;
-  text-align: center;
-  font-size: 22px;
-  line-height: 23px;
+@media (min-width: 501px) {
+  /* line 88, ../sass/ui-global-bar.scss */
+  #ui-search {
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    min-width: 280px;
+    position: absolute;
+    bottom: 7px;
+    right: 2px;
+  }
+}
+/* line 105, ../sass/ui-global-bar.scss */
+#ui-search form.search-google-appliance-search-form {
+  margin-bottom: 0;
+  position: relative;
+}
+/* line 111, ../sass/ui-global-bar.scss */
+#ui-search .ui-glyph-icon-ui-search {
+  font-size: 15px;
+  font-size: 1.5rem;
   position: absolute;
-  top: 2px;
-  left: 5px;
+  left: 2px;
+  top: 4px;
 }
-/* line 104, ../sass/ui-global-bar.scss */
+/* line 119, ../sass/ui-global-bar.scss */
+#ui-search .form-item-search-terms {
+  margin: 0;
+  line-height: 0;
+  padding-left: 25px;
+  padding-right: 64px;
+}
+/* line 125, ../sass/ui-global-bar.scss */
+#ui-search .form-item-search-terms label {
+  text-indent: -119988px;
+  overflow: hidden;
+  text-align: left;
+  text-transform: capitalize;
+  background: #fff;
+  color: #000;
+}
+/* line 133, ../sass/ui-global-bar.scss */
 #ui-search #edit-search-terms {
   background-color: transparent;
   border: none;
-  display: inline-block;
   width: 100%;
   margin: 0;
-  padding: 2px 2px 1px 2px;
-  line-height: normal;
+  padding: 4px;
 }
-/* line 114, ../sass/ui-global-bar.scss */
+/* line 142, ../sass/ui-global-bar.scss */
 #ui-search #edit-submit-search {
   position: absolute;
-  top: 3px;
-  right: 2px;
+  right: 0;
+  top: 0;
   background-image: none;
   margin: 0;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
-  border-radius: 4px;
-  padding: 1px 8px;
-  line-height: normal;
-  height: 22px;
-  width: 65px;
+  padding: 3px 8px;
+  font-weight: normal;
 }
 
 /* ========================================================================== */
 /* =============================================================================
  *   UI Global Footer
  * ========================================================================== */
-/* line 133, ../sass/ui-global-bar.scss */
+/* line 158, ../sass/ui-global-bar.scss */
 #ui-global-footer {
+  font-size: 14px;
+  font-size: 1.4rem;
+  -moz-box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.05) inset;
+  -webkit-box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.05) inset;
+  box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.05) inset;
   background-color: #111111;
   color: #999;
   padding: 20px 8px;
-  font-size: 14px;
   border-top: 1px solid #000;
-  -webkit-box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.05) inset;
-  -moz-box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.05) inset;
-  box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.05) inset;
 }
-/* line 141, ../sass/ui-global-bar.scss */
+/* line 166, ../sass/ui-global-bar.scss */
 #ui-global-footer a {
   color: #999;
   border-bottom: none;
 }
 
-/* line 147, ../sass/ui-global-bar.scss */
+/* line 172, ../sass/ui-global-bar.scss */
 #ui-footer-logo a {
-  display: block !important;
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  border: 0;
-  text-shadow: none;
-  color: transparent;
-  background-color: transparent;
-  background-position: 0 -122px;
-  height: 26px;
-  width: 200px;
+  font-size: 27px;
+  font-size: 2.7rem;
+  color: #fee000;
 }
 
-/* line 154, ../sass/ui-global-bar.scss */
+/* line 179, ../sass/ui-global-bar.scss */
 #ui-global-links .item-list ul {
   margin-top: 10px;
 }
-/* line 158, ../sass/ui-global-bar.scss */
+/* line 183, ../sass/ui-global-bar.scss */
 #ui-global-links .item-list li {
   list-style-type: none;
   margin: 0;
   display: block;
 }
 
-/* ========================================================================== */
-/* =============================================================================
- *   Small Media Query
- * ========================================================================== */
-@media only screen and (max-width: 500px) {
-  /* line 171, ../sass/ui-global-bar.scss */
-  #ui-wrapper {
-    height: auto;
-  }
-
-  /* line 176, ../sass/ui-global-bar.scss */
-  #ui-logo a {
-    position: relative;
-    display: inline-block;
-    width: 100%;
-  }
-
-  /* line 183, ../sass/ui-global-bar.scss */
-  #ui-search-toggle {
-    display: block;
-    font-size: 0;
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 40px;
-    width: 40px;
-  }
-  /* line 192, ../sass/ui-global-bar.scss */
-  #ui-search-toggle:before {
-    content: '🔍';
-    /* '\1f50d' */
-    font-family: 'fontello';
-    font-style: normal;
-    font-weight: normal;
-    speak: none;
-    display: inline-block;
-    text-decoration: none;
-    text-align: center;
-    font-size: 22px;
-    line-height: 23px;
-    position: absolute;
-    padding-top: 5px;
-    padding-left: 5px;
-    top: 3px;
-    left: 5px;
-  }
-
-  /* line 211, ../sass/ui-global-bar.scss */
-  #ui-search {
-    max-width: 100%;
-    margin: 10px 8px;
-    float: none;
-    width: auto;
-  }
-}
-/* ========================================================================== */
-/* =============================================================================
- *   Large Media Query
- * ========================================================================== */
-@media only screen and (min-width: 501px) {
-  /* line 226, ../sass/ui-global-bar.scss */
-  #ui-logo {
-    margin-top: -2px;
-  }
-
-  /* line 230, ../sass/ui-global-bar.scss */
-  #ui-search.search-hidden {
-    display: block;
-  }
-
-  /* FOOTER ----------------------------------------------------------------*/
-  /* line 235, ../sass/ui-global-bar.scss */
-  #ui-global-links .item-list {
-    overflow: hidden;
-    *overflow: visible;
-    *zoom: 1;
-  }
-  /* line 238, ../sass/ui-global-bar.scss */
-  #ui-global-links .item-list li {
-    display: block;
-    float: left;
-    margin-right: 10px;
-  }
-  /* line 244, ../sass/ui-global-bar.scss */
-  #ui-global-links .item-list li:after {
-    content: "/";
-    padding-left: 10px;
-  }
-  /* line 249, ../sass/ui-global-bar.scss */
-  #ui-global-links .item-list li.last:after {
-    content: none;
-  }
-}
 /* ========================================================================== */

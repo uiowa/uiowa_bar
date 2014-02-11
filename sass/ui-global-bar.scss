@@ -20,12 +20,30 @@
  *   UI Wrapper and Container
  * ========================================================================= */
   #ui-wrapper {
-    height: 40px;
-    font-size: 14px;
+    position: relative;
+    z-index: 1;
+    @include box-shadow(0px 3px 8px rgba(0,0,0,.4));
 
-    .container {
+    .l-container {
       @include cf;
       position: relative;
+    }
+  }
+/* ========================================================================== */
+
+
+/* =============================================================================
+ *   UI Logo
+ * ========================================================================== */
+  #ui-logo {
+    padding: 2px 0;
+
+    @include breakpoint($bp-search-toggle-is-hidden) {
+      float: left;
+    }
+
+    a {
+      @include font-size(2.5);
     }
   }
 /* ========================================================================== */
@@ -36,19 +54,17 @@
  * ========================================================================== */
   #ui-search-toggle {
     display: none;  // hide by default
-  }
-/* ========================================================================== */
 
-
-/* =============================================================================
- *   UI Logo
- * ========================================================================== */
-  #ui-logo a {
+    @include font-size(2);
     position: absolute;
-    top: 5px;
-    @include ir;
-    width: 200px;
-    height: 40px;
+    top: 0;
+    right: 0;
+    padding: 11px 9px;
+    line-height: 0;
+
+    @include breakpoint($bp-search-toggle-is-visible) {
+      display: block;
+    }
   }
 /* ========================================================================== */
 
@@ -57,46 +73,59 @@
  *   Search Bar
  * ========================================================================== */
   // Set visiblity for search box
-  #ui-search.search-hidden { display: none; }
-  #ui-search.search-exposed { display: block; }
+  #ui-search.is-hidden {
+    display: none;
+
+    @include breakpoint($bp-search-toggle-is-hidden) {
+      display: block; // always show as a block on larger screens
+    }
+  }
+
+  #ui-search.is-visible {
+    display: block;
+  }
 
   #ui-search {
-    position: relative;
-    @include border-radius(4px);
-    padding: 0;
-    margin: 5px $uiowa-bar-gutter 0 0;
-    width: 100%;
-    max-width: 300px;
-    float: right;
+    line-height: 0;
+    overflow: hidden;
 
-    // Label
+    @include breakpoint($bp-search-toggle-is-visible) {
+      padding: 5px;
+    }
+
+    @include breakpoint($bp-search-toggle-is-hidden) {
+      @include border-radius(3px);
+      min-width: 280px;
+      position: absolute;
+      bottom: 7px;
+      right: 2px;
+    }
+
+    // Form elements
+    form.search-google-appliance-search-form {
+      margin-bottom: 0; // override gsa module css
+
+      position: relative;
+    }
+
+    .ui-glyph-icon-ui-search {
+      @include font-size(1.5);
+      position: absolute;
+      left: 2px;
+      top: 4px;
+    }
+
+    // Search txt input container
     .form-item-search-terms {
-      display: inline-block;
       margin: 0;
-      width: 100%;
-      padding-right: 70px;
-      padding-left: 30px;
       line-height: 0;
+      padding-left: 25px;
+      padding-right: 64px;
 
       label {
-        font-size: 0;
-        display: inline-block;
-
-        &:before {
-          content: '🔍'; /* '\1f50d' */
-          font-family: 'fontello';
-          font-style: normal;
-          font-weight: normal;
-          speak: none;
-          display: inline-block;
-          text-decoration: inherit;
-          text-align: center;
-          font-size: 22px;
-          line-height: 23px;
-          position: absolute;
-          top: 2px;
-          left: 5px;
-        }
+        @include hide-text;
+        background: #fff;
+        color: #000;
       }
     }
 
@@ -104,24 +133,20 @@
     #edit-search-terms {
       background-color: transparent;
       border: none;
-      display: inline-block;
       width: 100%;
       margin: 0;
-      padding: 2px 2px 1px 2px;
-      line-height: normal;
+      padding: 4px;
     }
 
+    // Search Button
     #edit-submit-search {
       position: absolute;
-      top: 3px;
-      right: 2px;
+      right: 0;
+      top: 0;
       background-image: none;
       margin: 0;
-      @include border-radius(4px);
-      padding: 1px 8px;
-      line-height: normal;
-      height: 22px;
-      width: 65px;
+      padding: 3px 8px;
+      font-weight: normal;
     }
   }
 /* ========================================================================== */
@@ -131,12 +156,12 @@
  *   UI Global Footer
  * ========================================================================== */
   #ui-global-footer {
+    @include font-size(1.4);
+    @include box-shadow(0px 1px 0px rgba(255,255,255,.05) inset);
     background-color: #111111;
     color: #999;
     padding: 20px $uiowa-bar-gutter;
-    font-size: 14px;
     border-top: 1px solid #000;
-    @include box-shadow(0px 1px 0px rgba(255,255,255,.05) inset);
 
     a {
       color: #999;
@@ -145,8 +170,8 @@
   }
 
   #ui-footer-logo a {
-    @include ir;
-    @include sprites-sprite(ui-wm-dome-footer, $dimensions: true);
+    @include font-size(2.7);
+    color: $ui-gold;
   }
 
   #ui-global-links .item-list {
@@ -161,97 +186,5 @@
       display: block;
     }
   }
-/* ========================================================================== */
-
-
-/* =============================================================================
- *   Small Media Query
- * ========================================================================== */
-  @media only screen and (max-width:500px) {
-    #ui-wrapper {
-      height: auto;
-    }
-
-    #ui-logo {
-      a {
-        position: relative;
-        display: inline-block;
-        width: 100%;
-      }
-    }
-
-    #ui-search-toggle {
-      display: block;
-      font-size: 0;
-      position: absolute;
-      top: 0;
-      right: 0;
-      height: 40px;
-      width: 40px;
-
-      &:before {
-        content: '🔍'; /* '\1f50d' */
-        font-family: 'fontello';
-        font-style: normal;
-        font-weight: normal;
-        speak: none;
-        display: inline-block;
-        text-decoration: none;
-        text-align: center;
-        font-size: 22px;
-        line-height: 23px;
-        position: absolute;
-        padding-top: 5px;
-        padding-left: 5px;
-        top: 3px;
-        left: 5px;
-      }
-    }
-
-    #ui-search {
-      max-width: 100%;
-      margin: 10px $uiowa-bar-gutter;
-      float: none;
-      width: auto;
-    }
-
-  } // END MEDIA QUERY
-/* ========================================================================== */
-
-
-/* =============================================================================
- *   Large Media Query
- * ========================================================================== */
-  @media only screen and (min-width:501px) {
-    #ui-logo {
-      margin-top: -2px; // hides the border set on mobile display
-    }
-
-    #ui-search.search-hidden {
-      display: block; // forces visibility when hidden for mobile display
-    }
-
-    /* FOOTER ----------------------------------------------------------------*/
-    #ui-global-links .item-list {
-      @include cf;
-
-      li {
-        display: block;
-        float: left;
-        margin-right: 10px;
-
-
-        &:after {
-          content: "/";
-          padding-left: 10px;
-        }
-
-        &.last:after {
-          content: none;
-        }
-      }
-    }
-
-  } // END MEDIA QUERY
 /* ========================================================================== */
 

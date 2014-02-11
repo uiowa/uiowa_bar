@@ -14,7 +14,11 @@
   $uiowa-bar-gutter: 8px;
 
   // Color  Vars
-  $ui-gold: #f6c72f;
+  $ui-gold: #fee000;
+
+  $bp-mobile: 500px;
+  $bp-search-toggle-is-visible: max-width 500px;
+  $bp-search-toggle-is-hidden: 501px;
 /* ========================================================================== */
 
 
@@ -39,5 +43,17 @@
     overflow: hidden;   // New formatting context in better browsers
     *overflow: visible; // Protect IE7 and older from the overflow property
     *zoom: 1;           // Give IE hasLayout, a new formatting context equivalent
+  }
+
+  @mixin font-size($sizeValue: 1.6) {
+    font-size: ($sizeValue * 10) + px;
+    font-size: $sizeValue + rem;
+  }
+
+  @mixin placeholder {
+    &.placeholder { @content; }
+    &:-moz-placeholder { @content; }
+    &::-moz-placeholder { @content; }
+    &::-webkit-input-placeholder { @content; }
   }
 /* ========================================================================== */

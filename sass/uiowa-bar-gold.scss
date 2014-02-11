@@ -5,11 +5,23 @@
 @import "base";
 
 
+$bar-color: #edb80f;
+$ui-wordmark-color: #000;
+$toggle-color: #333;
+
 /* =============================================================================
  *   UI Wrapper and Container
  * ========================================================================== */
   .uiowa-bar-gold #ui-wrapper {
-    background-color: #edb80f;
+    background-color: $bar-color;
+  }
+/* ========================================================================== */
+
+/* =============================================================================
+ *   UI Logo
+ * ========================================================================== */
+  .uiowa-bar-gold #ui-logo a {
+    color: $ui-wordmark-color;
   }
 /* ========================================================================== */
 
@@ -18,32 +30,11 @@
  *   Search Toggle
  * ========================================================================== */
   .uiowa-bar-gold #ui-search-toggle {
-    background-color: darken(#edb80f, 10%);
-    @include box-shadow(0px 0px 6px rgba(0,0,0,.6) inset);
+    color: $toggle-color;
 
-    &:before {
-      color: #333;
-      @include text-shadow(0px -1px 0px rgba(0,0,0,.3));
-    }
-
-    &.inactive {
-      background-color: transparent;
-      @include box-shadow(-1px 0px 0px rgba(darken(#edb80f, 10%),.05));
-      border-left: 1px solid darken(#edb80f, 10%);
-    }
-  }
-/* ========================================================================== */
-
-
-/* =============================================================================
- *   UI Logo
- * ========================================================================== */
-  .uiowa-bar-gold #ui-logo {
-    border-bottom: 1px solid darken(#edb80f, 10%);
-    @include box-shadow(0px 1px 0px rgba(#ccc,.8));
-
-    a {
-      @include sprites-sprite(ui-wm-gold, $offset-x: $uiowa-bar-gutter);
+    &.is-active {
+      background-color: darken($bar-color, 10%);
+      @include box-shadow(0px 0px 6px darken($bar-color, 15%) inset);
     }
   }
 /* ========================================================================== */
@@ -52,34 +43,6 @@
 /* =============================================================================
  *   Search Bar
  * ========================================================================== */
-  .uiowa-bar-gold #ui-search {
-    background-color: #333;
-    border: 1px solid #202020;
-    @include box-shadow(0px 0px 3px rgba(0,0,0,.25) inset);
-
-    // Label
-    .form-item-search-terms label:before {
-      color: #666666;
-      @include text-shadow(0px -1px 0px rgba(0,0,0,.35));
-    }
-
-    // Search Text Input
-    #edit-search-terms {
-      color: #999;
-    }
-
-    #edit-submit-search {
-      background-color: #222;
-      border: 1px solid #333;
-      color: #999;
-      @include box-shadow(0px -12px 2px rgba(0,0,0,.5) inset);
-
-      &:hover, &:focus, &:active {
-        background-color: lighten($ui-gold, 15%);
-        @include box-shadow(0px -12px 2px $ui-gold inset);
-        color: #222;
-        @include text-shadow(0px 1px 0px rgba(255,255,255,.3));
-      }
-    }
-  }
-/* ========================================================================== */
+.uiowa-bar-gold #ui-search {
+  @extend %search-bar-dark;
+}

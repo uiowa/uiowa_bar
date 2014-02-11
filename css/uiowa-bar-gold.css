@@ -6,11 +6,6 @@
  * @file
  * Base File
  */
-/* line 82, sprites/*.png */
-.sprites-sprite, .uiowa-bar-gold #ui-logo a {
-  background: url('images/sprites-s12d0c54b2a.png') no-repeat;
-}
-
 /**
  * @file
  * Custom Partial
@@ -23,101 +18,97 @@
  *   Mixins
  * ========================================================================== */
 /* ========================================================================== */
-@font-face {
-  font-family: 'fontello';
-  src: url("../iconfonts/font/fontello.eot");
-  src: url("../iconfonts/font/fontello.eot?#iefix") format("embedded-opentype"), url("../iconfonts/font/fontello.woff") format("woff"), url("../iconfonts/font/fontello.ttf") format("truetype"), url("../iconfonts/font/fontello.svg#fontello") format("svg");
-  font-weight: normal;
-  font-style: normal;
+/**
+ * @file
+ * Partial for search box abstractions
+ */
+/* =============================================================================
+ *   Dark Version
+ * ========================================================================== */
+/* line 9, ../sass/_search_abstractions.scss */
+.uiowa-bar-gold #ui-search {
+  background-color: #545454;
+  -moz-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3) inset;
+  -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3) inset;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3) inset;
+  border: 1px solid #222;
+  color: #333;
+}
+/* line 15, ../sass/_search_abstractions.scss */
+.uiowa-bar-gold #ui-search .ui-glyph-icon-ui-search {
+  color: #333;
+}
+/* line 20, ../sass/_search_abstractions.scss */
+.uiowa-bar-gold #ui-search #edit-search-terms {
+  color: #fff;
+}
+/* line 54, ../sass/_custom.scss */
+.uiowa-bar-gold #ui-search #edit-search-terms.placeholder {
+  color: #c8c8c8;
+}
+/* line 55, ../sass/_custom.scss */
+.uiowa-bar-gold #ui-search #edit-search-terms:-moz-placeholder {
+  color: #c8c8c8;
+}
+/* line 56, ../sass/_custom.scss */
+.uiowa-bar-gold #ui-search #edit-search-terms::-moz-placeholder {
+  color: #c8c8c8;
+}
+/* line 57, ../sass/_custom.scss */
+.uiowa-bar-gold #ui-search #edit-search-terms::-webkit-input-placeholder {
+  color: #c8c8c8;
+}
+/* line 29, ../sass/_search_abstractions.scss */
+.uiowa-bar-gold #ui-search #edit-submit-search {
+  background-color: #212121;
+  border: 1px solid #1c1c1c;
+  color: #999;
+}
+/* line 34, ../sass/_search_abstractions.scss */
+.uiowa-bar-gold #ui-search #edit-submit-search:hover, .uiowa-bar-gold #ui-search #edit-submit-search:focus, .uiowa-bar-gold #ui-search #edit-submit-search:active {
+  background-color: #fee000;
+  color: #212121;
+  border-color: #cbb300;
 }
 
 /* =============================================================================
+ *   Light Version
+ * ========================================================================== */
+/* ========================================================================== */
+/* =============================================================================
  *   UI Wrapper and Container
  * ========================================================================== */
-/* line 11, ../sass/uiowa-bar-gold.scss */
+/* line 15, ../sass/uiowa-bar-gold.scss */
 .uiowa-bar-gold #ui-wrapper {
   background-color: #edb80f;
 }
 
 /* ========================================================================== */
 /* =============================================================================
- *   Search Toggle
+ *   UI Logo
  * ========================================================================== */
-/* line 20, ../sass/uiowa-bar-gold.scss */
-.uiowa-bar-gold #ui-search-toggle {
-  background-color: #bd930c;
-  -webkit-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.6) inset;
-  -moz-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.6) inset;
-  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.6) inset;
-}
-/* line 24, ../sass/uiowa-bar-gold.scss */
-.uiowa-bar-gold #ui-search-toggle:before {
-  color: #333;
-  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
-}
-/* line 29, ../sass/uiowa-bar-gold.scss */
-.uiowa-bar-gold #ui-search-toggle.inactive {
-  background-color: transparent;
-  -webkit-box-shadow: -1px 0px 0px rgba(189, 147, 12, 0.05);
-  -moz-box-shadow: -1px 0px 0px rgba(189, 147, 12, 0.05);
-  box-shadow: -1px 0px 0px rgba(189, 147, 12, 0.05);
-  border-left: 1px solid #bd930c;
+/* line 23, ../sass/uiowa-bar-gold.scss */
+.uiowa-bar-gold #ui-logo a {
+  color: black;
 }
 
 /* ========================================================================== */
 /* =============================================================================
- *   UI Logo
+ *   Search Toggle
  * ========================================================================== */
-/* line 41, ../sass/uiowa-bar-gold.scss */
-.uiowa-bar-gold #ui-logo {
-  border-bottom: 1px solid #bd930c;
-  -webkit-box-shadow: 0px 1px 0px rgba(204, 204, 204, 0.8);
-  -moz-box-shadow: 0px 1px 0px rgba(204, 204, 204, 0.8);
-  box-shadow: 0px 1px 0px rgba(204, 204, 204, 0.8);
+/* line 32, ../sass/uiowa-bar-gold.scss */
+.uiowa-bar-gold #ui-search-toggle {
+  color: #333333;
 }
-/* line 45, ../sass/uiowa-bar-gold.scss */
-.uiowa-bar-gold #ui-logo a {
-  background-position: 8px -260px;
+/* line 35, ../sass/uiowa-bar-gold.scss */
+.uiowa-bar-gold #ui-search-toggle.is-active {
+  background-color: #bd930c;
+  -moz-box-shadow: 0px 0px 6px #a5800a inset;
+  -webkit-box-shadow: 0px 0px 6px #a5800a inset;
+  box-shadow: 0px 0px 6px #a5800a inset;
 }
 
 /* ========================================================================== */
 /* =============================================================================
  *   Search Bar
  * ========================================================================== */
-/* line 55, ../sass/uiowa-bar-gold.scss */
-.uiowa-bar-gold #ui-search {
-  background-color: #333;
-  border: 1px solid #202020;
-  -webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.25) inset;
-  -moz-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.25) inset;
-  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.25) inset;
-}
-/* line 61, ../sass/uiowa-bar-gold.scss */
-.uiowa-bar-gold #ui-search .form-item-search-terms label:before {
-  color: #666666;
-  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.35);
-}
-/* line 67, ../sass/uiowa-bar-gold.scss */
-.uiowa-bar-gold #ui-search #edit-search-terms {
-  color: #999;
-}
-/* line 71, ../sass/uiowa-bar-gold.scss */
-.uiowa-bar-gold #ui-search #edit-submit-search {
-  background-color: #222;
-  border: 1px solid #333;
-  color: #999;
-  -webkit-box-shadow: 0px -12px 2px rgba(0, 0, 0, 0.5) inset;
-  -moz-box-shadow: 0px -12px 2px rgba(0, 0, 0, 0.5) inset;
-  box-shadow: 0px -12px 2px rgba(0, 0, 0, 0.5) inset;
-}
-/* line 77, ../sass/uiowa-bar-gold.scss */
-.uiowa-bar-gold #ui-search #edit-submit-search:hover, .uiowa-bar-gold #ui-search #edit-submit-search:focus, .uiowa-bar-gold #ui-search #edit-submit-search:active {
-  background-color: #f9db78;
-  -webkit-box-shadow: 0px -12px 2px #f6c72f inset;
-  -moz-box-shadow: 0px -12px 2px #f6c72f inset;
-  box-shadow: 0px -12px 2px #f6c72f inset;
-  color: #222;
-  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.3);
-}
-
-/* ========================================================================== */

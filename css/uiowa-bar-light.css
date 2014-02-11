@@ -6,11 +6,6 @@
  * @file
  * Base File
  */
-/* line 82, sprites/*.png */
-.sprites-sprite, .uiowa-bar-light #ui-logo a {
-  background: url('images/sprites-s12d0c54b2a.png') no-repeat;
-}
-
 /**
  * @file
  * Custom Partial
@@ -23,112 +18,97 @@
  *   Mixins
  * ========================================================================== */
 /* ========================================================================== */
-@font-face {
-  font-family: 'fontello';
-  src: url("../iconfonts/font/fontello.eot");
-  src: url("../iconfonts/font/fontello.eot?#iefix") format("embedded-opentype"), url("../iconfonts/font/fontello.woff") format("woff"), url("../iconfonts/font/fontello.ttf") format("truetype"), url("../iconfonts/font/fontello.svg#fontello") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
+/**
+ * @file
+ * Partial for search box abstractions
+ */
 /* =============================================================================
- *   UI Wrapper and Container
+ *   Dark Version
  * ========================================================================== */
-/* line 11, ../sass/uiowa-bar-light.scss */
-.uiowa-bar-light #ui-wrapper {
-  background-color: #f3f0f0;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f3f0f0), color-stop(100%, #d0d0d0));
-  background-image: -webkit-linear-gradient(#f3f0f0, #d0d0d0);
-  background-image: -moz-linear-gradient(#f3f0f0, #d0d0d0);
-  background-image: -o-linear-gradient(#f3f0f0, #d0d0d0);
-  background-image: linear-gradient(#f3f0f0, #d0d0d0);
-  border-bottom: 1px solid #ddd;
-  border-top: 1px solid #ccc;
-  -webkit-box-shadow: 0px -1px 0px #bbbbbb inset;
-  -moz-box-shadow: 0px -1px 0px #bbbbbb inset;
-  box-shadow: 0px -1px 0px #bbbbbb inset;
+/* =============================================================================
+ *   Light Version
+ * ========================================================================== */
+/* line 45, ../sass/_search_abstractions.scss */
+.uiowa-bar-light #ui-search {
+  background-color: #eeeeee;
+  -moz-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1) inset;
+  -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1) inset;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1) inset;
+  border: 1px solid #bbb;
+}
+/* line 50, ../sass/_search_abstractions.scss */
+.uiowa-bar-light #ui-search .ui-glyph-icon-ui-search {
+  color: #999;
+}
+/* line 55, ../sass/_search_abstractions.scss */
+.uiowa-bar-light #ui-search #edit-search-terms {
+  color: #444;
+}
+/* line 54, ../sass/_custom.scss */
+.uiowa-bar-light #ui-search #edit-search-terms.placeholder {
+  color: #666;
+}
+/* line 55, ../sass/_custom.scss */
+.uiowa-bar-light #ui-search #edit-search-terms:-moz-placeholder {
+  color: #666;
+}
+/* line 56, ../sass/_custom.scss */
+.uiowa-bar-light #ui-search #edit-search-terms::-moz-placeholder {
+  color: #666;
+}
+/* line 57, ../sass/_custom.scss */
+.uiowa-bar-light #ui-search #edit-search-terms::-webkit-input-placeholder {
+  color: #666;
+}
+/* line 64, ../sass/_search_abstractions.scss */
+.uiowa-bar-light #ui-search #edit-submit-search {
+  background-color: #eeeeee;
+  border: 1px solid #d1d1d1;
+  color: #666;
+}
+/* line 69, ../sass/_search_abstractions.scss */
+.uiowa-bar-light #ui-search #edit-submit-search:hover, .uiowa-bar-light #ui-search #edit-submit-search:focus, .uiowa-bar-light #ui-search #edit-submit-search:active {
+  background-color: #fee000;
+  color: #212121;
+  border-color: #cbb300;
 }
 
 /* ========================================================================== */
 /* =============================================================================
- *   Search Toggle
+ *   UI Wrapper and Container
  * ========================================================================== */
-/* line 26, ../sass/uiowa-bar-light.scss */
-.uiowa-bar-light #ui-search-toggle {
-  background-color: #ddd;
-  -webkit-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3) inset;
-  -moz-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3) inset;
-  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3) inset;
-}
-/* line 30, ../sass/uiowa-bar-light.scss */
-.uiowa-bar-light #ui-search-toggle:before {
-  color: #222;
-  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.8);
-}
-/* line 35, ../sass/uiowa-bar-light.scss */
-.uiowa-bar-light #ui-search-toggle.inactive {
-  background-color: transparent;
-  -webkit-box-shadow: -1px 0px 0px rgba(255, 255, 255, 0.8);
-  -moz-box-shadow: -1px 0px 0px rgba(255, 255, 255, 0.8);
-  box-shadow: -1px 0px 0px rgba(255, 255, 255, 0.8);
-  border-left: 1px solid #c1c1c1;
+/* line 14, ../sass/uiowa-bar-light.scss */
+.uiowa-bar-light #ui-wrapper {
+  background-color: #e1e1e1;
 }
 
 /* ========================================================================== */
 /* =============================================================================
  *   UI Logo
  * ========================================================================== */
-/* line 47, ../sass/uiowa-bar-light.scss */
-.uiowa-bar-light #ui-logo {
-  border-bottom: 1px solid #ccc;
-  -webkit-box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.8);
-  -moz-box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.8);
-  box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.8);
-}
-/* line 51, ../sass/uiowa-bar-light.scss */
+/* line 22, ../sass/uiowa-bar-light.scss */
 .uiowa-bar-light #ui-logo a {
-  background-position: 8px -168px;
+  color: #333333;
+}
+
+/* ========================================================================== */
+/* =============================================================================
+ *   Search Toggle
+ * ========================================================================== */
+/* line 31, ../sass/uiowa-bar-light.scss */
+.uiowa-bar-light #ui-search-toggle {
+  color: #222222;
+}
+/* line 34, ../sass/uiowa-bar-light.scss */
+.uiowa-bar-light #ui-search-toggle.is-active {
+  background-color: #c8c8c8;
+  -moz-box-shadow: 0px 0px 6px #bbbbbb inset;
+  -webkit-box-shadow: 0px 0px 6px #bbbbbb inset;
+  box-shadow: 0px 0px 6px #bbbbbb inset;
 }
 
 /* ========================================================================== */
 /* =============================================================================
  *   Search Bar
  * ========================================================================== */
-/* line 61, ../sass/uiowa-bar-light.scss */
-.uiowa-bar-light #ui-search {
-  background-color: #eee;
-  border: 1px solid #bbb;
-  -webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1) inset;
-  -moz-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1) inset;
-  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1) inset;
-}
-/* line 67, ../sass/uiowa-bar-light.scss */
-.uiowa-bar-light #ui-search .form-item-search-terms label:before {
-  color: #777;
-  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.6);
-}
-/* line 73, ../sass/uiowa-bar-light.scss */
-.uiowa-bar-light #ui-search #edit-search-terms {
-  color: #444;
-}
-/* line 77, ../sass/uiowa-bar-light.scss */
-.uiowa-bar-light #ui-search #edit-submit-search {
-  background-color: #eee;
-  border: 1px solid #bbb;
-  color: #666;
-  -webkit-box-shadow: 0px -12px 2px rgba(0, 0, 0, 0.1) inset;
-  -moz-box-shadow: 0px -12px 2px rgba(0, 0, 0, 0.1) inset;
-  box-shadow: 0px -12px 2px rgba(0, 0, 0, 0.1) inset;
-  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.6);
-}
-/* line 84, ../sass/uiowa-bar-light.scss */
-.uiowa-bar-light #ui-search #edit-submit-search:hover, .uiowa-bar-light #ui-search #edit-submit-search:focus, .uiowa-bar-light #ui-search #edit-submit-search:active {
-  background-color: #f9db78;
-  -webkit-box-shadow: 0px -12px 2px #f6c72f inset;
-  -moz-box-shadow: 0px -12px 2px #f6c72f inset;
-  box-shadow: 0px -12px 2px #f6c72f inset;
-  color: #222;
-  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.3);
-}
-
 /* ========================================================================== */
