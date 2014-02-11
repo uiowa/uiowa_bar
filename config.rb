@@ -17,8 +17,8 @@ require "rgbapng"
 # with debug code, be sure to change to :production when moving from development
 # to production servers.
 
-environment = :development
-#environment = :production
+#environment = :development
+environment = :production
 
 
 # Location of the theme's resources.
@@ -37,7 +37,8 @@ images_dir = "css/images"
 # command line)
 #output_style = :expanded or :nested or :compact or :compressed
 #output_style = (environment == :development) ? :expanded : :compact
-output_style = :expanded
+#output_style = :expanded
+output_style = :compressed
 
 # To enable relative paths to assets via compass helper functions. Since Drupal
 # themes can be installed in multiple locations, we don't need to worry about
