@@ -6,19 +6,13 @@
 /* =============================================================================
  *   Variables
  * ========================================================================== */
-  // Font Stacks
-  $serif-large: Georgia, Baskerville, Palatino, 'Palatino Linotype', 'Book Antiqua', 'Times New Roman', serif;
-  $sans-serif-arial-helvetica:  Arial, Helvetica, sans-serif;
-
-  // Gutters
-  $uiowa-bar-gutter: 8px;
-
   // Color  Vars
   $ui-gold: #fee000;
 
-  $bp-mobile: 500px;
+  // Breakpoints
   $bp-search-toggle-is-visible: max-width 500px;
   $bp-search-toggle-is-hidden: 501px;
+  $bp-display-footer-links-inline: 750px;
 /* ========================================================================== */
 
 

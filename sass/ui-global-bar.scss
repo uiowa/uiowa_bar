@@ -30,7 +30,8 @@
     }
 
     input {
-      font-size: 100%; // normalize input font-sizing
+      font-family: arial, sans-serif !important;
+      font-size: 100%;
     }
   }
 /* ========================================================================== */
@@ -108,7 +109,6 @@
     // Form elements
     form.search-google-appliance-search-form {
       margin-bottom: 0; // override gsa module css
-
       position: relative;
     }
 
@@ -164,31 +164,48 @@
     @include box-shadow(0px 1px 0px rgba(255,255,255,.05) inset);
     background-color: #111111;
     color: #999;
-    padding: 20px $uiowa-bar-gutter;
+    font-family: arial, sans-serif !important;
+    padding: 20px 8px;
     border-top: 1px solid #000;
 
-    a {
-      color: #999;
-      border-bottom: none;
-    }
+    ul {
+      margin-top: 10px;
+
+      li {
+        list-style-type: none;
+        margin: 0.5em 0;
+        padding: 0;
+
+        @include breakpoint($bp-display-footer-links-inline) {
+          @include inline-block;
+          margin: 0 0.5em;
+
+          &:after {
+            content: "/";
+            margin-left: 0.5em;
+          }
+
+          &:last-of-type:after {
+            content: none;
+          }
+        }
+      }
+
+      a {
+        color: #999;
+        border-bottom: none;
+
+        &:hover, &:focus {
+          color: #fff;
+          text-decoration: none;
+        }
+      }
+    } 
   }
 
   #ui-footer-logo a {
     @include font-size(2.7);
     color: $ui-gold;
-  }
-
-  #ui-global-links .item-list {
-
-    ul {
-      margin-top: 10px;
-    }
-
-    li {
-      list-style-type: none;
-      margin: 0;
-      display: block;
-    }
   }
 /* ========================================================================== */
 
