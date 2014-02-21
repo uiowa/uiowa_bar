@@ -96,8 +96,10 @@ function uiowa_bar_page_build(&$page) {
 
     // Build the University of Iowa branding bar
     module_load_include('inc', 'uiowa_bar', 'includes/uiowa_bar.build');
+    // Get the top bar render array
+    $uiowa_bar_top_render_array = build_uiowa_bar();
     $page['page_top']['uiowa_bar'] = array(
-      '#markup' => render(build_uiowa_bar()),
+      '#markup' => render($uiowa_bar_top_render_array),
       '#weight' => 25,
     );
 
@@ -105,8 +107,10 @@ function uiowa_bar_page_build(&$page) {
     module_load_include('inc', 'uiowa_bar', 'includes/uiowa_bar_footer.build');
     // Get the footer location variable
     $footer_location = variable_get('uiowa_bar_footer_location');
+    // Get the footer bar render array
+    $uiowa_bar_footer_render_array = build_uiowa_bar_footer();
     $page[$footer_location]['uiowa_bar_footer'] = array(
-      '#markup' => render(build_uiowa_bar_footer()),
+      '#markup' => render($uiowa_bar_footer_render_array),
       '#weight' => 25,
     );
   }
