@@ -41,5 +41,32 @@ function uiowa_bar_config_form($form, &$form_state) {
     ),
   );
 
+  $form['uiowa_bar_search_tool'] = array(
+    '#type' => 'select',
+    '#title' => t('Search Tool'),
+    '#default_value' => variable_get('uiowa_bar_search_tool'),
+    '#description' => t('Choose whether you would like to use the Google Search Appliance or the Google Custom Search.'),
+    '#options' => array(
+      'gsa' => t('Google Search Appliance'),
+      'cse' => t('Google Custom Search'),
+    ),
+  );
+
+  $form['uiowa_bar_cse_engine_id'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Search Engine ID'),
+    '#default_value' => variable_get('uiowa_bar_cse_engine_id'),
+    '#description' => t('Enter the CSE Engine ID'),
+    '#size' => 60 ,
+  );
+
+  $form['uiowa_bar_cse_scope'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Limit Custom Search to this Site'),
+    '#default_value' => variable_get('uiowa_bar_cse_scope'),
+    '#description' => t('If checked, the Google Custom Search will be scoped to this site only. If you are using a CSE ID that includes multiple sites in it, you will likely want to uncheck this.'),
+    '#size' => 60 ,
+  );
+
   return system_settings_form($form);
 }

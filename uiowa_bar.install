@@ -14,11 +14,18 @@ function uiowa_bar_install() {
   variable_set('uiowa_bar_color_palette', 'uiowa-bar-dark');
   // Set the default footer rendering location.
   variable_set('uiowa_bar_footer_location', 'page_bottom');
+  // Set the default search tool.
+  variable_set('uiowa_bar_search_tool', 'gsa');
+  // Set the default custom search engine id.
+  variable_set('uiowa_bar_cse_engine_id', '015014862498168032802:ben09oibdpm');
+  // Set the default custom search scoping to this site.
+  variable_set('uiowa_bar_cse_scope', 1);
 
   // Set permissions for the search.
   $roles = user_roles();
   foreach ($roles as $rid => $role) {
     user_role_grant_permissions($rid, array('access_google_appliance_content'));
+    user_role_grant_permissions($rid, array('access uiowa cse results'));
   }
 }
 
@@ -30,6 +37,12 @@ function uiowa_bar_uninstall() {
   variable_del('uiowa_bar_color_palette');
   // Delete the footer location variable.
   variable_del('uiowa_bar_footer_location');
+  // Delete the search tool variable.
+  variable_del('uiowa_bar_search_tool');
+  // Delete the custom search engine id variable.
+  variable_del('uiowa_bar_cse_engine_id');
+  // Delete the custom search scoping variable.
+  variable_del('uiowa_bar_cse_scope');
 }
 
 /**
@@ -118,4 +131,38 @@ function uiowa_bar_update_7104(&$sandbox) {
 function uiowa_bar_update_7105(&$sandbox) {
   // Set the default footer rendering location.
   variable_set('uiowa_bar_footer_location', 'page_bottom');
+}
+
+/**
+ * Set the default search tool.
+ */
+function uiowa_bar_update_7106(&$sandbox) {
+  // Set the default search tool.
+  variable_set('uiowa_bar_search_tool', 'gsa');
+}
+
+/**
+ * Set the default custom search engine id.
+ */
+function uiowa_bar_update_7107(&$sandbox) {
+  // Set the default custom search engine id.
+  variable_set('uiowa_bar_cse_engine_id', '015014862498168032802:ben09oibdpm');
+}
+
+/**
+ * Update anonymous and authenticated roles to allow Google Custom searches
+ */
+function uiowa_bar_update_7108(&$sandbox) {
+  // Set permissions.
+  $roles = user_roles();
+  foreach ($roles as $rid => $role) {
+    user_role_grant_permissions($rid, array('access uiowa cse results'));
+  }
+}
+/**
+ * Set the default custom search scoping to this site.
+ */
+function uiowa_bar_update_7109(&$sandbox) {
+  // Set the default custom search scoping to this site.
+  variable_set('uiowa_bar_cse_scope', 1);
 }

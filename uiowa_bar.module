@@ -3,8 +3,11 @@
 /**
  * @file
  *
- * Adds the University of Iowa branding bar and footer to each page
+ * Adds the University of Iowa branding bar and footer to each page and implements the Google Custom Search
  */
+
+// default theme impementations
+//require_once(drupal_get_path('module', 'uiowa_bar') . '/theme/uiowa_bar.theme.inc');
 
 /**
  * Implements hook_preprocess_HOOK().
@@ -23,6 +26,10 @@ function uiowa_bar_permission() {
       'title' => t('Administer UIowa branding bar'),
       'description' => t('Perform administration tasks for the UIowa branding bar.'),
     ),
+    'access uiowa cse results' => array(
+      'title' => t('Access Google Custom Search Results'),
+      'description' => t('View search results for the Google Custom Search for the University.'),
+    ),
   );
 }
 
@@ -32,9 +39,16 @@ function uiowa_bar_permission() {
 function uiowa_bar_menu() {
   $items = array();
 
+  $items['google-search'] = array(
+    'title' => variable_get('site_name').' Search',
+    'page callback' => 'uiowa_bar_view',
+    'access arguments' => array('access uiowa cse results'),
+    'type' => MENU_NORMAL_ITEM,
+  );
+
   $items['admin/config/user-interface/uiowa-bar'] = array(
-    'title' => 'University of Iowa branding bar',
-    'description' => 'Configuration for the University of Iowa branding bar',
+    'title' => 'University of Iowa Branding Bar',
+    'description' => 'Configuration for the University of Iowa Branding Bar',
     'page callback' => 'drupal_get_form',
     'page arguments' => array('uiowa_bar_config_form'),
     'access arguments' => array('administer uiowa bar'),
@@ -71,6 +85,10 @@ function uiowa_bar_theme(){
     'uiowa_bar_link_list' => array(
       'render element' => 'links',
     ),
+    'uiowa_bar_cse_results' => array(
+      'template' => 'uiowa-bar-cse-results',
+      'path' => drupal_get_path('module', 'uiowa_bar') . '/theme',
+    )
   );
 }
 
@@ -115,4 +133,10 @@ function uiowa_bar_page_build(&$page) {
       '#weight' => 25,
     );
   }
+}
+/**
+ * Implements hook_view().
+ */
+function uiowa_bar_view(){
+  return theme('uiowa_bar_cse_results');
 }
