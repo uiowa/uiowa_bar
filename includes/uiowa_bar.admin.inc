@@ -57,7 +57,19 @@ function uiowa_bar_config_form($form, &$form_state) {
     '#title' => t('Search Engine ID'),
     '#default_value' => variable_get('uiowa_bar_cse_engine_id'),
     '#description' => t('Enter the CSE Engine ID'),
-    '#size' => 60 ,
+    '#size' => 60,
+    '#states' => array(
+      // Show this field only when the search tool is set to cse.
+      'visible' => array(
+        ':input[name="uiowa_bar_search_tool"]' => array('value' => 'cse'),
+      ),
+      // Set field to be required when search tool is set to cse.
+      // This doesn't actually work, it only displays the asterisk.
+      // Will still need to add a custom validate function to actually make it required.
+      'required' => array(
+       ':input[name="uiowa_bar_search_tool"]' => array('value' => 'cse'),
+    ),
+    ),
   );
 
   $form['uiowa_bar_cse_scope'] = array(
@@ -65,8 +77,29 @@ function uiowa_bar_config_form($form, &$form_state) {
     '#title' => t('Limit Custom Search to this Site'),
     '#default_value' => variable_get('uiowa_bar_cse_scope'),
     '#description' => t('If checked, the Google Custom Search will be scoped to this site only. If you are using a CSE ID that includes multiple sites in it, you will likely want to uncheck this.'),
-    '#size' => 60 ,
+    '#size' => 60,
+    '#states' => array(
+      // Show this field only when the search tool is set to cse.
+      'visible' => array(
+        ':input[name="uiowa_bar_search_tool"]' => array('value' => 'cse'),
+      ),
+    ),
   );
 
+  // Adding an additional validate function to require Search Engine ID when
+  // search tool is set to cse.
+  $form['#validate'][] = '_uiowa_bar_config_form_validate';
+
   return system_settings_form($form);
+}
+
+/**
+* Custom validate function.
+*/
+function _uiowa_bar_config_form_validate($form, &$form_state) {
+  // If search tool is set to cse and cse engine id field is null then set error.
+  if (($form_state['values']['uiowa_bar_search_tool'] == 'cse')
+    && $form_state['values']['uiowa_bar_cse_engine_id'] == NULL){
+    form_set_error('uiowa_bar_cse_engine_id', $form['uiowa_bar_cse_engine_id']['#title'] . ' field is required when ' . $form['uiowa_bar_search_tool']['#title'] . ' field is set to Google Custom Search');
+  }
 }
