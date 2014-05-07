@@ -17,7 +17,7 @@ var myCallback = function() {
         queryParameterName:'search',
         <?php
           if(variable_get('uiowa_bar_cse_scope') == true){ ?>
-            as_sitesearch:'<?php echo $GLOBALS["base_url"]?>',
+            as_sitesearch:'<?php echo $GLOBALS["base_url"];?>',
           <?}?>
         
       }
@@ -29,7 +29,7 @@ window.__gcse = {
 };
 
 (function() {
-  var cx = '<?php echo variable_get("uiowa_bar_cse_engine_id")?>'; // Insert your own Custom Search engine ID here
+  var cx = '<?php echo variable_get("uiowa_bar_cse_engine_id");?>'; // Insert your own Custom Search engine ID here
   var gcse = document.createElement('script'); gcse.type = 'text/javascript';
   gcse.async = true;
   gcse.src = (document.location.protocol == 'https' ? 'https:' : 'http:') +
