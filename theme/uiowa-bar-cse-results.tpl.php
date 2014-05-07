@@ -17,7 +17,7 @@ var myCallback = function() {
         queryParameterName:'search',
         <?php
           if(variable_get('uiowa_bar_cse_scope') == true){
-            echo('as_sitesearch:'.$GLOBALS["base_url"].','); 
+            echo("as_sitesearch:'".$GLOBALS["base_url"]."',"); 
           }?>
       }
   });
