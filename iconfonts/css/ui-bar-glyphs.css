@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'ui-bar-glyphs';
-  src: url('../font/ui-bar-glyphs.eot?26862930');
-  src: url('../font/ui-bar-glyphs.eot?26862930#iefix') format('embedded-opentype'),
-       url('../font/ui-bar-glyphs.woff?26862930') format('woff'),
-       url('../font/ui-bar-glyphs.ttf?26862930') format('truetype'),
-       url('../font/ui-bar-glyphs.svg?26862930#ui-bar-glyphs') format('svg');
+  src: url('../font/ui-bar-glyphs.eot?307853');
+  src: url('../font/ui-bar-glyphs.eot?307853#iefix') format('embedded-opentype'),
+       url('../font/ui-bar-glyphs.woff?307853') format('woff'),
+       url('../font/ui-bar-glyphs.ttf?307853') format('truetype'),
+       url('../font/ui-bar-glyphs.svg?307853#ui-bar-glyphs') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -14,7 +14,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'ui-bar-glyphs';
-    src: url('../font/ui-bar-glyphs.svg?26862930#ui-bar-glyphs') format('svg');
+    src: url('../font/ui-bar-glyphs.svg?307853#ui-bar-glyphs') format('svg');
   }
 }
 */

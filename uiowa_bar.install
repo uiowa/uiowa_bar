@@ -21,7 +21,7 @@ function uiowa_bar_install() {
   // Set the default custom search scoping to this site.
   variable_set('uiowa_bar_cse_scope', 1);
   // Set the default varient.
-  variable_set('uiowa_bar_varient', 'standard');
+  variable_set('uiowa_bar_varient', 'standard-varient');
 
   // Set permissions for the search.
   $roles = user_roles();
@@ -175,5 +175,5 @@ function uiowa_bar_update_7109(&$sandbox) {
  */
 function uiowa_bar_update_7110(&$sandbox) {
   // Set the default bar varient for this site.
-  variable_set('uiowa_bar_varient', 'standard');
+  variable_set('uiowa_bar_varient', 'standard-varient');
 }

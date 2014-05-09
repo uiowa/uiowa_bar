@@ -36,8 +36,8 @@ function uiowa_bar_config_form($form, &$form_state) {
     '#default_value' => variable_get('uiowa_bar_varient'),
     '#description' => t('Choose the varient of the University of Iowa Branding Bar'),
     '#options' => array(
-      'uiowa-bar-standard' => t('Standard'),
-      'uiowa-bar-osl' => t('Division of Student Life'),
+      'standard-varient' => t('Standard'),
+      'osl-varient' => t('Division of Student Life'),
     ),
   );
 

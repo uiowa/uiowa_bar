@@ -221,3 +221,97 @@
   }
 /* ========================================================================== */
 
+
+/* =============================================================================
+ *   OSL Varient
+ * ========================================================================== */
+.osl-varient{
+
+  #ui-wrapper{
+    .container{
+      max-width: 1140px;
+      margin: 0 auto;
+    }
+  }
+
+  #osl-logo {
+    @include font-size(4.8);
+    line-height: 0.8;
+    .ui-glyph-icon-osl-logo:before{
+      margin-left: 0;
+    }
+  }
+
+  p.adr {
+    font-size: 11px;
+    margin-top: 0.66em;
+  }
+
+  .division-menu .directory-link {
+      display: none;
+  }
+  .division-directory {
+      color: #fff;
+      font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .dosl-wrapper{
+      float: left;
+      padding: 10px 0;
+      width: 25%;
+  }
+  .division-menu {
+      float: left;
+      width: 75%;
+      padding: 15px 0 0;
+      list-style: none;
+      ul {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+      }
+  }
+
+
+  @media only screen and (min-width: 768px) {
+      .division-menu .division-show-hide {
+          display: block !important;
+      }
+  }
+
+  .division-menu .menu-list {
+      float: left;
+      padding-left: 2.75%;
+      width: 33%;
+  }
+  .division-menu a {
+      border-left: 1px solid #555;
+      color: #FFF;
+      text-decoration: none;
+      display: block;
+      font-size: 11px;
+      padding: 2px 0 2px 10px;
+      position: relative;
+      -webkit-transition: border-color .1s linear;
+         -moz-transition: border-color .1s linear;
+              transition: border-color .1s linear;
+  }
+  .division-menu a:hover {
+      border-left-color: #ffce39;
+      color: #fff;
+  }
+
+  /* Second level navigation  */
+  .division-menu ul a {
+      font-size: 11px;
+      padding-left: 10px;
+  }
+
+   #ui-logo{
+    clear: both;
+   }
+}
+
+  
+
+/* ========================================================================== */
