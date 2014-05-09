@@ -21,12 +21,23 @@ function uiowa_bar_config_form($form, &$form_state) {
     '#type' => 'select',
     '#title' => t('Color Palette'),
     '#default_value' => variable_get('uiowa_bar_color_palette'),
-    '#description' => t('Choose the color palette of the University of Iowa branding bar'),
+    '#description' => t('Choose the color palette of the University of Iowa Branding Bar'),
     '#options' => array(
       'uiowa-bar-light' => t('Light Theme'),
       'uiowa-bar-gold' => t('Gold Theme'),
       'uiowa-bar-dark' => t('Dark Theme'),
       'uiowa-bar-large-dark' => t('Large Dark Theme'),
+    ),
+  );
+
+  $form['uiowa_bar_varient'] = array(
+    '#type' => 'select',
+    '#title' => t('Varient'),
+    '#default_value' => variable_get('uiowa_bar_varient'),
+    '#description' => t('Choose the varient of the University of Iowa Branding Bar'),
+    '#options' => array(
+      'uiowa-bar-standard' => t('Standard'),
+      'uiowa-bar-osl' => t('Division of Student Life'),
     ),
   );
 

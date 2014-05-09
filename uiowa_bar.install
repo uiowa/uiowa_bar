@@ -20,6 +20,8 @@ function uiowa_bar_install() {
   variable_set('uiowa_bar_cse_engine_id', '015014862498168032802:ben09oibdpm');
   // Set the default custom search scoping to this site.
   variable_set('uiowa_bar_cse_scope', 1);
+  // Set the default varient.
+  variable_set('uiowa_bar_varient', 'standard');
 
   // Set permissions for the search.
   $roles = user_roles();
@@ -43,6 +45,8 @@ function uiowa_bar_uninstall() {
   variable_del('uiowa_bar_cse_engine_id');
   // Delete the custom search scoping variable.
   variable_del('uiowa_bar_cse_scope');
+  // Delete the varient variable.
+  variable_del('uiowa_bar_varient');
 }
 
 /**
@@ -165,4 +169,11 @@ function uiowa_bar_update_7108(&$sandbox) {
 function uiowa_bar_update_7109(&$sandbox) {
   // Set the default custom search scoping to this site.
   variable_set('uiowa_bar_cse_scope', 1);
+}
+/**
+ * Set the default bar varient for this site.
+ */
+function uiowa_bar_update_7110(&$sandbox) {
+  // Set the default bar varient for this site.
+  variable_set('uiowa_bar_varient', 'standard');
 }
