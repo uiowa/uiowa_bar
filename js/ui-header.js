@@ -17,6 +17,7 @@
     // Set default states
     $("#ui-search-toggle").toggleClass("is-active is-inactive");
     $("#ui-search").addClass("animated").toggleClass("is-visible is-hidden");
+    $('.osl-varient .division-directory').hide();
 
     // Evaluate on window resize
     on_resize(function() {
@@ -41,7 +42,20 @@
     $("#ui-search-toggle").click(function (evt) {
       evt.preventDefault();
       $(this).toggleClass("is-active is-inactive").toggleAttr('title', 'Open search bar', 'Close search bar');
-      $('#ui-search').toggleClass("is-visible is-hidden").toggleClass('fadeInDown').toggleAttr('aria-hidden', 'true', 'false');
+      $('#ui-search').slideToggle().toggleClass("is-visible is-hidden").toggleAttr('aria-hidden', 'true', 'false');
+    });
+
+    $('.osl-varient .directory-toggle').click(function() {
+        $(this).toggleClass("active");
+        $('.division-directory').slideToggle();
+        return false;
+    });
+
+    // For small screens - show the directory
+    $('.division-menu').click(function() {
+        $('.division-show-hide').slideToggle('slow');
+        $('.division-menu .has-subnav a').toggleClass('active');
+
     });
   };
 

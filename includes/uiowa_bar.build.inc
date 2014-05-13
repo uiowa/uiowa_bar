@@ -48,12 +48,12 @@ function build_uiowa_bar() {
     '#markup' => '<a href="http://www.uiowa.edu" title="The University of Iowa"><i class="ui-glyph-icon-domewordsingle" aria-hidden="true"></i><span class="element-invisible">The University of Iowa</span></a>',
   );
   if(variable_get('uiowa_bar_varient') == 'osl-varient'){
-    $uiowa_bar['ui-global-bar']['container']['osl-logo'] = array(
-      '#attributes' => array('id' => array('osl-logo')),
+    $uiowa_bar['ui-global-bar']['container']['osl-wordmark'] = array(
+      '#attributes' => array('id' => array('osl-wordmark')),
       '#type' => 'container',
     );
 
-    $uiowa_bar['ui-global-bar']['container']['osl-logo']['link'] = array(
+    $uiowa_bar['ui-global-bar']['container']['osl-wordmark']['link'] = array(
       '#markup' => '<a href="#" class="directory-toggle"><i class="ui-glyph-icon-osl-wordmark" aria-hidden="true"></i><span class="element-invisible">Division of Student Life</span></a>',
     );
   }
