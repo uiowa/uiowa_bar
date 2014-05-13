@@ -47,6 +47,16 @@ function build_uiowa_bar() {
   $uiowa_bar['ui-global-bar']['container']['ui-logo']['link'] = array(
     '#markup' => '<a href="http://www.uiowa.edu" title="The University of Iowa"><i class="ui-glyph-icon-domewordsingle" aria-hidden="true"></i><span class="element-invisible">The University of Iowa</span></a>',
   );
+  if(variable_get('uiowa_bar_varient') == 'osl-varient'){
+    $uiowa_bar['ui-global-bar']['container']['osl-logo'] = array(
+      '#attributes' => array('id' => array('osl-logo')),
+      '#type' => 'container',
+    );
+
+    $uiowa_bar['ui-global-bar']['container']['osl-logo']['link'] = array(
+      '#markup' => '<a href="#" class="directory-toggle"><i class="ui-glyph-icon-osl-wordmark" aria-hidden="true"></i><span class="element-invisible">Division of Student Life</span></a>',
+    );
+  }
   $uiowa_bar['ui-global-bar']['container']['ui-search-toggle'] = array(
     '#markup' => '<a href="#" title="Open search bar" id="ui-search-toggle" class="is-active"><i class="ui-glyph-icon-ui-search" aria-hidden="true"></i><span class="element-invisible">Toggle Search</span></a>',
   );
@@ -94,7 +104,7 @@ function uiowa_bar_search_form($form, &$form_state) {
   else{
     $form['#action'] = 'google-search';
   }
-  
+
 
   // use core search CSS in addition to this module's css
   // (keep it general in case core search is enabled)
@@ -117,5 +127,5 @@ function uiowa_bar_search_form_submit($form, &$form_state) {
   else{
     $form_state['redirect'] = url($form['#action'], array('absolute' => TRUE,'query' => array('search' => $search_query)));
   }
-  
+
 }

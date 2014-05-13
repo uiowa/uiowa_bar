@@ -212,7 +212,7 @@
           text-decoration: none;
         }
       }
-    } 
+    }
   }
 
   #ui-footer-logo a {
@@ -310,8 +310,87 @@
    #ui-logo{
     clear: both;
    }
+
+  .directory-toggle {
+    float: right;
+    width: 260px;
+    color: #888;
+    padding-top: 8px;
+    @include font-size(2.8);
+  }
+
+  .directory-toggle:after { /* creates the arrow */
+    content: '';
+    border-style: solid;
+    border-width: 8px 6px 0 6px;
+    border-color: #666 transparent transparent transparent;
+    display: inline-block;
+    height: 0px;
+    position: relative;
+    left: 207px;
+    top: -5px;
+    text-decoration: none;
+    width: 0px;
+  }
+  .directory-toggle.active:after { /* flips the arrow upside down when clicked */
+    border-width: 0 5px 6px 5px;
+    border-color: transparent transparent #777 transparent;
+  }
+
+   #ui-search {
+
+    position: absolute;
+    right: 264px;
+    bottom: 7px;
+    min-width: 0;
+    background-color: inherit !important;
+    box-shadow: none !important;
+    border: none !important;
+    .form-item{
+      margin-bottom: 0;
+      padding-right: 0;
+    }
+
+    .ui-glyph-icon-ui-search{
+      display: none;
+    }
+
+    #edit-search-terms {
+      -webkit-appearance: textfield;
+      background: #fff;
+      border: 1px solid #000;
+      color: #222 !important;
+      display: inline-block;
+      font-size: 13px;
+      font-family: arial, verdana, sans-serif;
+      line-height: normal;
+      padding: 5px 0 4px 5px;
+      position: relative;
+      vertical-align: middle;
+      width: 120px;
+      -webkit-border-radius: 15px;
+         -moz-border-radius: 15px;
+              border-radius: 15px;
+      -webkit-transition: width 0.2s ease, background-color 0.2s ease;
+         -moz-transition: width 0.2s ease, background-color 0.2s ease;
+              transition: width 0.2s ease, background-color 0.2s ease;
+      }
+    /* Focus */
+    #edit-search-terms:focus {
+        outline: none;
+        text-shadow: none;
+        width: 180px;
+    }
+    [placeholder]:focus::-webkit-input-placeholder {
+        transition: opacity 0.5s 0.5s ease;
+        opacity: 0;
+    }
+    #edit-submit-search {
+        border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px;
+    }
+  }
 }
 
-  
+
 
 /* ========================================================================== */
