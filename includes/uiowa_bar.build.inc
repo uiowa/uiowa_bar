@@ -68,12 +68,12 @@ function uiowa_bar_search_form($form, &$form_state) {
   );
 
   if(variable_get('uiowa_bar_search_tool') == 'gsa'){
-    $form_state['action'] = 'gsearch/this-site/';
+    $form['#action'] = '/gsearch/this-site/';
   }
   else{
-    $form['#action'] = 'google-search';
+    $form['#action'] = '/google-search';
   }
-  
+
 
   // use core search CSS in addition to this module's css
   // (keep it general in case core search is enabled)
@@ -91,10 +91,10 @@ function uiowa_bar_search_form_submit($form, &$form_state) {
   // set the redirect
   $search_query = urlencode($form_state['input']['search-terms']);
   if(variable_get('uiowa_bar_search_tool') == 'gsa'){
-    $form_state['redirect'] = url($form_state['action'] . $search_query, array('absolute' => TRUE));
+    $form_state['redirect'] = url($form['#action'] . $search_query, array('absolute' => TRUE));
   }
   else{
     $form_state['redirect'] = url($form['#action'], array('absolute' => TRUE,'query' => array('search' => $search_query)));
   }
-  
+
 }
