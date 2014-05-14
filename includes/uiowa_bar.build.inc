@@ -68,10 +68,10 @@ function uiowa_bar_search_form($form, &$form_state) {
   );
 
   if(variable_get('uiowa_bar_search_tool') == 'gsa'){
-    $form['#action'] = '/gsearch/this-site/';
+    $form['#action'] = $base_path.'gsearch/this-site/';
   }
   else{
-    $form['#action'] = '/google-search';
+    $form['#action'] = $base_path.'/google-search';
   }
 
 
