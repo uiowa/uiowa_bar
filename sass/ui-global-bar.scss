@@ -159,8 +159,31 @@
  *   Google Custom Search Tweaks
  * ========================================================================== */
 #search-results{
-  .gsc-control-cse, .gsc-table-result{
+  .gsc-control-cse{
     font-family: inherit !important;
+    // Interior tables
+    table {
+      margin: 0;
+    }
+    tbody tr {
+      border: 1px solid #FFFFFF;
+    }
+    +
+    .gsc-table-result {
+      margin-left: 8px;
+    }
+    .gsc-input-box {
+      height: auto;
+    }
+    .cse .gsc-search-button input.gsc-search-button-v2, input.gsc-search-button-v2 {
+      height: auto;
+      width: auto;
+    }
+    .gsc-selected-option-container {
+      height: auto;
+      width: auto !important;
+      max-width: 100%;
+    }
   }
   .gs-result .gs-title, .gs-result .gs-title *{
     color: #222 ;
