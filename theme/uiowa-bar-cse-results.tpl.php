@@ -1,5 +1,5 @@
 <?php
-$queryString = drupal_get_query_parameters();
+$queryString = (drupal_get_query_parameters() ? drupal_get_query_parameters() : null);
 ?>
 
 <h3 id="university-search"><a href="http://search.uiowa.edu/search?q=<?php echo $queryString['search'];?>&btnG=Search&client=our_frontend&output=xml_no_dtd&proxystylesheet=our_frontend&sort=date%3AD%3AL%3Ad1&entqr=0&oe=UTF-8&ie=UTF-8&ud=1&site=default_collection" target="_blank">Search the University of Iowa for <em><?php echo $queryString['search'];?></em></a></h3>
