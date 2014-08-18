@@ -15,7 +15,7 @@ function uiowa_bar_install() {
   // Set the default footer rendering location.
   variable_set('uiowa_bar_footer_location', 'page_bottom');
   // Set the default search tool.
-  variable_set('uiowa_bar_search_tool', 'gsa');
+  variable_set('uiowa_bar_search_tool', 'cse');
   // Set the default custom search engine id.
   variable_set('uiowa_bar_cse_engine_id', '015014862498168032802:ben09oibdpm');
   // Set the default custom search scoping to this site.
@@ -176,4 +176,12 @@ function uiowa_bar_update_7109(&$sandbox) {
 function uiowa_bar_update_7110(&$sandbox) {
   // Set the default bar varient for this site.
   variable_set('uiowa_bar_varient', 'standard-varient');
+}
+
+/**
+ * Update the default search tool.
+ */
+function uiowa_bar_update_7111(&$sandbox) {
+  // Set the default search tool.
+  variable_set('uiowa_bar_search_tool', 'cse');
 }
