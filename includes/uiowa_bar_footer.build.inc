@@ -39,7 +39,7 @@ function build_uiowa_bar_footer() {
     '#children' => array(
       0 => array(
         'label' => t('UI Directory'),
-        'url' => 'http://dnaapps.uiowa.edu/PublicDirectory/',
+        'url' => 'https://www.dna.its.uiowa.edu/Whitepages/',
         'class' => 'phonebook',
         'title' => 'University of Iowa Phonebook and Email search',
       ),
