@@ -97,13 +97,7 @@ function uiowa_bar_search_form($form, &$form_state) {
     '#value' => t('Search'),
     '#name' => 'btnG',
   );
-
-  if(variable_get('uiowa_bar_search_tool') == 'gsa'){
-  $form['#action'] = $GLOBALS['base_url'].'/gsearch/this-site/';
-  }
-  else{
-    $form['#action'] = $GLOBALS['base_url'].'/google-search';
-  }
+  $form['#action'] = $GLOBALS['base_url'].'/google-search';
 
   // use core search CSS in addition to this module's css
   // (keep it general in case core search is enabled)
@@ -111,20 +105,13 @@ function uiowa_bar_search_form($form, &$form_state) {
   $form['#attributes']['class'][] = 'search-google-appliance-search-form';
 
   return $form;
-  }
+}
 
-  /**
-  * Submit handler for full search form
-  */
-  function uiowa_bar_search_form_submit($form, &$form_state) {
-
+/**
+* Submit handler for full search form
+*/
+function uiowa_bar_search_form_submit($form, &$form_state) {
   // set the redirect
   $search_query = urlencode($form_state['input']['search-terms']);
-  if(variable_get('uiowa_bar_search_tool') == 'gsa'){
-    $form_state['redirect'] = url($form['#action'] . $search_query, array('absolute' => FALSE));
-  }
-  else{
-    $form_state['redirect'] = url($form['#action'] . '?search=' . $search_query, array('absolute' => FALSE));
-  }
-
+  $form_state['redirect'] = url($form['#action'] . '?search=' . $search_query, array('absolute' => FALSE));
 }
