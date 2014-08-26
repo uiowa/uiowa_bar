@@ -24,7 +24,6 @@ function uiowa_bar_install() {
   // Set permissions for the search.
   $roles = user_roles();
   foreach ($roles as $rid => $role) {
-    user_role_grant_permissions($rid, array('access_google_appliance_content'));
     user_role_grant_permissions($rid, array('access uiowa cse results'));
   }
 }
