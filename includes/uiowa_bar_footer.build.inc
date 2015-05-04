@@ -38,13 +38,13 @@ function build_uiowa_bar_footer() {
     '#theme' => 'uiowa_bar_link_list',
     '#children' => array(
       0 => array(
-        'label' => t('UI Directory'),
+        'label' => t('Directory'),
         'url' => 'https://www.dna.its.uiowa.edu/Whitepages/',
         'class' => 'phonebook',
         'title' => 'University of Iowa Phonebook and Email search',
       ),
       1 => array(
-        'label' => t('UI A-Z Search'),
+        'label' => t('A-Z Search'),
         'url' => 'http://www.uiowa.edu/a-z',
         'class' => 'a-z',
         'title' => 'University of Iowa A-Z Search',
@@ -56,22 +56,28 @@ function build_uiowa_bar_footer() {
         'title' => 'About the University of Iowa',
       ),
       3 => array(
-        'label' => t('UI Contact Us'),
+        'label' => t('Contact Us'),
         'url' => 'http://www.uiowa.edu/homepage/contact-us',
         'class' => 'contact',
         'title' => 'Contact the University of Iowa',
       ),
       4 => array(
-        'label' => t('UI Calendars'),
+        'label' => t('Calendars'),
         'url' => 'http://www.uiowa.edu/homepage/calendars',
         'class' => 'calendars',
         'title' => 'University of Iowa Calendars',
       ),
       5 => array(
-        'label' => t('UI Maps'),
+        'label' => t('Maps'),
         'url' => 'http://maps.uiowa.edu',
         'class' => 'maps',
         'title' => 'University of Iowa Maps',
+      ),
+      5 => array(
+        'label' => t('Privacy Information'),
+        'url' => 'http://www.uiowa.edu/homepage/online-privacy-information',
+        'class' => 'privacy',
+        'title' => 'Online Privacy Information',
       ),
     )
   );
