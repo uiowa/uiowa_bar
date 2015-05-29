@@ -16,8 +16,21 @@
  *
  * @see: build_uiowa_bar().
  */
-function HOOK_uiowa_bar_top_alter(&$uiowa_bar) {
-  // No example.
+function hook_uiowa_bar_top_alter(&$uiowa_bar) {
+  // Add some arts-related links. Used on http://arts.uiowa.edu.
+  $items = array(
+    'support' => array(
+      'data' => l(t('Support the Arts'), 'http://www.uifoundation.org/artscampaign/', array('attributes' => array('class' => 'support-link'))),
+    ),
+    'campus' => array(
+      'data' => l(t('Public Art on Campus'), 'http://www.facilities.uiowa.edu/art-on-campus/', array('attributes' => array('class' => 'campus-link'))),
+    ),
+  );
+  $uiowa_bar['ui-global-bar']['container']['ai-links'] = array(
+    '#attributes' => array('class' => array('ai-links')),
+    '#theme' => 'item_list',
+    '#items' => $items,
+  );
 }
 
 /**
@@ -31,6 +44,16 @@ function HOOK_uiowa_bar_top_alter(&$uiowa_bar) {
  *
  * @see: build_uiowa_bar_footer().
  */
-function HOOK_uiowa_bar_footer_alter(&$uiowa_bar) {
-  // No example.
+function hook_uiowa_bar_footer_alter(&$uiowa_bar) {
+  // Provide a login link for anonymous users. Used on http://ideal.uiowa.edu/
+  global $base_url;
+  if (!user_is_logged_in()) {
+    $uiowa_bar['ui-global-footer']['container']['hawkid-login'] = array(
+      '#attributes' => array('id' => array('hawkid-login')),
+      '#type' => 'container',
+    );
+    $uiowa_bar['ui-global-footer']['container']['hawkid-login']['link'] = array(
+      '#markup' => '<a href="' . $base_url . '/cas?destination=front">Login</a>',
+    );
+  }
 }
