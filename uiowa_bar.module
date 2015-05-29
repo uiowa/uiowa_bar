@@ -6,9 +6,6 @@
  * Adds the University of Iowa branding bar and footer to each page and implements the Google Custom Search
  */
 
-// default theme impementations
-//require_once(drupal_get_path('module', 'uiowa_bar') . '/theme/uiowa_bar.theme.inc');
-
 /**
  * Implements hook_preprocess_HOOK().
  */
