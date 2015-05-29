@@ -6,10 +6,12 @@
  */
 
 /**
+ * Alter the top branding bar before being built.
+ *
  * Allow modules to alter the top uiowa bar render array just before being
  * passed to hook_page_build().
  *
- * @param $uiowa_bar
+ * @param array $uiowa_bar
  *   The top render array.
  *
  * @see: build_uiowa_bar().
@@ -19,10 +21,12 @@ function HOOK_uiowa_bar_top_alter(&$uiowa_bar) {
 }
 
 /**
+ * Alter the branding footer before being built.
+ *
  * Allow modules to alter the bottom uiowa bar render array just before being
  * passed to hook_page_build().
  *
- * @param $uiowa_bar
+ * @param array $uiowa_bar
  *   The footer render array.
  *
  * @see: build_uiowa_bar_footer().
