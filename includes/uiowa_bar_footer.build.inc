@@ -3,7 +3,7 @@
 /**
  * @file
  *
- * Build and theme the University of Iowa branding bar footer
+ * Build and theme the University of Iowa branding bar footer.
  */
 
 /**
@@ -79,11 +79,11 @@ function build_uiowa_bar_footer() {
         'class' => 'privacy',
         'title' => 'Online Privacy Information',
       ),
-    )
+    ),
   );
-  // Get year
+  // Get year.
   $year = date('Y');
-  // Add copyright
+  // Add copyright.
   $uiowa_bar['ui-global-footer']['container']['copyright'] = array(
     '#attributes' => array('class' => array('ui-copyright')),
     '#type' => 'markup',
@@ -99,6 +99,8 @@ function build_uiowa_bar_footer() {
 }
 
 /**
+ * Theme action links.
+ *
  * Theme function to build a list of action links for the University of Iowa
  * branding bar.
  */
@@ -116,7 +118,7 @@ function theme_uiowa_bar_link_list($variables = array()) {
       'html' => TRUE,
       'attributes' => array(
         'class' => array($link['class']),
-        'title' => $link['title'])
+        'title' => $link['title']),
       )
     );
   }
