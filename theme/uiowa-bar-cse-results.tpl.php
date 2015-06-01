@@ -1,4 +1,10 @@
 <?php
+/**
+ * @file
+ *
+ * Custom Search Results.
+ */
+
 $queryString = (drupal_get_query_parameters() ? drupal_get_query_parameters() : null);
 $terms = filter_xss($queryString['search'], array());
 ?>

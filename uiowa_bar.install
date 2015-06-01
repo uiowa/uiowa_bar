@@ -3,7 +3,7 @@
 /**
  * @file
  *
- * Install and uninstall tasks for UIowa Bar
+ * Install and uninstall tasks for UIowa Bar.
  */
 
 /**
@@ -45,8 +45,8 @@ function uiowa_bar_uninstall() {
 }
 
 /**
-* Update from theme settings to variables
-*/
+ * Update from theme settings to variables.
+ */
 function uiowa_bar_update_7000(&$sandbox) {
   $theme_default = variable_get('theme_default', NULL);
   $old_link_style = theme_get_setting('ui_globalbar_link_style', $theme = $theme_default);
@@ -56,6 +56,7 @@ function uiowa_bar_update_7000(&$sandbox) {
       case 'uiowa-text':
         variable_set('uiowa_bar_link_style', 'uiowa-text');
         break;
+
       default:
         variable_set('uiowa_bar_link_style', 'uiowa-icon');
     }
@@ -68,22 +69,22 @@ function uiowa_bar_update_7000(&$sandbox) {
 }
 
 /**
-* Add default variable for search display
-*/
+ * Add default variable for search display.
+ */
 function uiowa_bar_update_7100(&$sandbox) {
   variable_set('uiowa_bar_search_display', 0);
 }
 
 /**
-* Turn on new search dependencies
-*/
+ * Turn on new search dependencies.
+ */
 function uiowa_bar_update_7101(&$sandbox) {
   $module_list = array('google_appliance', 'uiowa_gsa');
   module_enable($module_list, $enable_dependencies = FALSE);
 }
 
 /**
- * Update anonymous and authenticated roles to allow Google Appliance searches
+ * Update anonymous and authenticated roles to allow Google Appliance searches.
  */
 function uiowa_bar_update_7102(&$sandbox) {
   // Set permissions.
@@ -97,19 +98,21 @@ function uiowa_bar_update_7102(&$sandbox) {
  * Remove deprecated configuration options and rename palette choices.
  */
 function uiowa_bar_update_7103(&$sandbox) {
-  // Delete variables
+  // Delete variables.
   variable_del('uiowa_bar_link_style');
   variable_del('uiowa_bar_search_display');
-  // Rename palette options
+  // Rename palette options.
   $palette = variable_get('uiowa_bar_color_palette');
   if ($palette) {
     switch ($palette) {
       case 'skin-a':
         variable_set('uiowa_bar_color_palette', 'uiowa-bar-light');
         break;
+
       case 'skin-b':
         variable_set('uiowa_bar_color_palette', 'uiowa-bar-dark');
         break;
+
       default:
         variable_set('uiowa_bar_color_palette', 'uiowa-bar-light');
     }
@@ -149,7 +152,7 @@ function uiowa_bar_update_7107(&$sandbox) {
 }
 
 /**
- * Update anonymous and authenticated roles to allow Google Custom searches
+ * Update anonymous and authenticated roles to allow Google Custom searches.
  */
 function uiowa_bar_update_7108(&$sandbox) {
   // Set permissions.

@@ -1,9 +1,9 @@
 (function ($) {
   Drupal.uiowa_bar = function() {
-    // debulked onresize handler
-    function on_resize(c,t){onresize=function(){clearTimeout(t);t=setTimeout(c,100)};return c};
+    // Debulked onresize handler.
+    function on_resize(c,t){onresize = function(){clearTimeout(t);t = setTimeout(c,100)};return c};
 
-    // toggle attribute function
+    // Toggle attribute function.
     $.fn.toggleAttr = function(attr, attr1, attr2) {
       return this.each(function() {
         var self = $(this);
@@ -14,14 +14,14 @@
       });
     };
 
-    // Set default states
+    // Set default states.
     $("#ui-search-toggle").toggleClass("is-active is-inactive");
     $("#ui-search").addClass("animated").toggleClass("is-visible is-hidden");
     $('.osl-varient .division-directory').hide();
 
-    // Evaluate on window resize
+    // Evaluate on window resize.
     on_resize(function() {
-      // set aria-hidden for search toggle
+      // Set aria-hidden for search toggle.
       if ($('#ui-search-toggle').css('display') == 'none') {
         $("#ui-search-toggle").attr('aria-hidden', 'true');
       }
@@ -29,7 +29,7 @@
         $("#ui-search-toggle").attr('aria-hidden', 'false');
       }
 
-      // set aria-hidden for search form
+      // Set aria-hidden for search form.
       if ($('#ui-search').css('display') == 'block') {
         $("#ui-search").attr('aria-hidden', 'false');
       }
@@ -38,7 +38,7 @@
       }
     })();
 
-    // attach event listener to toggle
+    // Attach event listener to toggle.
     $("#ui-search-toggle").click(function (evt) {
       evt.preventDefault();
       $(this).toggleClass("is-active is-inactive").toggleAttr('title', 'Open search bar', 'Close search bar');
@@ -51,7 +51,7 @@
         return false;
     });
 
-    // For small screens - show the directory
+    // For small screens - show the directory.
     $('.division-menu').click(function() {
         $('.division-show-hide').slideToggle('slow');
         $('.division-menu .has-subnav a').toggleClass('active');

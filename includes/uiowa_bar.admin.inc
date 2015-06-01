@@ -3,14 +3,14 @@
 /**
  * @file
  *
- * Administrative form functions for the University of Iowa branding bar
+ * Administrative form functions for the University of Iowa branding bar.
  */
 
 /**
-* Page callback: University of Iowa branding bar configuration form
-*
-* @see uiowa_bar_menu()
-*/
+ * Page callback: University of Iowa branding bar configuration form.
+ *
+ * @see uiowa_bar_menu()
+ */
 function uiowa_bar_config_form($form, &$form_state) {
   $form['markup'] = array(
     '#type' => 'markup',
