@@ -84,10 +84,6 @@ function uiowa_bar_theme() {
     'uiowa_bar_link_list' => array(
       'render element' => 'links',
     ),
-    'uiowa_bar_cse_results' => array(
-      'template' => 'uiowa-bar-cse-results',
-      'path' => drupal_get_path('module', 'uiowa_bar') . '/theme',
-    ),
   );
 }
 
