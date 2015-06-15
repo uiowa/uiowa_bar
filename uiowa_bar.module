@@ -76,21 +76,6 @@ function uiowa_bar_form_system_theme_settings_alter(&$form, &$form_state) {
 }
 
 /**
- * Implements hook_theme().
- */
-function uiowa_bar_theme() {
-  return array(
-    'uiowa_bar_link_list' => array(
-      'render element' => 'links',
-    ),
-    'uiowa_bar_cse_results' => array(
-      'template' => 'uiowa-bar-cse-results',
-      'path' => drupal_get_path('module', 'uiowa_bar') . '/theme',
-    ),
-  );
-}
-
-/**
  * Implements hook_page_build().
  */
 function uiowa_bar_page_build(&$page) {
