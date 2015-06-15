@@ -1,3 +1,8 @@
+/**
+ * @file
+ * UIowa bar dropdown functionality.
+ */
+
 (function ($) {
   Drupal.uiowa_bar = function() {
     // Debulked onresize handler.
