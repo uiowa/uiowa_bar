@@ -109,6 +109,6 @@ function uiowa_bar_search_form($form, &$form_state) {
  */
 function uiowa_bar_search_form_submit($form, &$form_state) {
   // Set the redirect.
-  $search_query = urlencode($form_state['input']['search-terms']);
+  $search_query = urlencode($form_state['values']['search-terms']);
   $form_state['redirect'] = url($form['#action'] . '?search=' . $search_query, array('absolute' => FALSE));
 }
