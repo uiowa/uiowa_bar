@@ -4,7 +4,7 @@
  */
 
 (function ($) {
-  Drupal.uiowa_bar = function() {
+  Drupal.uiowaBar = function() {
     // Debulked onresize handler.
     function on_resize(c,t){onresize = function(){clearTimeout(t);t = setTimeout(c,100)};return c};
 
@@ -64,11 +64,11 @@
     });
   };
 
-  // Attach uiowa_bar behavior.
-  Drupal.behaviors.uiowa_bar = {
+  // Attach uiowaBar behavior.
+  Drupal.behaviors.uiowaBar = {
     attach: function(context, settings) {
-      $('#ui-wrapper', context).once('uiowa_bar', function() {
-        Drupal.uiowa_bar();
+      $('#ui-wrapper', context).once('uiowaBar', function() {
+        Drupal.uiowaBar();
       });
     }
   };
