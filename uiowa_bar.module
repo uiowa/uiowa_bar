@@ -40,7 +40,8 @@ function uiowa_bar_menu() {
 
   $items['google-search'] = array(
     'title' => variable_get('site_name') . ' Search',
-    'page callback' => 'uiowa_bar_view',
+    'page callback' => 'uiowa_bar_build_results',
+    'file' => 'includes/uiowa_bar_results.build.inc',
     'access arguments' => array('access uiowa cse results'),
     'type' => MENU_NORMAL_ITEM,
   );
@@ -122,10 +123,4 @@ function uiowa_bar_page_build(&$page) {
       '#weight' => 25,
     );
   }
-}
-/**
- * Implements hook_view().
- */
-function uiowa_bar_view() {
-  return theme('uiowa_bar_cse_results');
 }
