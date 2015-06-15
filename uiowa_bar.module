@@ -85,39 +85,29 @@ function uiowa_bar_page_build(&$page) {
   // If the theme being used is the default theme, build the bar.
   // This avoids us building the bar on pages using the admin theme.
   if (variable_get('theme_default', 'none') === $theme_key) {
-    /* Include CSS Assets */
-    // Global uiowa_bar styles.
-    drupal_add_css(drupal_get_path('module', 'uiowa_bar') . '/css/ui-global-bar.css', array('group' => CSS_DEFAULT, 'every_page' => TRUE));
-    // UIowa fontello glyphs.
-    drupal_add_css(drupal_get_path('module', 'uiowa_bar') . '/iconfonts/css/ui-bar-glyphs.css', array('group' => CSS_DEFAULT, 'every_page' => TRUE));
-    // UIowa Fontello glyphs for IE7.
-    drupal_add_css(drupal_get_path('module', 'uiowa_bar') . '/iconfonts/css/ui-bar-glyphs-ie7.css', array('group' => CSS_DEFAULT, 'every_page' => TRUE, 'browsers' => array('IE' => 'IE 7', '!IE' => FALSE)));
+    $path = drupal_get_path('module', 'uiowa_bar');
     $color = variable_get('uiowa_bar_color_palette');
-    // uiowa bar variation-specific styles.
-    drupal_add_css(drupal_get_path('module', 'uiowa_bar') . '/css/' . $color . '.css', array('group' => CSS_DEFAULT, 'every_page' => TRUE));
-    // Fixes for IE8 and below.
-    drupal_add_css(drupal_get_path('module', 'uiowa_bar') . '/css/lte-ie8.css', array('group' => CSS_DEFAULT, 'every_page' => TRUE, 'browsers' => array('IE' => 'lte IE 8', '!IE' => FALSE)));
-    // Fixes for IE7.
-    drupal_add_css(drupal_get_path('module', 'uiowa_bar') . '/css/ie7.css', array('group' => CSS_DEFAULT, 'every_page' => TRUE, 'browsers' => array('IE' => 'IE 7', '!IE' => FALSE)));
+    $footer_location = variable_get('uiowa_bar_footer_location');
 
-    /* Include Javascript Assets */
-    drupal_add_js(drupal_get_path('module', 'uiowa_bar') . '/js/ui-header.js');
+    drupal_add_css($path . '/css/ui-global-bar.css', array('group' => CSS_DEFAULT, 'every_page' => TRUE));
+    drupal_add_css($path . '/iconfonts/css/ui-bar-glyphs.css', array('group' => CSS_DEFAULT, 'every_page' => TRUE));
+    drupal_add_css($path . '/iconfonts/css/ui-bar-glyphs-ie7.css', array('group' => CSS_DEFAULT, 'every_page' => TRUE, 'browsers' => array('IE' => 'IE 7', '!IE' => FALSE)));
+    drupal_add_css($path . '/css/' . $color . '.css', array('group' => CSS_DEFAULT, 'every_page' => TRUE));
+    drupal_add_css($path . '/css/lte-ie8.css', array('group' => CSS_DEFAULT, 'every_page' => TRUE, 'browsers' => array('IE' => 'lte IE 8', '!IE' => FALSE)));
+    drupal_add_css($path . '/css/ie7.css', array('group' => CSS_DEFAULT, 'every_page' => TRUE, 'browsers' => array('IE' => 'IE 7', '!IE' => FALSE)));
+    drupal_add_js($path . '/js/ui-header.js');
 
-    // Build the University of Iowa branding bar.
     module_load_include('inc', 'uiowa_bar', 'includes/uiowa_bar.build');
-    // Get the top bar render array.
+    module_load_include('inc', 'uiowa_bar', 'includes/uiowa_bar_footer.build');
+
     $uiowa_bar_top_render_array = build_uiowa_bar();
+    $uiowa_bar_footer_render_array = build_uiowa_bar_footer();
+
     $page['page_top']['uiowa_bar'] = array(
       '#markup' => render($uiowa_bar_top_render_array),
       '#weight' => 25,
     );
 
-    // Build the University of Iowa branding bar footer.
-    module_load_include('inc', 'uiowa_bar', 'includes/uiowa_bar_footer.build');
-    // Get the footer location variable.
-    $footer_location = variable_get('uiowa_bar_footer_location');
-    // Get the footer bar render array.
-    $uiowa_bar_footer_render_array = build_uiowa_bar_footer();
     $page[$footer_location]['uiowa_bar_footer'] = array(
       '#markup' => render($uiowa_bar_footer_render_array),
       '#weight' => 25,
