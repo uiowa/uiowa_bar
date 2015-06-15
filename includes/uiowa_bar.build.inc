@@ -1,8 +1,6 @@
 <?php
-
 /**
  * @file
- *
  * Build and theme the University of Iowa branding bar.
  */
 
