@@ -9,10 +9,10 @@
  */
 function uiowa_bar_build_results() {
   $query_string = (drupal_get_query_parameters() ? drupal_get_query_parameters() : NULL);
-  $path = drupal_get_path('module', 'uiowa_bar');
+  $search_terms = isset($query_string['search']) ? $query_string['search'] : '';
 
   $search_params = array(
-    'q' => $query_string['search'],
+    'q' => $search_terms,
     'btnG' => 'Search',
     'client' => 'our_frontend',
     'output' => 'xml_no_dtd',
@@ -33,7 +33,7 @@ function uiowa_bar_build_results() {
       '#suffix' => '</h3>',
       'link' => array(
         '#type' => 'link',
-        '#title' => t('Search the University of Iowa for @terms', array('@terms' => $query_string['search'])),
+        '#title' => t('Search the University of Iowa for @terms', array('@terms' => $search_terms)),
         '#href' => "http://search.uiowa.edu/search?{$params}",
         '#attributes' => array(
           'target' => '_blank',
@@ -56,7 +56,7 @@ function uiowa_bar_build_results() {
             'type' => 'setting',
           ),
           array(
-            'data' => $path . '/js/cse.results.js',
+            'data' => drupal_get_path('module', 'uiowa_bar') . '/js/cse.results.js',
             'type' => 'file',
           ),
         ),
