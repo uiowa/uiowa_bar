@@ -93,6 +93,9 @@ function uiowa_bar_theme() {
 function uiowa_bar_page_build(&$page) {
   global $theme_key;
 
+  // Get this module's path.
+  $path = drupal_get_path('module', 'uiowa_bar');
+
   // If the theme being used is the default theme, build the bar.
   // This avoids us building the bar on pages using the admin theme.
   if (variable_get('theme_default', 'none') === $theme_key) {
