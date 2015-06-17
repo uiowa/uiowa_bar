@@ -1,8 +1,6 @@
 <?php
-
 /**
  * @file
- *
  * Build and theme the University of Iowa branding bar footer.
  */
 
@@ -118,9 +116,9 @@ function theme_uiowa_bar_link_list($variables = array()) {
       'html' => TRUE,
       'attributes' => array(
         'class' => array($link['class']),
-        'title' => $link['title']),
-      )
-    );
+        'title' => $link['title'],
+      ),
+    ));
   }
   return theme('item_list', array('items' => $links));
 }

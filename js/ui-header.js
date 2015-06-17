@@ -1,5 +1,10 @@
+/**
+ * @file
+ * UIowa bar dropdown functionality.
+ */
+
 (function ($) {
-  Drupal.uiowa_bar = function() {
+  Drupal.uiowaBar = function() {
     // Debulked onresize handler.
     function on_resize(c,t){onresize = function(){clearTimeout(t);t = setTimeout(c,100)};return c};
 
@@ -7,10 +12,12 @@
     $.fn.toggleAttr = function(attr, attr1, attr2) {
       return this.each(function() {
         var self = $(this);
-        if (self.attr(attr) == attr1)
+        if (self.attr(attr) == attr1) {
           self.attr(attr, attr2);
-        else
+        }
+        else {
           self.attr(attr, attr1);
+        }
       });
     };
 
@@ -59,11 +66,11 @@
     });
   };
 
-  // Attach uiowa_bar behavior.
-  Drupal.behaviors.uiowa_bar = {
+  // Attach uiowaBar behavior.
+  Drupal.behaviors.uiowaBar = {
     attach: function(context, settings) {
-      $('#ui-wrapper', context).once('uiowa_bar', function() {
-        Drupal.uiowa_bar();
+      $('#ui-wrapper', context).once('uiowaBar', function() {
+        Drupal.uiowaBar();
       });
     }
   };
