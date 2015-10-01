@@ -1,0 +1,8 @@
+{
+    "name": "its-uofiowa/uiowa_bar",
+    "description": "Adds the University of Iowa Branding Bar and Footer to the page.",
+    "type": "drupal-module",
+    "require": {
+      "composer/installers": "*"
+    }
+}
