@@ -34,7 +34,7 @@ function uiowa_bar_build_results() {
       'link' => array(
         '#type' => 'link',
         '#title' => t('Search the University of Iowa for @terms', array('@terms' => $search_terms)),
-        '#href' => "http://search.uiowa.edu/search?{$params}",
+        '#href' => "https://search.uiowa.edu/search?{$params}",
         '#attributes' => array(
           'target' => '_blank',
         ),
