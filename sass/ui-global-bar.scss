@@ -254,6 +254,16 @@
       font-size: 2.2rem;
     }
   }
+
+  .engineering-wordmark-link {
+    display: block;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .engineering-wordmark-link {
+      max-width: 200px;
+    }
+  }
 }
 
 /* =============================================================================
