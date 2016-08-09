@@ -36,6 +36,7 @@ function uiowa_bar_config_form($form, &$form_state) {
     '#options' => array(
       'standard-varient' => t('Standard'),
       'osl-varient' => t('Division of Student Life'),
+      'engineering-varient' => t('College of Engineering'),
     ),
   );
 
