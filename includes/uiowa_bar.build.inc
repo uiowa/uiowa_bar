@@ -9,6 +9,8 @@
  */
 function build_uiowa_bar() {
   $varient = variable_get('uiowa_bar_varient');
+  $theme = variable_get('uiowa_bar_color_palette');
+  $base_path = $GLOBALS['base_path'];
   $uiowa_bar = array();
 
   $uiowa_bar['ui-global-bar'] = array(
@@ -61,14 +63,23 @@ function build_uiowa_bar() {
   }
 
   if ($varient == 'engineering-varient') {
+    if ($theme == 'uiowa-bar-dark' || $theme == 'uiowa-bar-large-dark') {
+      $coe_wordmark = $base_path . drupal_get_path('module', 'uiowa_bar') . '/images/coe_wordmark_wht.png';
+    }
+    else {
+      $coe_wordmark = $base_path . drupal_get_path('module', 'uiowa_bar') . '/images/coe_wordmark_blk.png';
+    }
+    $coe_wordmark = '<img src="' . $coe_wordmark . '" alt="College of Engineering" />';
+
     $uiowa_bar['ui-global-bar']['container']['engineering-wordmark'] = array(
       '#attributes' => array('id' => array('engineering-wordmark')),
       '#type' => 'container',
     );
 
     $uiowa_bar['ui-global-bar']['container']['engineering-wordmark']['link'] = array(
-      '#markup' => l('College of Engineering', '//engineering.uiowa.edu',
+      '#markup' => l($coe_wordmark, '//engineering.uiowa.edu',
         array(
+          'html' => TRUE,
           'attributes' => array(
             'class' => 'engineering-wordmark-link',
             'id' =>'engineering-wordmark-link',
