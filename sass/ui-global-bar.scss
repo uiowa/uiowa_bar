@@ -242,8 +242,29 @@
     @include font-size(2.7);
     color: $ui-gold;
   }
-/* ========================================================================== */
 
+/* =============================================================================
+ *   Engineering Varient
+ * ========================================================================== */
+.engineering-varient {
+  #ui-logo {
+    float: none;
+
+    a {
+      font-size: 2.2rem;
+    }
+  }
+
+  .engineering-wordmark-link {
+    display: inline-block;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .engineering-wordmark-link {
+      max-width: 200px;
+    }
+  }
+}
 
 /* =============================================================================
  *   OSL Varient

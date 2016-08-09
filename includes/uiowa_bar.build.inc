@@ -8,17 +8,22 @@
  * Build out the University of Iowa branding bar.
  */
 function build_uiowa_bar() {
+  $varient = variable_get('uiowa_bar_varient');
+  $theme = variable_get('uiowa_bar_color_palette');
+  $base_path = $GLOBALS['base_path'];
   $uiowa_bar = array();
+
   $uiowa_bar['ui-global-bar'] = array(
     '#attributes' => array('id' => array('ui-wrapper')),
     '#type' => 'container',
   );
+
   $uiowa_bar['ui-global-bar']['container'] = array(
     '#attributes' => array('class' => array('container', 'l-container')),
     '#type' => 'container',
   );
 
-  if (variable_get('uiowa_bar_varient') == 'osl-varient') {
+  if ($varient == 'osl-varient') {
     $uiowa_bar['ui-global-bar']['container']['division-directory'] = array(
       '#attributes' => array('class' => array('division-directory')),
       '#type' => 'container',
@@ -41,10 +46,12 @@ function build_uiowa_bar() {
     '#attributes' => array('id' => array('ui-logo')),
     '#type' => 'container',
   );
+
   $uiowa_bar['ui-global-bar']['container']['ui-logo']['link'] = array(
     '#markup' => '<a href="http://www.uiowa.edu" title="The University of Iowa"><i class="ui-glyph-icon-domewordsingle" aria-hidden="true"></i><span class="element-invisible">The University of Iowa</span></a>',
   );
-  if (variable_get('uiowa_bar_varient') == 'osl-varient') {
+
+  if ($varient == 'osl-varient') {
     $uiowa_bar['ui-global-bar']['container']['osl-wordmark'] = array(
       '#attributes' => array('id' => array('osl-wordmark')),
       '#type' => 'container',
@@ -54,9 +61,38 @@ function build_uiowa_bar() {
       '#markup' => '<a href="#" class="directory-toggle"><i class="ui-glyph-icon-osl-wordmark" aria-hidden="true"></i><span class="element-invisible">Division of Student Life</span></a>',
     );
   }
+
+  if ($varient == 'engineering-varient') {
+    if ($theme == 'uiowa-bar-dark' || $theme == 'uiowa-bar-large-dark') {
+      $coe_wordmark = $base_path . drupal_get_path('module', 'uiowa_bar') . '/images/coe_wordmark_wht.png';
+    }
+    else {
+      $coe_wordmark = $base_path . drupal_get_path('module', 'uiowa_bar') . '/images/coe_wordmark_blk.png';
+    }
+    $coe_wordmark = '<img src="' . $coe_wordmark . '" alt="College of Engineering" />';
+
+    $uiowa_bar['ui-global-bar']['container']['engineering-wordmark'] = array(
+      '#attributes' => array('id' => array('engineering-wordmark')),
+      '#type' => 'container',
+    );
+
+    $uiowa_bar['ui-global-bar']['container']['engineering-wordmark']['link'] = array(
+      '#markup' => l($coe_wordmark, '//engineering.uiowa.edu',
+        array(
+          'html' => TRUE,
+          'attributes' => array(
+            'class' => 'engineering-wordmark-link',
+            'id' =>'engineering-wordmark-link',
+          ),
+        )
+      ),
+    );
+  }
+
   $uiowa_bar['ui-global-bar']['container']['ui-search-toggle'] = array(
     '#markup' => '<a href="#" title="Open search bar" id="ui-search-toggle" class="is-active"><i class="ui-glyph-icon-ui-search" aria-hidden="true"></i><span class="element-invisible">Toggle Search</span></a>',
   );
+
   $uiowa_bar['ui-global-bar']['container']['ui-search'] = array(
     '#attributes' => array(
       'id' => array('ui-search'),
@@ -64,6 +100,7 @@ function build_uiowa_bar() {
     ),
     '#type' => 'container',
   );
+
   $uiowa_bar['ui-global-bar']['container']['ui-search']['search-form'] = drupal_get_form('uiowa_bar_search_form');
 
   // Allow other modules to alter the top render array.
