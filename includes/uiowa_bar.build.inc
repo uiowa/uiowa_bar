@@ -77,7 +77,7 @@ function build_uiowa_bar() {
     );
 
     $uiowa_bar['ui-global-bar']['container']['engineering-wordmark']['link'] = array(
-      '#markup' => l($coe_wordmark, '//engineering.uiowa.edu',
+      '#markup' => l($coe_wordmark, 'http://engineering.uiowa.edu',
         array(
           'html' => TRUE,
           'attributes' => array(
