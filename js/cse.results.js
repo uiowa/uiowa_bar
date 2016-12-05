@@ -10,7 +10,7 @@
     }
 
     if (Drupal.settings.uiowaBar.cseScope == 1) {
-      cseAttributes.as_sitesearch = window.location.hostname;
+      cseAttributes.as_sitesearch = window.location.hostname+Drupal.settings.basePath;
     }
 
     google.search.cse.element.render({
