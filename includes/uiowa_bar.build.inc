@@ -101,6 +101,7 @@ function build_uiowa_bar() {
     '#attributes' => array(
       'id' => array('ui-search'),
       'class' => array('is-visible'),
+      'role' => 'search',
     ),
     '#type' => 'container',
   );
