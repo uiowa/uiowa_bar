@@ -14,7 +14,11 @@ function build_uiowa_bar() {
   $uiowa_bar = array();
 
   $uiowa_bar['ui-global-bar'] = array(
-    '#attributes' => array('id' => array('ui-wrapper')),
+    '#attributes' => array(
+      'id' => 'ui-wrapper',
+      'role' => 'complementary',
+      'aria-label' => 'UI global header',
+    ),
     '#type' => 'container',
   );
 
