@@ -143,6 +143,7 @@ function uiowa_bar_search_form($form, &$form_state) {
   $form['#attributes']['class'][] = 'search-google-appliance-search-form';
 
   $form['#attributes']['aria-label'][] = 'site search';
+  $form['#attributes']['role'] = 'search';
   return $form;
 }
 
