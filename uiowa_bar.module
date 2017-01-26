@@ -122,6 +122,10 @@ function uiowa_bar_page_build(&$page) {
       '#weight' => 25,
     );
 
+    // Change the form's role to search.
+    // Per (www.w3.org/TR/wai-aria-practices-1.1/examples/landmarks/search.html).
+    $page['page_top']['uiowa_bar']['#markup']  = str_replace('role="form"', 'role="search"', $page['page_top']['uiowa_bar']['#markup']);
+
     $page[$footer_location]['uiowa_bar_footer'] = array(
       '#markup' => render($uiowa_bar_footer_render_array),
       '#weight' => 25,
