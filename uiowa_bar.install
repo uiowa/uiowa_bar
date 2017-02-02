@@ -12,7 +12,8 @@ function uiowa_bar_install() {
   variable_set('uiowa_bar_cse_engine_id', '015014862498168032802:ben09oibdpm');
   // Set the default custom search scoping to this site.
   variable_set('uiowa_bar_cse_scope', 1);
-
+  // Set the default custom search scoping to this site.
+  variable_set('uiowa_bar_wordmark', 'uiowa');
   // Set permissions for the search.
   $roles = user_roles();
   foreach ($roles as $rid => $role) {
@@ -188,4 +189,12 @@ function uiowa_bar_update_7200() {
   variable_del('uiowa_bar_footer_location');
   // Delete the varient variable.
   variable_del('uiowa_bar_varient');
+}
+
+/**
+ * Add workmark option configuration.
+ */
+function uiowa_bar_update_7201() {
+  // Add the wordmark option variable.
+  variable_set('uiowa_bar_wordmark', 'uiowa');
 }

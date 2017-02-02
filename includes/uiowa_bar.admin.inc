@@ -15,6 +15,17 @@ function uiowa_bar_config_form($form, &$form_state) {
     '#markup' => t('<p>These settings allows you to customize the top University of Iowa branding bar.</p>'),
   );
 
+  $form['uiowa_bar_wordmark'] = array(
+    '#type' => 'radios',
+    '#title' => t('Wordmark'),
+    '#default_value' => variable_get('uiowa_bar_wordmark'),
+    '#options' => array(
+      'uiowa' => t('University'),
+      'uihc' => t('UI Healthcare')
+    ),
+    '#description' => t('Choose between the University or UI Healthcare wordmarks'),
+  );
+
   $form['uiowa_bar_cse_engine_id'] = array(
     '#type' => 'textfield',
     '#title' => t('Search Engine ID'),

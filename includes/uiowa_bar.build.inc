@@ -9,6 +9,7 @@
  */
 function build_uiowa_bar() {
   $path = drupal_get_path('module', 'uiowa_bar');
+  $wordmark = variable_get('uiowa_bar_wordmark');
   $uiowa_bar = array();
 
   $uiowa_bar['uiowa-bar'] = array(
@@ -23,7 +24,7 @@ function build_uiowa_bar() {
 
 
   $uiowa_bar['uiowa-bar']['container']['wordmark'] = array(
-    '#markup' => '<a href="http://www.uiowa.edu" title="The University of Iowa" id="wordmark-link" ><img src="'.$path.'/assets/uiowa.svg"  id="wordmark"/></a>',
+    '#markup' => '<a href="http://www.uiowa.edu" title="The University of Iowa" id="wordmark-link" ><img src="'.$path.'/assets/'.$wordmark.'.svg"  id="wordmark"/></a>',
   );
 
 
