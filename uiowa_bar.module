@@ -7,14 +7,6 @@
  * implements the Google Custom Search.
  */
 
-/**
- * Implements hook_preprocess_HOOK().
- */
-function uiowa_bar_preprocess_html(&$vars) {
-  // Add a body class for the active theme name.
-  $vars['classes_array'][] = variable_get('uiowa_bar_color_palette');
-  $vars['classes_array'][] = variable_get('uiowa_bar_varient');
-}
 
 /**
  * Implements hook_permission().
@@ -59,22 +51,6 @@ function uiowa_bar_menu() {
   return $items;
 }
 
-/**
- * Implements hook_form_system_theme_settings_alter().
- */
-function uiowa_bar_form_system_theme_settings_alter(&$form, &$form_state) {
-  // Custom University of Iowa branding bar styles.
-  $form['at-settings']['ui_branding'] = array(
-    '#type' => 'fieldset',
-    '#title' => t('University of Iowa branding bar'),
-    '#description' => t('<p>University of Iowa branding bar customization.</p>'),
-  );
-
-  $form['at-settings']['ui_branding']['content'] = array(
-    '#type' => 'markup',
-    '#markup' => '<p>Many customization options are available for the University of Iowa branding bar, including color palette and how the bar functions.</p><p><a href="' . $GLOBALS['base_url'] . '/admin/config/user-interface/uiowa-bar">Customize the University of Iowa branding bar</a>.</p>',
-  );
-}
 
 /**
  * Implements hook_theme().
@@ -100,30 +76,15 @@ function uiowa_bar_page_build(&$page) {
   // This avoids us building the bar on pages using the admin theme.
   if (variable_get('theme_default', 'none') === $theme_key) {
     $path = drupal_get_path('module', 'uiowa_bar');
-    $color = variable_get('uiowa_bar_color_palette');
-    $footer_location = variable_get('uiowa_bar_footer_location');
-
-    drupal_add_css($path . '/css/ui-global-bar.css', array('group' => CSS_DEFAULT, 'every_page' => TRUE));
-    drupal_add_css($path . '/iconfonts/css/ui-bar-glyphs.css', array('group' => CSS_DEFAULT, 'every_page' => TRUE));
-    drupal_add_css($path . '/iconfonts/css/ui-bar-glyphs-ie7.css', array('group' => CSS_DEFAULT, 'every_page' => TRUE, 'browsers' => array('IE' => 'IE 7', '!IE' => FALSE)));
-    drupal_add_css($path . '/css/' . $color . '.css', array('group' => CSS_DEFAULT, 'every_page' => TRUE));
-    drupal_add_css($path . '/css/lte-ie8.css', array('group' => CSS_DEFAULT, 'every_page' => TRUE, 'browsers' => array('IE' => 'lte IE 8', '!IE' => FALSE)));
-    drupal_add_css($path . '/css/ie7.css', array('group' => CSS_DEFAULT, 'every_page' => TRUE, 'browsers' => array('IE' => 'IE 7', '!IE' => FALSE)));
-    drupal_add_js($path . '/js/ui-header.js');
+    drupal_add_css($path . '/css/uiowa-bar.css', array('group' => CSS_DEFAULT, 'every_page' => TRUE));
+      drupal_add_js($path . '/js/ui-header.js');
 
     module_load_include('inc', 'uiowa_bar', 'includes/uiowa_bar.build');
-    module_load_include('inc', 'uiowa_bar', 'includes/uiowa_bar_footer.build');
-
+    
     $uiowa_bar_top_render_array = build_uiowa_bar();
-    $uiowa_bar_footer_render_array = build_uiowa_bar_footer();
 
     $page['page_top']['uiowa_bar'] = array(
       '#markup' => render($uiowa_bar_top_render_array),
-      '#weight' => 25,
-    );
-
-    $page[$footer_location]['uiowa_bar_footer'] = array(
-      '#markup' => render($uiowa_bar_footer_render_array),
       '#weight' => 25,
     );
   }

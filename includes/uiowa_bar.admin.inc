@@ -15,42 +15,6 @@ function uiowa_bar_config_form($form, &$form_state) {
     '#markup' => t('<p>These settings allows you to customize the top University of Iowa branding bar.</p>'),
   );
 
-  $form['uiowa_bar_color_palette'] = array(
-    '#type' => 'select',
-    '#title' => t('Color Palette'),
-    '#default_value' => variable_get('uiowa_bar_color_palette'),
-    '#description' => t('Choose the color palette of the University of Iowa Branding Bar'),
-    '#options' => array(
-      'uiowa-bar-light' => t('Light Theme'),
-      'uiowa-bar-gold' => t('Gold Theme'),
-      'uiowa-bar-dark' => t('Dark Theme'),
-      'uiowa-bar-large-dark' => t('Large Dark Theme'),
-    ),
-  );
-
-  $form['uiowa_bar_varient'] = array(
-    '#type' => 'select',
-    '#title' => t('Varient'),
-    '#default_value' => variable_get('uiowa_bar_varient'),
-    '#description' => t('Choose the varient of the University of Iowa Branding Bar'),
-    '#options' => array(
-      'standard-varient' => t('Standard'),
-      'osl-varient' => t('Division of Student Life'),
-      'engineering-varient' => t('College of Engineering'),
-    ),
-  );
-
-  $form['uiowa_bar_footer_location'] = array(
-    '#type' => 'select',
-    '#title' => t('Footer Location'),
-    '#default_value' => variable_get('uiowa_bar_footer_location'),
-    '#description' => t('Choose which region to render the footer. This may style the footer differently depending upon your theme.'),
-    '#options' => array(
-      'footer' => t('Footer Region'),
-      'page_bottom' => t('Page Bottom Region'),
-    ),
-  );
-
   $form['uiowa_bar_cse_engine_id'] = array(
     '#type' => 'textfield',
     '#title' => t('Search Engine ID'),

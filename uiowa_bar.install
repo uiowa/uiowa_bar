@@ -8,16 +8,10 @@
  * Implements hook_install().
  */
 function uiowa_bar_install() {
-  // Set the default color palette to the dark palette.
-  variable_set('uiowa_bar_color_palette', 'uiowa-bar-dark');
-  // Set the default footer rendering location.
-  variable_set('uiowa_bar_footer_location', 'page_bottom');
   // Set the default custom search engine id.
   variable_set('uiowa_bar_cse_engine_id', '015014862498168032802:ben09oibdpm');
   // Set the default custom search scoping to this site.
   variable_set('uiowa_bar_cse_scope', 1);
-  // Set the default varient.
-  variable_set('uiowa_bar_varient', 'standard-varient');
 
   // Set permissions for the search.
   $roles = user_roles();
@@ -30,16 +24,10 @@ function uiowa_bar_install() {
  * Implements hook_uninstall().
  */
 function uiowa_bar_uninstall() {
-  // Delete the color palette variable.
-  variable_del('uiowa_bar_color_palette');
-  // Delete the footer location variable.
-  variable_del('uiowa_bar_footer_location');
   // Delete the custom search engine id variable.
   variable_del('uiowa_bar_cse_engine_id');
   // Delete the custom search scoping variable.
   variable_del('uiowa_bar_cse_scope');
-  // Delete the varient variable.
-  variable_del('uiowa_bar_varient');
 }
 
 /**
@@ -188,4 +176,16 @@ function uiowa_bar_update_7111(&$sandbox) {
 function uiowa_bar_update_7112() {
   // Delete the search tool variable.
   variable_del('uiowa_bar_search_tool');
+}
+
+/**
+ * Remove configuration no longer applicable to the module.
+ */
+function uiowa_bar_update_7200() {
+  // Delete the color palette variable.
+  variable_del('uiowa_bar_color_palette');
+  // Delete the footer location variable.
+  variable_del('uiowa_bar_footer_location');
+  // Delete the varient variable.
+  variable_del('uiowa_bar_varient');
 }
