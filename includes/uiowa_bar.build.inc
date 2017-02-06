@@ -14,7 +14,11 @@ function build_uiowa_bar() {
   $uiowa_bar = array();
 
   $uiowa_bar['ui-global-bar'] = array(
-    '#attributes' => array('id' => array('ui-wrapper')),
+    '#attributes' => array(
+      'id' => 'ui-wrapper',
+      'role' => 'region',
+      'aria-label' => 'UI global header',
+    ),
     '#type' => 'container',
   );
 
@@ -138,6 +142,8 @@ function uiowa_bar_search_form($form, &$form_state) {
   $form['#attributes']['class'][] = 'search-form';
   $form['#attributes']['class'][] = 'search-google-appliance-search-form';
 
+  $form['#attributes']['aria-label'] = 'site search';
+  $form['#attributes']['role'] = 'search';
   return $form;
 }
 

@@ -10,7 +10,11 @@
 function build_uiowa_bar_footer() {
   $uiowa_bar = array();
   $uiowa_bar['ui-global-footer'] = array(
-    '#attributes' => array('id' => array('ui-global-footer')),
+    '#attributes' => array(
+      'id' => 'ui-global-footer',
+      'role' => 'region',
+      'aria-label' => 'UI global footer',
+    ),
     '#type' => 'container',
   );
   $uiowa_bar['ui-global-footer']['container'] = array(
