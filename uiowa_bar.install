@@ -14,6 +14,11 @@ function uiowa_bar_install() {
   variable_set('uiowa_bar_cse_scope', 1);
   // Set the default custom search scoping to this site.
   variable_set('uiowa_bar_wordmark', 'uiowa');
+  // Create the variables for the branding bar links.
+  variable_set('uiowa_bar_link1_title', '');
+  variable_set('uiowa_bar_link1_url', '');
+  variable_set('uiowa_bar_link2_title', '');
+  variable_set('uiowa_bar_link2_url', '');
   // Set permissions for the search.
   $roles = user_roles();
   foreach ($roles as $rid => $role) {
@@ -197,4 +202,15 @@ function uiowa_bar_update_7200() {
 function uiowa_bar_update_7201() {
   // Add the wordmark option variable.
   variable_set('uiowa_bar_wordmark', 'uiowa');
+}
+
+/**
+ * Create the variables for the branding bar links.
+ */
+function uiowa_bar_update_7202() {
+  // Create the variables for the branding bar links.
+  variable_set('uiowa_bar_link1_title', '');
+  variable_set('uiowa_bar_link1_url', '');
+  variable_set('uiowa_bar_link2_title', '');
+  variable_set('uiowa_bar_link2_url', '');
 }

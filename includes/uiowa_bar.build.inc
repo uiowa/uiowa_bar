@@ -10,6 +10,11 @@
 function build_uiowa_bar() {
   $path = drupal_get_path('module', 'uiowa_bar');
   $wordmark = variable_get('uiowa_bar_wordmark');
+  $link1_title = variable_get('uiowa_bar_link1_title');
+  $link1_url = variable_get('uiowa_bar_link1_url');
+  $link2_title = variable_get('uiowa_bar_link2_title');
+  $link2_url = variable_get('uiowa_bar_link2_url');
+
   $uiowa_bar = array();
 
   $uiowa_bar['uiowa-bar'] = array(
@@ -24,7 +29,7 @@ function build_uiowa_bar() {
 
 
   $uiowa_bar['uiowa-bar']['container']['wordmark'] = array(
-    '#markup' => '<a href="http://www.uiowa.edu" title="The University of Iowa" id="wordmark-link" ><img src="'.$path.'/assets/'.$wordmark.'.svg"  id="wordmark"/></a>',
+    '#markup' => '<a href="http://www.uiowa.edu" title="The University of Iowa" id="wordmark-link" ><img src="/'.$path.'/assets/'.$wordmark.'.svg"  id="wordmark"/></a>',
   );
 
 
@@ -34,6 +39,12 @@ function build_uiowa_bar() {
     ),
     '#type' => 'container',
   );
+
+  if($link1_title && $link1_url){
+    $uiowa_bar['uiowa-bar']['container']['uiowa-search']['links'] = array(
+      '#markup' => 'test',
+    );
+  }
 
   $uiowa_bar['uiowa-bar']['container']['uiowa-search']['search-form'] = drupal_get_form('uiowa_bar_search_form');
 

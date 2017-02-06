@@ -26,6 +26,48 @@ function uiowa_bar_config_form($form, &$form_state) {
     '#description' => t('Choose between the University or UI Healthcare wordmarks'),
   );
 
+  $form['uiowa_bar_link1'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Link'),
+    '#collapsible' => TRUE, 
+    '#collapsed' => TRUE,
+  );
+
+  $form['uiowa_bar_link1']['uiowa_bar_link1_title'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Title'),
+    '#default_value' => variable_get('uiowa_bar_link1_title'),
+    '#size' => 60,
+  );
+
+  $form['uiowa_bar_link1']['uiowa_bar_link1_url'] = array(
+    '#type' => 'textfield',
+    '#title' => t('URL'),
+    '#default_value' => variable_get('uiowa_bar_link1_url'),
+    '#size' => 60,
+  );
+
+  $form['uiowa_bar_link2'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Link'),
+    '#collapsible' => TRUE, 
+    '#collapsed' => TRUE,
+  );
+
+  $form['uiowa_bar_link2']['title'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Title'),
+    '#default_value' => variable_get('uiowa_bar_link2_title'),
+    '#size' => 60,
+  );
+
+  $form['uiowa_bar_link2']['url'] = array(
+    '#type' => 'textfield',
+    '#title' => t('URL'),
+    '#default_value' => variable_get('uiowa_bar_link2_url'),
+    '#size' => 60,
+  );
+
   $form['uiowa_bar_cse_engine_id'] = array(
     '#type' => 'textfield',
     '#title' => t('Search Engine ID'),
