@@ -15,18 +15,24 @@
 #uiowa-bar #wordmark-link{
 	display: block;
 }
-#uiowa-bar #wordmark {
+#uiowa-bar svg {
 	width: auto; 
 	height: 30px; 
+	fill: #FCD116;
 }
+
 #uiowa-bar #uiowa-search{
 	margin-top: 5px;
+	font-size: 11px;
 }
 #uiowa-bar #uiowa-search div { 
 	display: inline-block; 
 }
-#uiowa-bar #uiowa-search .form-group{
+#uiowa-bar #uiowa-search .form-group,
+#uiowa-bar #uiowa-search .form-item,
+#uiowa-bar #uiowa-search .search-form{
 	margin-bottom: 0;
+	margin-top: 0;
 }
 #uiowa-bar #uiowa-search label{
 	position:absolute;
@@ -36,7 +42,8 @@
 	height:1px;
 	overflow:hidden;
 }
-#uiowa-bar #uiowa-search .form-control { 
+#uiowa-bar #uiowa-search .form-control,
+#uiowa-bar #uiowa-search #edit-search-terms { 
 	width: inherit; 
 	padding:6px 15px; 
 	height: inherit;
@@ -44,15 +51,15 @@
 	border-radius: 0;
 	border-width: 0px; 
 	background-color: #E8E8E8; 
-	font-size: 1.1em;
+	font-size: 11px;
 	display: inline-block;
 }
-#uiowa-bar #uiowa-search #edit-submit-search { 
+#uiowa-bar #uiowa-search input#edit-submit-search { 
 	padding:6px 15px; 
 	border: none;
 	background-color:#a6a6a6;
 	border-radius: 0;
 	color:#000000;
 	margin: -1px 0 0 -3px;
-	font-size: 1.1em;
+	font-size: 11px;
 }
