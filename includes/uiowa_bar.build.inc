@@ -23,7 +23,7 @@ function build_uiowa_bar() {
   );
 
   $uiowa_bar['uiowa-bar']['container'] = array(
-    '#attributes' => array('class' => array('wrapper')),
+    '#attributes' => array('class' => array('container', 'l-container')),
     '#type' => 'container',
   );
 
