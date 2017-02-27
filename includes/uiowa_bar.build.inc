@@ -18,36 +18,43 @@ function build_uiowa_bar() {
   $uiowa_bar = array();
 
   $uiowa_bar['uiowa-bar'] = array(
-    '#attributes' => array('id' => array('uiowa-bar')),
-    '#type' => 'container',
-  );
-
-  $uiowa_bar['uiowa-bar']['container'] = array(
-    '#attributes' => array('class' => array('container', 'l-container')),
+    '#attributes' => array(
+      'id' => array('uiowa-bar'),
+      'role' => 'region',
+      'aria-label' => 'University of Iowa global header',
+    ),
     '#type' => 'container',
   );
 
   $wordmark_svg = file_get_contents(drupal_get_path('module', 'uiowa_bar').'/assets/'.$wordmark.'.svg');
 
-  $uiowa_bar['uiowa-bar']['container']['wordmark'] = array(
+  $uiowa_bar['uiowa-bar']['wordmark'] = array(
     '#markup' => '<a href="http://www.uiowa.edu" title="The University of Iowa" id="wordmark-link">'.$wordmark_svg.'</a>',
   );
 
 
-  $uiowa_bar['uiowa-bar']['container']['uiowa-search'] = array(
+  $uiowa_bar['uiowa-bar']['uiowa-search'] = array(
     '#attributes' => array(
       'id' => array('uiowa-search'),
     ),
     '#type' => 'container',
   );
 
-  if($link1_title && $link1_url){
-    $uiowa_bar['uiowa-bar']['container']['uiowa-search']['links'] = array(
-      '#markup' => 'test',
+  if(($link1_title && $link1_url) || ($link1_title && $link1_url)){
+    $branding_bar_links = array();
+    if($link1_title && $link1_url){
+      $branding_bar_links[] = array( 'title' => $link1_title, 'href' => $link1_url);
+    }
+    if($link2_title && $link2_url){
+      $branding_bar_links[] = array( 'title' => $link2_title, 'href' => $link2_url);
+    }
+    $uiowa_bar['uiowa-bar']['uiowa-search']['links'] = array(
+      '#theme' => 'links',
+      '#links' => $branding_bar_links,
     );
   }
 
-  $uiowa_bar['uiowa-bar']['container']['uiowa-search']['search-form'] = drupal_get_form('uiowa_bar_search_form');
+  $uiowa_bar['uiowa-bar']['uiowa-search']['search-form'] = drupal_get_form('uiowa_bar_search_form');
 
   // Allow other modules to alter the top render array.
   drupal_alter('uiowa_bar_top', $uiowa_bar);
@@ -80,7 +87,8 @@ function uiowa_bar_search_form($form, &$form_state) {
   // (keep it general in case core search is enabled).
   $form['#attributes']['class'][] = 'search-form';
   $form['#attributes']['class'][] = 'search-google-appliance-search-form';
-
+  $form['#attributes']['aria-label'] = 'site search';
+  $form['#attributes']['role'] = 'search';
   return $form;
 }
 
