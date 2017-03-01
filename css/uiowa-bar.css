@@ -5,46 +5,42 @@
 	font-family: sans-serif;
 	box-sizing: border-box;
 	padding: 6px 10px 2px;
-	display: flex; 
-	justify-content: space-between; 
 	width: 100%;
-}
-#uiowa-bar .container { 
-
+	position: relative;
 }
 
-#uiowa-bar .container:before,
-#uiowa-bar .container:after { 
-	content: none;
-}
 
-#uiowa-bar #wordmark-link{
-	display: block;
-}
 #uiowa-bar svg {
 	width: auto; 
 	height: 27px; 
 	fill: #FCD116;
 }
 
-#uiowa-bar #uiowa-search{
-	margin-top: 3px;
+#uiowa-bar #wordmark-link{
+	display: block;
+	text-align: center;
 }
+
+
 #uiowa-bar #uiowa-search div,
 #uiowa-bar #uiowa-search ul,
 #uiowa-bar #uiowa-search li,
 #uiowa-bar #uiowa-search form { 
-	display: inline-block; 
+	display: inline; 
+	text-align: center;
+	margin: 0 auto;
 }
+
 
 #uiowa-bar #uiowa-search form .btn { 
-	display: inline-block; 
+	display: inline; 
 	clear: none;
-	width: inherit;
+	width: 20%;
 }
 
+
 #uiowa-bar #uiowa-search .links{
-	margin-right: 20px;
+	display: none;
 }
 
 #uiowa-bar #uiowa-search .links a{
@@ -72,13 +68,14 @@
 }
 #uiowa-bar #uiowa-search .form-control,
 #uiowa-bar #uiowa-search #edit-search-terms { 
+	display: inline;
 	border-radius: 0;
 	height: inherit;
 	padding: 4px;
 	border-width: 0px;
-	width: 120px;
+	width: 79%;
 	font-size: 1em;
-	background-color: #E8E8E8; 
+	background-color: #222; 
 }
 
 #uiowa-bar #uiowa-search #edit-search-terms::-webkit-input-placeholder,
@@ -97,4 +94,39 @@
 	background-color:#888888;
 	border-radius: 0;
 	color:#E8E8E8;
+}
+
+@media (min-width: 500px){
+	#uiowa-bar{
+		height: 40px;
+	}
+	#uiowa-bar #wordmark-link{
+		display: block;
+		position: absolute;
+		top: 6px;
+		left: 25px;
+	}
+	#uiowa-bar #uiowa-search{
+		margin-top: 3px;
+		position: absolute;
+		top: 6px;
+		right: 25px;
+	}
+	#uiowa-bar #uiowa-search .form-control,
+	#uiowa-bar #uiowa-search #edit-search-terms { 
+		display: inline;
+		width: 120px;
+		background-color: #E8E8E8; 
+	}
+	#uiowa-bar #uiowa-search form .btn { 
+		display: inline; 
+		width: inherit;
+	}
+}
+
+@media (min-width: 700px){
+	#uiowa-bar #uiowa-search .links{
+		display: inline-block;
+		margin-right: 20px;
+	}
 }

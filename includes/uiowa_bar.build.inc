@@ -26,13 +26,6 @@ function build_uiowa_bar() {
     '#type' => 'container',
   );
 
-  $wordmark_svg = file_get_contents(drupal_get_path('module', 'uiowa_bar').'/assets/'.$wordmark.'.svg');
-
-  $uiowa_bar['uiowa-bar']['wordmark'] = array(
-    '#markup' => '<a href="http://www.uiowa.edu" title="The University of Iowa" id="wordmark-link">'.$wordmark_svg.'</a>',
-  );
-
-
   $uiowa_bar['uiowa-bar']['uiowa-search'] = array(
     '#attributes' => array(
       'id' => array('uiowa-search'),
@@ -55,6 +48,12 @@ function build_uiowa_bar() {
   }
 
   $uiowa_bar['uiowa-bar']['uiowa-search']['search-form'] = drupal_get_form('uiowa_bar_search_form');
+
+  $wordmark_svg = file_get_contents(drupal_get_path('module', 'uiowa_bar').'/assets/'.$wordmark.'.svg');
+
+  $uiowa_bar['uiowa-bar']['wordmark'] = array(
+    '#markup' => '<a href="http://www.uiowa.edu" title="The University of Iowa" id="wordmark-link">'.$wordmark_svg.'</a>',
+  );
 
   // Allow other modules to alter the top render array.
   drupal_alter('uiowa_bar_top', $uiowa_bar);
