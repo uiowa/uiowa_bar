@@ -9,6 +9,10 @@
 	position: relative;
 }
 
+#uiowa-bar .fallback{
+	color: #FCD116;
+}
+
 
 #uiowa-bar svg {
 	width: auto; 
@@ -116,11 +120,13 @@
 	#uiowa-bar #uiowa-search #edit-search-terms { 
 		display: inline;
 		width: 120px;
-		background-color: #E8E8E8; 
+		border-left: 1px solid #888;
 	}
+
 	#uiowa-bar #uiowa-search form .btn { 
 		display: inline; 
 		width: inherit;
+		border: 1px solid #888;
 	}
 }
 
