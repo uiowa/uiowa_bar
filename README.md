@@ -33,6 +33,10 @@ This was removed as it was more confusing to users than helpful.
 
 All information on a web site is automatically copyrighted, so you do not need to have it on your site. If you would like it, feel free to include it in your site footer.
 
+### The global footer provided a link to the privacy statement, do I need that on my site?
+
+The privacy statement linked off the home page covers all sites under uiowa.edu, however you may consider adding it to your site footer as well.
+
 ### Will websites also be required to use a standard favicon/touch icons?
 
 While not mentioned specifically in the brand manual, it is encouraged to use the gold dome on a black background as outlined in the social media section. There is a [Drupal module](https://github.com/ITS-UofIowa/uiowa_favicon) available which can put this in place for you.
