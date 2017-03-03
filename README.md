@@ -37,6 +37,12 @@ All information on a web site is automatically copyrighted, so you do not need t
 
 The privacy statement linked off the home page covers all sites under uiowa.edu, however you may consider adding it to your site footer as well.
 
+### What is the tag manager code?
+
+This module adds a Google Tag Manager code to all sites with a single Google Analytics code in it. This allows for tracking traffic across all sites using this module. It is meant to handle the situation where a site did not install Google Analytics and needs information about their site, however it may also be used to gather data about how traffic flows across the University web sites.
+
+This will not impact any Google Analytics code that may be on your site already.
+
 ### Will websites also be required to use a standard favicon/touch icons?
 
 While not mentioned specifically in the brand manual, it is encouraged to use the gold dome on a black background as outlined in the social media section. There is a [Drupal module](https://github.com/ITS-UofIowa/uiowa_favicon) available which can put this in place for you.
