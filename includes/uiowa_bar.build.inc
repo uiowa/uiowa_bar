@@ -39,7 +39,7 @@ function build_uiowa_bar() {
     '#type' => 'container',
   );
 
-  if(($link1_title && $link1_url) || ($link1_title && $link1_url)){
+  if(($link1_title && $link1_url) || ($link2_title && $link2_url)){
     $branding_bar_links = array();
     if($link1_title && $link1_url){
       $branding_bar_links[] = array( 'title' => $link1_title, 'href' => $link1_url);

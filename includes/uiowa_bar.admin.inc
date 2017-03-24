@@ -54,14 +54,14 @@ function uiowa_bar_config_form($form, &$form_state) {
     '#collapsed' => TRUE,
   );
 
-  $form['uiowa_bar_link2']['title'] = array(
+  $form['uiowa_bar_link2']['uiowa_bar_link2_title'] = array(
     '#type' => 'textfield',
     '#title' => t('Title'),
     '#default_value' => variable_get('uiowa_bar_link2_title'),
     '#size' => 60,
   );
 
-  $form['uiowa_bar_link2']['url'] = array(
+  $form['uiowa_bar_link2']['uiowa_bar_link2_url'] = array(
     '#type' => 'textfield',
     '#title' => t('URL'),
     '#default_value' => variable_get('uiowa_bar_link2_url'),
