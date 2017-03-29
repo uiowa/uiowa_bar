@@ -11,9 +11,7 @@ The module has been built to be compatibile with all modern browsers, as well as
 
 Enable the module as usual.
 
-The module provides a default light theme for the bar and footer. If you wish to
-change the palette to the dark theme, navigate to
-admin/config/user-interface/uiowa-bar
+Settings for the module can be found when logged into your site at admin/config/user-interface/uiowa-bar
 
 ## FAQs
 
