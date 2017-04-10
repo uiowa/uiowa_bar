@@ -128,6 +128,11 @@
   color: #000;
 }
 
+#uiowa-bar #uiowa-search input#edit-submit-search:hover,
+#uiowa-bar #uiowa-search input#edit-submit-search:focus {
+  background-color: #FFCD00;
+}
+
 @media(max-width: 500px) {
   #uiowa-bar{
     height: inherit;
