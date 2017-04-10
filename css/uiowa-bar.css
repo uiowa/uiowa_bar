@@ -117,6 +117,7 @@
 
 #uiowa-bar #uiowa-search input#edit-submit-search {
   border: none;
+  line-height: normal;
   margin-left: -3px;
   padding: 4px 10px;
   font-size: 1.1em;
