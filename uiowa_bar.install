@@ -214,3 +214,19 @@ function uiowa_bar_update_7202() {
   variable_set('uiowa_bar_link2_title', '');
   variable_set('uiowa_bar_link2_url', '');
 }
+
+/**
+ * If Hidden CAPTCHA, set No Challenge.
+ */
+function uiowa_bar_update_7203() {
+  // If Hidden CAPTCHA is enabled.
+  if (module_exists('hidden_captcha')) {
+    // If Default challenge on non-listed forms is checked.
+    if (variable_get(captcha_default_challenge_on_nonlisted_forms) == '1') {
+      // Set the default challenge type for uiowa_bar_search_form to No Challenge.
+      db_insert('captcha_points')
+        ->fields(array('form_id' => 'uiowa_bar_search_form',))
+        ->execute();
+    }
+  }
+}
