@@ -133,6 +133,49 @@
   background-color: #FFCD00;
 }
 
+/* Search results styling */
+
+#search-results .gsc-control-cse,
+#search-results .gsc-table-result{
+  font-family: inherit !important;
+}
+
+#search-results .gsc-control-cse table,
+#search-results .gsc-table-result table {
+  margin: 0;
+}
+
+#search-results .gsc-control-cse tbody tr,
+#search-results .gsc-table-result tbody tr {
+  border: 1px solid #FFFFFF;
+}
+#search-results .gsc-control-cse .gsc-table-result,
+#search-results .gsc-table-result .gsc-table-result {
+  margin-left: 8px;
+}
+#search-results .gsc-control-cse .gsc-input-box,
+#search-results .gsc-table-result .gsc-input-box {
+  height: auto;
+}
+#search-results .gsc-control-cse .cse .gsc-search-button input.gsc-search-button-v2,
+#search-results .gsc-table-result .cse .gsc-search-button input.gsc-search-button-v2,
+#search-results .gsc-control-cse input.gsc-search-button-v2,
+#search-results .gsc-table-result input.gsc-search-button-v2{
+  height: auto;
+  width: auto;
+}
+#search-results .gsc-control-cse .gsc-selected-option-container,
+#search-results .gsc-table-result .gsc-selected-option-container {
+  height: auto;
+  width: auto !important;
+  max-width: 100%;
+}
+
+#search-results .gs-result .gs-title,
+#search-results .gs-result .gs-title *{
+  color: #222 ;
+}
+
 @media(max-width: 500px) {
   #uiowa-bar{
     height: inherit;
