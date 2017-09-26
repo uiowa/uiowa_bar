@@ -33,11 +33,19 @@ function build_uiowa_bar() {
     '#type' => 'container',
   );
 
-    $wordmark_svg = file_get_contents(drupal_get_path('module', 'uiowa_bar').'/assets/'.$wordmark.'.svg');
+  $wordmark_svg = file_get_contents(drupal_get_path('module', 'uiowa_bar').'/assets/'.$wordmark.'.svg');
 
-  $uiowa_bar['ui-wrapper']['uiowa-bar']['wordmark'] = array(
-    '#markup' => '<a href="http://www.uiowa.edu" title="The University of Iowa" id="wordmark-link">'.$wordmark_svg.'</a>',
-  );
+  if($wordmark == 'uiowa'){
+    $uiowa_bar['ui-wrapper']['uiowa-bar']['wordmark'] = array(
+      '#markup' => '<a href="https://uiowa.edu" title="The University of Iowa" id="wordmark-link">'.$wordmark_svg.'</a>',
+    );
+  }
+  elseif($wordmark == 'uihc'){
+    $uiowa_bar['ui-wrapper']['uiowa-bar']['wordmark'] = array(
+      '#markup' => '<a href="https://uihealthcare.org" title="University of Iowa Health Care" id="wordmark-link">'.$wordmark_svg.'</a>',
+    );
+  }
+  
 
   $uiowa_bar['ui-wrapper']['uiowa-bar']['uiowa-search'] = array(
     '#attributes' => array(
