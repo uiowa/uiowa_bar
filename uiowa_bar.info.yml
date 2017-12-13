@@ -1,0 +1,6 @@
+name: Uiowa Bar
+type: module
+description: The description.
+package: uiowa
+core: 8.x
+configure: uiowa_bar.settings_form

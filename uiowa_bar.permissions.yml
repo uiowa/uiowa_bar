@@ -1,0 +1,4 @@
+administer uiowa_bar configuration:
+  title: 'Administer uiowa_bar configuration'
+  description: 'Optional description.'
+  restrict access: true

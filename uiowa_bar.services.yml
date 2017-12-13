@@ -1,0 +1,6 @@
+services:
+  uiowa_bar.event_subscriber:
+    class: Drupal\uiowa_bar\EventSubscriber\UiowaBarSubscriber
+    arguments: ['@current_user']
+    tags:
+      - { name: event_subscriber }
