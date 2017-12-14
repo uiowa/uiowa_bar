@@ -30,68 +30,68 @@ class SettingsForm extends ConfigFormBase {
   public function buildForm(array $form, FormStateInterface $form_state) {
     $config = $this->config('uiowa_bar.settings');
 
-    $form['markup'] = array(
+    $form['markup'] = [
       '#type' => 'markup',
       '#markup' => t('<p>These settings allows you to customize the top University of Iowa branding bar.</p>'),
-    );
-    $form['wordmark'] = array(
+    ];
+    $form['wordmark'] = [
       '#type' => 'radios',
       '#title' => t('Wordmark'),
       '#required' => TRUE,
       '#default_value' => $config->get('uiowa_bar.wordmark'),
-      '#options' => array(
+      '#options' => [
         'uiowa' => t('University'),
         'uihc' => t('UI Healthcare')
-      ),
+      ],
       '#description' => t('Choose between the University or UI Healthcare wordmarks'),
-    );
-    $form['link_1'] = array(
+    ];
+    $form['link_1'] = [
       '#type' => 'details',
       '#title' => 'Link: ' . $config->get('uiowa_bar.link_1_title') . ' -> ' . $config->get('uiowa_bar.link_1_url'),
-    );
-    $form['link_1']['link_1_title'] = array(
+    ];
+    $form['link_1']['link_1_title'] = [
       '#type' => 'textfield',
       '#title' => t('Title'),
       '#default_value' => $config->get('uiowa_bar.link_1_title'),
       '#size' => 60,
-    );
-    $form['link_1']['link_1_url'] = array(
+    ];
+    $form['link_1']['link_1_url'] = [
       '#type' => 'url',
       '#title' => t('URL'),
       '#default_value' => $config->get('uiowa_bar.link_1_url'),
       '#size' => 60,
-    );
-    $form['link_2'] = array(
+    ];
+    $form['link_2'] = [
       '#type' => 'details',
       '#title' => 'Link: ' . $config->get('uiowa_bar.link_2_title') . ' -> ' . $config->get('uiowa_bar.link_2_url'),
-    );
-    $form['link_2']['link_2_title'] = array(
+    ];
+    $form['link_2']['link_2_title'] = [
       '#type' => 'textfield',
       '#title' => t('Title'),
       '#default_value' => $config->get('uiowa_bar.link_2_title'),
       '#size' => 60,
-    );
-    $form['link_2']['link_2_url'] = array(
+    ];
+    $form['link_2']['link_2_url'] = [
       '#type' => 'url',
       '#title' => t('URL'),
       '#default_value' => $config->get('uiowa_bar.link_2_url'),
       '#size' => 60,
-    );
-    $form['cse_engine_id'] = array(
+    ];
+    $form['cse_engine_id'] = [
       '#type' => 'textfield',
       '#title' => t('Search Engine ID'),
       '#default_value' => $config->get('uiowa_bar.cse_engine_id'),
       '#description' => t('Enter the CSE Engine ID. The default is 015014862498168032802:ben09oibdpm.'),
       '#size' => 60,
       '#required' => TRUE,
-    );
-    $form['cse_scope'] = array(
+    ];
+    $form['cse_scope'] = [
       '#type' => 'checkbox',
       '#title' => t('Limit Custom Search to this Site'),
       '#default_value' => $config->get('uiowa_bar.cse_scope'),
       '#description' => t('If checked, the Google Custom Search will be scoped to this site only. If you are using a CSE ID that includes multiple sites in it, you will likely want to uncheck this.'),
       '#size' => 60,
-    );
+    ];
 
     return parent::buildForm($form, $form_state);
   }
