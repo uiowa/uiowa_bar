@@ -28,6 +28,7 @@ class SettingsForm extends ConfigFormBase {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
+    $form = parent::buildForm($form, $form_state);
     $config = $this->config('uiowa_bar.settings');
 
     $form['markup'] = [
@@ -47,7 +48,7 @@ class SettingsForm extends ConfigFormBase {
     ];
     $form['link_1'] = [
       '#type' => 'details',
-      '#title' => 'Link: ' . $config->get('uiowa_bar.link_1_title') . ' -> ' . $config->get('uiowa_bar.link_1_url'),
+      '#title' => 'Link 1',
     ];
     $form['link_1']['link_1_title'] = [
       '#type' => 'textfield',
@@ -63,7 +64,7 @@ class SettingsForm extends ConfigFormBase {
     ];
     $form['link_2'] = [
       '#type' => 'details',
-      '#title' => 'Link: ' . $config->get('uiowa_bar.link_2_title') . ' -> ' . $config->get('uiowa_bar.link_2_url'),
+      '#title' => 'Link 2',
     ];
     $form['link_2']['link_2_title'] = [
       '#type' => 'textfield',
@@ -93,7 +94,7 @@ class SettingsForm extends ConfigFormBase {
       '#size' => 60,
     ];
 
-    return parent::buildForm($form, $form_state);
+    return $form;
   }
 
   /**
