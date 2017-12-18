@@ -8,7 +8,7 @@ use Drupal\Component\Utility\UrlHelper;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
- * Returns responses for Uiowa Bar routes.%
+ * Returns responses for Uiowa Bar routes.
  */
 class UiowaBarResultsController extends ControllerBase {
 
@@ -48,7 +48,7 @@ class UiowaBarResultsController extends ControllerBase {
         'id' => 'search-results',
       ],
     ];
-    
+    // Pass config to drupalSettings.
     $build['#attached']['drupalSettings']['uiowaBar']['engineId'] = $config['cse_engine_id'];
     $build['#attached']['drupalSettings']['uiowaBar']['cseScope'] = $config['cse_scope'];
 
