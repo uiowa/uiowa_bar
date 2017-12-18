@@ -8,7 +8,7 @@ use Drupal\Component\Utility\UrlHelper;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
- * Returns responses for Uiowa Bar routes.%
+ * Returns responses for Uiowa Bar routes.
  */
 class UiowaBarResultsController extends ControllerBase {
 
