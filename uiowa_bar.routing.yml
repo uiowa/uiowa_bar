@@ -1,8 +1,8 @@
 uiowa_bar.example:
-  path: '/uiowa-bar/example'
+  path: '/google-search'
   defaults:
-    _title: 'Example'
-    _controller: '\Drupal\uiowa_bar\Controller\UiowaBarController::build'
+    _title: 'Search'
+    _controller: '\Drupal\uiowa_bar\Controller\UiowaBarResultsController::build'
   requirements:
     _permission: 'access content'
 

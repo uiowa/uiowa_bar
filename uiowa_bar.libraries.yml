@@ -1,9 +1,11 @@
 # Custom module library for general purposes.
-uiowa_bar:
+uiowa-bar:
+  version: 1.x
   js:
-    js/uiowa-bar.js: {}
+    js/cse.results.js: {}
   css:
     component:
       css/uiowa-bar.css: {}
   dependencies:
+    - core/jquery
     - core/drupalSettings
