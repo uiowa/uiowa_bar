@@ -16,7 +16,10 @@ function uiowa_bar_theme() {
     $uiowa_bar_config = \Drupal::config('uiowa_bar.settings');
     return array(
         'uiowa_bar' => [
-            'variables' => ['config' => $uiowa_bar_config->get('uiowa_bar')],
+            'variables' => [
+                'config' => $uiowa_bar_config->get('uiowa_bar'),
+                'search_form' => NULL
+            ],
         ],
         'parts/uiowa_wordmark' => [],
         'parts/uihc_wordmark' => [],
@@ -28,7 +31,10 @@ function uiowa_bar_theme() {
  */
 
 function uiowa_bar_page_attachments(&$page){
-    $page['#attached']['library'][] = 'uiowa_bar/uiowa-bar';
+    $admin_context = \Drupal::service('router.admin_context');
+    if (!$admin_context->isAdminRoute()) {
+        $page['#attached']['library'][] = 'uiowa_bar/uiowa-bar';
+    }
 }
 
 /**
@@ -37,8 +43,10 @@ function uiowa_bar_page_attachments(&$page){
 function uiowa_bar_page_top(&$page_top){
     $admin_context = \Drupal::service('router.admin_context');
     if (!$admin_context->isAdminRoute()) {
+        $search_form = \Drupal::formBuilder()->getForm('Drupal\uiowa_bar\Form\SearchForm');
         $page_top['uiowa_bar'] = [
             '#theme' => 'uiowa_bar',
+            '#search_form' => $search_form,
         ];
     }
 }

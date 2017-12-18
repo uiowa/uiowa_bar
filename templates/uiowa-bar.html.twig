@@ -9,15 +9,7 @@
             <ul class="links">
                 <li><a href="https://uiowa.edu">Sample Link</a></li>
             </ul>
-            <form class="search-form search-google-appliance-search-form" aria-label="site search" role="form" action="/google-search" method="get" id="uiowa-bar-search-form" accept-charset="UTF-8">
-                <div>
-                    <div class="form-item form-type-textfield form-item-search-terms form-group">
-                        <label for="edit-search-terms">Search </label>
-                        <input placeholder="Search this site" class="form-control form-text" type="text" id="search" name="search" value="" size="15" maxlength="256">
-                    </div>
-                    <input type="submit" id="edit-submit-search" value="Search" class="form-submit btn btn-default">
-                </div>
-            </form>
+            {{ search_form }}
         </div>
     </div>
 </div>
