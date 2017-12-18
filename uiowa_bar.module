@@ -28,7 +28,7 @@ function uiowa_bar_theme() {
  */
 
 function uiowa_bar_page_attachments(&$page){
-    $page['#attached']['library'][] = 'uiowa_bar/uiowa_bar';
+    $page['#attached']['library'][] = 'uiowa_bar/uiowa-bar';
 }
 
 /**
