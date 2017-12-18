@@ -1,4 +1,4 @@
-uiowa_bar.example:
+uiowa_bar.search_results:
   path: '/google-search'
   defaults:
     _title: 'Search'
