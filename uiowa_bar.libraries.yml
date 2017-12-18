@@ -3,7 +3,7 @@ uiowa_bar:
   js:
     js/uiowa-bar.js: {}
   css:
-    component:
+    base:
       css/uiowa-bar.css: {}
   dependencies:
     - core/drupalSettings
