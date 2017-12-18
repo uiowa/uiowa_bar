@@ -41,7 +41,7 @@ class UiowaBarResultsController extends ControllerBase {
     $params = UrlHelper::buildQuery($search_params);
     $build['search'] = [
       '#type' => 'link',
-      '#title' => t('Search the University of Iowa for @terms', ['@terms' => $search_terms]),
+      '#title' => t('Search all University of Iowa for @terms', ['@terms' => $search_terms]),
       '#url' => Url::fromUri('https://search.uiowa.edu/search', ['query' => $search_params]),
       '#attributes' => [
         'target' => '_blank',
