@@ -1,5 +1,5 @@
 <?php
-
+use Drupal\Core\Render\Element;
 /**
  * @file
  * Primary module hooks for Uiowa Bar module.
@@ -8,3 +8,32 @@
  * This file is no longer required in Drupal 8.
  * @see https://www.drupal.org/node/2217931
  */
+
+/**
+ * Implements hook_theme().
+ */
+function uiowa_bar_theme() {
+    $uiowa_bar_config = \Drupal::config('uiowa_bar.settings');
+    return array(
+        'uiowa_bar' => [
+            'variables' => ['config' => $uiowa_bar_config->get('uiowa_bar')],
+        ],
+    );
+}
+
+/**
+ * Implements hook_page_attachments().
+ */
+
+function uiowa_bar_page_attachments(&$page){
+    $page['#attached']['library'][] = 'uiowa_bar/uiowa_bar';
+}
+
+/**
+ * Implements hook_page_top().
+ */
+function uiowa_bar_page_top(&$page_top){
+    $page_top['uiowa_bar'] = [
+        '#theme' => 'uiowa_bar',
+    ];
+}

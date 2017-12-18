@@ -4,7 +4,7 @@ uiowa-bar:
   js:
     js/cse.results.js: {}
   css:
-    component:
+    base:
       css/uiowa-bar.css: {}
   dependencies:
     - core/jquery
