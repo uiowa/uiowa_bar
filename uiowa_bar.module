@@ -18,6 +18,8 @@ function uiowa_bar_theme() {
         'uiowa_bar' => [
             'variables' => ['config' => $uiowa_bar_config->get('uiowa_bar')],
         ],
+        'parts/uiowa_wordmark' => [],
+        'parts/uihc_wordmark' => [],
     );
 }
 
@@ -33,7 +35,10 @@ function uiowa_bar_page_attachments(&$page){
  * Implements hook_page_top().
  */
 function uiowa_bar_page_top(&$page_top){
-    $page_top['uiowa_bar'] = [
-        '#theme' => 'uiowa_bar',
-    ];
+    $admin_context = \Drupal::service('router.admin_context');
+    if (!$admin_context->isAdminRoute()) {
+        $page_top['uiowa_bar'] = [
+            '#theme' => 'uiowa_bar',
+        ];
+    }
 }
