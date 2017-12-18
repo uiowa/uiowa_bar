@@ -1,4 +1,4 @@
 administer uiowa_bar configuration:
   title: 'Administer uiowa_bar configuration'
-  description: 'Optional description.'
+  description: 'Manage wordmark and Google CSE settings.'
   restrict access: true
