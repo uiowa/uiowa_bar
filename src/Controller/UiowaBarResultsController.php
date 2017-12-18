@@ -48,7 +48,7 @@ class UiowaBarResultsController extends ControllerBase {
         'id' => 'search-results',
       ],
     ];
-    $build['#attached']['library'][] = 'uiowa_bar/uiowa-bar';
+    
     $build['#attached']['drupalSettings']['uiowaBar']['engineId'] = $config['cse_engine_id'];
     $build['#attached']['drupalSettings']['uiowaBar']['cseScope'] = $config['cse_scope'];
 
