@@ -4,6 +4,8 @@ namespace Drupal\uiowa_bar\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
 use Drupal\Core\Datetime\DateFormatterInterface;
+use Drupal\Core\Link;
+use Drupal\Core\Url;
 use Drupal\Component\Utility\UrlHelper;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
@@ -37,10 +39,13 @@ class UiowaBarResultsController extends ControllerBase {
       'site' => 'default_collection',
     ];
     $params = UrlHelper::buildQuery($search_params);
-    $build['heading'] = [
-      '#type' => 'html_tag',
-      '#tag' => 'h2',
-      '#value' => t('Results for <strong>@search</strong>', ['@search' => $search_terms]),
+    $build['search'] = [
+      '#type' => 'link',
+      '#title' => t('Search all University of Iowa for @terms', ['@terms' => $search_terms]),
+      '#url' => Url::fromUri('https://search.uiowa.edu/search', ['query' => $search_params]),
+      '#attributes' => [
+        'target' => '_blank',
+      ],
     ];
     $build['results_container'] = [
       '#type' => 'container',
