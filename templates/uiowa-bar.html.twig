@@ -7,7 +7,12 @@
     {% endif %}
         <div id="uiowa-search">
             <ul class="links">
-                <li><a href="https://uiowa.edu">Sample Link</a></li>
+                {% if config.link_1_title and config.link_1_url %}
+                <li><a href="{{ config.link_1_url }}">{{ config.link_1_title }}</a></li>
+                {% endif %}
+                {% if config.link_2_title and config.link_2_url %}
+                <li><a href="{{ config.link_2_url }}">{{ config.link_2_title }}</a></li>
+                {% endif %}
             </ul>
             {{ search_form }}
         </div>
