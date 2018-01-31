@@ -3,10 +3,6 @@
 /**
  * @file
  * Primary module hooks for Uiowa Bar module.
- *
- * @DCG
- * This file is no longer required in Drupal 8.
- * @see https://www.drupal.org/node/2217931
  */
 
 use Drupal\Core\Render\Element;
@@ -14,7 +10,7 @@ use Drupal\Core\Render\Element;
 /**
  * Implements hook_theme().
  */
-function uiowa_bar_theme() {
+function uiowa_bar_theme($existing, $type, $theme, $path) {
   $uiowa_bar_config = \Drupal::config('uiowa_bar.settings');
   return [
     'uiowa_bar' => [
@@ -23,8 +19,6 @@ function uiowa_bar_theme() {
         'search_form' => NULL,
       ],
     ],
-    'parts/uiowa_wordmark' => [],
-    'parts/uihc_wordmark' => [],
   ];
 }
 

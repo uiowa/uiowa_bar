@@ -1,9 +1,9 @@
 <div id="ui-wrapper">
     <div id="uiowa-bar" role="region" aria-label="University of Iowa global header">
     {% if config.wordmark == 'uiowa'  %}
-        {% include 'parts/uiowa-wordmark.html.twig' %}
+          {{ include('@uiowa_bar/parts/uiowa-wordmark.html.twig') }}
     {% elseif config.wordmark == 'uihc'  %}
-        {% include 'parts/uihc-wordmark.html.twig' %}
+        {{ include('@uiowa_bar/parts/uihc-wordmark.html.twig') }}
     {% endif %}
         <div id="uiowa-search">
             <ul class="links">
