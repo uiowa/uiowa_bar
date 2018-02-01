@@ -26,15 +26,17 @@
   // Attach uiowaBarResults behavior.
   Drupal.behaviors.uiowaBarResults = {
     attach: function(context, settings) {
-      window.__gcse = {
-        parsetags: 'explicit',
-        callback: Drupal.uiowaBarResults,
-      };
-      var cx = drupalSettings.uiowaBar.engineId;
-      var gcse = document.createElement('script'); gcse.type = 'text/javascript';
-      gcse.async = true;
-      gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gcse, s);
+      $('body.path-google-search', context).once('uiowaBarResults').each(function() {
+        window.__gcse = {
+          parsetags: 'explicit',
+          callback: Drupal.uiowaBarResults,
+        };
+        var cx = drupalSettings.uiowaBar.engineId;
+        var gcse = document.createElement('script'); gcse.type = 'text/javascript';
+        gcse.async = true;
+        gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gcse, s);
+      });
     }
   };
 })(jQuery, Drupal, drupalSettings);
