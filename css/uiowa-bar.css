@@ -87,6 +87,8 @@
     display: inline;
     width: 120px;
     color: #FFF;
+    line-height: 1.1;
+    margin-top: 0;
   }
   
   #uiowa-bar #uiowa-search .form-control:focus,
