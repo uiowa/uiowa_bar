@@ -21,25 +21,41 @@ class SearchForm extends FormBase {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    $form = array();
-    $form['search-terms'] = array(
+    $form = [];
+    $form['search-terms'] = [
       '#type' => 'textfield',
       '#title' => t('Search'),
-      '#attributes' => array(
+      '#label_attributes' => [
+        'class' => [
+          'sr-only',
+        ],
+      ],
+      '#attributes' => [
         'placeholder' => 'Search this site',
-      ),
+        'class' => [
+          'form-control',
+          'mt-0',
+        ]
+      ],
       '#maxlength' => '256',
       '#size' => '15',
-    );
-    $form['submit-search'] = array(
+    ];
+    $form['submit-search'] = [
       '#type' => 'submit',
       '#value' => t('Search'),
       '#name' => 'btnG',
-    );
+      '#attributes' => [
+        'class' => [
+          'ml-1',
+          'mr-0',
+        ]
+      ],
+    ];
     $form['#action'] = $GLOBALS['base_url'] . '/google-search';
     // Use core search CSS in addition to this module's css.
     // (keep it general in case core search is enabled).
-    $form['#attributes']['class'][] = 'search-form';
+    $form['#attributes']['class'][] = 'uiowa-bar--navbar--search-form';
+    $form['#attributes']['class'][] = 'form-inline';
     $form['#attributes']['class'][] = 'search-google-appliance-search-form';
     $form['#attributes']['aria-label'] = 'site search';
     $form['#attributes']['role'] = 'search';
