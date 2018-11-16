@@ -1,20 +1,18 @@
-<div id="ui-wrapper">
-    <div id="uiowa-bar" role="region" aria-label="University of Iowa global header">
-    {% if config.wordmark == 'uiowa'  %}
-          {{ include('@uiowa_bar/parts/uiowa-wordmark.html.twig') }}
-    {% elseif config.wordmark == 'uihc'  %}
-        {{ include('@uiowa_bar/parts/uihc-wordmark.html.twig') }}
-    {% endif %}
-        <div id="uiowa-search">
-            <ul class="links">
-                {% if config.link_1_title and config.link_1_url %}
-                <li><a href="{{ config.link_1_url }}">{{ config.link_1_title }}</a></li>
-                {% endif %}
-                {% if config.link_2_title and config.link_2_url %}
-                <li><a href="{{ config.link_2_url }}">{{ config.link_2_title }}</a></li>
-                {% endif %}
-            </ul>
-            {{ search_form }}
-        </div>
-    </div>
+<div id="uiowa-bar--wrapper" class="uiowa-bar--wrapper container-fluid" role="region" aria-label="University of Iowa global header" >
+  {% if config.wordmark == 'uiowa'  %}
+    {{ include('@uiowa_bar/parts/uiowa-wordmark.html.twig') }}
+  {% elseif config.wordmark == 'uihc'  %}
+    {{ include('@uiowa_bar/parts/uihc-wordmark.html.twig') }}
+  {% endif %}
+  <div id="uiowa-search" class="uiowa-bar--navbar d-flex align-items-center">
+    <ul class="uiowa-bar--navbar--links d-inline-flex mb-0">
+      {% if config.link_1_title and config.link_1_url %}
+        <li class="mr-2"><a href="{{ config.link_1_url }}">{{ config.link_1_title }}</a></li>
+      {% endif %}
+      {% if config.link_2_title and config.link_2_url %}
+        <li class="mr-2"><a href="{{ config.link_2_url }}">{{ config.link_2_title }}</a></li>
+      {% endif %}
+    </ul>
+    {{ search_form }}
+  </div>
 </div>
