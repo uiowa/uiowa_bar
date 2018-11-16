@@ -68,6 +68,8 @@
 }
 
 #uiowa-bar #uiowa-search label {
+  color: #ffffff;
+  background-color: #000000;
   position: absolute;
   left: -10000px;
   top: auto;
