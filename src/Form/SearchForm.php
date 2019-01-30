@@ -34,7 +34,9 @@ class SearchForm extends FormBase {
         'placeholder' => 'Search this site',
         'class' => [
           'form-control',
+          'form-control-sm',
           'mt-0',
+          'mx-sm-2',
         ]
       ],
       '#maxlength' => '256',
@@ -46,8 +48,10 @@ class SearchForm extends FormBase {
       '#name' => 'btnG',
       '#attributes' => [
         'class' => [
-          'ml-1',
-          'mr-0',
+          'mx-0',
+          'form-control-sm',
+          'btn-sm',
+          'btn-dark',
         ]
       ],
     ];
