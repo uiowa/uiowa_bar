@@ -36,7 +36,6 @@ class SearchForm extends FormBase {
           'form-control',
           'form-control-sm',
           'mt-0',
-          'mx-sm-2',
         ]
       ],
       '#maxlength' => '256',
@@ -59,7 +58,7 @@ class SearchForm extends FormBase {
     // Use core search CSS in addition to this module's css.
     // (keep it general in case core search is enabled).
     $form['#attributes']['class'][] = 'uiowa-bar--navbar--search-form';
-    $form['#attributes']['class'][] = 'form-inline';
+    $form['#attributes']['class'][] = 'form-row';
     $form['#attributes']['class'][] = 'search-google-appliance-search-form';
     $form['#attributes']['aria-label'] = 'site search';
     $form['#attributes']['role'] = 'search';

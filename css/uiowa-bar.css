@@ -11,6 +11,13 @@
 
 .uiowa-bar--navbar--links {
   list-style: none;
+  margin-bottom: 0.25rem;
+}
+@media(min-width: 768px) {
+  .uiowa-bar--navbar--links {
+    margin-left: 1rem;
+    margin-bottom: 0;
+  }
 }
 
 .uiowa-bar--navbar--links > li > a {
@@ -23,4 +30,34 @@
     justify-content: space-between;
     align-items: center;
   }
+}
+
+#uiowa-search {
+  flex-direction: column;
+}
+@media(min-width: 768px) {
+  #uiowa-search {
+    flex-direction: row;
+  }
+}
+fieldset.form-item-search-terms {
+  position: relative;
+  width: 100%;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-bottom: 0;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 66.66667%;
+  flex: 0 0 66.66667%;
+  max-width: 66.66667%;
+}
+input.form-submit {
+  position: relative;
+  width: 100%;
+  padding-left: 5px;
+  padding-right: 5px;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 33.33333%;
+  flex: 0 0 33.33333%;
+  max-width: 33.33333%;
 }

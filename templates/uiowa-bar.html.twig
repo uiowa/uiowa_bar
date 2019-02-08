@@ -5,7 +5,7 @@
     {{ include('@uiowa_bar/parts/uihc-wordmark.html.twig') }}
   {% endif %}
   <div id="uiowa-search" class="uiowa-bar--navbar d-flex align-items-center mt-2 mt-sm-0">
-    <ul class="uiowa-bar--navbar--links d-inline-flex mb-0 px-0">
+    <ul class="uiowa-bar--navbar--links d-inline-flex px-0 mx-1">
       {% if config.link_1_title and config.link_1_url %}
         <li class="mr-2"><a href="{{ config.link_1_url }}">{{ config.link_1_title }}</a></li>
       {% endif %}
