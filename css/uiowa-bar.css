@@ -1,6 +1,7 @@
 .uiowa-bar--wrapper {
   background-color: #000;
   padding: 0.4rem 0;
+  flex-shrink: 0;
 }
 
 .uiowa--bar--wordmark {

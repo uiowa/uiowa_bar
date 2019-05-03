@@ -118,6 +118,9 @@ class SettingsForm extends ConfigFormBase {
       ->set('uiowa_bar.cse_scope', $form_state->getValue('cse_scope'))
       ->save();
     parent::submitForm($form, $form_state);
+
+    // Clear cache.
+    drupal_flush_all_caches();
   }
 
 }
