@@ -41,7 +41,7 @@
     flex-direction: row;
   }
 }
-fieldset.form-item-search-terms {
+#uiowa-search fieldset.form-item-search-terms {
   position: relative;
   width: 100%;
   padding-left: 5px;
@@ -52,7 +52,7 @@ fieldset.form-item-search-terms {
   flex: 0 0 66.66667%;
   max-width: 66.66667%;
 }
-input.form-submit {
+#uiowa-search input.form-submit {
   position: relative;
   width: 100%;
   padding-left: 5px;
