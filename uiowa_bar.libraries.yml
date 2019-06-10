@@ -3,6 +3,7 @@ uiowa-bar:
   version: 1.x
   js:
     js/cse.results.js: {}
+    js/tag-manager.js: {}
   css:
     base:
       css/uiowa-bar.css: {}
