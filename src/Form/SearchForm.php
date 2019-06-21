@@ -4,6 +4,7 @@ namespace Drupal\uiowa_bar\Form;
 
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Url;
 
 /**
  * Implements an example form.
@@ -76,10 +77,11 @@ class SearchForm extends FormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-    $search_query = urlencode($form_state->getValue('search-terms'));
-    $form_state->setRedirect('uiowa_bar.search_results', [
-      'search' => $search_query,
-    ]);
+    $form_state->setRedirectUrl(Url::fromRoute('uiowa_bar.search_results', [], [
+      'query' => [
+        'search' => $form_state->getValue('search-terms'),
+      ],
+    ]));
   }
 
 }

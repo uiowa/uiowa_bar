@@ -56,6 +56,7 @@ class UiowaBarResultsController extends ControllerBase {
     // Pass config to drupalSettings.
     $build['#attached']['drupalSettings']['uiowaBar']['engineId'] = $config['cse_engine_id'];
     $build['#attached']['drupalSettings']['uiowaBar']['cseScope'] = $config['cse_scope'];
+    $build['#cache']['max-age'] = 0;
 
     return $build;
   }
