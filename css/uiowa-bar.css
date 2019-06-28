@@ -23,6 +23,7 @@
 
 .uiowa-bar--navbar--links > li > a {
   color: #fff;
+  font-size: 0.875rem;
 }
 
 @media(min-width: 500px) {
