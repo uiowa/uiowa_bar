@@ -10,9 +10,14 @@
   fill: #FFCD00;
 }
 
+.uiowa--bar--wordmark svg {
+  height: 30px;
+}
+
 .uiowa-bar--navbar--links {
   list-style: none;
   margin-bottom: 0.25rem;
+  flex: 0 0 auto;
 }
 @media(min-width: 768px) {
   .uiowa-bar--navbar--links {
@@ -24,6 +29,11 @@
 .uiowa-bar--navbar--links > li > a {
   color: #fff;
   font-size: 0.875rem;
+}
+
+.uiowa-bar--navbar--search-form {
+  flex: 0 0 auto;
+  width: 250px;
 }
 
 @media(min-width: 500px) {
