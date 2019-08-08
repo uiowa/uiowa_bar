@@ -2,11 +2,11 @@
   background-color: #000;
   padding: 0.4rem 0;
   flex-shrink: 0;
+  flex-wrap: wrap;
 }
 
 .uiowa--bar--wordmark {
   display: block;
-  width: 200px;
   fill: #FFCD00;
 }
 
