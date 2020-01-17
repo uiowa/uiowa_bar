@@ -6,8 +6,7 @@
  */
 
 /**
- * Write a line or two here about what the updates are for.
- * This is shown to users on the update.php page.
+ * Set the display search configuration to true for existing sites.
  */
 function uiowa_bar_update_8101(&$sandbox) {
   $config_factory = \Drupal::configFactory();
