@@ -13,6 +13,8 @@
         <li class="mx-2"><a href="{{ config.link_2_url }}">{{ config.link_2_title }}</a></li>
       {% endif %}
     </ul>
-    {{ search_form }}
+    {% if config.display_search %}
+      {{ search_form }}
+    {% endif %}
   </div>
 </div>
