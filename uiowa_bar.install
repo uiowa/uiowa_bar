@@ -4,3 +4,14 @@
  * @file
  * Install, update and uninstall functions for the Uiowa Bar module.
  */
+
+/**
+ * Write a line or two here about what the updates are for.
+ * This is shown to users on the update.php page.
+ */
+function uiowa_bar_update_8101(&$sandbox) {
+  $config_factory = \Drupal::configFactory();
+  $config = $config_factory->getEditable('uiowa_bar.settings');
+  $config->set('display_search', 1);
+  $config->save(TRUE);
+}

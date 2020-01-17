@@ -1,0 +1,16 @@
+uiowa_bar.settings:
+  type: config_object
+  label: 'UIowa Bar settings'
+  mappings:
+    wordmark:
+      type: text
+      label: 'Wordmark'
+    display_search:
+      type: integer
+      label: 'Display search'
+    cse_engine_id:
+      type: text
+      label: 'CSE engine id'
+    cse_engine_scope:
+      type: integer
+      label: 'CSE engine scope'
