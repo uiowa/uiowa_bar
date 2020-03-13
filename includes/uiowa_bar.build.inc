@@ -10,7 +10,7 @@
 function build_uiowa_bar() {
   $path = drupal_get_path('module', 'uiowa_bar');
   $alert_toggle = variable_get('uiowa_bar_alert_toggle');
-//  $alert_title = variable_get('uiowa_bar_alert_title');
+  $alert_title = variable_get('uiowa_bar_alert_title');
   $alert_content = variable_get('uiowa_bar_alert');
   $alert_severity = variable_get('uiowa_bar_alert_severity');
   $wordmark = variable_get('uiowa_bar_wordmark');
@@ -47,14 +47,14 @@ function build_uiowa_bar() {
       ),
       '#type' => 'container',
     );
-//    if (!empty($alert_title)) {
-//      $uiowa_bar['ui-wrapper']['uiowa-bar-alert']['uiowa-bar-alert-title'] = array(
-//        '#type' => 'markup',
-//        '#prefix' => '<div class="uiowa-bar-alert-title">',
-//        '#markup' => $alert_title,
-//        '#suffix' => '</div>'
-//      );
-//    }
+    if (!empty($alert_title)) {
+      $uiowa_bar['ui-wrapper']['uiowa-bar-alert']['uiowa-bar-alert-title'] = array(
+        '#type' => 'markup',
+        '#prefix' => '<div class="uiowa-bar-alert-title">',
+        '#markup' => $alert_title,
+        '#suffix' => '</div>'
+      );
+    }
     if (!empty($alert_content)) {
       $uiowa_bar['ui-wrapper']['uiowa-bar-alert']['uiowa-bar-alert-content'] = array(
         '#type' => 'markup',

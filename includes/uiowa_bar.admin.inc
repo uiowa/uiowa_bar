@@ -44,12 +44,12 @@ function uiowa_bar_config_form($form, &$form_state) {
       'high' => t('High')
     ),
   );
-//  $form['alert']['uiowa_bar_alert_container']['uiowa_bar_alert_title'] = array(
-//    '#type' => 'textfield',
-//    '#title' => t('Alert Title'),
-//    '#default_value' => variable_get('uiowa_bar_alert_title'),
-//    '#size' => 60,
-//  );
+  $form['alert']['uiowa_bar_alert_container']['uiowa_bar_alert_title'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Alert Title'),
+    '#default_value' => variable_get('uiowa_bar_alert_title'),
+    '#size' => 60,
+  );
   $defaults = array('value' => '', 'format' => 'filtered_html');
   $uiowa_bar_alert = variable_get('uiowa_bar_alert');
   empty($uiowa_bar_alert) ? $uiowa_bar_alert = $defaults : $uiowa_bar_alert;
