@@ -212,3 +212,58 @@
     display: none;
   }
 }
+
+#uiowa-bar-alert.uiowa-bar-alert {
+  position: relative;
+  overflow: hidden;
+  padding: 10px 25px;
+  color: #1b1b1b;
+}
+#uiowa-bar-alert.uiowa-bar-alert:before {
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 8px;
+}
+#uiowa-bar-alert .uiowa-bar-alert-title {
+  color: #1b1b1b;
+  font-size: 1.4em;
+  font-weight: bold;
+  line-height: 1.1;
+  margin-top: 0;
+  margin-bottom: .5rem;
+}
+#uiowa-bar-alert .uiowa-bar-alert-content p {
+  margin-bottom: 5px;
+}
+#uiowa-bar-alert .uiowa-bar-alert-content a {
+  color: #005ea2;
+  text-decoration: underline;
+  border-bottom: 0;
+}
+#uiowa-bar-alert .uiowa-bar-alert-content a:hover,
+#uiowa-bar-alert .uiowa-bar-alert-content a:focus {
+  color: #1a4480;
+  text-decoration: none;
+  border-bottom: 0;
+}
+#uiowa-bar-alert.uiowa-bar-alert-low {
+  background-color: #e7f6f8;
+}
+#uiowa-bar-alert.uiowa-bar-alert-low:before {
+  background-color: #005ea2;
+}
+#uiowa-bar-alert.uiowa-bar-alert-medium {
+  background-color: #faf3d1;
+}
+#uiowa-bar-alert.uiowa-bar-alert-medium:before {
+  background-color: #ffcd00;
+}
+#uiowa-bar-alert.uiowa-bar-alert-high {
+  background-color: #f4e3db;
+}
+#uiowa-bar-alert.uiowa-bar-alert-high:before {
+  background-color: #d63e04;
+}

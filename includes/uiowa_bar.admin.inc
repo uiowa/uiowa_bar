@@ -14,6 +14,52 @@ function uiowa_bar_config_form($form, &$form_state) {
     '#type' => 'markup',
     '#markup' => t('<p>These settings allows you to customize the top University of Iowa branding bar.</p>'),
   );
+  $form['alert'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Site-Wide Alert Settings'),
+    '#collapsible' => TRUE,
+    '#collapsed' => FALSE,
+  );
+  $form['alert']['uiowa_bar_alert_toggle'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Enable alert'),
+    '#description' => t('Check to display alert text site-wide.'),
+    '#default_value' => variable_get('uiowa_bar_alert_toggle'),
+  );
+  $form['alert']['uiowa_bar_alert_container'] = array(
+    '#type' => 'container',
+    '#states' => array(
+      'visible' => array(
+        ':input[name="uiowa_bar_alert_toggle"]' => array('checked' => TRUE),
+      ),
+    ),
+  );
+  $form['alert']['uiowa_bar_alert_container']['uiowa_bar_alert_severity'] = array(
+    '#type' => 'select',
+    '#title' => t('Alert Severity'),
+    '#default_value' => variable_get('uiowa_bar_alert_severity'),
+    '#options' => array(
+      'low' => t('Low'),
+      'medium' => t('Medium'),
+      'high' => t('High')
+    ),
+  );
+  $form['alert']['uiowa_bar_alert_container']['uiowa_bar_alert_title'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Alert Title'),
+    '#default_value' => variable_get('uiowa_bar_alert_title'),
+    '#size' => 60,
+  );
+  $defaults = array('value' => '', 'format' => 'filtered_html');
+  $uiowa_bar_alert = variable_get('uiowa_bar_alert');
+  empty($uiowa_bar_alert) ? $uiowa_bar_alert = $defaults : $uiowa_bar_alert;
+  $form['alert']['uiowa_bar_alert_container']['uiowa_bar_alert'] = array(
+    '#type' => 'text_format',
+    '#title' => t('Alert Text'),
+    '#default_value' => $uiowa_bar_alert['value'],
+    '#description' => t('Enter the alert information to display site-wide.'),
+    '#format' => $uiowa_bar_alert['format'],
+  );
 
   $form['uiowa_bar_wordmark'] = array(
     '#type' => 'radios',
@@ -29,7 +75,7 @@ function uiowa_bar_config_form($form, &$form_state) {
   $form['uiowa_bar_link1'] = array(
     '#type' => 'fieldset',
     '#title' => t('Link'),
-    '#collapsible' => TRUE, 
+    '#collapsible' => TRUE,
     '#collapsed' => TRUE,
   );
 
@@ -50,7 +96,7 @@ function uiowa_bar_config_form($form, &$form_state) {
   $form['uiowa_bar_link2'] = array(
     '#type' => 'fieldset',
     '#title' => t('Link'),
-    '#collapsible' => TRUE, 
+    '#collapsible' => TRUE,
     '#collapsed' => TRUE,
   );
 
@@ -84,6 +130,11 @@ function uiowa_bar_config_form($form, &$form_state) {
     '#description' => t('If checked, the Google Custom Search will be scoped to this site only. If you are using a CSE ID that includes multiple sites in it, you will likely want to uncheck this.'),
     '#size' => 60,
   );
-
+  drupal_flush_all_caches();
+  $service = _acquia_purge_service();
+  if ($service->lockAcquire()) {
+    $service->process();
+    $service->lockRelease();
+  }
   return system_settings_form($form);
 }
