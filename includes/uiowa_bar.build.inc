@@ -9,6 +9,10 @@
  */
 function build_uiowa_bar() {
   $path = drupal_get_path('module', 'uiowa_bar');
+  $alert_toggle = variable_get('uiowa_bar_alert_toggle');
+//  $alert_title = variable_get('uiowa_bar_alert_title');
+  $alert_content = variable_get('uiowa_bar_alert');
+  $alert_severity = variable_get('uiowa_bar_alert_severity');
   $wordmark = variable_get('uiowa_bar_wordmark');
   $link1_title = variable_get('uiowa_bar_link1_title');
   $link1_url = variable_get('uiowa_bar_link1_url');
@@ -23,7 +27,43 @@ function build_uiowa_bar() {
     ),
     '#type' => 'container',
   );
-
+  if ($alert_toggle == '1') {
+    $alert_classes = array(
+      'uiowa-bar-alert',
+    );
+    if (!empty($alert_severity)) {
+      $alert_aria_label = t('Site-wide ' . $alert_severity . '-severity alert message');
+      $alert_classes[] = 'uiowa-bar-alert-' . $alert_severity;
+    }
+    else {
+      $alert_aria_label = t('Site-wide alert message');
+    }
+    $uiowa_bar['ui-wrapper']['uiowa-bar-alert'] = array(
+      '#attributes' => array(
+        'id' => array('uiowa-bar-alert'),
+        'role' => 'alert',
+        'aria-label' => $alert_aria_label,
+        'class' => $alert_classes,
+      ),
+      '#type' => 'container',
+    );
+//    if (!empty($alert_title)) {
+//      $uiowa_bar['ui-wrapper']['uiowa-bar-alert']['uiowa-bar-alert-title'] = array(
+//        '#type' => 'markup',
+//        '#prefix' => '<div class="uiowa-bar-alert-title">',
+//        '#markup' => $alert_title,
+//        '#suffix' => '</div>'
+//      );
+//    }
+    if (!empty($alert_content)) {
+      $uiowa_bar['ui-wrapper']['uiowa-bar-alert']['uiowa-bar-alert-content'] = array(
+        '#type' => 'markup',
+        '#prefix' => '<div class="uiowa-bar-alert-content">',
+        '#markup' => check_markup($alert_content['value'], $alert_content['format']),
+        '#suffix' => '</div>'
+      );
+    }
+  }
   $uiowa_bar['ui-wrapper']['uiowa-bar'] = array(
     '#attributes' => array(
       'id' => array('uiowa-bar'),
@@ -45,7 +85,6 @@ function build_uiowa_bar() {
       '#markup' => '<a href="https://uihealthcare.org" title="University of Iowa Health Care" id="wordmark-link">'.$wordmark_svg.'</a>',
     );
   }
-  
 
   $uiowa_bar['ui-wrapper']['uiowa-bar']['uiowa-search'] = array(
     '#attributes' => array(
