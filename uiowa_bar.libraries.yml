@@ -11,8 +11,3 @@ uiowa-bar:
     - core/jquery.once
     - core/drupalSettings
     - core/drupal
-
-gtag:
-  version: 1.x
-  js:
-    js/tag-manager.js: {}
