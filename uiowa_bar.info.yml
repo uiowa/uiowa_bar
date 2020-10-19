@@ -3,4 +3,5 @@ type: module
 description: Branding bar at the top of University of Iowa web sites.
 package: University of Iowa
 core: 8.x
+core_version_requirement: ^8 || ^9
 configure: uiowa_bar.settings_form
