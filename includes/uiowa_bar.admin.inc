@@ -130,11 +130,23 @@ function uiowa_bar_config_form($form, &$form_state) {
     '#description' => t('If checked, the Google Custom Search will be scoped to this site only. If you are using a CSE ID that includes multiple sites in it, you will likely want to uncheck this.'),
     '#size' => 60,
   );
+
+  $form['#submit'][] = 'uiowa_bar_config_form_submit';
+
+  return system_settings_form($form);
+}
+
+/**
+ * Form submit for config form.
+ *
+ * @param $form
+ * @param $form_state
+ */
+function uiowa_bar_config_form_submit($form, &$form_state) {
   drupal_flush_all_caches();
   $service = _acquia_purge_service();
   if ($service->lockAcquire()) {
     $service->process();
     $service->lockRelease();
   }
-  return system_settings_form($form);
 }
